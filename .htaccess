@@ -1,0 +1,13 @@
+# Baig Solution Apache Security Configurations
+
+# Disable Directory Browsing
+Options -Indexes
+
+# Prevent access to config/package files
+<FilesMatch "^(package\.json|package-lock\.json|composer\.json|composer\.lock|dev-server\.js|\.gitignore|\.env)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Block access to git directory if exists
+RedirectMatch 404 /\.git
