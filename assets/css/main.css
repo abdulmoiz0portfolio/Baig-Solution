@@ -134,6 +134,23 @@ body {
     background-color: rgba(231, 127, 35, 0.08) !important;
 }
 
+/* Shared Section Eyebrow Label Typography Upgrade */
+.badge.bg-brand-translucent,
+.bg-brand-translucent {
+    font-size: 14.5px !important;
+    letter-spacing: 1.5px !important;
+    padding: 8px 16px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+
+h6.text-accent-brand.font-monospace {
+    font-size: 15px !important;
+    letter-spacing: 1.5px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+
 .border-brand-50 {
     border-color: rgba(231, 127, 35, 0.3) !important;
 }
