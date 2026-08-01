@@ -97,7 +97,7 @@
                             <span id="popup-email-error" style="color: #ff3333; font-size: 13px; display: none;">Please enter a valid email address.</span>
                         </div>
 
-                        <button type="submit" class="btn btn-brand w-100 py-3" style="font-size: 16px; font-weight: 700; border-radius: 12px;">Claim Now</button>
+                        <button type="submit" class="btn btn-brand w-100 py-3"><span>Claim Now</span> <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></button>
                     </div>
                 </form>
             </div>

@@ -264,43 +264,102 @@ h6.text-accent-brand.font-monospace {
 }
 
 /* Premium Buttons Styling */
+/* Premium Standardized Pill + Arrow-Circle Button Component */
 .btn-brand {
-    background-color: var(--accent-brand);
-    color: #ffffff;
+    background-color: var(--accent-brand) !important;
+    color: #ffffff !important;
     font-weight: 700;
-    border: 2px solid transparent;
-    border-radius: 50px;
-    padding: 14px 34px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 8px 20px var(--accent-brand-glow);
-    transition: var(--transition-smooth);
-}
-
-.btn-brand:hover {
-    background-color: #ffffff;
-    color: var(--accent-brand);
-    border-color: var(--accent-brand);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(231, 127, 35, 0.25);
-}
-
-.arrow-btn {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 15px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 12px 26px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
-    transition: var(--transition-smooth);
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(231, 127, 35, 0.35);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    z-index: 1;
 }
+
+.btn-brand.btn-lg {
+    padding: 15px 32px;
+    font-size: 16px;
+}
+
+/* Subtle diagonal shimmer sweep effect on hover */
+.btn-brand::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(
+        60deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+    transform: rotate(25deg);
+    transition: all 0.6s ease;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 2;
+}
+
+.btn-brand:hover::after {
+    left: 125%;
+    opacity: 1;
+}
+
+/* Button Hover State: Pill turns solid black/dark (#111111) */
+.btn-brand:hover {
+    background-color: #111111 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Attached Arrow Circle Styling */
+.arrow-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.22);
+    color: #ffffff !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-left: 4px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.arrow-btn svg,
+.arrow-btn i {
+    color: #ffffff !important;
+    stroke: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+/* Arrow Circle Hover State: Circle turns brand orange & arrow nudges top-right */
 .btn-brand:hover .arrow-btn {
-    transform: rotate(45deg);
-    background-color: var(--accent-brand);
-    color: #ffffff;
+    background-color: var(--accent-brand) !important;
+    color: #ffffff !important;
+    transform: scale(1.08);
+}
+
+.btn-brand:hover .arrow-btn svg,
+.btn-brand:hover .arrow-btn i {
+    transform: translate(2px, -2px) rotate(45deg);
 }
 
 /* Header & Nav */

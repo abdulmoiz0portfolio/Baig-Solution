@@ -45,7 +45,7 @@
                                 <textarea class="form-control border-light-subtle bg-white text-dark" id="contact-message-page" rows="5" placeholder="Tell us about your requirements..." required></textarea>
                             </div>
                             <div class="col-12 mt-4">
-                                <button type="submit" class="btn btn-brand w-100 py-3 fw-bold">Send Message <i class="fa-solid fa-paper-plane ms-2"></i></button>
+                                <button type="submit" class="btn btn-brand w-100 py-3"><span>Send Message</span> <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></button>
                             </div>
                         </div>
                     </form>
