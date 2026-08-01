@@ -188,15 +188,22 @@ body {
     justify-content: center;
     flex-wrap: nowrap;
     user-select: none;
+    padding-left: 12px;
 }
 
 .letters-loading {
     font-weight: 800;
-    font-size: 40px;
-    color: rgba(26, 26, 26, 0.15);
+    font-size: 55px;
+    color: rgba(231, 127, 35, 0.08);
     font-family: var(--font-jakarta);
     position: relative;
     display: inline-block;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+}
+
+.letters-loading:nth-child(4) {
+    margin-right: 25px;
 }
 
 .letters-loading::before {

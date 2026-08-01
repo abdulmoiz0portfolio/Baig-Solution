@@ -227,17 +227,17 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
             <div class="spinner"></div>
             <div class="txt-loading">
                 <span data-text-preloader="B" class="letters-loading">B</span>
-                <span data-text-preloader="a" class="letters-loading">a</span>
-                <span data-text-preloader="i" class="letters-loading">i</span>
-                <span data-text-preloader="g" class="letters-loading">g</span>
+                <span data-text-preloader="A" class="letters-loading">A</span>
+                <span data-text-preloader="I" class="letters-loading">I</span>
+                <span data-text-preloader="G" class="letters-loading">G</span>
                 <span data-text-preloader="S" class="letters-loading">S</span>
-                <span data-text-preloader="o" class="letters-loading">o</span>
-                <span data-text-preloader="l" class="letters-loading">l</span>
-                <span data-text-preloader="u" class="letters-loading">u</span>
-                <span data-text-preloader="t" class="letters-loading">t</span>
-                <span data-text-preloader="i" class="letters-loading">i</span>
-                <span data-text-preloader="o" class="letters-loading">o</span>
-                <span data-text-preloader="n" class="letters-loading">n</span>
+                <span data-text-preloader="O" class="letters-loading">O</span>
+                <span data-text-preloader="L" class="letters-loading">L</span>
+                <span data-text-preloader="U" class="letters-loading">U</span>
+                <span data-text-preloader="T" class="letters-loading">T</span>
+                <span data-text-preloader="I" class="letters-loading">I</span>
+                <span data-text-preloader="O" class="letters-loading">O</span>
+                <span data-text-preloader="N" class="letters-loading">N</span>
             </div>
             <p class="text-center loading-subtitle">Loading</p>
         </div>
