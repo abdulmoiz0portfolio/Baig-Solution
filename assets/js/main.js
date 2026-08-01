@@ -561,10 +561,14 @@ function initCustomCursor() {
         });
     });
     
-    // Expand outer ring on hover over interactive links or elements
+    // Expand outer ring on hover over interactive links or elements (excluding card-service-item & icon-arrow to eliminate ghost circle)
     document.body.addEventListener("mouseover", (e) => {
-        // Find if target or any parent matches hover elements
-        const target = e.target.closest("a, button, .btn, .card-service-item, .physics-pill, .close-modal");
+        if (e.target.closest(".icon-arrow, .card-service-item")) {
+            cursorOuter.classList.remove("cursor-hover");
+            cursorInner.classList.remove("cursor-hover");
+            return;
+        }
+        const target = e.target.closest("a, button, .btn, .physics-pill, .close-modal");
         if (target) {
             cursorOuter.classList.add("cursor-hover");
             cursorInner.classList.add("cursor-hover");
@@ -572,7 +576,7 @@ function initCustomCursor() {
     });
 
     document.body.addEventListener("mouseout", (e) => {
-        const target = e.target.closest("a, button, .btn, .card-service-item, .physics-pill, .close-modal");
+        const target = e.target.closest("a, button, .btn, .physics-pill, .close-modal");
         if (target) {
             cursorOuter.classList.remove("cursor-hover");
             cursorInner.classList.remove("cursor-hover");

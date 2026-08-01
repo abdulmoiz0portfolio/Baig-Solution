@@ -546,31 +546,45 @@ body {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: var(--accent-brand);
-    color: #ffffff;
+    background-color: var(--accent-brand) !important;
+    color: #ffffff !important;
     font-size: 14px;
-    border: 2px solid transparent;
+    border: none !important;
     transition: var(--transition-smooth);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    box-shadow: 0 4px 12px rgba(231, 127, 35, 0.25);
+    position: relative;
+    z-index: 2;
 }
 
-.icon-arrow i {
+.icon-arrow i,
+.icon-arrow svg {
+    display: inline-block !important;
+    color: #ffffff !important;
+    stroke: #ffffff;
+    width: 16px;
+    height: 16px;
     transition: transform 0.2s ease-out;
 }
 
 .card-service-item:hover .icon-arrow,
-.subpage-card:hover .icon-arrow {
-    background-color: #ffffff;
-    color: var(--accent-brand);
-    border-color: var(--accent-brand);
+.subpage-card:hover .icon-arrow,
+.icon-arrow:hover {
+    background-color: var(--accent-brand) !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(231, 127, 35, 0.45);
 }
 
 .card-service-item:hover .icon-arrow i,
-.subpage-card:hover .icon-arrow i {
+.card-service-item:hover .icon-arrow svg,
+.subpage-card:hover .icon-arrow i,
+.subpage-card:hover .icon-arrow svg,
+.icon-arrow:hover i,
+.icon-arrow:hover svg {
     transform: translate(3px, -3px);
 }
 
