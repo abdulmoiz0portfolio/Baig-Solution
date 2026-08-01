@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php $page_key = 'product-shoot'; include 'header.php'; ?>
 
 <!-- Product Shoot Hero Section -->
 <section class="subpage-hero text-center text-dark">

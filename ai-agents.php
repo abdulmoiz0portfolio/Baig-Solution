@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php $page_key = 'ai-agents'; include 'header.php'; ?>
 
 <!-- AI Agents Hero Section -->
 <section class="subpage-hero text-center text-dark">
@@ -55,6 +55,66 @@
         </div>
     </div>
 </section>
+
+<!-- Structured Breakdown Section Start -->
+<section class="section-padding bg-light-gray text-dark border-top border-light-subtle">
+    <div class="container max-w-900">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="mb-4">
+                    <h3 class="fw-bold text-dark mb-3"><i class="fa-solid fa-circle-question text-accent-brand me-2"></i> What is an AI Agent?</h3>
+                    <p class="text-secondary">An Autonomous AI Agent is an advanced system trained on your custom documentation, PDFs, and database sheets. Using advanced natural language models, it can understand customer intent, answer complex queries, qualify leads, and perform tasks independently.</p>
+                </div>
+                
+                <div class="mb-4">
+                    <h3 class="fw-bold text-dark mb-3"><i class="fa-solid fa-toolbox text-accent-brand me-2"></i> Tools We Use</h3>
+                    <p class="text-secondary mb-2">We build and orchestrate custom AI agent solutions using leading NLP and integration platforms:</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-white text-secondary border border-light-subtle px-3 py-2">OpenAI GPT-4o</span>
+                        <span class="badge bg-white text-secondary border border-light-subtle px-3 py-2">Claude 3.5 Sonnet</span>
+                        <span class="badge bg-white text-secondary border border-light-subtle px-3 py-2">n8n LangChain</span>
+                        <span class="badge bg-white text-secondary border border-light-subtle px-3 py-2">Pinecone RAG</span>
+                        <span class="badge bg-white text-secondary border border-light-subtle px-3 py-2">Firebase Firestore</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="fw-bold text-dark mb-3"><i class="fa-solid fa-clock text-accent-brand me-2"></i> Typical Timeline</h3>
+                    <p class="text-secondary">Bespoke AI Agents integrated with custom company knowledge bases typically require <strong>2 to 4 weeks</strong> for training, prompt engineering, integration, and guardrail testing.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="mb-4">
+                    <h3 class="fw-bold text-dark mb-3"><i class="fa-solid fa-cubes text-accent-brand me-2"></i> What We Build</h3>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-accent-brand me-2"></i> <strong>24/7 Support Bots:</strong> Answer FAQs and handle repetitive questions.</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-accent-brand me-2"></i> <strong>RAG Assistants:</strong> Instantly fetch details from internally indexed PDFs.</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-accent-brand me-2"></i> <strong>Lead Qualification Agents:</strong> Chatbots that pre-screen and score leads.</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-accent-brand me-2"></i> <strong>Auto Scheduling Agents:</strong> Book discovery calls directly in calendars.</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="fw-bold text-dark mb-3"><i class="fa-solid fa-users text-accent-brand me-2"></i> Who It's For</h3>
+                    <p class="text-secondary mb-2">Autonomous AI agents are highly effective for service-oriented organizations, including:</p>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-1"><i class="fa-solid fa-check text-accent-brand me-2"></i> Real Estate Agencies (pre-qualifying property buyers)</li>
+                        <li class="mb-1"><i class="fa-solid fa-check text-accent-brand me-2"></i> E-commerce Stores (handling order status issues)</li>
+                        <li class="mb-1"><i class="fa-solid fa-check text-accent-brand me-2"></i> Professional Coaches & Consulting Agencies</li>
+                        <li class="mb-1"><i class="fa-solid fa-check text-accent-brand me-2"></i> Local Medical and Legal clinics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Descriptive Internal Links -->
+        <div class="text-center mt-5 pt-4 border-top border-light-subtle">
+            <p class="text-muted mb-0">Looking for other automation components? Check out our <a href="ai-automations" class="text-accent-brand fw-bold text-decoration-none">Workflow AI Automations</a> or our high-performance <a href="website-development" class="text-accent-brand fw-bold text-decoration-none">Bespoke Web Development</a> solutions.</p>
+        </div>
+    </div>
+</section>
+<!-- Structured Breakdown Section End -->
 
 <!-- Consult Section Start -->
 <section class="section-padding bg-warm-peach text-dark">

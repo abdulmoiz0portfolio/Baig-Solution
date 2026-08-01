@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php $page_key = 'index'; include 'header.php'; ?>
 
 <!-- Hero Section Start -->
 <section class="hero-section hero-3 position-relative d-flex align-items-center justify-content-center">
@@ -84,41 +84,34 @@
                         </h2>
                     </div>
                     <p class="mt-3 wow fadeInUp text-secondary fs-5" data-wow-delay=".5s">
-                        Baig Solution is an AI-first digital agency. We operate at the intersection of human experience and technical stability to grow your business, merging sophisticated automation with intuitive design to build the future of work.
+                        Baig Solution is an AI automation agency that helps businesses automate lead follow-up, CRM syncing, and customer support using tools like n8n, Make, and GoHighLevel. We build custom AI agents and workflow automations for small and mid-sized businesses.
                     </p>
                     
-                    <div class="list-items wow fadeInUp mt-4" data-wow-delay=".3s">
+                    <h5 class="fw-bold text-dark mt-4 mb-3 wow fadeInUp" data-wow-delay=".3s">Who We Serve:</h5>
+                    <div class="list-items wow fadeInUp" data-wow-delay=".4s">
                         <ul class="list-unstyled">
-                            <li class="mb-3 d-flex align-items-center fs-6 text-dark fw-bold">
-                                <svg class="me-3" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none">
-                                    <path d="M7.38397 14.1797C7.34153 14.1797 7.29954 14.171 7.26066 14.1539C7.22178 14.1369 7.18683 14.1121 7.15803 14.0809L1.06612 7.49119C1.02551 7.44726 0.99859 7.39244 0.988651 7.33344C0.978712 7.27445 0.986187 7.21384 1.01016 7.15902C1.03414 7.10421 1.07357 7.05758 1.12364 7.02483C1.17371 6.99208 1.23223 6.97464 1.29206 6.97464H4.22437C4.26839 6.97464 4.31191 6.98409 4.35197 7.00234C4.39204 7.0206 4.42772 7.04723 4.45661 7.08045L6.49255 9.42273C6.71258 8.95239 7.13852 8.16925 7.88597 7.21497C8.99095 5.8042 11.0463 3.7294 14.5627 1.85642C14.6307 1.82023 14.7097 1.81083 14.7843 1.83009C14.8588 1.84936 14.9235 1.89587 14.9654 1.96046C15.0073 2.02504 15.0235 2.103 15.0108 2.17894C14.998 2.25488 14.9573 2.32328 14.8966 2.37064C14.8831 2.38113 13.5273 3.44882 11.967 5.40448C10.5309 7.20417 8.62191 10.1469 7.68255 13.946C7.66605 14.0128 7.62767 14.0721 7.57354 14.1144C7.5194 14.1568 7.45263 14.1799 7.38388 14.1799L7.38397 14.1797Z" fill="#e77f23" />
-                                </svg>
-                                AI Automation & Integration
+                            <li class="mb-2 d-flex align-items-start fs-6 text-secondary">
+                                <i class="fa-solid fa-house-chimney text-accent-brand me-3 mt-1"></i>
+                                <span><strong>Real Estate:</strong> Automated SMS replies, lead dispatch, and calendar booking.</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-center fs-6 text-dark fw-bold">
-                                <svg class="me-3" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none">
-                                    <path d="M7.38397 14.1797C7.34153 14.1797 7.29954 14.171 7.26066 14.1539C7.22178 14.1369 7.18683 14.1121 7.15803 14.0809L1.06612 7.49119C1.02551 7.44726 0.99859 7.39244 0.988651 7.33344C0.978712 7.27445 0.986187 7.21384 1.01016 7.15902C1.03414 7.10421 1.07357 7.05758 1.12364 7.02483C1.17371 6.99208 1.23223 6.97464 1.29206 6.97464H4.22437C4.26839 6.97464 4.31191 6.98409 4.35197 7.00234C4.39204 7.0206 4.42772 7.04723 4.45661 7.08045L6.49255 9.42273C6.71258 8.95239 7.13852 8.16925 7.88597 7.21497C8.99095 5.8042 11.0463 3.7294 14.5627 1.85642C14.6307 1.82023 14.7097 1.81083 14.7843 1.83009C14.8588 1.84936 14.9235 1.89587 14.9654 1.96046C15.0073 2.02504 15.0235 2.103 15.0108 2.17894C14.998 2.25488 14.9573 2.32328 14.8966 2.37064C14.8831 2.38113 13.5273 3.44882 11.967 5.40448C10.5309 7.20417 8.62191 10.1469 7.68255 13.946C7.66605 14.0128 7.62767 14.0721 7.57354 14.1144C7.5194 14.1568 7.45263 14.1799 7.38388 14.1799L7.38397 14.1797Z" fill="#e77f23" />
-                                </svg>
-                                Custom Development
+                            <li class="mb-2 d-flex align-items-start fs-6 text-secondary">
+                                <i class="fa-solid fa-graduation-cap text-accent-brand me-3 mt-1"></i>
+                                <span><strong>Coaches & Consultants:</strong> Automated onboarding, email nurture, and CRM updates.</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-center fs-6 text-dark fw-bold">
-                                <svg class="me-3" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none">
-                                    <path d="M7.38397 14.1797C7.34153 14.1797 7.29954 14.171 7.26066 14.1539C7.22178 14.1369 7.18683 14.1121 7.15803 14.0809L1.06612 7.49119C1.02551 7.44726 0.99859 7.39244 0.988651 7.33344C0.978712 7.27445 0.986187 7.21384 1.01016 7.15902C1.03414 7.10421 1.07357 7.05758 1.12364 7.02483C1.17371 6.99208 1.23223 6.97464 1.29206 6.97464H4.22437C4.26839 6.97464 4.31191 6.98409 4.35197 7.00234C4.39204 7.0206 4.42772 7.04723 4.45661 7.08045L6.49255 9.42273C6.71258 8.95239 7.13852 8.16925 7.88597 7.21497C8.99095 5.8042 11.0463 3.7294 14.5627 1.85642C14.6307 1.82023 14.7097 1.81083 14.7843 1.83009C14.8588 1.84936 14.9235 1.89587 14.9654 1.96046C15.0073 2.02504 15.0235 2.103 15.0108 2.17894C14.998 2.25488 14.9573 2.32328 14.8966 2.37064C14.8831 2.38113 13.5273 3.44882 11.967 5.40448C10.5309 7.20417 8.62191 10.1469 7.68255 13.946C7.66605 14.0128 7.62767 14.0721 7.57354 14.1144C7.5194 14.1568 7.45263 14.1799 7.38388 14.1799L7.38397 14.1797Z" fill="#e77f23" />
-                                </svg>
-                                Scalable Cloud Infrastructure
+                            <li class="mb-2 d-flex align-items-start fs-6 text-secondary">
+                                <i class="fa-solid fa-cart-shopping text-accent-brand me-3 mt-1"></i>
+                                <span><strong>E-Commerce:</strong> Inventory sync, abandoned cart tracking, and orders notification.</span>
                             </li>
-                            <li class="mb-3 d-flex align-items-center fs-6 text-dark fw-bold">
-                                <svg class="me-3" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none">
-                                    <path d="M7.38397 14.1797C7.34153 14.1797 7.29954 14.171 7.26066 14.1539C7.22178 14.1369 7.18683 14.1121 7.15803 14.0809L1.06612 7.49119C1.02551 7.44726 0.99859 7.39244 0.988651 7.33344C0.978712 7.27445 0.986187 7.21384 1.01016 7.15902C1.03414 7.10421 1.07357 7.05758 1.12364 7.02483C1.17371 6.99208 1.23223 6.97464 1.29206 6.97464H4.22437C4.26839 6.97464 4.31191 6.98409 4.35197 7.00234C4.39204 7.0206 4.42772 7.04723 4.45661 7.08045L6.49255 9.42273C6.71258 8.95239 7.13852 8.16925 7.88597 7.21497C8.99095 5.8042 11.0463 3.7294 14.5627 1.85642C14.6307 1.82023 14.7097 1.81083 14.7843 1.83009C14.8588 1.84936 14.9235 1.89587 14.9654 1.96046C15.0073 2.02504 15.0235 2.103 15.0108 2.17894C14.998 2.25488 14.9573 2.32328 14.8966 2.37064C14.8831 2.38113 13.5273 3.44882 11.967 5.40448C10.5309 7.20417 8.62191 10.1469 7.68255 13.946C7.66605 14.0128 7.62767 14.0721 7.57354 14.1144C7.5194 14.1568 7.45263 14.1799 7.38388 14.1799L7.38397 14.1797Z" fill="#e77f23" />
-                                </svg>
-                                24/7 AI Support
+                            <li class="mb-2 d-flex align-items-start fs-6 text-secondary">
+                                <i class="fa-solid fa-wrench text-accent-brand me-3 mt-1"></i>
+                                <span><strong>Service Businesses:</strong> Auto-invoicing, feedback loops, and internal team alerts.</span>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="main-button mt-5 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="main-button mt-4 wow fadeInUp" data-wow-delay=".5s">
                         <a href="about" class="btn btn-brand">
-                            <span>EXPLORE MORE</span>
+                            <span>Meet the Team</span>
                             <span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span>
                         </a>
                     </div>
@@ -224,6 +217,57 @@
         </div>
     </div>
 </section>
+
+<!-- Our Process Section Start -->
+<section id="process-section" class="section-padding bg-warm-peach text-dark border-top border-light-subtle">
+    <div class="container">
+        <div class="text-center mb-5 max-w-700 mx-auto">
+            <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">HOW WE WORK</span>
+            <h2 class="display-5 fw-extrabold mb-3">Our 4-Step Automation Process</h2>
+            <p class="text-secondary fs-5">A structured, collaborative approach to connecting your business operations.</p>
+        </div>
+        
+        <div class="row g-4 mt-2">
+            <!-- Step 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4 bg-white rounded-4 h-100 shadow-sm border border-light-subtle position-relative">
+                    <span class="position-absolute top-0 end-0 m-3 text-accent-brand fw-extrabold display-6 opacity-25">01</span>
+                    <div class="icon-box mb-3"><i class="fa-solid fa-phone text-accent-brand"></i></div>
+                    <h5 class="fw-bold text-dark">Discovery Call</h5>
+                    <p class="text-muted small mb-0">We analyze your current tools, identify manual bottlenecks, and map out opportunities to save time.</p>
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4 bg-white rounded-4 h-100 shadow-sm border border-light-subtle position-relative">
+                    <span class="position-absolute top-0 end-0 m-3 text-accent-brand fw-extrabold display-6 opacity-25">02</span>
+                    <div class="icon-box mb-3"><i class="fa-solid fa-compass text-accent-brand"></i></div>
+                    <h5 class="fw-bold text-dark">Workflow Design</h5>
+                    <p class="text-muted small mb-0">We design a visual blueprint mapping out exactly how your CRM, emails, and tools will sync.</p>
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4 bg-white rounded-4 h-100 shadow-sm border border-light-subtle position-relative">
+                    <span class="position-absolute top-0 end-0 m-3 text-accent-brand fw-extrabold display-6 opacity-25">03</span>
+                    <div class="icon-box mb-3"><i class="fa-solid fa-code text-accent-brand"></i></div>
+                    <h5 class="fw-bold text-dark">Build & Test</h5>
+                    <p class="text-muted small mb-0">We build the active node pipelines (n8n/Make) and run strict test cases to ensure data flows flawlessly.</p>
+                </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4 bg-white rounded-4 h-100 shadow-sm border border-light-subtle position-relative">
+                    <span class="position-absolute top-0 end-0 m-3 text-accent-brand fw-extrabold display-6 opacity-25">04</span>
+                    <div class="icon-box mb-3"><i class="fa-solid fa-circle-check text-accent-brand"></i></div>
+                    <h5 class="fw-bold text-dark">Launch & Support</h5>
+                    <p class="text-muted small mb-0">We launch the systems live, hand over documentation, and provide ongoing optimization support.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Our Process Section End -->
 
 <!-- Portfolio Section Start -->
 <section id="portfolio-section" class="section-padding bg-white text-dark border-top border-light-subtle">
@@ -493,5 +537,75 @@
     </div>
 </section>
 <!-- Contact Section End -->
+
+<!-- JSON-LD FAQ and Review Schemas -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How long does an AI Automation workflow setup take?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Generally, standard workflow automations (like email pipelines, CRM syncing, or simple chatbots) take between 1 to 2 weeks to design, integrate, test, and launch."
+    }
+  },{
+    "@type": "Question",
+    "name": "Are my client leads and databases secure with your setup?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, absolutely. We integrate Firebase Firestore directly using secure client SDK parameters and build WAF (Web Application Firewalls) in PHP to sanitize inputs and block bots."
+    }
+  },{
+    "@type": "Question",
+    "name": "Can we link third-party tools like Slack or WhatsApp?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, we integrate n8n, Make, or custom API endpoints to route data triggers to WhatsApp business channels, Slack workspaces, or local Discord systems."
+    }
+  }]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "LocalBusiness",
+    "name": "Baig Solution"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "M. Ibrahim"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+  },
+  "reviewBody": "Baig Solution transformed our sales onboarding. They built a custom n8n lead scoring agent that synced our calendar, CRM, and emails seamlessly. The team was fast, professional, and precise!"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "LocalBusiness",
+    "name": "Baig Solution"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Sarah K."
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+  },
+  "reviewBody": "The website design they created was stunning. High-speed, responsive, and completely custom. Plus, their product shoot photography added a premium touch to our landing page."
+}
+</script>
 
 <?php include 'footer.php'; ?>

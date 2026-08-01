@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php $page_key = 'contact'; include 'header.php'; ?>
 
 <!-- Contact Hero Section -->
 <section class="subpage-hero text-center text-dark">

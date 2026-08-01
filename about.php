@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php $page_key = 'about'; include 'header.php'; ?>
 
 <!-- About Hero Section -->
 <section class="subpage-hero text-center text-dark">
@@ -37,6 +37,69 @@
         </div>
     </div>
 </section>
+
+<!-- Our Background & Expertise Section Start -->
+<section id="expertise-section" class="section-padding bg-warm-peach text-dark border-top border-light-subtle">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">ABOUT OUR AGENCY</span>
+                <h2 class="display-6 fw-extrabold text-dark mb-4">AI Automation & Digital Excellence</h2>
+                <p class="text-secondary fs-5 mb-4">
+                    Baig Solution is an AI automation agency that helps businesses automate lead follow-up, CRM syncing, and customer support using tools like n8n, Make, and GoHighLevel. We build custom AI agents and workflow automations for small and mid-sized businesses.
+                </p>
+                <p class="text-muted mb-4">
+                    Headquartered in New Jersey (NJ, USA), we serve local businesses throughout the tri-state area as well as remote clients globally. By integrating advanced workflow engines directly into your tech stack, we eliminate hours of manual admin tasks every week.
+                </p>
+                
+                <!-- Key Expertise Indicators -->
+                <div class="row g-3 mt-2">
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <span class="display-6 text-accent-brand fw-extrabold me-3">5+</span>
+                            <span class="text-secondary small fw-bold">Years of Systems Experience</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <span class="display-6 text-accent-brand fw-extrabold me-3">100+</span>
+                            <span class="text-secondary small fw-bold">Workflows Deployed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="p-4 p-md-5 bg-white rounded-4 border border-light-subtle shadow-sm">
+                    <h4 class="fw-bold text-dark mb-4"><i class="fa-solid fa-graduation-cap text-accent-brand me-2"></i> Technical Mastery & E-E-A-T</h4>
+                    <p class="text-muted small mb-4">Our automated systems architects maintain deep credentials and specialize in connecting standard and bespoke application stacks.</p>
+                    
+                    <div class="mb-3">
+                        <h6 class="fw-bold text-dark mb-1">Visual Workflow Orchestration</h6>
+                        <span class="badge bg-light text-secondary border border-light-subtle font-monospace px-2 py-1">n8n</span>
+                        <span class="badge bg-light text-secondary border border-light-subtle font-monospace px-2 py-1">Make.com</span>
+                        <span class="badge bg-light text-secondary border border-light-subtle font-monospace px-2 py-1">Zapier</span>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <h6 class="fw-bold text-dark mb-1">Customer CRM & Sales Pipelines</h6>
+                        <span class="badge bg-light text-secondary border border-light-subtle font-monospace px-2 py-1">GoHighLevel</span>
+                        <span class="badge bg-light text-secondary border border-light-subtle font-monospace px-2 py-1">HubSpot</span>
+                        <span class="badge bg-light text-secondary border border-light-subtle font-monospace px-2 py-1">Salesforce</span>
+                    </div>
+                    
+                    <div>
+                        <h6 class="fw-bold text-dark mb-1">Custom Development Stack</h6>
+                        <span class="badge bg-light text-secondary border border-light-subtle font-monospace px-2 py-1">Node/Express</span>
+                        <span class="badge bg-light text-secondary border border-light-subtle font-monospace px-2 py-1">Next.js</span>
+                        <span class="badge bg-light text-secondary border border-light-subtle font-monospace px-2 py-1">Firebase Firestore</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Our Background & Expertise Section End -->
 
 <!-- FAQ Section Start -->
 <section id="faq-section" class="section-padding bg-light-gray text-dark border-top border-light-subtle">
@@ -91,5 +154,35 @@
     </div>
 </section>
 <!-- FAQ Section End -->
+
+<!-- JSON-LD FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How long does an AI Automation workflow setup take?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Generally, standard workflow automations (like email pipelines, CRM syncing, or simple chatbots) take between 1 to 2 weeks to design, integrate, test, and launch."
+    }
+  },{
+    "@type": "Question",
+    "name": "Are my client leads and databases secure with your setup?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, absolutely. We integrate Firebase Firestore directly using secure client SDK parameters and build WAF (Web Application Firewalls) in PHP to sanitize inputs and block bots."
+    }
+  },{
+    "@type": "Question",
+    "name": "Can we link third-party tools like Slack or WhatsApp?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, we integrate n8n, Make, or custom API endpoints to route data triggers to WhatsApp business channels, Slack workspaces, or local Discord systems."
+    }
+  }]
+}
+</script>
 
 <?php include 'footer.php'; ?>

@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php $page_key = 'admin'; include 'header.php'; ?>
 
 <!-- Admin Header Section -->
 <section class="subpage-hero text-center text-dark">

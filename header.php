@@ -1,17 +1,205 @@
-<?php include_once 'security.php'; ?>
+<?php 
+include_once 'security.php'; 
+
+if (!isset($page_key)) {
+    $page_key = 'index';
+}
+
+$meta_config = [
+    'index' => [
+        'title' => 'AI Automation Agency (n8n, Make, GoHighLevel) | Baig Solution',
+        'desc' => 'Baig Solution is an AI-first agency building custom AI agents and workflow automations to connect your CRM, WhatsApp, and emails. Scale operations 24/7.',
+        'keywords' => 'AI Automation Agency, n8n, Make, GoHighLevel, Zapier, AI Agents, New Jersey, software development, CRM integration',
+        'url' => ''
+    ],
+    'about' => [
+        'title' => 'Our Mission & Automation Experts | Baig Solution',
+        'desc' => 'Meet Baig Solution. We design custom AI agent systems, API integrations, and e-commerce growth strategies to help small & mid-sized businesses automate operations.',
+        'keywords' => 'About Baig Solution, AI Engineers, New Jersey AI, CRM automation experts, n8n consultants',
+        'url' => 'about'
+    ],
+    'website-development' => [
+        'title' => 'Bespoke Web & App Development Services | Baig Solution',
+        'desc' => 'High-performance, secure, responsive web applications and custom single-page apps optimized for speed and automated lead conversion. Start today.',
+        'keywords' => 'Bespoke Web Development, Next.js, Firebase, Single Page Apps, SEO Optimization',
+        'url' => 'website-development'
+    ],
+    'ai-agents' => [
+        'title' => 'Custom Autonomous AI Support Agents | Baig Solution',
+        'desc' => 'Deploy natural language AI support agents trained on your custom knowledge base. Qualify leads and answer customer service queries 24/7 with zero hallucination.',
+        'keywords' => 'Autonomous AI Agents, AI chatbot, custom RAG, customer service automation, document indexing',
+        'url' => 'ai-agents'
+    ],
+    'ai-automations' => [
+        'title' => 'Workflow & CRM Automation (n8n, Make) | Baig Solution',
+        'desc' => 'Eliminate manual admin tasks. We build end-to-end automations connecting HubSpot, Slack, WhatsApp, and email platforms to streamline lead management.',
+        'keywords' => 'AI Automations, n8n agency, Make.com integration, HubSpot workflow, Zapier triggers',
+        'url' => 'ai-automations'
+    ],
+    'product-shoot' => [
+        'title' => 'Commercial Product Photography & Studio Shoots | Baig Solution',
+        'desc' => 'High-end e-commerce product shoots featuring studio lighting and expert prop styling that increases brand conversion rates. Browse our portfolio.',
+        'keywords' => 'Product Shoot Photography, e-commerce photography, luxury product studio, backlighting styling',
+        'url' => 'product-shoot'
+    ],
+    'contact' => [
+        'title' => 'Book a Free AI Operations Audit & Consultation | Baig Solution',
+        'desc' => 'Ready to automate your operations? Contact Baig Solution to schedule a free automation audit. We connect your calendar, CRM, and communication tools.',
+        'keywords' => 'Contact Baig Solution, AI operations audit, book consultation, New Jersey digital agency',
+        'url' => 'contact'
+    ],
+    'admin' => [
+        'title' => 'CRM Lead Logs Control Panel | Baig Solution',
+        'desc' => 'Internal dashboard for Baig Solution administrators to track real-time contact leads, newsletter subscribers, and automated cost quote submissions.',
+        'keywords' => 'Admin dashboard, lead tracking, CRM logs',
+        'url' => 'admin'
+    ]
+];
+
+$active_meta = isset($meta_config[$page_key]) ? $meta_config[$page_key] : $meta_config['index'];
+$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'baigsolution.com';
+$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https" : "http";
+$canonical_url = "{$protocol}://{$host}/" . $active_meta['url'];
+$og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baig Solution | AI Agents, Automations & Website Development</title>
+    <title><?php echo $active_meta['title']; ?></title>
+    <link rel="canonical" href="<?php echo $canonical_url; ?>">
     
     <!-- Meta SEO Tags -->
-    <meta name="description" content="Baig Solution is an AI-first digital agency. We build websites, mobile apps, AI automations and brands for growing businesses.">
-    <meta name="keywords" content="AI Agents, AI Automation, Web Development, Baig Solution, AI Agency, Software Development, NJ, New Jersey">
+    <meta name="description" content="<?php echo $active_meta['desc']; ?>">
+    <meta name="keywords" content="<?php echo $active_meta['keywords']; ?>">
     <meta name="author" content="Baig Solution">
     
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo $canonical_url; ?>">
+    <meta property="og:title" content="<?php echo $active_meta['title']; ?>">
+    <meta property="og:description" content="<?php echo $active_meta['desc']; ?>">
+    <meta property="og:image" content="<?php echo $og_image; ?>">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="<?php echo $canonical_url; ?>">
+    <meta name="twitter:title" content="<?php echo $active_meta['title']; ?>">
+    <meta name="twitter:description" content="<?php echo $active_meta['desc']; ?>">
+    <meta name="twitter:image" content="<?php echo $og_image; ?>">
+
+    <!-- JSON-LD Structured Data Schema -->
+    <?php if ($page_key === 'index'): ?>
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Baig Solution",
+      "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
+      "logo": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
+      "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-845-715-5504",
+        "contactType": "customer service",
+        "email": "info@baigsolution.com"
+      }
+    }
+    </script>
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Baig Solution",
+      "image": "<?php echo $og_image; ?>",
+      "@id": "<?php echo $protocol; ?>://<?php echo $host; ?>/#localbusiness",
+      "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
+      "telephone": "+1-845-715-5504",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New Jersey",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.0583,
+        "longitude": -74.4057
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "New Jersey"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ]
+    }
+    </script>
+    <?php endif; ?>
+
+    <!-- Service Schema -->
+    <?php if (in_array($page_key, ['ai-agents', 'ai-automations', 'website-development', 'product-shoot'])): ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "<?php echo $active_meta['title']; ?>",
+      "serviceType": "<?php echo str_replace(' | Baig Solution', '', $active_meta['title']); ?>",
+      "provider": {
+        "@type": "Organization",
+        "name": "Baig Solution",
+        "url": "<?php echo $protocol; ?>://<?php echo $host; ?>"
+      },
+      "description": "<?php echo $active_meta['desc']; ?>",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      }
+    }
+    </script>
+    <?php endif; ?>
+
+    <!-- BreadcrumbList Schema -->
+    <?php if ($page_key !== 'index'): ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "<?php echo $protocol; ?>://<?php echo $host; ?>"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "<?php echo str_replace(' | Baig Solution', '', $active_meta['title']); ?>",
+        "item": "<?php echo $canonical_url; ?>"
+      }]
+    }
+    </script>
+    <?php endif; ?>
+
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     

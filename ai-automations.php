@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php $page_key = 'ai-automations'; include 'header.php'; ?>
 
 <!-- AI Automations Page Hero Section -->
 <section class="section-padding bg-light-gray text-dark text-center d-flex align-items-center justify-content-center border-bottom border-light" style="margin-top: 80px;">
@@ -90,6 +90,66 @@
         </div>
     </div>
 </section>
+
+<!-- Structured Breakdown Section Start -->
+<section class="section-padding bg-light-gray text-dark border-top border-light-subtle">
+    <div class="container max-w-900">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="mb-4">
+                    <h3 class="fw-bold text-dark mb-3"><i class="fa-solid fa-circle-question text-accent-brand me-2"></i> What is AI Automation?</h3>
+                    <p class="text-secondary">AI Automation is the process of linking your business tools, databases, and communication channels using automated workflows. By using smart logic and API triggers, we sync data automatically, eliminating manual copy-pasting and human error.</p>
+                </div>
+                
+                <div class="mb-4">
+                    <h3 class="fw-bold text-dark mb-3"><i class="fa-solid fa-toolbox text-accent-brand me-2"></i> Tools We Use</h3>
+                    <p class="text-secondary mb-2">We construct workflows using industry-leading visual logic builders and cloud integrators:</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-white text-secondary border border-light-subtle px-3 py-2">n8n</span>
+                        <span class="badge bg-white text-secondary border border-light-subtle px-3 py-2">Make.com</span>
+                        <span class="badge bg-white text-secondary border border-light-subtle px-3 py-2">GoHighLevel</span>
+                        <span class="badge bg-white text-secondary border border-light-subtle px-3 py-2">Zapier</span>
+                        <span class="badge bg-white text-secondary border border-light-subtle px-3 py-2">Custom REST APIs</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="fw-bold text-dark mb-3"><i class="fa-solid fa-clock text-accent-brand me-2"></i> Typical Timeline</h3>
+                    <p class="text-secondary">Standard workflow integrations (like CRM syncing, email onboarding funnels, or simple triggers) typically take between <strong>1 to 2 weeks</strong> to design, build, test, and deploy live.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="mb-4">
+                    <h3 class="fw-bold text-dark mb-3"><i class="fa-solid fa-cubes text-accent-brand me-2"></i> What We Build</h3>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-accent-brand me-2"></i> <strong>Form-to-CRM Syncs:</strong> Instant HubSpot or Salesforce mapping.</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-accent-brand me-2"></i> <strong>Slack/Discord Alerts:</strong> Direct channel alerts when leads arrive.</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-accent-brand me-2"></i> <strong>Calendar Syncs:</strong> Auto booking coordination with calendar slots.</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-accent-brand me-2"></i> <strong>Auto Invoicing:</strong> Auto generation and email dispatch via QuickBooks.</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="fw-bold text-dark mb-3"><i class="fa-solid fa-users text-accent-brand me-2"></i> Who It's For</h3>
+                    <p class="text-secondary mb-2">Our custom integrations are built specifically for growing businesses, including:</p>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-1"><i class="fa-solid fa-check text-accent-brand me-2"></i> Real Estate Agencies</li>
+                        <li class="mb-1"><i class="fa-solid fa-check text-accent-brand me-2"></i> E-commerce Stores</li>
+                        <li class="mb-1"><i class="fa-solid fa-check text-accent-brand me-2"></i> Professional Coaches & Consultants</li>
+                        <li class="mb-1"><i class="fa-solid fa-check text-accent-brand me-2"></i> Local Service Businesses (HVAC, clinics)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Descriptive Internal Links -->
+        <div class="text-center mt-5 pt-4 border-top border-light-subtle">
+            <p class="text-muted mb-0">Looking for other automation components? Check out our <a href="ai-agents" class="text-accent-brand fw-bold text-decoration-none">Autonomous AI Agents</a> or our high-performance <a href="website-development" class="text-accent-brand fw-bold text-decoration-none">Bespoke Web Development</a> solutions.</p>
+        </div>
+    </div>
+</section>
+<!-- Structured Breakdown Section End -->
 
 <!-- Consult Section Start -->
 <section class="section-padding bg-warm-peach text-dark">
