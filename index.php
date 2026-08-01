@@ -6,15 +6,37 @@
     
     <div class="container position-relative z-1 hero-content text-center py-5">
         <h6 class="wow fadeInUp text-accent-brand font-monospace mb-3" data-wow-delay=".1s">Baig Solution</h6>
-        <h1 class="wow fadeInUp display-4 fw-extrabold mb-4 text-dark" data-wow-delay=".3s">
-            Don't Just Build a Website. <br><span class="text-accent-brand"> Build an Automated Lead Engine! </span>
+        <h1 class="wow fadeInUp display-4 fw-extrabold mb-3 text-dark" data-wow-delay=".2s">
+            We Build Systems That Work <br><span class="text-accent-brand">While You Sleep</span>
         </h1>
+        <p class="wow fadeInUp lead text-secondary max-w-700 mx-auto mb-4" data-wow-delay=".3s">
+            From lead capture to follow-up to reporting — we design automated systems that run your business operations 24/7, so nothing falls through the cracks and no opportunity gets missed.
+        </p>
+
+        <!-- Core Automation Benefits -->
+        <div class="hero-bullets max-w-600 mx-auto text-start my-4 wow fadeInUp" data-wow-delay=".4s" style="display: inline-block;">
+            <div class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-bolt text-accent-brand me-3 mt-1 fs-5"></i>
+                <span class="text-secondary fs-5">Leads followed up in seconds, not hours</span>
+            </div>
+            <div class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-arrows-rotate text-accent-brand me-3 mt-1 fs-5"></i>
+                <span class="text-secondary fs-5">Your tools connected — CRM, calendar, WhatsApp, email, all in sync</span>
+            </div>
+            <div class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-chart-simple text-accent-brand me-3 mt-1 fs-5"></i>
+                <span class="text-secondary fs-5">Real-time visibility into what's happening, without lifting a finger</span>
+            </div>
+        </div>
         
-        <div class="hero-button justify-content-center d-flex position-relative mt-5 wow fadeInUp" data-wow-delay=".5s">
-            <a href="about" class="btn btn-brand btn-lg">
-                <span>EXPLORE MORE</span>
+        <div class="hero-button justify-content-center d-flex align-items-center flex-column mt-4 wow fadeInUp" data-wow-delay=".5s">
+            <a href="contact" class="btn btn-brand btn-lg">
+                <span>Automate My Business</span>
                 <span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span>
             </a>
+            <p class="text-muted small mt-3 mb-0">
+                <i class="fa-solid fa-circle-check text-accent-brand me-1"></i> Trusted by growing businesses to save hours every week
+            </p>
         </div>
         
         <!-- Scroll Down Indicator -->
@@ -136,9 +158,46 @@
         </div>
         
         <div class="row g-4 justify-content-center">
-            <!-- Service Card 1 -->
-            <div class="col-lg-3 col-md-6">
+            <!-- Row 1: Primary Services (AI Focus) -->
+            <div class="col-lg-5 col-md-6">
                 <div class="card-service-item wow fadeInUp" data-wow-delay=".2s">
+                    <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm">
+                        <img src="assets/img/services/ai_agents.jpg" alt="Autonomous AI Agents" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                    </div>
+                    <div class="content">
+                        <h3><a href="ai-agents" class="text-dark text-decoration-none">Autonomous AI Agents</a></h3>
+                        <p class="text-muted">Smart digital agents that automate customer support, analyze complex business data, and execute tasks 24/7.</p>
+                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs — whatever fits your stack best.</p>
+                        <a href="ai-agents" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center"><i class="fa-regular fa-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-5 col-md-6">
+                <div class="card-service-item wow fadeInUp" data-wow-delay=".4s">
+                    <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm">
+                        <img src="assets/img/services/ai_automations.jpg" alt="End-to-End AI Automations" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                    </div>
+                    <div class="content">
+                        <h3><a href="ai-automations" class="text-dark text-decoration-none">End-to-End AI Automations</a></h3>
+                        <p class="text-muted">Eliminate manual overhead by linking CRM platforms, pipelines, and smart triggers to automate workflows.</p>
+                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs — whatever fits your stack best.</p>
+                        <a href="ai-automations" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center"><i class="fa-regular fa-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Offerings Separator -->
+        <div class="text-center my-5 pt-3 wow fadeInUp" data-wow-delay=".5s">
+            <h4 class="text-muted fw-bold font-monospace text-uppercase" style="font-size: 14px; letter-spacing: 2px;">Additional Services</h4>
+            <div class="mx-auto bg-secondary bg-opacity-25 mt-2" style="width: 60px; height: 2px;"></div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Row 2: Secondary Services -->
+            <div class="col-lg-5 col-md-6">
+                <div class="card-service-item wow fadeInUp" data-wow-delay=".6s">
                     <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm">
                         <img src="assets/img/services/web_development.jpg" alt="Web & App Development" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
                     </div>
@@ -149,34 +208,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Service Card 2 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="card-service-item wow fadeInUp" data-wow-delay=".4s">
-                    <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm">
-                        <img src="assets/img/services/ai_agents.jpg" alt="Autonomous AI Agents" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
-                    </div>
-                    <div class="content">
-                        <h3><a href="ai-agents" class="text-dark text-decoration-none">Autonomous AI Agents</a></h3>
-                        <p class="text-muted">Smart digital agents that automate customer support, analyze complex business data, and execute tasks 24/7.</p>
-                        <a href="ai-agents" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center"><i class="fa-regular fa-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- Service Card 3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="card-service-item wow fadeInUp" data-wow-delay=".6s">
-                    <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm">
-                        <img src="assets/img/services/ai_automations.jpg" alt="End-to-End AI Automations" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
-                    </div>
-                    <div class="content">
-                        <h3><a href="ai-automations" class="text-dark text-decoration-none">End-to-End AI Automations</a></h3>
-                        <p class="text-muted">Eliminate manual overhead by linking CRM platforms, pipelines, and smart triggers to automate workflows.</p>
-                        <a href="ai-automations" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center"><i class="fa-regular fa-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- Service Card 4 (Product Shoot Category) -->
-            <div class="col-lg-3 col-md-6">
+            
+            <div class="col-lg-5 col-md-6">
                 <div class="card-service-item wow fadeInUp" data-wow-delay=".8s">
                     <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm">
                         <img src="assets/img/services/product_shoot.jpg" alt="Product Shoot Photography" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
@@ -205,33 +238,91 @@
             <!-- Project 1 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 subpage-card">
-                    <img src="assets/img/services/ai_agents.jpg" class="card-img-top w-100" style="aspect-ratio: 4/3; object-fit: cover;" alt="AI Support Agent Setup">
+                    <div class="position-relative">
+                        <img src="assets/img/services/ai_agents.jpg" class="card-img-top w-100" style="aspect-ratio: 4/3; object-fit: cover;" alt="AI Support Agent Setup">
+                        <span class="position-absolute bottom-0 end-0 bg-dark text-white text-uppercase font-monospace px-2 py-1 m-2 rounded-2" style="font-size: 10px; opacity: 0.85;">[ Workflow Canvas Screenshot ]</span>
+                    </div>
                     <div class="card-body p-4">
                         <span class="text-accent-brand small fw-bold font-monospace">AI AGENTS</span>
-                        <h4 class="fw-bold mt-2 text-dark">Automated Support Agent</h4>
-                        <p class="text-muted small">We built a real-time natural language agent integrated with customer support transcripts, reducing resolution times by 70%.</p>
+                        <h4 class="fw-bold mt-2 mb-3 text-dark border-bottom border-light pb-2">Automated Support Agent</h4>
+                        
+                        <!-- Loom Video Embed Slot (Uncomment and replace URL when ready) -->
+                        <!--
+                        <div class="loom-embed mb-3" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+                            <iframe src="https://www.loom.com/embed/placeholder-id" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                        </div>
+                        -->
+
+                        <div class="case-study-details mt-3">
+                            <div class="mb-2">
+                                <strong class="text-danger small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Problem:</strong>
+                                <p class="text-secondary small mb-0">Client's support team was manually answering repetitive customer questions, leading to slow response times and inconsistent answers.</p>
+                            </div>
+                            <div class="mb-2">
+                                <strong class="text-primary small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Solution:</strong>
+                                <p class="text-secondary small mb-0">Built a real-time natural language AI agent integrated with customer support transcripts to handle common queries automatically and escalate complex ones to humans.</p>
+                            </div>
+                            <div>
+                                <strong class="text-success small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Result:</strong>
+                                <p class="text-dark fw-bold small mb-0"><i class="fa-solid fa-arrow-trend-up me-1 text-success"></i> Reduced resolution times by 70%.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- Project 2 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 subpage-card">
-                    <img src="assets/img/services/ai_automations.jpg" class="card-img-top w-100" style="aspect-ratio: 4/3; object-fit: cover;" alt="n8n Hub Sync Pipeline">
+                    <div class="position-relative">
+                        <img src="assets/img/services/ai_automations.jpg" class="card-img-top w-100" style="aspect-ratio: 4/3; object-fit: cover;" alt="n8n Hub Sync Pipeline">
+                        <span class="position-absolute bottom-0 end-0 bg-dark text-white text-uppercase font-monospace px-2 py-1 m-2 rounded-2" style="font-size: 10px; opacity: 0.85;">[ n8n Workflow Screenshot ]</span>
+                    </div>
                     <div class="card-body p-4">
                         <span class="text-accent-brand small fw-bold font-monospace">AI AUTOMATIONS</span>
-                        <h4 class="fw-bold mt-2 text-dark">Slack & Hubspot Pipeline</h4>
-                        <p class="text-muted small">An end-to-end n8n workflow mapping customer form entries, sending lead scores to Hubspot, and triggering Slack team alerts.</p>
+                        <h4 class="fw-bold mt-2 mb-3 text-dark border-bottom border-light pb-2">Slack & Hubspot Pipeline</h4>
+                        
+                        <div class="case-study-details mt-3">
+                            <div class="mb-2">
+                                <strong class="text-danger small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Problem:</strong>
+                                <p class="text-secondary small mb-0">Leads submitted through forms were manually copied into HubSpot and manually shared with the sales team, causing delays and missed leads.</p>
+                            </div>
+                            <div class="mb-2">
+                                <strong class="text-primary small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Solution:</strong>
+                                <p class="text-secondary small mb-0">Built an end-to-end n8n workflow that automatically maps form entries, sends lead scores to HubSpot, and triggers instant Slack alerts to the team.</p>
+                            </div>
+                            <div>
+                                <strong class="text-success small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Result:</strong>
+                                <p class="text-dark fw-bold small mb-0"><i class="fa-solid fa-arrow-trend-up me-1 text-success"></i> Lead response time reduced from hours to under 5 minutes.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- Project 3 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 subpage-card">
-                    <img src="assets/img/services/web_development.jpg" class="card-img-top w-100" style="aspect-ratio: 4/3; object-fit: cover;" alt="Bespoke E-commerce portal">
+                    <div class="position-relative">
+                        <img src="assets/img/services/web_development.jpg" class="card-img-top w-100" style="aspect-ratio: 4/3; object-fit: cover;" alt="Bespoke E-commerce portal">
+                        <span class="position-absolute bottom-0 end-0 bg-dark text-white text-uppercase font-monospace px-2 py-1 m-2 rounded-2" style="font-size: 10px; opacity: 0.85;">[ Development Stack Screenshot ]</span>
+                    </div>
                     <div class="card-body p-4">
                         <span class="text-accent-brand small fw-bold font-monospace">WEB DEV</span>
-                        <h4 class="fw-bold mt-2 text-dark">Fast-Loading Portal</h4>
-                        <p class="text-muted small">Bespoke lightweight single page application built on top of customized styling variables, optimized for high Google PageSpeed scores.</p>
+                        <h4 class="fw-bold mt-2 mb-3 text-dark border-bottom border-light pb-2">Fast-Loading Portal</h4>
+                        
+                        <div class="case-study-details mt-3">
+                            <div class="mb-2">
+                                <strong class="text-danger small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Problem:</strong>
+                                <p class="text-secondary small mb-0">Client needed a lightweight, high-performing e-commerce presence but existing options were slow and hard to maintain.</p>
+                            </div>
+                            <div class="mb-2">
+                                <strong class="text-primary small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Solution:</strong>
+                                <p class="text-secondary small mb-0">Built a bespoke lightweight single-page application with customized styling variables, optimized for performance.</p>
+                            </div>
+                            <div>
+                                <strong class="text-success small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Result:</strong>
+                                <p class="text-dark fw-bold small mb-0"><i class="fa-solid fa-arrow-trend-up me-1 text-success"></i> Achieved a 98/100 score on Google PageSpeed Insights.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -241,6 +332,7 @@
 <!-- Portfolio Section End -->
 
 <!-- Testimonials Section Start -->
+<!-- TODO: When collecting future testimonials, prioritize ones with specific measurable results (e.g., "reduced resolution time by 70%") -->
 <section id="testimonials-section" class="section-padding bg-light-gray text-dark border-top border-light-subtle">
     <div class="container max-w-800">
         <div class="text-center mb-5">

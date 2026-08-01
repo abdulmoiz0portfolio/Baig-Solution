@@ -37,10 +37,10 @@
                     <div class="footer-widget">
                         <h5 class="widget-title">Our Services</h5>
                         <ul class="list-unstyled footer-menu">
-                            <li><a href="service">AI Agents Integration</a></li>
-                            <li><a href="service">AI Automations (n8n/Make)</a></li>
-                            <li><a href="service">Web & App Development</a></li>
-                            <li><a href="service">UI/UX Design</a></li>
+                            <li><a href="ai-agents">AI Agents Integration</a></li>
+                            <li><a href="ai-automations">AI Automations (n8n/Make)</a></li>
+                            <li><a href="website-development">Web & App Development</a></li>
+                            <li><a href="product-shoot">Product Shoot</a></li>
                         </ul>
                     </div>
                 </div>

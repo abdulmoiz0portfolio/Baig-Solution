@@ -76,9 +76,9 @@
                                 Services
                             </a>
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 12px; padding: 10px;">
-                                <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="website-development">Website Development</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="ai-agents">Autonomous AI Agents</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="ai-automations">AI Automations</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="website-development">Web & App Development</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="product-shoot">Product Shoot</a></li>
                             </ul>
                         </li>
