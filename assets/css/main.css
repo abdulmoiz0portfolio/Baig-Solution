@@ -544,11 +544,27 @@ body {
     font-size: 14px;
     transition: var(--transition-smooth);
     text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.9);
 }
-.card-service-item:hover .icon-arrow {
+.card-service-item:hover .icon-arrow,
+.subpage-card:hover .icon-arrow {
+    opacity: 1;
+    visibility: visible;
     background-color: var(--accent-brand);
     color: #ffffff;
-    transform: rotate(45deg);
+    transform: translateY(0) scale(1) rotate(45deg);
+}
+
+@media (max-w-991px) {
+    .icon-arrow {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        background-color: var(--accent-brand) !important;
+        color: #ffffff !important;
+    }
 }
 
 /* Contact layout forms */
