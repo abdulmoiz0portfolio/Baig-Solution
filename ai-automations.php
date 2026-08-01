@@ -9,7 +9,7 @@
             Streamline your operations, eliminate manual bottlenecks, and grow smarter with custom-built artificial intelligence automations.
         </p>
         <div class="mt-4">
-            <a href="contact" class="btn btn-brand">Get Started Today <span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span></a>
+            <a href="contact" class="btn btn-brand">Get Started Today <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></a>
         </div>
     </div>
 </section>
@@ -160,7 +160,7 @@
         </p>
         <a href="contact" class="btn btn-brand btn-lg">
             <span>Book Free Consultation</span>
-            <span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span>
+            <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span>
         </a>
     </div>
 </section>

@@ -32,7 +32,7 @@
         <div class="hero-button justify-content-center d-flex align-items-center flex-column mt-4 wow fadeInUp" data-wow-delay=".5s">
             <a href="contact" class="btn btn-brand btn-lg">
                 <span>Automate My Business</span>
-                <span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span>
+                <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span>
             </a>
             <p class="text-muted small mt-3 mb-0">
                 <i class="fa-solid fa-circle-check text-accent-brand me-1"></i> Trusted by growing businesses to save hours every week
@@ -112,7 +112,7 @@
                     <div class="main-button mt-4 wow fadeInUp" data-wow-delay=".5s">
                         <a href="about" class="btn btn-brand">
                             <span>Meet the Team</span>
-                            <span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span>
+                            <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span>
                         </a>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                         <h3><a href="ai-agents" class="text-dark text-decoration-none">Autonomous AI Agents</a></h3>
                         <p class="text-muted">Smart digital agents that automate customer support, analyze complex business data, and execute tasks 24/7.</p>
                         <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs — whatever fits your stack best.</p>
-                        <a href="ai-agents" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center"><i class="fa-regular fa-arrow-up-right"></i></a>
+                        <a href="ai-agents" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center"><i class="fa-solid fa-arrow-up-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@
                         <h3><a href="ai-automations" class="text-dark text-decoration-none">End-to-End AI Automations</a></h3>
                         <p class="text-muted">Eliminate manual overhead by linking CRM platforms, pipelines, and smart triggers to automate workflows.</p>
                         <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs — whatever fits your stack best.</p>
-                        <a href="ai-automations" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center"><i class="fa-regular fa-arrow-up-right"></i></a>
+                        <a href="ai-automations" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center"><i class="fa-solid fa-arrow-up-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -197,7 +197,7 @@
                     <div class="content">
                         <h3><a href="website-development" class="text-dark text-decoration-none">Web & App Development</a></h3>
                         <p class="text-muted">High performance, responsive, secure web platforms and fluid mobile apps built using modern technologies.</p>
-                        <a href="website-development" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center"><i class="fa-regular fa-arrow-up-right"></i></a>
+                        <a href="website-development" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center"><i class="fa-solid fa-arrow-up-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -210,7 +210,7 @@
                     <div class="content">
                         <h3><a href="product-shoot" class="text-dark text-decoration-none">Product Shoot</a></h3>
                         <p class="text-muted">High-end commercial product photography featuring studio lighting and custom setups to showcase your products.</p>
-                        <a href="product-shoot" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center"><i class="fa-regular fa-arrow-up-right"></i></a>
+                        <a href="product-shoot" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center"><i class="fa-solid fa-arrow-up-right"></i></a>
                     </div>
                 </div>
             </div>

@@ -152,7 +152,7 @@
                             <input type="email" class="form-control text-center" id="calcEmail" placeholder="Enter your email" required>
                         </div>
                         <button type="submit" id="calcSubmitBtn" class="btn btn-brand w-100">
-                            Submit Quote Query <span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span>
+                            Submit Quote Query <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span>
                         </button>
                     </form>
                 </div>

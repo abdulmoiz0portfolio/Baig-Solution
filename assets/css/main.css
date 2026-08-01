@@ -558,6 +558,10 @@ body {
     overflow: hidden;
 }
 
+.icon-arrow i {
+    transition: transform 0.2s ease-out;
+}
+
 .card-service-item:hover .icon-arrow,
 .subpage-card:hover .icon-arrow {
     background-color: #ffffff;
@@ -567,26 +571,7 @@ body {
 
 .card-service-item:hover .icon-arrow i,
 .subpage-card:hover .icon-arrow i {
-    animation: arrowFly 0.4s ease-in-out forwards;
-}
-
-@keyframes arrowFly {
-    0% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    49% {
-        transform: translate(22px, -22px);
-        opacity: 0;
-    }
-    50% {
-        transform: translate(-22px, 22px);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
+    transform: translate(3px, -3px);
 }
 
 /* Contact layout forms */

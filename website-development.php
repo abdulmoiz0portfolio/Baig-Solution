@@ -65,7 +65,7 @@
         </p>
         <a href="contact" class="btn btn-brand btn-lg">
             <span>Book Free Consultation</span>
-            <span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span>
+            <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span>
         </a>
     </div>
 </section>

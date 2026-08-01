@@ -272,7 +272,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                         </li>
                         <li class="nav-item"><a class="nav-link" href="contact">Contact us</a></li>
                         <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                            <a href="contact" class="btn btn-brand">Get Started <span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span></a>
+                            <a href="contact" class="btn btn-brand">Get Started <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></a>
                         </li>
                     </ul>
                 </div>
