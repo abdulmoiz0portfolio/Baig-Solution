@@ -332,7 +332,7 @@ h6.text-accent-brand.font-monospace {
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.22);
+    background-color: var(--accent-brand) !important;
     color: #ffffff !important;
     display: inline-flex;
     align-items: center;
