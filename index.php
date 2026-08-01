@@ -494,7 +494,7 @@
                         <div class="icon-box me-3"><i class="fa-solid fa-phone text-accent-brand"></i></div>
                         <div>
                             <h6 class="mb-0 text-muted">Call Us</h6>
-                            <a href="tel:+18457155504" class="text-dark text-decoration-none fw-bold">+1 845-715-5504</a>
+                            <a href="tel:+923366920141" class="text-dark text-decoration-none fw-bold">+92 336 6920141</a>
                         </div>
                     </div>
                 </div>

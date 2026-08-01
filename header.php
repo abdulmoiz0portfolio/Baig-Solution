@@ -103,7 +103,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
       "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7.",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-845-715-5504",
+        "telephone": "+92-336-6920141",
         "contactType": "customer service",
         "email": "info@baigsolution.com"
       }
@@ -119,7 +119,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
       "image": "<?php echo $og_image; ?>",
       "@id": "<?php echo $protocol; ?>://<?php echo $host; ?>/#localbusiness",
       "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
-      "telephone": "+1-845-715-5504",
+      "telephone": "+92-336-6920141",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "New Jersey",

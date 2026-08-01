@@ -55,7 +55,7 @@
                             </li>
                             <li class="d-flex mb-2">
                                 <i class="fa-solid fa-phone text-accent-brand me-2 mt-1"></i>
-                                <a href="tel:+18457155504">+1 845-715-5504</a>
+                                <a href="tel:+923366920141">+92 336 6920141</a>
                             </li>
                         </ul>
                     </div>
