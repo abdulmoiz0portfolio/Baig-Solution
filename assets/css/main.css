@@ -982,3 +982,54 @@ h6.text-accent-brand.font-monospace {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
     border-color: rgba(231, 127, 35, 0.2);
 }
+
+/* Reviews Styling */
+.star-rating {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.star-rating .star {
+    font-size: 26px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.star-rating .star:hover {
+    transform: scale(1.2);
+}
+
+.star-rating .star.active {
+    color: var(--accent-brand) !important;
+}
+
+.average-rating {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.average-rating i {
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+.review-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    text-align: left;
+    transition: var(--transition-smooth);
+}
+
+.review-card:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    border-color: rgba(231, 127, 35, 0.15);
+}
+
+.review-stars-display i {
+    font-size: 14px;
+}
+
