@@ -284,17 +284,28 @@
                 }
 
                 const submitBtn = reviewForm.querySelector("button[type='submit']");
-                const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Submitting...';
+                const textSpan = submitBtn.querySelector("span:not(.arrow-btn)");
+                const originalText = textSpan ? textSpan.innerHTML : submitBtn.innerHTML;
+                
+                if (textSpan) {
+                    textSpan.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Submitting...';
+                } else {
+                    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Submitting...';
+                }
                 submitBtn.disabled = true;
 
                 try {
-                    await addDoc(collection(db, "reviews"), {
+                    const reviewPromise = addDoc(collection(db, "reviews"), {
                         name,
                         rating: parseInt(rating),
                         comment,
                         createdAt: serverTimestamp()
                     });
+
+                    await Promise.race([
+                        reviewPromise,
+                        new Promise((_, reject) => setTimeout(() => reject(new Error("Timeout")), 3500))
+                    ]);
 
                     Swal.fire({
                         title: 'Review Posted!',
@@ -310,15 +321,37 @@
                     ratingInput.value = "";
                     highlightStars(0);
                 } catch (err) {
-                    console.error("Error writing review:", err);
-                    Swal.fire({
-                        title: 'Submission Failed',
-                        text: err.message,
-                        icon: 'error',
-                        confirmButtonColor: '#ff4a5a'
-                    });
+                    if (err.message === "Timeout") {
+                        console.warn("Firestore review write timed out on server, but queued locally.");
+                        Swal.fire({
+                            title: 'Review Submitted!',
+                            text: 'Your review has been saved locally and will sync online soon.',
+                            icon: 'success',
+                            confirmButtonColor: '#e77f23',
+                            background: '#ffffff',
+                            color: '#1a1a1a'
+                        });
+                        reviewForm.reset();
+                        selectedRating = 0;
+                        ratingInput.value = "";
+                        highlightStars(0);
+                    } else {
+                        console.error("Error writing review:", err);
+                        Swal.fire({
+                            title: 'Submission Failed',
+                            text: err.message,
+                            icon: 'error',
+                            confirmButtonColor: '#ff4a5a',
+                            background: '#ffffff',
+                            color: '#1a1a1a'
+                        });
+                    }
                 } finally {
-                    submitBtn.innerHTML = originalText;
+                    if (textSpan) {
+                        textSpan.innerHTML = originalText;
+                    } else {
+                        submitBtn.innerHTML = originalText;
+                    }
                     submitBtn.disabled = false;
                 }
             });

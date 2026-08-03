@@ -358,8 +358,14 @@ function initNewsletterPopup() {
             emailInput.style.borderColor = "#ddd";
             
             const submitBtn = form.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Subscribing...';
+            const textSpan = submitBtn.querySelector("span:not(.arrow-btn)");
+            const originalBtnText = textSpan ? textSpan.innerHTML : submitBtn.innerHTML;
+            
+            if (textSpan) {
+                textSpan.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Subscribing...';
+            } else {
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Subscribing...';
+            }
             submitBtn.disabled = true;
 
             try {
@@ -422,7 +428,11 @@ function initNewsletterPopup() {
                     confirmButtonColor: '#ff3333'
                 });
             } finally {
-                submitBtn.innerHTML = originalBtnText;
+                if (textSpan) {
+                    textSpan.innerHTML = originalBtnText;
+                } else {
+                    submitBtn.innerHTML = originalBtnText;
+                }
                 submitBtn.disabled = false;
             }
         });
@@ -467,8 +477,14 @@ function bindFormSubmit(form, nameId, emailId, serviceId, messageId) {
         }
 
         const submitBtn = form.querySelector("button[type='submit']");
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Submitting...';
+        const textSpan = submitBtn.querySelector("span:not(.arrow-btn)");
+        const originalText = textSpan ? textSpan.innerHTML : submitBtn.innerHTML;
+        
+        if (textSpan) {
+            textSpan.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Submitting...';
+        } else {
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Submitting...';
+        }
         submitBtn.disabled = true;
 
         try {
@@ -516,7 +532,11 @@ function bindFormSubmit(form, nameId, emailId, serviceId, messageId) {
                 confirmButtonColor: '#ff4a5a'
             });
         } finally {
-            submitBtn.innerHTML = originalText;
+            if (textSpan) {
+                textSpan.innerHTML = originalText;
+            } else {
+                submitBtn.innerHTML = originalText;
+            }
             submitBtn.disabled = false;
         }
     });
@@ -654,9 +674,14 @@ function initCostCalculator() {
             e.preventDefault();
             const email = document.getElementById("calcEmail").value;
             const submitBtn = document.getElementById("calcSubmitBtn");
-            const originalText = submitBtn.innerHTML;
+            const textSpan = submitBtn.querySelector("span:not(.arrow-btn)");
+            const originalText = textSpan ? textSpan.innerHTML : submitBtn.innerHTML;
             
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+            if (textSpan) {
+                textSpan.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Submitting...';
+            } else {
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Submitting...';
+            }
             submitBtn.disabled = true;
             
             // Gather selected services list
@@ -712,7 +737,11 @@ function initCostCalculator() {
                     confirmButtonColor: '#ff4a5a'
                 });
             } finally {
-                submitBtn.innerHTML = originalText;
+                if (textSpan) {
+                    textSpan.innerHTML = originalText;
+                } else {
+                    submitBtn.innerHTML = originalText;
+                }
                 submitBtn.disabled = false;
             }
         });
