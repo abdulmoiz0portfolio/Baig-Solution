@@ -74,6 +74,44 @@
     </div>
 </section>
 
+<!-- Social Share Section -->
+<section class="py-4 bg-white text-dark border-bottom">
+    <div class="container text-center">
+        <h5 class="fw-bold mb-3">Share this page</h5>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="https://wa.me/?text=https://baig-solution.vercel.app/Reviews" target="_blank" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #e77f23; border-color: #e77f23; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#e77f23'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e77f23';">
+                <i class="fa-brands fa-whatsapp fa-lg"></i>
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=https://baig-solution.vercel.app/Reviews" target="_blank" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #e77f23; border-color: #e77f23; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#e77f23'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e77f23';">
+                <i class="fa-brands fa-x-twitter fa-lg"></i>
+            </a>
+            <button onclick="copyReviewLink()" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #e77f23; border-color: #e77f23; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#e77f23'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e77f23';">
+                <i class="fa-solid fa-link fa-lg"></i>
+            </button>
+        </div>
+    </div>
+</section>
+<script>
+function copyReviewLink() {
+    navigator.clipboard.writeText('https://baig-solution.vercel.app/Reviews').then(() => {
+        if(typeof Swal !== 'undefined'){
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'success',
+                title: 'Link copied to clipboard!',
+                showConfirmButton: false,
+                timer: 2000,
+                background: '#ffffff',
+                color: '#1a1a1a',
+                iconColor: '#e77f23'
+            });
+        } else {
+            alert("Link copied to clipboard!");
+        }
+    });
+}
+</script>
 <!-- Live Reviews List Section -->
 <section class="section-padding bg-light text-dark">
     <div class="container">

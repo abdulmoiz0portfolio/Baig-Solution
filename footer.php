@@ -249,45 +249,10 @@
         }
 
         // --- CUSTOMER RATINGS & REVIEWS REAL-TIME INTEGRATION ---
-        const reviewForm = document.getElementById("reviewForm");
-        if (reviewForm) {
-            const starRating = document.getElementById("starRating");
-            const stars = starRating.querySelectorAll(".star");
-            const ratingInput = document.getElementById("reviewRating");
-            const reviewsList = document.getElementById("reviewsList");
+        const reviewsList = document.getElementById("reviewsList");
+        if (reviewsList) {
             const averageRatingText = document.getElementById("averageRating");
             const reviewCountText = document.getElementById("reviewCount");
-
-            // Interactive Star UI
-            let selectedRating = 0;
-            stars.forEach(star => {
-                star.addEventListener("mouseover", () => {
-                    const value = parseInt(star.getAttribute("data-value"));
-                    highlightStars(value);
-                });
-
-                star.addEventListener("mouseout", () => {
-                    highlightStars(selectedRating);
-                });
-
-                star.addEventListener("click", () => {
-                    selectedRating = parseInt(star.getAttribute("data-value"));
-                    ratingInput.value = selectedRating;
-                    highlightStars(selectedRating);
-                });
-            });
-
-            function highlightStars(count) {
-                stars.forEach((star, index) => {
-                    if (index < count) {
-                        star.classList.remove("fa-regular");
-                        star.classList.add("fa-solid", "active");
-                    } else {
-                        star.classList.remove("fa-solid", "active");
-                        star.classList.add("fa-regular");
-                    }
-                });
-            }
 
             // Real-Time Listening for Reviews
             const reviewsQuery = query(collection(db, "reviews"), orderBy("createdAt", "desc"));
@@ -324,17 +289,22 @@
                         }
                     }
 
+                    const profileLink = review.profileLink ? `<a href="${escapeHTML(review.profileLink)}" target="_blank" rel="noopener" class="small text-accent-brand text-decoration-none mt-1 d-inline-block"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>View Profile</a>` : '';
+
                     const reviewCard = document.createElement("div");
-                    reviewCard.className = "review-card p-4 mb-3 border rounded-4 bg-light shadow-sm";
+                    reviewCard.className = "col-md-6 col-lg-4";
                     reviewCard.innerHTML = `
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <div>
-                                <h5 class="fw-bold text-dark mb-0">${escapeHTML(review.name)}</h5>
-                                <div class="review-stars-display mt-1">${starsHtml}</div>
+                        <div class="review-card p-4 border rounded-4 bg-white shadow-sm h-100">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h5 class="fw-bold text-dark mb-0">${escapeHTML(review.name)}</h5>
+                                    <div class="review-stars-display mt-1">${starsHtml}</div>
+                                    ${profileLink}
+                                </div>
+                                <small class="text-muted">${dateStr}</small>
                             </div>
-                            <small class="text-muted">${dateStr}</small>
+                            <p class="text-secondary mb-0 mt-2 text-start" style="white-space: pre-line;">${escapeHTML(review.comment)}</p>
                         </div>
-                        <p class="text-secondary mb-0 mt-2 text-start" style="white-space: pre-line;">${escapeHTML(review.comment)}</p>
                     `;
                     reviewsList.appendChild(reviewCard);
                 });
@@ -342,17 +312,18 @@
                 // Update metrics
                 if (reviewCount > 0) {
                     const avg = (totalRating / reviewCount).toFixed(1);
-                    averageRatingText.innerHTML = `${avg} <i class="fa-solid fa-star text-accent-brand"></i>`;
-                    reviewCountText.textContent = `based on ${reviewCount} review${reviewCount > 1 ? 's' : ''}`;
+                    if(averageRatingText) averageRatingText.innerHTML = `${avg} <i class="fa-solid fa-star text-accent-brand"></i>`;
+                    if(reviewCountText) reviewCountText.textContent = `based on ${reviewCount} review${reviewCount > 1 ? 's' : ''}`;
                 } else {
-                    averageRatingText.textContent = "0 ★";
-                    reviewCountText.textContent = "(0 reviews)";
-                    reviewsList.innerHTML = `<div class="text-center text-muted py-5 border rounded-4 bg-light">No reviews yet. Be the first to write a review!</div>`;
+                    if(averageRatingText) averageRatingText.textContent = "0 ★";
+                    if(reviewCountText) reviewCountText.textContent = "(0 reviews)";
+                    reviewsList.innerHTML = `<div class="col-12 text-center text-muted py-5 border rounded-4 bg-light">No reviews yet. Be the first to write a review!</div>`;
                 }
             });
 
             function escapeHTML(str) {
-                return str.replace(/[&<>'"]/g, 
+                if (!str) return '';
+                return String(str).replace(/[&<>'"]/g, 
                     tag => ({
                         '&': '&amp;',
                         '<': '&lt;',
@@ -362,99 +333,6 @@
                     }[tag] || tag)
                 );
             }
-
-            // Submit Review Form
-            reviewForm.addEventListener("submit", async (e) => {
-                e.preventDefault();
-
-                const name = document.getElementById("reviewName").value.trim();
-                const rating = ratingInput.value;
-                const comment = document.getElementById("reviewComment").value.trim();
-
-                if (!name || !rating || !comment) {
-                    Swal.fire({
-                        title: 'Required Fields',
-                        text: 'Please enter your name, select a star rating, and write a comment.',
-                        icon: 'warning',
-                        confirmButtonColor: '#e77f23',
-                        background: '#ffffff',
-                        color: '#1a1a1a'
-                    });
-                    return;
-                }
-
-                const submitBtn = reviewForm.querySelector("button[type='submit']");
-                const textSpan = submitBtn.querySelector("span:not(.arrow-btn)");
-                const originalText = textSpan ? textSpan.innerHTML : submitBtn.innerHTML;
-                
-                if (textSpan) {
-                    textSpan.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Submitting...';
-                } else {
-                    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Submitting...';
-                }
-                submitBtn.disabled = true;
-
-                try {
-                    const reviewPromise = addDoc(collection(db, "reviews"), {
-                        name,
-                        rating: parseInt(rating),
-                        comment,
-                        createdAt: serverTimestamp()
-                    });
-
-                    await Promise.race([
-                        reviewPromise,
-                        new Promise((_, reject) => setTimeout(() => reject(new Error("Timeout")), 3500))
-                    ]);
-
-                    Swal.fire({
-                        title: 'Thank you!',
-                        text: 'Your review has been posted successfully.',
-                        icon: 'success',
-                        confirmButtonColor: '#e77f23',
-                        background: '#ffffff',
-                        color: '#1a1a1a'
-                    });
-
-                    reviewForm.reset();
-                    selectedRating = 0;
-                    ratingInput.value = "";
-                    highlightStars(0);
-                } catch (err) {
-                    if (err.message === "Timeout") {
-                        console.warn("Firestore review write timed out on server, but queued locally.");
-                        Swal.fire({
-                            title: 'Thank you!',
-                            text: 'Your review has been posted successfully.',
-                            icon: 'success',
-                            confirmButtonColor: '#e77f23',
-                            background: '#ffffff',
-                            color: '#1a1a1a'
-                        });
-                        reviewForm.reset();
-                        selectedRating = 0;
-                        ratingInput.value = "";
-                        highlightStars(0);
-                    } else {
-                        console.error("Error writing review:", err);
-                        Swal.fire({
-                            title: 'Submission Failed',
-                            text: err.message,
-                            icon: 'error',
-                            confirmButtonColor: '#ff4a5a',
-                            background: '#ffffff',
-                            color: '#1a1a1a'
-                        });
-                    }
-                } finally {
-                    if (textSpan) {
-                        textSpan.innerHTML = originalText;
-                    } else {
-                        submitBtn.innerHTML = originalText;
-                    }
-                    submitBtn.disabled = false;
-                }
-            });
         }
     </script>
 
