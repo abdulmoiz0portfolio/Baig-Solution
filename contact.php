@@ -55,4 +55,43 @@
     </div>
 </section>
 
+<!-- Reviews Section -->
+<section id="reviews" class="section-padding bg-white text-dark">
+    <div class="container">
+        <h3 class="mb-4 fw-extrabold text-dark text-center">Customer Ratings & Reviews</h3>
+        <div class="average-rating mb-3 text-center">
+            <span id="averageRating">0 ★</span> <span id="reviewCount">(0 reviews)</span>
+        </div>
+        <form id="reviewForm" class="mb-4" novalidate>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label text-muted fw-bold">Full Name</label>
+                    <input type="text" class="form-control" id="reviewName" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label text-muted fw-bold">Rating</label>
+                    <div id="starRating" class="star-rating mb-2">
+                        <i class="fa-regular fa-star star" data-value="1"></i>
+                        <i class="fa-regular fa-star star" data-value="2"></i>
+                        <i class="fa-regular fa-star star" data-value="3"></i>
+                        <i class="fa-regular fa-star star" data-value="4"></i>
+                        <i class="fa-regular fa-star star" data-value="5"></i>
+                    </div>
+                    <input type="hidden" id="reviewRating" required>
+                </div>
+                <div class="col-12">
+                    <label class="form-label text-muted fw-bold">Comment</label>
+                    <textarea class="form-control" id="reviewComment" rows="3" required></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-brand w-100 py-3"><span>Submit Review</span> <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></button>
+                </div>
+            </div>
+        </form>
+        <div id="reviewsList" class="reviews-list"></div>
+    </div>
+</section>
+
 <?php include 'footer.php'; ?>
+
+
