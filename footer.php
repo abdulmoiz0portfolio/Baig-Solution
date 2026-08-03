@@ -51,7 +51,7 @@
 
                             <li class="d-flex mb-2">
                                 <i class="fa-solid fa-envelope text-accent-brand me-2 mt-1"></i>
-                                <a href="mailto:info@baigsolution.com">info@baigsolution.com</a>
+                                <a href="mailto:bobrober2323@gmail.com">bobrober2323@gmail.com</a>
                             </li>
                             <li class="d-flex mb-2">
                                 <i class="fa-solid fa-phone text-accent-brand me-2 mt-1"></i>

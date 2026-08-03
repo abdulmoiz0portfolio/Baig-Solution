@@ -105,7 +105,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
         "@type": "ContactPoint",
         "telephone": "+92-336-6920141",
         "contactType": "customer service",
-        "email": "info@baigsolution.com"
+        "email": "bobrober2323@gmail.com"
       }
     }
     </script>

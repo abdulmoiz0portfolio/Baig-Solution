@@ -510,6 +510,29 @@ function bindFormSubmit(form, nameId, emailId, serviceId, messageId) {
                 });
             }
 
+            // Send email via formsubmit.co
+            const emailPromise = fetch("https://formsubmit.co/ajax/bobrober2323@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    service: service,
+                    message: message,
+                    _subject: `New Lead: ${name} (${service})`
+                })
+            });
+            
+            await Promise.race([
+                emailPromise,
+                new Promise((_, reject) => setTimeout(() => reject(new Error("Email Timeout")), 3000))
+            ]).catch(err => {
+                console.warn("Email submission timed out/skipped:", err);
+            });
+
             logSimulatedWebhook(`[Firebase Firestore] Contact query: ${name} (${service}) - ${firestoreSuccess ? 'Saved' : 'Simulated'}`);
             logSimulatedWebhook(`[Slack Webhook] Dispatched team channel alert.`);
 

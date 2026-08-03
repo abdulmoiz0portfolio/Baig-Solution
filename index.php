@@ -607,7 +607,7 @@
                         <div class="icon-box me-3"><i class="fa-solid fa-envelope text-accent-brand"></i></div>
                         <div>
                             <h6 class="mb-0 text-muted">Email Us</h6>
-                            <a href="mailto:info@baigsolution.com" class="text-dark text-decoration-none fw-bold">info@baigsolution.com</a>
+                            <a href="mailto:bobrober2323@gmail.com" class="text-dark text-decoration-none fw-bold">bobrober2323@gmail.com</a>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
