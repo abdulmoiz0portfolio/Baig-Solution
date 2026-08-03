@@ -592,19 +592,7 @@
 </section>
 <!-- FAQ Section End -->
 
-<!-- Testimonials Section Start -->
-<section id="testimonials-section" class="section-padding bg-light text-dark">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-6 fw-extrabold text-dark">TESTIMONIALS</h2>
-            <p class="text-muted fs-5">What Our Clients Say</p>
-        </div>
-        <div id="testimonialsList" class="row g-4">
-            <!-- Dynamic testimonial cards will be injected here -->
-        </div>
-    </div>
-</section>
-<!-- Testimonials Section End -->
+
 
 
 

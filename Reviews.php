@@ -79,8 +79,10 @@
             </p>
         </div>
         <div id="reviewsList" class="row g-4">
-            <!-- Injected by Firebase real-time listener -->
+            <!-- All reviews injected here by Firebase real-time listener -->
         </div>
+        <!-- Positive reviews (rating >= 4) also populate this for testimonials -->
+        <div id="testimonialsList" class="d-none"></div>
     </div>
 </section>
 
