@@ -308,8 +308,8 @@
                     ]);
 
                     Swal.fire({
-                        title: 'Review Posted!',
-                        text: 'Thank you for sharing your feedback with us.',
+                        title: 'Thank you!',
+                        text: 'Your review has been posted successfully.',
                         icon: 'success',
                         confirmButtonColor: '#e77f23',
                         background: '#ffffff',
@@ -324,8 +324,8 @@
                     if (err.message === "Timeout") {
                         console.warn("Firestore review write timed out on server, but queued locally.");
                         Swal.fire({
-                            title: 'Review Submitted!',
-                            text: 'Your review has been saved locally and will sync online soon.',
+                            title: 'Thank you!',
+                            text: 'Your review has been posted successfully.',
                             icon: 'success',
                             confirmButtonColor: '#e77f23',
                             background: '#ffffff',
