@@ -489,6 +489,10 @@ function bindFormSubmit(form, nameId, emailId, serviceId, messageId) {
         submitBtn.disabled = true;
 
         try {
+            // Capture optional fields if present
+            const phone   = (document.getElementById('contact-phone')?.value   || '').trim();
+            const bizLink = (document.getElementById('contact-biz-link')?.value || '').trim();
+
             let firestoreSuccess = false;
             if (window.db) {
                 const { collection, addDoc, serverTimestamp } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js");
@@ -496,6 +500,8 @@ function bindFormSubmit(form, nameId, emailId, serviceId, messageId) {
                 const firestorePromise = addDoc(collection(window.db, "contacts"), {
                     name,
                     email,
+                    phone: phone || null,
+                    bizLink: bizLink || null,
                     service,
                     description: message,
                     timestamp: serverTimestamp()
@@ -521,6 +527,8 @@ function bindFormSubmit(form, nameId, emailId, serviceId, messageId) {
                 body: JSON.stringify({
                     name: name,
                     email: email,
+                    phone: phone || 'Not provided',
+                    bizLink: bizLink || 'Not provided',
                     service: service,
                     message: message,
                     _subject: `New Lead: ${name} (${service})`

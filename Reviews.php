@@ -1,0 +1,87 @@
+<?php $page_key = 'contact'; include 'header.php'; ?>
+
+<!-- Reviews Hero -->
+<section class="subpage-hero text-center text-dark">
+    <div class="container">
+        <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">CUSTOMER REVIEWS</span>
+        <h1 class="display-4 fw-extrabold text-dark">Ratings &amp; Reviews</h1>
+        <div class="title-underline"></div>
+        <p class="lead text-secondary mx-auto mt-4 max-w-700">
+            Share your experience with Baig Solution. Your feedback helps us grow.
+        </p>
+    </div>
+</section>
+
+<!-- Review Form Section -->
+<section class="section-padding bg-white text-dark">
+    <div class="container">
+        <div class="row g-5 justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form-wrapper p-4 p-md-5 rounded-4 shadow-sm bg-light">
+                    <h3 class="mb-2 fw-extrabold text-dark text-center">Leave a Review</h3>
+                    <p class="text-center text-muted mb-4">Share your experience and link to your business profile.</p>
+
+                    <form id="review-firebase-form" novalidate>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label for="review-name" class="form-label text-muted fw-bold">Full Name</label>
+                                <input type="text" class="form-control border-light-subtle bg-white text-dark" id="review-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="review-email" class="form-label text-muted fw-bold">Email Address</label>
+                                <input type="email" class="form-control border-light-subtle bg-white text-dark" id="review-email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="review-phone" class="form-label text-muted fw-bold">Phone</label>
+                                <input type="tel" class="form-control border-light-subtle bg-white text-dark" id="review-phone" placeholder="+92 300 1234567">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="review-link" class="form-label text-muted fw-bold">Business / Freelancer Link</label>
+                                <input type="url" class="form-control border-light-subtle bg-white text-dark" id="review-link" placeholder="https://yourprofile.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="review-rating" class="form-label text-muted fw-bold">Rating (1‑5)</label>
+                                <select class="form-select border-light-subtle bg-white text-dark" id="review-rating" required>
+                                    <option value="" disabled selected>Select Rating</option>
+                                    <option value="1">1 ★</option>
+                                    <option value="2">2 ★★</option>
+                                    <option value="3">3 ★★★</option>
+                                    <option value="4">4 ★★★★</option>
+                                    <option value="5">5 ★★★★★</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="review-comment" class="form-label text-muted fw-bold">Your Review</label>
+                                <textarea class="form-control border-light-subtle bg-white text-dark" id="review-comment" rows="4" placeholder="What did you love about our service?" required></textarea>
+                            </div>
+                            <div class="col-12 mt-2">
+                                <button type="submit" class="btn btn-brand w-100 py-3">
+                                    <span>Submit Review</span>
+                                    <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Live Reviews List Section -->
+<section class="section-padding bg-light text-dark">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-extrabold text-dark">What Our Clients Say</h2>
+            <p class="text-muted">
+                Average: <strong id="averageRating">0 ★</strong>
+                &nbsp;<span id="reviewCount" class="text-muted small">(0 reviews)</span>
+            </p>
+        </div>
+        <div id="reviewsList" class="row g-4">
+            <!-- Injected by Firebase real-time listener -->
+        </div>
+    </div>
+</section>
+
+<?php include 'footer.php'; ?>
