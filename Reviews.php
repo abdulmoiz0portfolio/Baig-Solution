@@ -1,4 +1,10 @@
 <?php $page_key = 'contact'; include 'header.php'; ?>
+<!-- SEO Override for Reviews page -->
+<script>
+    document.title = 'Customer Ratings & Reviews | Baig Solution';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Read real client reviews and ratings for Baig Solution. Share your experience with our AI automation, web development, and product photography services.');
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', 'https://baig-solution.vercel.app/Reviews');
+</script>
 
 <!-- Reviews Hero -->
 <section class="subpage-hero text-center text-dark">
