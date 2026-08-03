@@ -38,6 +38,7 @@
                                     <option value="AI Automations">AI Automations (n8n/Make)</option>
                                     <option value="Web Development">Web & App Development</option>
                                     <option value="UI/UX Design">UI/UX Design</option>
+                                    <option value="Support">Support</option>
                                 </select>
                             </div>
                             <div class="col-12">
