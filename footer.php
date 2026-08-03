@@ -127,7 +127,7 @@
     <!-- Firebase SDK (Modular v10.7.1) -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getFirestore, collection, addDoc, onSnapshot, serverTimestamp, query, orderBy } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        import { getFirestore, collection, addDoc, onSnapshot, serverTimestamp, query, orderBy, where } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
         // Firebase config setup
         const firebaseConfig = {
@@ -147,6 +147,106 @@
         // Make db globally available
         window.db = db;
         console.log("Firebase initialized successfully!");
+
+        // --- REAL-TIME TESTIMONIALS (rating >= 4) → auto-populate TESTIMONIALS section ---
+        function escapeHTMLInner(str) {
+            if (!str) return '';
+            return String(str).replace(/[&<>'\"]/g, tag => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[tag] || tag));
+        }
+
+        const testimonialsContainer = document.getElementById('testimonialsList');
+        if (testimonialsContainer) {
+            const tQuery = query(
+                collection(db, 'reviews'),
+                where('rating', '>=', 4),
+                orderBy('createdAt', 'desc')
+            );
+            onSnapshot(tQuery, (snapshot) => {
+                if (snapshot.empty) {
+                    testimonialsContainer.innerHTML = `<div class="col-12 text-center text-muted py-5"><i class="fa-regular fa-face-smile fa-2x mb-3 d-block"></i>Be the first to leave a positive review!</div>`;
+                    return;
+                }
+                testimonialsContainer.innerHTML = '';
+                snapshot.forEach((doc) => {
+                    const d = doc.data();
+                    let starsHtml = '';
+                    for (let i = 1; i <= 5; i++) {
+                        starsHtml += i <= d.rating
+                            ? '<i class="fa-solid fa-star text-accent-brand me-1"></i>'
+                            : '<i class="fa-regular fa-star text-accent-brand me-1"></i>';
+                    }
+                    const profileLink = d.profileLink ? `<a href="${escapeHTMLInner(d.profileLink)}" target="_blank" rel="noopener" class="small text-accent-brand text-decoration-none mt-1 d-inline-block"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>View Profile</a>` : '';
+                    const col = document.createElement('div');
+                    col.className = 'col-md-6 col-lg-4';
+                    col.innerHTML = `
+                        <div class="review-card p-4 border rounded-4 bg-white shadow-sm h-100">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h5 class="fw-bold text-dark mb-0">${escapeHTMLInner(d.name)}</h5>
+                                    <div class="review-stars-display mt-1">${starsHtml}</div>
+                                    ${profileLink}
+                                </div>
+                                <small class="text-muted">${d.rating} ★</small>
+                            </div>
+                            <p class="text-secondary mb-0 mt-2" style="white-space:pre-line;">${escapeHTMLInner(d.comment)}</p>
+                        </div>`;
+                    testimonialsContainer.appendChild(col);
+                });
+            });
+        }
+
+        // --- NEW REVIEW FORM (index.php: id="review-firebase-form") ---
+        const newReviewForm = document.getElementById('review-firebase-form');
+        if (newReviewForm) {
+            newReviewForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const name    = (document.getElementById('review-name')?.value || '').trim();
+                const email   = (document.getElementById('review-email')?.value || '').trim();
+                const phone   = (document.getElementById('review-phone')?.value || '').trim();
+                const link    = (document.getElementById('review-link')?.value || '').trim();
+                const rating  = parseInt(document.getElementById('review-rating')?.value || '0');
+                const comment = (document.getElementById('review-comment')?.value || '').trim();
+
+                if (!name || !email || !rating || !comment) {
+                    Swal.fire({ title: 'Required Fields', text: 'Please fill in Name, Email, Rating and Review.', icon: 'warning', confirmButtonColor: '#e77f23', background: '#ffffff', color: '#1a1a1a' });
+                    return;
+                }
+
+                const submitBtn = newReviewForm.querySelector("button[type='submit']");
+                const textSpan  = submitBtn?.querySelector('span:not(.arrow-btn)');
+                const origText  = textSpan ? textSpan.innerHTML : (submitBtn?.innerHTML || '');
+                if (textSpan) textSpan.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i>Submitting...';
+                else if (submitBtn) submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i>Submitting...';
+                if (submitBtn) submitBtn.disabled = true;
+
+                try {
+                    await Promise.race([
+                        addDoc(collection(db, 'reviews'), {
+                            name, email,
+                            phone: phone || null,
+                            profileLink: link || null,
+                            rating,
+                            comment,
+                            createdAt: serverTimestamp()
+                        }),
+                        new Promise((_, rej) => setTimeout(() => rej(new Error('Timeout')), 4000))
+                    ]);
+                    Swal.fire({ title: 'Thank you!', text: 'Your review has been submitted successfully.', icon: 'success', confirmButtonColor: '#e77f23', background: '#ffffff', color: '#1a1a1a' });
+                    newReviewForm.reset();
+                } catch (err) {
+                    if (err.message === 'Timeout') {
+                        Swal.fire({ title: 'Thank you!', text: 'Your review has been submitted.', icon: 'success', confirmButtonColor: '#e77f23', background: '#ffffff', color: '#1a1a1a' });
+                        newReviewForm.reset();
+                    } else {
+                        Swal.fire({ title: 'Error', text: err.message, icon: 'error', confirmButtonColor: '#ff4a5a' });
+                    }
+                } finally {
+                    if (textSpan) textSpan.innerHTML = origText;
+                    else if (submitBtn) submitBtn.innerHTML = origText;
+                    if (submitBtn) submitBtn.disabled = false;
+                }
+            });
+        }
 
         // --- CUSTOMER RATINGS & REVIEWS REAL-TIME INTEGRATION ---
         const reviewForm = document.getElementById("reviewForm");

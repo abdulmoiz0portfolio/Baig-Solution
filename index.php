@@ -592,6 +592,77 @@
 </section>
 <!-- FAQ Section End -->
 
+<!-- Testimonials Section Start -->
+<section id="testimonials-section" class="section-padding bg-light text-dark">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-extrabold text-dark">TESTIMONIALS</h2>
+            <p class="text-muted fs-5">What Our Clients Say</p>
+        </div>
+        <div id="testimonialsList" class="row g-4">
+            <!-- Dynamic testimonial cards will be injected here -->
+        </div>
+    </div>
+</section>
+<!-- Testimonials Section End -->
+
+<!-- Customer Ratings & Reviews Section Start -->
+<section id="customer-reviews-section" class="section-padding bg-light text-dark">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-extrabold text-dark">Customer Ratings &amp; Reviews</h2>
+            <p class="text-muted fs-5">Share your experience and link to your business profile (optional).</p>
+        </div>
+        <div class="row g-4 mb-5">
+            <div class="col-12">
+                <form id="review-firebase-form" novalidate>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label for="review-name" class="form-label text-muted fw-bold">Full Name</label>
+                            <input type="text" class="form-control border-light-subtle bg-white text-dark" id="review-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="review-email" class="form-label text-muted fw-bold">Email Address</label>
+                            <input type="email" class="form-control border-light-subtle bg-white text-dark" id="review-email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="review-phone" class="form-label text-muted fw-bold">Phone (optional)</label>
+                            <input type="tel" class="form-control border-light-subtle bg-white text-dark" id="review-phone" placeholder="+92 300 1234567">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="review-link" class="form-label text-muted fw-bold">Business / Freelancer Link (optional)</label>
+                            <input type="url" class="form-control border-light-subtle bg-white text-dark" id="review-link" placeholder="https://yourprofile.com">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="review-rating" class="form-label text-muted fw-bold">Rating (1‑5)</label>
+                            <select class="form-select border-light-subtle bg-white text-dark" id="review-rating" required>
+                                <option value="" disabled selected>Select Rating</option>
+                                <option value="1">1 ★</option>
+                                <option value="2">2 ★★</option>
+                                <option value="3">3 ★★★</option>
+                                <option value="4">4 ★★★★</option>
+                                <option value="5">5 ★★★★★</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="review-comment" class="form-label text-muted fw-bold">Your Review</label>
+                            <textarea class="form-control border-light-subtle bg-white text-dark" id="review-comment" rows="4" placeholder="What did you love about our service?" required></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-5">
+                                <span>Submit Review</span>
+                                <i class="fa-solid fa-arrow-right ms-2 arrow-btn"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Existing testimonials (positive) remain below -->
+    </div>
+</section>
+<!-- Customer Ratings & Reviews Section End -->
+
 <!-- Contact Section Start -->
 <section id="contact-section" class="section-padding bg-white text-dark">
     <div class="container">

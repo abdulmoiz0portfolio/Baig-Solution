@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // 5. Firebase Forms Setup
     initFirebaseForms();
+    initTestimonials();
 
     // 6. Subpage entrance animations (GSAP Fades)
     initSubpageAnimations();
@@ -573,6 +574,60 @@ function logSimulatedWebhook(logText) {
     localStorage.setItem("admin_integration_logs", JSON.stringify(existing));
     window.dispatchEvent(new Event('storage'));
 }
+
+    // Utility to safely escape user-provided text for HTML insertion
+    function escapeHTML(str) {
+        const p = document.createElement('p');
+        p.textContent = str;
+        return p.innerHTML;
+    }
+
+    // Initialize real‑time testimonials (rating ≥ 4)
+    function initTestimonials() {
+        const container = document.getElementById('testimonialsList');
+        if (!container) return;
+        // Load Firestore utilities dynamically
+        import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js')
+            .then(({ collection, query, where, orderBy, onSnapshot }) => {
+                const q = query(
+                    collection(window.db, 'reviews'),
+                    where('rating', '>=', 4),
+                    orderBy('createdAt', 'desc')
+                );
+                onSnapshot(q, (snapshot) => {
+                    container.innerHTML = '';
+                    snapshot.forEach((doc) => {
+                        const data = doc.data();
+                        // Build star icons
+                        let starsHtml = '';
+                        for (let i = 1; i <= 5; i++) {
+                            starsHtml += i <= data.rating
+                                ? '<i class="fa-solid fa-star text-accent-brand me-1"></i>'
+                                : '<i class="fa-regular fa-star text-accent-brand me-1"></i>';
+                        }
+                        const col = document.createElement('div');
+                        col.className = 'col-md-6 col-lg-4';
+                        col.innerHTML = `
+                            <div class="review-card p-4 border rounded-4 bg-white shadow-sm h-100">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="fw-bold text-dark mb-0">${escapeHTML(data.name)}</h5>
+                                        <div class="review-stars-display mt-1">
+                                            ${starsHtml}
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">${data.rating} ★</small>
+                                </div>
+                                <p class="text-secondary mb-0 mt-2" style="white-space: pre-line;">
+                                    ${escapeHTML(data.comment)}
+                                </p>
+                            </div>`;
+                        container.appendChild(col);
+                    });
+                });
+            })
+            .catch(err => console.warn('Testimonials init error:', err));
+    }
 
 /**
  * Custom Mouse Cursor Follower setup with GSAP trailing animations
