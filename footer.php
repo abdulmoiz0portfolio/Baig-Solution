@@ -131,13 +131,13 @@
 
         // Firebase config setup
         const firebaseConfig = {
-            apiKey: "AIzaSyDnhTfQGGO5zrhfJzoXIL5sofzcT6bSDK8",
-            authDomain: "baig-solution.firebaseapp.com",
-            projectId: "baig-solution",
-            storageBucket: "baig-solution.firebasestorage.app",
-            messagingSenderId: "828258119603",
-            appId: "1:828258119603:web:aec30d6e42c42d172b65c6",
-            measurementId: "G-V571HWND5D"
+            apiKey: "AIzaSyC6xWt2A5L2zAIH99ZKg-wLarxMrq-wXkQ",
+            authDomain: "agile-seeker-474518-k5.firebaseapp.com",
+            projectId: "agile-seeker-474518-k5",
+            storageBucket: "agile-seeker-474518-k5.firebasestorage.app",
+            messagingSenderId: "622205381755",
+            appId: "1:622205381755:web:28e759fca2b0d40249c6de",
+            measurementId: "G-BJPTX3MKXB"
         };
 
         // Initialize Firebase
