@@ -114,7 +114,7 @@
                 <h3 class="display-6 fw-extrabold text-dark">Product Shoot in Action</h3>
                 <p class="text-secondary">Watch how we bring products to life with professional styling and lighting.</p>
             </div>
-            <div class="col-lg-5 col-md-8 mx-auto">
+            <div class="col-lg-3 col-md-5 col-sm-8 mx-auto">
                 <div class="showcase-dark-frame">
                     <div class="showcase-dark-header">
                         <div class="d-flex align-items-center gap-2">
@@ -136,11 +136,7 @@
 
         <!-- ═══ PRODUCT CAROUSEL (Video + Images in one place) ═══ -->
         <div class="row mt-5">
-            <div class="col-12 text-center mb-4">
-                <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">AI PRODUCT SHOOTS</span>
-                <h3 class="fw-extrabold text-dark">Food &amp; Beverage Product Photography</h3>
-                <p class="text-secondary">AI-enhanced commercial food photography — shot, styled, and edited by Baig Solution.</p>
-            </div>
+            <!-- Heading removed per user request -->
             <div class="col-lg-5 col-md-8 mx-auto">
                 <div class="showcase-dark-frame">
                     <div class="showcase-dark-header">
@@ -149,26 +145,20 @@
                             <span class="sdot" style="background:#ffbd2e;"></span>
                             <span class="sdot" style="background:#28c840;"></span>
                         </div>
-                        <span class="sframe-title" id="carousel-label"><i class="fa-solid fa-video me-2 text-accent-brand"></i>Product Demo Video</span>
-                        <span class="sframe-badge" id="carousel-counter">1 / 4</span>
+                        <span class="sframe-title" id="carousel-label"><i class="fa-solid fa-image me-2 text-accent-brand"></i>Crispy Chicken Bucket</span>
+                        <span class="sframe-badge" id="carousel-counter">1 / 3</span>
                     </div>
                     <div class="sframe-body" style="position:relative; min-height:400px;">
-                        <!-- Slide 0: Video -->
+                        <!-- Slide 0: Chicken Bucket -->
                         <div class="carousel-slide active" data-slide="0">
-                            <video id="carouselVideo" controls loop playsinline style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;">
-                                <source src="assets/img/products/product-demo.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <!-- Slide 1: Chicken Bucket -->
-                        <div class="carousel-slide" data-slide="1">
                             <img src="assets/img/products/chicken-bucket.webp" alt="Crispy Fried Chicken Bucket" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;background:#0d0d1a;" loading="lazy">
                         </div>
-                        <!-- Slide 2: Chicken Wrap -->
-                        <div class="carousel-slide" data-slide="2">
+                        <!-- Slide 1: Chicken Wrap -->
+                        <div class="carousel-slide" data-slide="1">
                             <img src="assets/img/products/chicken-wrap.webp" alt="Gourmet Chicken Wrap" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;background:#0d0d1a;" loading="lazy">
                         </div>
-                        <!-- Slide 3: Chicken Burger -->
-                        <div class="carousel-slide" data-slide="3">
+                        <!-- Slide 2: Chicken Burger -->
+                        <div class="carousel-slide" data-slide="2">
                             <img src="assets/img/products/chicken-burger.webp" alt="Premium Chicken Burger" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;background:#0d0d1a;" loading="lazy">
                         </div>
 
@@ -178,10 +168,9 @@
                     </div>
                     <!-- Dot indicators -->
                     <div class="carousel-dots">
-                        <button class="dot active" data-index="0"><i class="fa-solid fa-video"></i></button>
-                        <button class="dot" data-index="1">🍗</button>
-                        <button class="dot" data-index="2">🌯</button>
-                        <button class="dot" data-index="3">🍔</button>
+                        <button class="dot active" data-index="0">🍗</button>
+                        <button class="dot" data-index="1">🌯</button>
+                        <button class="dot" data-index="2">🍔</button>
                     </div>
                 </div>
             </div>
@@ -242,11 +231,9 @@
     const dots = document.querySelectorAll('.carousel-dots .dot');
     const label = document.getElementById('carousel-label');
     const counter = document.getElementById('carousel-counter');
-    const video = document.getElementById('carouselVideo');
     if (!slides.length) return;
 
     const labels = [
-        '<i class="fa-solid fa-video me-2 text-accent-brand"></i>Product Demo Video',
         '<i class="fa-solid fa-image me-2 text-accent-brand"></i>Crispy Chicken Bucket',
         '<i class="fa-solid fa-image me-2 text-accent-brand"></i>Gourmet Chicken Wrap',
         '<i class="fa-solid fa-image me-2 text-accent-brand"></i>Premium Chicken Burger'
@@ -256,13 +243,11 @@
     function goTo(i) {
         slides[current].classList.remove('active');
         dots[current].classList.remove('active');
-        if (current === 0 && video) video.pause();
         current = (i + slides.length) % slides.length;
         slides[current].classList.add('active');
         dots[current].classList.add('active');
         label.innerHTML = labels[current];
         counter.textContent = (current + 1) + ' / ' + slides.length;
-        if (current === 0 && video) video.play();
     }
 
     document.getElementById('prevSlide')?.addEventListener('click', () => goTo(current - 1));
