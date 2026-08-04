@@ -107,77 +107,169 @@
             </div>
         </div>
 
-        <!-- AI Product Shoots Row -->
-        <div class="row mt-4">
+        <!-- ═══ VIDEO SHOWCASE (Standalone, with audio) ═══ -->
+        <div class="row mt-5 pt-5 border-top border-light-subtle">
             <div class="col-12 text-center mb-4">
-                <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">AI PRODUCT SHOOTS</span>
-                <h3 class="fw-extrabold text-dark">Food &amp; Beverage Product Photography</h3>
-                <p class="text-secondary">AI-enhanced commercial food photography — shot, styled, and edited by Baig Solution.</p>
+                <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">VIDEO SHOWCASE</span>
+                <h3 class="display-6 fw-extrabold text-dark">Product Shoot in Action</h3>
+                <p class="text-secondary">Watch how we bring products to life with professional styling and lighting.</p>
             </div>
-
-            <!-- Food Photo 1: Chicken Bucket -->
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-light text-center">
-                    <img src="assets/img/products/chicken-bucket.webp" alt="Crispy Fried Chicken Bucket - AI Product Photography" class="card-img-top w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy">
-                    <div class="card-body p-3">
-                        <h5 class="fw-bold text-dark mb-1">Crispy Chicken Bucket</h5>
-                        <p class="text-muted small mb-0">Warm Ambient Restaurant Lighting</p>
+            <div class="col-lg-10 mx-auto">
+                <div class="showcase-dark-frame">
+                    <div class="showcase-dark-header">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="sdot" style="background:#ff5f57;"></span>
+                            <span class="sdot" style="background:#ffbd2e;"></span>
+                            <span class="sdot" style="background:#28c840;"></span>
+                        </div>
+                        <span class="sframe-title"><i class="fa-solid fa-play-circle me-2 text-accent-brand"></i>Product Shoot Demo</span>
+                        <span class="sframe-badge">STUDIO</span>
                     </div>
-                </div>
-            </div>
-
-            <!-- Food Photo 2: Chicken Wrap -->
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-light text-center">
-                    <img src="assets/img/products/chicken-wrap.webp" alt="Gourmet Chicken Wrap - AI Product Photography" class="card-img-top w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy">
-                    <div class="card-body p-3">
-                        <h5 class="fw-bold text-dark mb-1">Gourmet Chicken Wrap</h5>
-                        <p class="text-muted small mb-0">Dark Moody Food Styling</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Food Photo 3: Chicken Burger -->
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-light text-center">
-                    <img src="assets/img/products/chicken-burger.webp" alt="Premium Chicken Burger - AI Product Photography" class="card-img-top w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy">
-                    <div class="card-body p-3">
-                        <h5 class="fw-bold text-dark mb-1">Premium Chicken Burger</h5>
-                        <p class="text-muted small mb-0">Golden Hour Studio Shoot</p>
+                    <div class="sframe-body">
+                        <video controls loop playsinline preload="metadata" style="width:100%;height:auto;display:block;max-height:550px;object-fit:cover;">
+                            <source src="assets/img/products/product-demo.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Product Video Showcase -->
+        <!-- ═══ PRODUCT CAROUSEL (Video + Images in one place) ═══ -->
         <div class="row mt-5">
             <div class="col-12 text-center mb-4">
-                <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">VIDEO SHOWCASE</span>
-                <h3 class="fw-extrabold text-dark">Product Shoot in Action</h3>
-                <p class="text-secondary">Watch how we bring products to life with professional styling and lighting.</p>
+                <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">AI PRODUCT SHOOTS</span>
+                <h3 class="fw-extrabold text-dark">Food &amp; Beverage Product Photography</h3>
+                <p class="text-secondary">AI-enhanced commercial food photography — shot, styled, and edited by Baig Solution.</p>
             </div>
             <div class="col-lg-10 mx-auto">
-                <div style="background:#1a1a2e; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); box-shadow:0 25px 80px rgba(0,0,0,0.3);">
-                    <div style="background:linear-gradient(135deg,#0d0d1a,#1a1a2e); padding:14px 20px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(255,255,255,0.06);">
+                <div class="showcase-dark-frame">
+                    <div class="showcase-dark-header">
                         <div class="d-flex align-items-center gap-2">
-                            <span style="width:12px;height:12px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
-                            <span style="width:12px;height:12px;border-radius:50%;background:#ffbd2e;display:inline-block;"></span>
-                            <span style="width:12px;height:12px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+                            <span class="sdot" style="background:#ff5f57;"></span>
+                            <span class="sdot" style="background:#ffbd2e;"></span>
+                            <span class="sdot" style="background:#28c840;"></span>
                         </div>
-                        <span style="color:rgba(255,255,255,0.7); font-size:14px; font-weight:500; flex:1;"><i class="fa-solid fa-play-circle me-2 text-accent-brand"></i>Product Shoot Demo</span>
-                        <span style="background:rgba(231,127,35,0.15); color:#e77f23; padding:4px 14px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; border:1px solid rgba(231,127,35,0.2);">STUDIO</span>
+                        <span class="sframe-title" id="carousel-label"><i class="fa-solid fa-video me-2 text-accent-brand"></i>Product Demo Video</span>
+                        <span class="sframe-badge" id="carousel-counter">1 / 4</span>
                     </div>
-                    <div style="background:#0d0d1a;">
-                        <video style="width:100%; height:auto; display:block; max-height:550px; object-fit:cover;" autoplay muted loop playsinline preload="metadata">
-                            <source src="assets/img/products/product-demo.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                    <div class="sframe-body" style="position:relative; min-height:350px;">
+                        <!-- Slide 0: Video -->
+                        <div class="carousel-slide active" data-slide="0">
+                            <video id="carouselVideo" autoplay muted loop playsinline style="width:100%;height:auto;display:block;max-height:550px;object-fit:cover;">
+                                <source src="assets/img/products/product-demo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- Slide 1: Chicken Bucket -->
+                        <div class="carousel-slide" data-slide="1">
+                            <img src="assets/img/products/chicken-bucket.webp" alt="Crispy Fried Chicken Bucket" style="width:100%;height:auto;display:block;max-height:550px;object-fit:contain;background:#0d0d1a;" loading="lazy">
+                        </div>
+                        <!-- Slide 2: Chicken Wrap -->
+                        <div class="carousel-slide" data-slide="2">
+                            <img src="assets/img/products/chicken-wrap.webp" alt="Gourmet Chicken Wrap" style="width:100%;height:auto;display:block;max-height:550px;object-fit:contain;background:#0d0d1a;" loading="lazy">
+                        </div>
+                        <!-- Slide 3: Chicken Burger -->
+                        <div class="carousel-slide" data-slide="3">
+                            <img src="assets/img/products/chicken-burger.webp" alt="Premium Chicken Burger" style="width:100%;height:auto;display:block;max-height:550px;object-fit:contain;background:#0d0d1a;" loading="lazy">
+                        </div>
+
+                        <!-- Prev / Next Buttons -->
+                        <button class="carousel-nav-btn prev-btn" id="prevSlide"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-nav-btn next-btn" id="nextSlide"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    <!-- Dot indicators -->
+                    <div class="carousel-dots">
+                        <button class="dot active" data-index="0"><i class="fa-solid fa-video"></i></button>
+                        <button class="dot" data-index="1">🍗</button>
+                        <button class="dot" data-index="2">🌯</button>
+                        <button class="dot" data-index="3">🍔</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+/* ── Dark showcase frame ── */
+.showcase-dark-frame { background:#1a1a2e; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); box-shadow:0 25px 80px rgba(0,0,0,0.3); }
+.showcase-dark-header { background:linear-gradient(135deg,#0d0d1a,#1a1a2e); padding:14px 20px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(255,255,255,0.06); }
+.sdot { width:12px; height:12px; border-radius:50%; display:inline-block; }
+.sframe-title { color:rgba(255,255,255,0.7); font-size:14px; font-weight:500; flex:1; }
+.sframe-badge { background:rgba(231,127,35,0.15); color:#e77f23; padding:4px 14px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; border:1px solid rgba(231,127,35,0.2); }
+.sframe-body { background:#0d0d1a; position:relative; }
+
+/* ── Carousel ── */
+.carousel-slide { display:none; animation: fadeSlide 0.4s ease; }
+.carousel-slide.active { display:block; }
+@keyframes fadeSlide { from { opacity:0; transform:scale(0.98); } to { opacity:1; transform:scale(1); } }
+
+.carousel-nav-btn {
+    position:absolute; top:50%; transform:translateY(-50%);
+    width:48px; height:48px; border-radius:50%;
+    background:rgba(231,127,35,0.9); color:#fff; border:none;
+    font-size:18px; cursor:pointer; z-index:10;
+    transition:all 0.3s ease; box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+.carousel-nav-btn:hover { background:#e77f23; transform:translateY(-50%) scale(1.1); }
+.prev-btn { left:16px; }
+.next-btn { right:16px; }
+
+.carousel-dots {
+    display:flex; justify-content:center; gap:10px; padding:16px;
+    background:linear-gradient(135deg,#0d0d1a,#1a1a2e);
+}
+.carousel-dots .dot {
+    width:40px; height:40px; border-radius:50%;
+    background:rgba(255,255,255,0.1); border:2px solid transparent;
+    color:rgba(255,255,255,0.5); font-size:14px;
+    cursor:pointer; transition:all 0.3s ease;
+    display:flex; align-items:center; justify-content:center;
+}
+.carousel-dots .dot.active { border-color:#e77f23; background:rgba(231,127,35,0.2); color:#e77f23; }
+.carousel-dots .dot:hover { border-color:rgba(231,127,35,0.5); }
+
+@media (max-width:768px) {
+    .carousel-nav-btn { width:36px; height:36px; font-size:14px; }
+    .prev-btn { left:8px; }
+    .next-btn { right:8px; }
+    .carousel-dots .dot { width:34px; height:34px; font-size:12px; }
+}
+</style>
+
+<script>
+(function() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+    const label = document.getElementById('carousel-label');
+    const counter = document.getElementById('carousel-counter');
+    const video = document.getElementById('carouselVideo');
+    if (!slides.length) return;
+
+    const labels = [
+        '<i class="fa-solid fa-video me-2 text-accent-brand"></i>Product Demo Video',
+        '<i class="fa-solid fa-image me-2 text-accent-brand"></i>Crispy Chicken Bucket',
+        '<i class="fa-solid fa-image me-2 text-accent-brand"></i>Gourmet Chicken Wrap',
+        '<i class="fa-solid fa-image me-2 text-accent-brand"></i>Premium Chicken Burger'
+    ];
+    let current = 0;
+
+    function goTo(i) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        if (current === 0 && video) video.pause();
+        current = (i + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+        label.innerHTML = labels[current];
+        counter.textContent = (current + 1) + ' / ' + slides.length;
+        if (current === 0 && video) video.play();
+    }
+
+    document.getElementById('prevSlide')?.addEventListener('click', () => goTo(current - 1));
+    document.getElementById('nextSlide')?.addEventListener('click', () => goTo(current + 1));
+    dots.forEach(d => d.addEventListener('click', () => goTo(parseInt(d.dataset.index))));
+})();
+</script>
 
 <!-- Consult Section Start -->
 <section class="section-padding bg-warm-peach text-dark">
