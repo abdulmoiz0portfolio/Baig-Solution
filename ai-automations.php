@@ -119,20 +119,25 @@
             </div>
         </div>
 
-        <!-- Image Showcase (Second — appears on scroll) -->
-        <div class="showcase-frame" data-aos="fade-up" data-aos-delay="200">
-            <div class="showcase-frame-header">
-                <div class="d-flex align-items-center gap-2">
-                    <span class="frame-dot" style="background:#ff5f57;"></span>
-                    <span class="frame-dot" style="background:#ffbd2e;"></span>
-                    <span class="frame-dot" style="background:#28c840;"></span>
+        <!-- Image Showcase Gallery (appears on scroll) -->
+        <div class="row g-4 mt-3">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="showcase-frame h-100">
+                    <div class="showcase-frame-header" style="padding: 10px 14px;">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="frame-dot" style="width:10px;height:10px;background:#ff5f57;"></span>
+                            <span class="frame-dot" style="width:10px;height:10px;background:#ffbd2e;"></span>
+                            <span class="frame-dot" style="width:10px;height:10px;background:#28c840;"></span>
+                        </div>
+                        <span class="frame-title" style="font-size:12px;"><i class="fa-solid fa-diagram-project me-2 text-accent-brand"></i>Lead Cleaner</span>
+                        <span class="frame-badge" style="font-size:10px; padding:3px 10px;">n8n</span>
+                    </div>
+                    <div class="showcase-frame-body">
+                        <img src="assets/media/n8n/n8n-workflow.webp" alt="n8n Automation Workflow Architecture by Baig Solution" class="showcase-image" style="max-height: 250px; object-fit: contain; padding: 15px;" loading="lazy">
+                    </div>
                 </div>
-                <span class="frame-title"><i class="fa-solid fa-diagram-project me-2 text-accent-brand"></i>Workflow Architecture</span>
-                <span class="frame-badge">n8n</span>
             </div>
-            <div class="showcase-frame-body">
-                <img src="assets/media/n8n/n8n-workflow.webp" alt="n8n Automation Workflow Architecture by Baig Solution" class="showcase-image" loading="lazy">
-            </div>
+            <!-- Future workflow images can be added here -->
         </div>
     </div>
 </section>
