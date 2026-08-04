@@ -148,6 +148,34 @@
                 </div>
             </div>
         </div>
+
+        <!-- Product Video Showcase -->
+        <div class="row mt-5">
+            <div class="col-12 text-center mb-4">
+                <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">VIDEO SHOWCASE</span>
+                <h3 class="fw-extrabold text-dark">Product Shoot in Action</h3>
+                <p class="text-secondary">Watch how we bring products to life with professional styling and lighting.</p>
+            </div>
+            <div class="col-lg-10 mx-auto">
+                <div style="background:#1a1a2e; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); box-shadow:0 25px 80px rgba(0,0,0,0.3);">
+                    <div style="background:linear-gradient(135deg,#0d0d1a,#1a1a2e); padding:14px 20px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(255,255,255,0.06);">
+                        <div class="d-flex align-items-center gap-2">
+                            <span style="width:12px;height:12px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
+                            <span style="width:12px;height:12px;border-radius:50%;background:#ffbd2e;display:inline-block;"></span>
+                            <span style="width:12px;height:12px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+                        </div>
+                        <span style="color:rgba(255,255,255,0.7); font-size:14px; font-weight:500; flex:1;"><i class="fa-solid fa-play-circle me-2 text-accent-brand"></i>Product Shoot Demo</span>
+                        <span style="background:rgba(231,127,35,0.15); color:#e77f23; padding:4px 14px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; border:1px solid rgba(231,127,35,0.2);">STUDIO</span>
+                    </div>
+                    <div style="background:#0d0d1a;">
+                        <video style="width:100%; height:auto; display:block; max-height:550px; object-fit:cover;" autoplay muted loop playsinline preload="metadata">
+                            <source src="assets/img/products/product-demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
