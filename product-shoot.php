@@ -114,7 +114,7 @@
                 <h3 class="display-6 fw-extrabold text-dark">Product Shoot in Action</h3>
                 <p class="text-secondary">Watch how we bring products to life with professional styling and lighting.</p>
             </div>
-            <div class="col-lg-10 mx-auto">
+            <div class="col-lg-5 col-md-8 mx-auto">
                 <div class="showcase-dark-frame">
                     <div class="showcase-dark-header">
                         <div class="d-flex align-items-center gap-2">
@@ -126,7 +126,7 @@
                         <span class="sframe-badge">STUDIO</span>
                     </div>
                     <div class="sframe-body">
-                        <video controls loop playsinline preload="metadata" style="width:100%;height:auto;display:block;max-height:550px;object-fit:cover;">
+                        <video controls loop playsinline preload="metadata" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;">
                             <source src="assets/img/products/product-demo.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -141,7 +141,7 @@
                 <h3 class="fw-extrabold text-dark">Food &amp; Beverage Product Photography</h3>
                 <p class="text-secondary">AI-enhanced commercial food photography — shot, styled, and edited by Baig Solution.</p>
             </div>
-            <div class="col-lg-10 mx-auto">
+            <div class="col-lg-5 col-md-8 mx-auto">
                 <div class="showcase-dark-frame">
                     <div class="showcase-dark-header">
                         <div class="d-flex align-items-center gap-2">
@@ -152,24 +152,24 @@
                         <span class="sframe-title" id="carousel-label"><i class="fa-solid fa-video me-2 text-accent-brand"></i>Product Demo Video</span>
                         <span class="sframe-badge" id="carousel-counter">1 / 4</span>
                     </div>
-                    <div class="sframe-body" style="position:relative; min-height:350px;">
+                    <div class="sframe-body" style="position:relative; min-height:400px;">
                         <!-- Slide 0: Video -->
                         <div class="carousel-slide active" data-slide="0">
-                            <video id="carouselVideo" autoplay muted loop playsinline style="width:100%;height:auto;display:block;max-height:550px;object-fit:cover;">
+                            <video id="carouselVideo" controls loop playsinline style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;">
                                 <source src="assets/img/products/product-demo.mp4" type="video/mp4">
                             </video>
                         </div>
                         <!-- Slide 1: Chicken Bucket -->
                         <div class="carousel-slide" data-slide="1">
-                            <img src="assets/img/products/chicken-bucket.webp" alt="Crispy Fried Chicken Bucket" style="width:100%;height:auto;display:block;max-height:550px;object-fit:contain;background:#0d0d1a;" loading="lazy">
+                            <img src="assets/img/products/chicken-bucket.webp" alt="Crispy Fried Chicken Bucket" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;background:#0d0d1a;" loading="lazy">
                         </div>
                         <!-- Slide 2: Chicken Wrap -->
                         <div class="carousel-slide" data-slide="2">
-                            <img src="assets/img/products/chicken-wrap.webp" alt="Gourmet Chicken Wrap" style="width:100%;height:auto;display:block;max-height:550px;object-fit:contain;background:#0d0d1a;" loading="lazy">
+                            <img src="assets/img/products/chicken-wrap.webp" alt="Gourmet Chicken Wrap" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;background:#0d0d1a;" loading="lazy">
                         </div>
                         <!-- Slide 3: Chicken Burger -->
                         <div class="carousel-slide" data-slide="3">
-                            <img src="assets/img/products/chicken-burger.webp" alt="Premium Chicken Burger" style="width:100%;height:auto;display:block;max-height:550px;object-fit:contain;background:#0d0d1a;" loading="lazy">
+                            <img src="assets/img/products/chicken-burger.webp" alt="Premium Chicken Burger" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;background:#0d0d1a;" loading="lazy">
                         </div>
 
                         <!-- Prev / Next Buttons -->
