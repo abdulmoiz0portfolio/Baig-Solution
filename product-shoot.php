@@ -106,6 +106,48 @@
                 </div>
             </div>
         </div>
+
+        <!-- AI Product Shoots Row -->
+        <div class="row mt-4">
+            <div class="col-12 text-center mb-4">
+                <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">AI PRODUCT SHOOTS</span>
+                <h3 class="fw-extrabold text-dark">Food &amp; Beverage Product Photography</h3>
+                <p class="text-secondary">AI-enhanced commercial food photography — shot, styled, and edited by Baig Solution.</p>
+            </div>
+
+            <!-- Food Photo 1: Chicken Bucket -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-light text-center">
+                    <img src="assets/img/products/chicken-bucket.webp" alt="Crispy Fried Chicken Bucket - AI Product Photography" class="card-img-top w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy">
+                    <div class="card-body p-3">
+                        <h5 class="fw-bold text-dark mb-1">Crispy Chicken Bucket</h5>
+                        <p class="text-muted small mb-0">Warm Ambient Restaurant Lighting</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Food Photo 2: Chicken Wrap -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-light text-center">
+                    <img src="assets/img/products/chicken-wrap.webp" alt="Gourmet Chicken Wrap - AI Product Photography" class="card-img-top w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy">
+                    <div class="card-body p-3">
+                        <h5 class="fw-bold text-dark mb-1">Gourmet Chicken Wrap</h5>
+                        <p class="text-muted small mb-0">Dark Moody Food Styling</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Food Photo 3: Chicken Burger -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-light text-center">
+                    <img src="assets/img/products/chicken-burger.webp" alt="Premium Chicken Burger - AI Product Photography" class="card-img-top w-100" style="aspect-ratio: 3/4; object-fit: cover;" loading="lazy">
+                    <div class="card-body p-3">
+                        <h5 class="fw-bold text-dark mb-1">Premium Chicken Burger</h5>
+                        <p class="text-muted small mb-0">Golden Hour Studio Shoot</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
