@@ -112,7 +112,7 @@
                 <span class="frame-badge">n8n</span>
             </div>
             <div class="showcase-frame-body">
-                <video class="showcase-video" autoplay muted loop playsinline preload="metadata" poster="assets/media/n8n/n8n-workflow.webp">
+                <video class="showcase-video" controls loop playsinline preload="metadata" poster="assets/media/n8n/n8n-workflow.webp">
                     <source src="assets/media/n8n/n8n-demo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
