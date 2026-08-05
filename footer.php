@@ -68,8 +68,8 @@
                     <p class="mb-0 text-muted">&copy; 2026 Baig Solution. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-                    <a href="privacy.php" class="text-muted text-decoration-none me-3">Privacy Policy</a>
-                    <a href="terms.php" class="text-muted text-decoration-none">Terms of Service</a>
+                    <a href="privacy" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+                    <a href="terms" class="text-muted text-decoration-none">Terms of Service</a>
                 </div>
             </div>
         </div>

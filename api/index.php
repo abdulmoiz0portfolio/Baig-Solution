@@ -26,7 +26,9 @@ $allowed_pages = [
     'ai-automations',
     'product-shoot',
     'service',
-    'Reviews'
+    'Reviews',
+    'privacy',
+    'terms'
 ];
 
 if (in_array($path, $allowed_pages)) {
