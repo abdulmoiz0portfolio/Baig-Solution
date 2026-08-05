@@ -337,16 +337,32 @@
     <!-- n8n Chat Widget Integration -->
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+        
+        // Add custom styling for the chat widget to match Baig Solution theme
+        const style = document.createElement('style');
+        style.innerHTML = `
+            :root {
+                --chat--color-primary: #1a1a1a;
+                --chat--color-secondary: #e77f23;
+                --chat--color-background: #ffffff;
+                --chat--color-font: #333333;
+                --chat--font-family: 'Outfit', sans-serif;
+            }
+            .chat-wrapper { box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important; border-radius: 12px !important; overflow: hidden; }
+        `;
+        document.head.appendChild(style);
+
         createChat({
             webhookUrl: 'https://n8n.bminternational.com.pk/webhook/ae4e39aa-5247-4b22-b089-00e3cbf3216c/chat',
             showWelcomeScreen: true,
             initialMessages: [
-                'Hi! I am Muzaini, the AI Automation Expert here. How can I automate your business today?'
+                'Hi! I am Muzaini, the AI Automation Expert here.',
+                'You can ask me anything, or try one of these:\n👉 What services do you offer?\n👉 How much does automation cost?\n👉 Connect me with a human expert.'
             ],
             i18n: {
                 en: {
                     title: 'Baig Solution Support',
-                    subtitle: 'Powered by n8n',
+                    subtitle: '24/7 AI Automation Expert',
                     getStarted: 'Start Chatting',
                 }
             }
