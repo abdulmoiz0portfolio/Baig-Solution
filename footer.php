@@ -376,10 +376,29 @@
 
         // Sticky button function to open chat and send lead capture message
         window.connectWithExpert = function() {
-            // Find chat toggle button and click it to open chat if it's closed
-            const chatToggle = document.querySelector('.chat-toggle') || document.querySelector('[class*="chat-toggle"]');
-            if (chatToggle) {
-                chatToggle.click();
+            // Check if Chatbot API exists
+            if (window.Chatbot && window.Chatbot.open) {
+                window.Chatbot.open();
+            } else {
+                // Find the toggle button (usually a direct child of the chat wrapper or has specific SVG)
+                // In @n8n/chat, the main toggle button is often the last button in the wrapper or a direct child
+                const chatWrapper = document.querySelector('.chat-wrapper');
+                if (chatWrapper) {
+                    // Try to find the button that is NOT inside the chat-layout (the main toggle button)
+                    const buttons = chatWrapper.querySelectorAll('button');
+                    buttons.forEach(btn => {
+                        // The toggle button usually doesn't have inner text like 'Start Chatting' or send icon if it's just the bubble
+                        if (!btn.closest('.chat-layout') || btn.classList.length > 0) {
+                            // If chat is closed, the toggle button is visible. We can just click the first button that isn't the send button.
+                            // The safest way is to click the button that controls the window.
+                            btn.click();
+                        }
+                    });
+                } else {
+                    // Fallback broad search
+                    const anyChatButton = document.querySelector('button[class*="toggle"], .chat-wrapper > button');
+                    if (anyChatButton) anyChatButton.click();
+                }
             }
 
             // Small delay to ensure chat is open and rendered
@@ -398,7 +417,7 @@
                     });
                     textarea.dispatchEvent(enterEvent);
                 }
-            }, 400);
+            }, 600);
         }
     </script>
 
