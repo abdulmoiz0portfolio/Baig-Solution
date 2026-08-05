@@ -879,7 +879,7 @@ function initScrollAnimations() {
            // Skip container if it's specifically wrapping the typewriter to avoid double-hiding
            // Actually, it's fine to fade the container and type the text, but let's just make sure they start hidden
         }
-        gsap.set(el, { opacity: 0, y: 40 });
+        // gsap.set(el, { opacity: 0, y: 40 });
         observer.observe(el);
     });
 
