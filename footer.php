@@ -335,7 +335,7 @@
     </script>
 
     <!-- Single Sticky Lead Capture Button -->
-    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; right: -5px; transform: translateY(-50%); background: #e77f23; color: white; border: none; padding: 12px 20px 12px 24px; border-radius: 30px 0 0 30px; font-size: 15px; cursor: pointer; box-shadow: -4px 4px 15px rgba(0,0,0,0.2); font-weight: 600; z-index: 99999; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; right: -5px; transform: translateY(-50%); background: #e77f23; color: white; border: none; padding: 12px 20px 12px 24px; border-radius: 30px 0 0 30px; font-size: 15px; cursor: pointer; box-shadow: -4px 4px 15px rgba(0,0,0,0.2); font-weight: 600; z-index: 9000; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
         <i class="fa-solid fa-headset"></i> Connect with an Expert
     </button>
 
@@ -353,9 +353,24 @@
                 --chat--color-font: #333333;
                 --chat--font-family: 'Outfit', sans-serif;
             }
-            .chat-wrapper { box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; border-radius: 12px !important; overflow: hidden; }
+            .chat-wrapper { box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; border-radius: 12px !important; overflow: hidden; z-index: 9999 !important; }
             #sticky-expert-btn:hover { right: 0; background: #cf6f1d; }
             #in-chat-quick-replies::-webkit-scrollbar { display: none; }
+            
+            /* Hide the default n8n chat toggle bubble completely */
+            .chat-wrapper > button:not(.chat-layout button) {
+                display: none !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+            }
+            
+            /* Fix chat layout spacing so X button looks good */
+            .chat-header {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding-right: 15px !important;
+            }
         `;
         document.head.appendChild(style);
 
@@ -374,59 +389,98 @@
             }
         });
 
-        // Inject Native-looking Quick Replies inside the chat window
+        // Helper to find and click the hidden toggle button
+        const toggleChatState = () => {
+            const chatWrapper = document.querySelector('.chat-wrapper');
+            if (chatWrapper) {
+                const buttons = chatWrapper.querySelectorAll('button');
+                buttons.forEach(btn => {
+                    // Click the button that is the main toggle (not inside the chat-layout)
+                    if (!btn.closest('.chat-layout') || btn.classList.length > 0) {
+                        btn.click();
+                    }
+                });
+            }
+        };
+
+        // Inject Native-looking Quick Replies and Custom Close Button
         const observer = new MutationObserver((mutations, obs) => {
             const chatLayout = document.querySelector('.chat-layout');
-            if (chatLayout && !document.getElementById('in-chat-quick-replies')) {
-                // Chat layout found, inject horizontal quick replies
-                const qrContainer = document.createElement('div');
-                qrContainer.id = 'in-chat-quick-replies';
-                // Positioned absolutely right above the input bar (approx 65px tall)
-                qrContainer.style.cssText = 'position: absolute; bottom: 65px; left: 0; width: 100%; display: flex; gap: 8px; overflow-x: auto; padding: 10px; background: rgba(255,255,255,0.95); backdrop-filter: blur(4px); white-space: nowrap; scrollbar-width: none; z-index: 100; border-top: 1px solid #eee; align-items: center;';
-                
-                const replies = [
-                    { icon: '🛠️', text: 'Services' },
-                    { icon: '💰', text: 'Pricing' },
-                    { icon: '📞', text: 'Connect Expert' }
-                ];
-
-                replies.forEach(r => {
-                    const btn = document.createElement('button');
-                    btn.innerHTML = `${r.icon} ${r.text}`;
-                    btn.style.cssText = 'background: white; border: 1px solid #ddd; padding: 6px 14px; border-radius: 4px; font-size: 13px; color: #333; cursor: pointer; flex-shrink: 0; font-family: "Outfit", sans-serif; display: flex; align-items: center; gap: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: background 0.2s, transform 0.1s;';
-                    
-                    btn.onmouseover = () => btn.style.background = '#f9f9f9';
-                    btn.onmouseout = () => btn.style.background = 'white';
-                    btn.onmousedown = () => btn.style.transform = 'scale(0.96)';
-                    btn.onmouseup = () => btn.style.transform = 'scale(1)';
-                    
-                    btn.onclick = () => {
-                        const textarea = document.querySelector('.chat-layout textarea') || document.querySelector('textarea');
-                        if (textarea) {
-                            const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, "value").set;
-                            
-                            let fullMsg = "";
-                            if (r.text === 'Services') fullMsg = "What services do you offer?";
-                            if (r.text === 'Pricing') fullMsg = "How much does automation cost?";
-                            if (r.text === 'Connect Expert') fullMsg = "I need to connect with an expert right now.";
-                            
-                            nativeInputValueSetter.call(textarea, fullMsg);
-                            textarea.dispatchEvent(new Event('input', { bubbles: true }));
-                            
-                            const enterEvent = new KeyboardEvent('keydown', {
-                                bubbles: true, cancelable: true, keyCode: 13, key: 'Enter'
-                            });
-                            textarea.dispatchEvent(enterEvent);
-                            
-                            // Hide quick replies after one is used to keep chat clean
-                            qrContainer.style.display = 'none';
-                        }
+            
+            if (chatLayout) {
+                // 1. Inject Custom "X" Close Button in Header
+                const chatHeader = chatLayout.querySelector('header') || chatLayout.querySelector('.chat-header') || chatLayout.firstChild;
+                if (chatHeader && !document.getElementById('custom-chat-close')) {
+                    const closeBtn = document.createElement('button');
+                    closeBtn.id = 'custom-chat-close';
+                    closeBtn.innerHTML = '✖';
+                    closeBtn.style.cssText = 'background: transparent; border: none; color: white; font-size: 16px; cursor: pointer; padding: 5px; margin-left: auto; line-height: 1;';
+                    closeBtn.onclick = () => {
+                        toggleChatState(); // Click hidden toggle to close
                     };
-                    qrContainer.appendChild(btn);
-                });
+                    chatHeader.style.display = 'flex';
+                    chatHeader.style.justifyContent = 'space-between';
+                    chatHeader.style.alignItems = 'center';
+                    chatHeader.appendChild(closeBtn);
+                }
 
-                chatLayout.appendChild(qrContainer);
-                // Keep observing in case chat is destroyed and recreated, but we don't disconnect.
+                // 2. Inject Horizontal Quick Replies above Textarea
+                if (!document.getElementById('in-chat-quick-replies')) {
+                    const textarea = chatLayout.querySelector('textarea');
+                    if (textarea) {
+                        const chatFooter = textarea.parentElement; // The container holding the input
+                        
+                        const qrContainer = document.createElement('div');
+                        qrContainer.id = 'in-chat-quick-replies';
+                        // Position relative so it naturally stacks above the input area
+                        qrContainer.style.cssText = 'display: flex; gap: 8px; overflow-x: auto; padding: 10px; background: #f8f9fa; white-space: nowrap; scrollbar-width: none; border-top: 1px solid #eee; width: 100%; box-sizing: border-box;';
+                        
+                        const replies = [
+                            { icon: '🛠️', text: 'Services' },
+                            { icon: '💰', text: 'Pricing' },
+                            { icon: '📞', text: 'Connect Expert' }
+                        ];
+
+                        replies.forEach(r => {
+                            const btn = document.createElement('button');
+                            btn.innerHTML = `${r.icon} ${r.text}`;
+                            btn.style.cssText = 'background: white; border: 1px solid #ddd; padding: 6px 14px; border-radius: 4px; font-size: 13px; color: #333; cursor: pointer; flex-shrink: 0; font-family: "Outfit", sans-serif; display: flex; align-items: center; gap: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: background 0.2s, transform 0.1s; margin-bottom: 2px;';
+                            
+                            btn.onmouseover = () => btn.style.background = '#f9f9f9';
+                            btn.onmouseout = () => btn.style.background = 'white';
+                            btn.onmousedown = () => btn.style.transform = 'scale(0.96)';
+                            btn.onmouseup = () => btn.style.transform = 'scale(1)';
+                            
+                            btn.onclick = () => {
+                                const ta = document.querySelector('.chat-layout textarea');
+                                if (ta) {
+                                    const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, "value").set;
+                                    
+                                    let fullMsg = "";
+                                    if (r.text === 'Services') fullMsg = "What services do you offer?";
+                                    if (r.text === 'Pricing') fullMsg = "How much does automation cost?";
+                                    if (r.text === 'Connect Expert') fullMsg = "I need to connect with an expert right now.";
+                                    
+                                    nativeInputValueSetter.call(ta, fullMsg);
+                                    ta.dispatchEvent(new Event('input', { bubbles: true }));
+                                    
+                                    const enterEvent = new KeyboardEvent('keydown', {
+                                        bubbles: true, cancelable: true, keyCode: 13, key: 'Enter'
+                                    });
+                                    ta.dispatchEvent(enterEvent);
+                                    
+                                    // Quick replies stay visible so user can click them again if needed!
+                                }
+                            };
+                            qrContainer.appendChild(btn);
+                        });
+
+                        // Insert the quick replies container right before the input footer area
+                        if (chatFooter && chatFooter.parentElement) {
+                            chatFooter.parentElement.insertBefore(qrContainer, chatFooter);
+                        }
+                    }
+                }
             }
         });
         observer.observe(document.body, { childList: true, subtree: true });
@@ -436,18 +490,7 @@
             if (window.Chatbot && window.Chatbot.open) {
                 window.Chatbot.open();
             } else {
-                const chatWrapper = document.querySelector('.chat-wrapper');
-                if (chatWrapper) {
-                    const buttons = chatWrapper.querySelectorAll('button');
-                    buttons.forEach(btn => {
-                        if (!btn.closest('.chat-layout') || btn.classList.length > 0) {
-                            btn.click();
-                        }
-                    });
-                } else {
-                    const anyChatButton = document.querySelector('button[class*="toggle"], .chat-wrapper > button');
-                    if (anyChatButton) anyChatButton.click();
-                }
+                toggleChatState();
             }
 
             setTimeout(() => {
