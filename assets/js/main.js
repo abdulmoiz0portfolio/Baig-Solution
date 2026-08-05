@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 7. Interactive cost calculator
     initCostCalculator();
+
+    // 8. Site-wide scroll animations & writing effect
+    initScrollAnimations();
 });
 
 // Window Load Handler for Preloader
@@ -833,3 +836,71 @@ function initCostCalculator() {
         });
     }
 }
+
+
+/**
+ * 8. Site-wide scroll animations & writing effect
+ */
+function initScrollAnimations() {
+    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. General Fade-Up Animations for Cards/Images
+    const wowElements = document.querySelectorAll(".wow");
+    wowElements.forEach(el => {
+        // Skip headings that we want to type out
+        if (el.tagName.match(/^H[1-6]$/i) || el.classList.contains("typewriter")) return;
+        
+        gsap.fromTo(el, 
+            { y: 50, opacity: 0 }, 
+            { 
+                y: 0, 
+                opacity: 1, 
+                duration: 0.8, 
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%",
+                    toggleActions: "play none none none"
+                }
+            }
+        );
+    });
+
+    // 2. Writing / Staggered Text Reveal Effect for Headings
+    // Target main section headings (h2, h3) but ignore header/footer elements
+    const headings = document.querySelectorAll("h2:not(.modal-content-side h2), h3:not(.widget-title)");
+    headings.forEach(heading => {
+        // Skip if it contains complex HTML children like icons (to avoid breaking them)
+        if (heading.querySelector("i") || heading.querySelector("svg") || heading.closest("header") || heading.closest("footer")) return;
+
+        const text = heading.innerText;
+        heading.innerHTML = "";
+        
+        // Split text into words and wrap in spans
+        const words = text.split(" ");
+        words.forEach(word => {
+            const span = document.createElement("span");
+            span.style.display = "inline-block";
+            span.style.opacity = "0";
+            span.style.transform = "translateY(15px) scale(0.95)";
+            span.innerText = word + " ";
+            heading.appendChild(span);
+        });
+
+        gsap.to(heading.querySelectorAll("span"), {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.4,
+            stagger: 0.08, // This gives the typing/cascading effect
+            ease: "back.out(1.2)",
+            scrollTrigger: {
+                trigger: heading,
+                start: "top 85%",
+                toggleActions: "play none none none"
+            }
+        });
+    });
+}
+
