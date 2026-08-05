@@ -353,15 +353,18 @@
                 --chat--color-font: #333333;
                 --chat--font-family: 'Outfit', sans-serif;
             }
-            .chat-wrapper { box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; border-radius: 12px !important; overflow: hidden; z-index: 9999 !important; }
+            .chat-wrapper { box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important; border-radius: 12px !important; overflow: hidden; z-index: 999999 !important; }
             #sticky-expert-btn:hover { right: 0; background: #cf6f1d; }
             #in-chat-quick-replies::-webkit-scrollbar { display: none; }
             
-            /* Hide the default n8n chat toggle bubble completely */
-            .chat-wrapper > button:not(.chat-layout button) {
-                display: none !important;
+            /* Hide the default n8n chat toggle bubble completely without using display:none so clicks still register */
+            .chat-wrapper > *:not(.chat-layout) {
                 opacity: 0 !important;
                 pointer-events: none !important;
+                position: absolute !important;
+                width: 0 !important;
+                height: 0 !important;
+                overflow: hidden !important;
             }
             
             /* Fix chat layout spacing so X button looks good */
@@ -389,17 +392,18 @@
             }
         });
 
-        // Helper to find and click the hidden toggle button
+        // Helper to find and click the hidden toggle button reliably
         const toggleChatState = () => {
             const chatWrapper = document.querySelector('.chat-wrapper');
             if (chatWrapper) {
-                const buttons = chatWrapper.querySelectorAll('button');
-                buttons.forEach(btn => {
-                    // Click the button that is the main toggle (not inside the chat-layout)
-                    if (!btn.closest('.chat-layout') || btn.classList.length > 0) {
-                        btn.click();
+                // Find any direct child of chat-wrapper that is NOT the chat-layout (this will be the toggle bubble)
+                const children = chatWrapper.children;
+                for (let i = 0; i < children.length; i++) {
+                    if (!children[i].classList.contains('chat-layout')) {
+                        children[i].click();
+                        break;
                     }
-                });
+                }
             }
         };
 
@@ -414,9 +418,12 @@
                     const closeBtn = document.createElement('button');
                     closeBtn.id = 'custom-chat-close';
                     closeBtn.innerHTML = '✖';
-                    closeBtn.style.cssText = 'background: transparent; border: none; color: white; font-size: 16px; cursor: pointer; padding: 5px; margin-left: auto; line-height: 1;';
+                    closeBtn.style.cssText = 'background: transparent; border: none; color: white; font-size: 16px; cursor: pointer; padding: 5px; margin-left: auto; line-height: 1; outline: none;';
                     closeBtn.onclick = () => {
                         toggleChatState(); // Click hidden toggle to close
+                        // Show the sticky button again when chat closes
+                        const stickyBtn = document.getElementById('sticky-expert-btn');
+                        if (stickyBtn) stickyBtn.style.display = 'flex';
                     };
                     chatHeader.style.display = 'flex';
                     chatHeader.style.justifyContent = 'space-between';
@@ -444,7 +451,7 @@
                         replies.forEach(r => {
                             const btn = document.createElement('button');
                             btn.innerHTML = `${r.icon} ${r.text}`;
-                            btn.style.cssText = 'background: white; border: 1px solid #ddd; padding: 6px 14px; border-radius: 4px; font-size: 13px; color: #333; cursor: pointer; flex-shrink: 0; font-family: "Outfit", sans-serif; display: flex; align-items: center; gap: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: background 0.2s, transform 0.1s; margin-bottom: 2px;';
+                            btn.style.cssText = 'background: white; border: 1px solid #ddd; padding: 6px 14px; border-radius: 4px; font-size: 13px; color: #333; cursor: pointer; flex-shrink: 0; font-family: "Outfit", sans-serif; display: flex; align-items: center; gap: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: background 0.2s, transform 0.1s; margin-bottom: 2px; outline: none;';
                             
                             btn.onmouseover = () => btn.style.background = '#f9f9f9';
                             btn.onmouseout = () => btn.style.background = 'white';
@@ -468,8 +475,6 @@
                                         bubbles: true, cancelable: true, keyCode: 13, key: 'Enter'
                                     });
                                     ta.dispatchEvent(enterEvent);
-                                    
-                                    // Quick replies stay visible so user can click them again if needed!
                                 }
                             };
                             qrContainer.appendChild(btn);
@@ -487,12 +492,14 @@
 
         // Sticky button function to open chat and send lead capture message
         window.connectWithExpert = function() {
-            if (window.Chatbot && window.Chatbot.open) {
-                window.Chatbot.open();
-            } else {
-                toggleChatState();
-            }
+            // Hide the sticky button when chat opens so it never overlaps!
+            const stickyBtn = document.getElementById('sticky-expert-btn');
+            if (stickyBtn) stickyBtn.style.display = 'none';
 
+            // Open chat by clicking hidden toggle
+            toggleChatState();
+
+            // Send message automatically
             setTimeout(() => {
                 const textarea = document.querySelector('.chat-layout textarea') || document.querySelector('textarea');
                 if (textarea) {
