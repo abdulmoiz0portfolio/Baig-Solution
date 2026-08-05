@@ -842,33 +842,48 @@ function initCostCalculator() {
  * 8. Site-wide scroll animations & writing effect
  */
 function initScrollAnimations() {
-    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
-    gsap.registerPlugin(ScrollTrigger);
+    if (typeof gsap === "undefined") return;
 
-    // 1. General Fade-Up Animations for Cards/Images
+    // Use IntersectionObserver for robust scroll reveals
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Determine if it's a typing heading or standard element
+                if (entry.target.classList.contains("typewriter-anim")) {
+                    gsap.to(entry.target.querySelectorAll("span"), {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        duration: 0.4,
+                        stagger: 0.08,
+                        ease: "back.out(1.2)"
+                    });
+                } else {
+                    // Standard .wow element
+                    gsap.to(entry.target, { 
+                        opacity: 1, 
+                        y: 0, 
+                        duration: 0.8, 
+                        ease: "power2.out" 
+                    });
+                }
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // 1. General Fade-Up Animations for Cards/Images (.wow)
     const wowElements = document.querySelectorAll(".wow");
     wowElements.forEach(el => {
-        // Skip headings that we want to type out
-        if (el.tagName.match(/^H[1-6]$/i) || el.classList.contains("typewriter")) return;
-        
-        gsap.fromTo(el, 
-            { y: 50, opacity: 0 }, 
-            { 
-                y: 0, 
-                opacity: 1, 
-                duration: 0.8, 
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 85%",
-                    toggleActions: "play none none none"
-                }
-            }
-        );
+        if (el.classList.contains("typewriter-anim") || el.querySelector(".typewriter-anim")) {
+           // Skip container if it's specifically wrapping the typewriter to avoid double-hiding
+           // Actually, it's fine to fade the container and type the text, but let's just make sure they start hidden
+        }
+        gsap.set(el, { opacity: 0, y: 40 });
+        observer.observe(el);
     });
 
     // 2. Writing / Staggered Text Reveal Effect for Headings
-    // Target ONLY specific headings with '.typewriter-anim' class to avoid breaking complex HTML
     const headings = document.querySelectorAll(".typewriter-anim");
     headings.forEach(heading => {
         const text = heading.innerText;
@@ -885,19 +900,6 @@ function initScrollAnimations() {
             heading.appendChild(span);
         });
 
-        gsap.to(heading.querySelectorAll("span"), {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.4,
-            stagger: 0.08, // This gives the typing/cascading effect
-            ease: "back.out(1.2)",
-            scrollTrigger: {
-                trigger: heading,
-                start: "top 85%",
-                toggleActions: "play none none none"
-            }
-        });
+        observer.observe(heading);
     });
 }
-
