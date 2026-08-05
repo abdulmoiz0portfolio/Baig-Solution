@@ -223,7 +223,7 @@
     <div class="container max-w-1000">
         <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".1s">
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">CHOOSE YOUR SOLUTION</span>
-            <h2 class="display-6 fw-extrabold mb-3 typewriter-anim">AI Agents vs. AI Automations</h2>
+            <h2 class="display-6 fw-extrabold mb-3 typewriter-anim">AIAgents vs AIAutomations</h2>
             <p class="text-white-50 fs-5 mx-auto max-w-700">Not sure which service fits your business? Here is the core difference.</p>
         </div>
 
