@@ -334,6 +334,13 @@
         }
     </script>
 
+    <!-- Custom Quick Replies on Website -->
+    <div id="custom-quick-replies" style="position: fixed; bottom: 90px; right: 20px; display: flex; flex-direction: column; gap: 8px; z-index: 99999; align-items: flex-end; transition: opacity 0.3s ease;">
+        <button class="qr-btn" onclick="sendQuickReply('What services do you offer?')" style="background: #e77f23; color: white; border: none; padding: 10px 16px; border-radius: 20px; font-size: 14px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.15); font-weight: 500; transition: transform 0.2s;">👉 What services do you offer?</button>
+        <button class="qr-btn" onclick="sendQuickReply('How much does automation cost?')" style="background: #e77f23; color: white; border: none; padding: 10px 16px; border-radius: 20px; font-size: 14px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.15); font-weight: 500; transition: transform 0.2s;">👉 How much does automation cost?</button>
+        <button class="qr-btn" onclick="sendQuickReply('Connect me with a human expert.')" style="background: #e77f23; color: white; border: none; padding: 10px 16px; border-radius: 20px; font-size: 14px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.15); font-weight: 500; transition: transform 0.2s;">👉 Connect me with an expert.</button>
+    </div>
+
     <!-- n8n Chat Widget Integration -->
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
@@ -348,7 +355,7 @@
                 --chat--color-font: #333333;
                 --chat--font-family: 'Outfit', sans-serif;
             }
-            .chat-wrapper { box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important; border-radius: 12px !important; overflow: hidden; }
+            .chat-wrapper { box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; border-radius: 12px !important; overflow: hidden; }
         `;
         document.head.appendChild(style);
 
@@ -356,8 +363,7 @@
             webhookUrl: 'https://n8n.bminternational.com.pk/webhook/ae4e39aa-5247-4b22-b089-00e3cbf3216c/chat',
             showWelcomeScreen: true,
             initialMessages: [
-                'Hi! I am Muzaini, the AI Automation Expert here.',
-                'You can ask me anything, or try one of these:\n👉 What services do you offer?\n👉 How much does automation cost?\n👉 Connect me with a human expert.'
+                'Hi! I am Muzaini, the AI Automation Expert here. How can I help you scale today?'
             ],
             i18n: {
                 en: {
@@ -366,6 +372,44 @@
                     getStarted: 'Start Chatting',
                 }
             }
+        });
+
+        // Make function globally available for the buttons
+        window.sendQuickReply = function(text) {
+            // Find chat toggle button and click it to open chat if it's closed
+            const chatToggle = document.querySelector('.chat-toggle') || document.querySelector('[class*="chat-toggle"]');
+            if (chatToggle) {
+                chatToggle.click();
+            }
+
+            // Small delay to ensure chat is open and rendered
+            setTimeout(() => {
+                // Find textarea
+                const textarea = document.querySelector('.chat-layout textarea');
+                if (textarea) {
+                    // Update value bypass Vue/React state
+                    const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, "value").set;
+                    nativeInputValueSetter.call(textarea, text);
+                    textarea.dispatchEvent(new Event('input', { bubbles: true }));
+                    
+                    // Simulate Enter keypress
+                    const enterEvent = new KeyboardEvent('keydown', {
+                        bubbles: true, cancelable: true, keyCode: 13, key: 'Enter'
+                    });
+                    textarea.dispatchEvent(enterEvent);
+                } else {
+                    console.log("Could not find chat textarea.");
+                }
+            }, 300);
+
+            // Hide quick replies after clicking
+            document.getElementById('custom-quick-replies').style.display = 'none';
+        }
+        
+        // Add hover effects for buttons
+        document.querySelectorAll('.qr-btn').forEach(btn => {
+            btn.addEventListener('mouseover', () => btn.style.transform = 'scale(1.05)');
+            btn.addEventListener('mouseout', () => btn.style.transform = 'scale(1)');
         });
     </script>
 
