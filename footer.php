@@ -334,12 +334,10 @@
         }
     </script>
 
-    <!-- Custom Quick Replies on Website -->
-    <div id="custom-quick-replies" style="position: fixed; bottom: 90px; right: 20px; display: flex; flex-direction: column; gap: 8px; z-index: 99999; align-items: flex-end; transition: opacity 0.3s ease;">
-        <button class="qr-btn" onclick="sendQuickReply('What services do you offer?')" style="background: #e77f23; color: white; border: none; padding: 10px 16px; border-radius: 20px; font-size: 14px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.15); font-weight: 500; transition: transform 0.2s;">👉 What services do you offer?</button>
-        <button class="qr-btn" onclick="sendQuickReply('How much does automation cost?')" style="background: #e77f23; color: white; border: none; padding: 10px 16px; border-radius: 20px; font-size: 14px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.15); font-weight: 500; transition: transform 0.2s;">👉 How much does automation cost?</button>
-        <button class="qr-btn" onclick="sendQuickReply('Connect me with a human expert.')" style="background: #e77f23; color: white; border: none; padding: 10px 16px; border-radius: 20px; font-size: 14px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.15); font-weight: 500; transition: transform 0.2s;">👉 Connect me with an expert.</button>
-    </div>
+    <!-- Single Sticky Lead Capture Button -->
+    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; right: -5px; transform: translateY(-50%); background: #e77f23; color: white; border: none; padding: 12px 20px 12px 24px; border-radius: 30px 0 0 30px; font-size: 15px; cursor: pointer; box-shadow: -4px 4px 15px rgba(0,0,0,0.2); font-weight: 600; z-index: 99999; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-headset"></i> Connect with an Expert
+    </button>
 
     <!-- n8n Chat Widget Integration -->
     <script type="module">
@@ -356,6 +354,7 @@
                 --chat--font-family: 'Outfit', sans-serif;
             }
             .chat-wrapper { box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; border-radius: 12px !important; overflow: hidden; }
+            #sticky-expert-btn:hover { right: 0; background: #cf6f1d; }
         `;
         document.head.appendChild(style);
 
@@ -363,7 +362,8 @@
             webhookUrl: 'https://n8n.bminternational.com.pk/webhook/ae4e39aa-5247-4b22-b089-00e3cbf3216c/chat',
             showWelcomeScreen: true,
             initialMessages: [
-                'Hi! I am Muzaini, the AI Automation Expert here. How can I help you scale today?'
+                'Hi! I am Muzaini, the AI Automation Expert here.',
+                'Type a number to ask quickly:\n1️⃣ What services do you offer?\n2️⃣ How much does automation cost?\n3️⃣ Connect me with a human expert.'
             ],
             i18n: {
                 en: {
@@ -374,8 +374,8 @@
             }
         });
 
-        // Make function globally available for the buttons
-        window.sendQuickReply = function(text) {
+        // Sticky button function to open chat and send lead capture message
+        window.connectWithExpert = function() {
             // Find chat toggle button and click it to open chat if it's closed
             const chatToggle = document.querySelector('.chat-toggle') || document.querySelector('[class*="chat-toggle"]');
             if (chatToggle) {
@@ -385,11 +385,11 @@
             // Small delay to ensure chat is open and rendered
             setTimeout(() => {
                 // Find textarea
-                const textarea = document.querySelector('.chat-layout textarea');
+                const textarea = document.querySelector('.chat-layout textarea') || document.querySelector('textarea');
                 if (textarea) {
                     // Update value bypass Vue/React state
                     const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, "value").set;
-                    nativeInputValueSetter.call(textarea, text);
+                    nativeInputValueSetter.call(textarea, "I need to connect with an expert right now.");
                     textarea.dispatchEvent(new Event('input', { bubbles: true }));
                     
                     // Simulate Enter keypress
@@ -397,20 +397,9 @@
                         bubbles: true, cancelable: true, keyCode: 13, key: 'Enter'
                     });
                     textarea.dispatchEvent(enterEvent);
-                } else {
-                    console.log("Could not find chat textarea.");
                 }
-            }, 300);
-
-            // Hide quick replies after clicking
-            document.getElementById('custom-quick-replies').style.display = 'none';
+            }, 400);
         }
-        
-        // Add hover effects for buttons
-        document.querySelectorAll('.qr-btn').forEach(btn => {
-            btn.addEventListener('mouseover', () => btn.style.transform = 'scale(1.05)');
-            btn.addEventListener('mouseout', () => btn.style.transform = 'scale(1)');
-        });
     </script>
 
 
