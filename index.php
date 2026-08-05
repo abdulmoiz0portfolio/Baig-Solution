@@ -218,6 +218,60 @@
     </div>
 </section>
 
+<!-- ═══ AI Comparison Section Start ═══ -->
+<section class="py-5 bg-dark text-white border-top border-light-subtle">
+    <div class="container max-w-1000">
+        <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".1s">
+            <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">CHOOSE YOUR SOLUTION</span>
+            <h2 class="display-6 fw-extrabold mb-3">AI Agents vs. AI Automations</h2>
+            <p class="text-white-50 fs-5 mx-auto max-w-700">Not sure which service fits your business? Here is the core difference.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+            <!-- AI Agents Column -->
+            <div class="col-md-6 wow fadeInLeft" data-wow-delay=".2s">
+                <div class="p-4 p-md-5 h-100 rounded-4 d-flex flex-column" style="background: linear-gradient(145deg, #161625, #0d0d1a); border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.3);">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 56px; height: 56px; font-size: 24px;">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="h4 fw-bold mb-0 text-white">Autonomous AI Agents</h3>
+                    </div>
+                    <p class="text-accent-brand fw-bold mb-3 small text-uppercase font-monospace" style="letter-spacing: 1.5px;">The "Decision Makers"</p>
+                    <p class="text-white-50 mb-4 fs-6 lh-lg flex-grow-1">Intelligent virtual assistants that understand context and make dynamic decisions. Ideal for handling customer conversations, qualifying leads, and providing 24/7 support without strict rule paths.</p>
+                    <ul class="list-unstyled text-white-50 mb-5">
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>Natural language understanding</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>Dynamic problem solving</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>Custom trained on your knowledge base</span></li>
+                    </ul>
+                    <a href="ai-agents" class="btn btn-outline-light btn-lg w-100 fw-bold border-2">Explore AI Agents <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+
+            <!-- AI Automations Column -->
+            <div class="col-md-6 wow fadeInRight" data-wow-delay=".3s">
+                <div class="p-4 p-md-5 h-100 rounded-4 d-flex flex-column" style="background: linear-gradient(145deg, #161625, #0d0d1a); border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.3);">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 56px; height: 56px; font-size: 24px;">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <h3 class="h4 fw-bold mb-0 text-white">End-to-End Automations</h3>
+                    </div>
+                    <p class="text-accent-brand fw-bold mb-3 small text-uppercase font-monospace" style="letter-spacing: 1.5px;">The "Task Doers"</p>
+                    <p class="text-white-50 mb-4 fs-6 lh-lg flex-grow-1">Strict, rule-based workflows that connect your existing software stack. Best for moving data, syncing CRMs, triggering emails, and eliminating manual copy-paste tasks instantly.</p>
+                    <ul class="list-unstyled text-white-50 mb-5">
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>Rule-based exact execution</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>API & Webhook integrations</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>100% predictable outcomes</span></li>
+                    </ul>
+                    <a href="ai-automations" class="btn btn-outline-light btn-lg w-100 fw-bold border-2">Explore Automations <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ═══ AI Comparison Section End ═══ -->
+
 <!-- Technologies We're Using Marquee Section Start -->
 <section id="technologies-section" class="py-5 bg-light-gray text-dark border-top border-light-subtle overflow-hidden">
     <div class="container mb-4">
