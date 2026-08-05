@@ -338,7 +338,7 @@
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
         createChat({
-            webhookUrl: 'https://belllaroger691.app.n8n.cloud/webhook/ae4e39aa-5247-4b22-b089-00e3cbf3216c/chat',
+            webhookUrl: 'https://n8n.bminternational.com.pk/webhook/ae4e39aa-5247-4b22-b089-00e3cbf3216c/chat',
             showWelcomeScreen: true,
             i18n: {
                 en: {
