@@ -367,12 +367,31 @@
                 overflow: hidden !important;
             }
             
-            /* Fix chat layout spacing so X button looks good */
+            /* Fix chat header layout to make it smaller and position X button */
             .chat-header {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: space-between !important;
-                padding-right: 15px !important;
+                padding: 15px 20px !important;
+                min-height: auto !important;
+                position: relative !important;
+                display: block !important;
+            }
+            
+            #custom-chat-close {
+                position: absolute !important;
+                top: 10px !important;
+                right: 12px !important;
+                background: transparent;
+                border: none;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+                line-height: 1;
+                outline: none;
+                padding: 5px;
+                z-index: 10;
+                transition: transform 0.2s;
+            }
+            #custom-chat-close:hover {
+                transform: scale(1.1);
             }
         `;
         document.head.appendChild(style);
@@ -418,16 +437,13 @@
                     const closeBtn = document.createElement('button');
                     closeBtn.id = 'custom-chat-close';
                     closeBtn.innerHTML = '✖';
-                    closeBtn.style.cssText = 'background: transparent; border: none; color: white; font-size: 16px; cursor: pointer; padding: 5px; margin-left: auto; line-height: 1; outline: none;';
                     closeBtn.onclick = () => {
                         toggleChatState(); // Click hidden toggle to close
                         // Show the sticky button again when chat closes
                         const stickyBtn = document.getElementById('sticky-expert-btn');
                         if (stickyBtn) stickyBtn.style.display = 'flex';
                     };
-                    chatHeader.style.display = 'flex';
-                    chatHeader.style.justifyContent = 'space-between';
-                    chatHeader.style.alignItems = 'center';
+                    // Only append, styling is handled in CSS above
                     chatHeader.appendChild(closeBtn);
                 }
 
