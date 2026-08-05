@@ -357,16 +357,6 @@
             #sticky-expert-btn:hover { right: 0; background: #cf6f1d; }
             #in-chat-quick-replies::-webkit-scrollbar { display: none; }
             
-            /* Hide the default n8n chat toggle bubble completely without using display:none so clicks still register */
-            .chat-wrapper > *:not(.chat-layout) {
-                opacity: 0 !important;
-                pointer-events: none !important;
-                position: absolute !important;
-                width: 0 !important;
-                height: 0 !important;
-                overflow: hidden !important;
-            }
-            
             /* Fix chat header layout to make it smaller and position X button */
             .chat-header {
                 padding: 15px 20px !important;
@@ -411,34 +401,59 @@
             }
         });
 
-        // Helper to find and click the hidden toggle button reliably
-        const toggleChatState = () => {
-            const chatWrapper = document.querySelector('.chat-wrapper');
-            if (chatWrapper) {
-                // Find any direct child of chat-wrapper that is NOT the chat-layout (this will be the toggle bubble)
-                const children = chatWrapper.children;
-                for (let i = 0; i < children.length; i++) {
-                    if (!children[i].classList.contains('chat-layout')) {
-                        children[i].click();
-                        break;
+        // Helper to find the default n8n chat toggle button (the red bubble)
+        const getChatToggleButton = () => {
+            // Find buttons or divs that are fixed at bottom right (typical chat bubble position)
+            const elements = document.querySelectorAll('button, div');
+            for (const el of elements) {
+                if (el.id === 'sticky-expert-btn' || el.id === 'custom-chat-close' || el.closest('.chat-wrapper')) continue;
+                
+                const style = window.getComputedStyle(el);
+                if (style.position === 'fixed') {
+                    const bottom = parseInt(style.bottom);
+                    const right = parseInt(style.right);
+                    if (!isNaN(bottom) && !isNaN(right) && bottom <= 50 && right <= 50) {
+                        return el;
                     }
                 }
+            }
+            return null;
+        };
+
+        const toggleChatState = () => {
+            if (window.n8nChatToggle) {
+                window.n8nChatToggle.click();
+            } else {
+                const btn = getChatToggleButton();
+                if (btn) btn.click();
             }
         };
 
         // Inject Native-looking Quick Replies and Custom Close Button
         const observer = new MutationObserver((mutations, obs) => {
+            // 1. Hide the default red chat bubble securely and save its reference
+            if (!window.n8nChatToggle) {
+                const toggleBtn = getChatToggleButton();
+                if (toggleBtn) {
+                    toggleBtn.style.setProperty('opacity', '0', 'important');
+                    toggleBtn.style.setProperty('pointer-events', 'none', 'important');
+                    toggleBtn.style.setProperty('transform', 'scale(0)', 'important');
+                    toggleBtn.style.setProperty('z-index', '-1000', 'important');
+                    window.n8nChatToggle = toggleBtn;
+                }
+            }
+
             const chatLayout = document.querySelector('.chat-layout');
             
             if (chatLayout) {
-                // 1. Inject Custom "X" Close Button in Header
+                // 2. Inject Custom "X" Close Button in Header
                 const chatHeader = chatLayout.querySelector('header') || chatLayout.querySelector('.chat-header') || chatLayout.firstChild;
                 if (chatHeader && !document.getElementById('custom-chat-close')) {
                     const closeBtn = document.createElement('button');
                     closeBtn.id = 'custom-chat-close';
                     closeBtn.innerHTML = '✖';
                     closeBtn.onclick = () => {
-                        toggleChatState(); // Click hidden toggle to close
+                        if (window.n8nChatToggle) window.n8nChatToggle.click(); // Click hidden toggle to close
                         // Show the sticky button again when chat closes
                         const stickyBtn = document.getElementById('sticky-expert-btn');
                         if (stickyBtn) stickyBtn.style.display = 'flex';
