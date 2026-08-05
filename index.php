@@ -454,95 +454,57 @@
             <p class="text-secondary fs-5">Take a look at how we deploy custom code and AI agents to transform businesses.</p>
         </div>
         
-        <div class="row g-4">
-            <!-- Project 1 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 subpage-card">
-                    <div class="position-relative">
-                        <img src="assets/img/services/ai_agents.jpg" class="card-img-top w-100" style="aspect-ratio: 4/3; object-fit: cover;" alt="AI Support Agent Setup">
-                        <span class="position-absolute bottom-0 end-0 bg-dark text-white text-uppercase font-monospace px-2 py-1 m-2 rounded-2" style="font-size: 10px; opacity: 0.85;">[ Workflow Canvas Screenshot ]</span>
-                    </div>
-                    <div class="card-body p-4">
-                        <span class="text-accent-brand small fw-bold font-monospace">AI AGENTS</span>
-                        <h4 class="fw-bold mt-2 mb-3 text-dark border-bottom border-light pb-2">Automated Support Agent</h4>
-                        
-                        <!-- Loom Video Embed Slot (Uncomment and replace URL when ready) -->
-                        <!--
-                        <div class="loom-embed mb-3" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
-                            <iframe src="https://www.loom.com/embed/placeholder-id" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                <div class="row g-4 mt-2">
+            <!-- Project 1: BM International -->
+            <div class="col-lg-6 wow">
+                <div class="portfolio-card bg-white rounded-4 border p-4 h-100 position-relative shadow-sm text-start" style="transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;">
+                    <div class="portfolio-preview rounded-3 overflow-hidden position-relative bg-light mb-4 border border-light-subtle shadow-sm" style="height: 340px;">
+                        <!-- Iframe for live site preview (scaled to fit more content) -->
+                        <div style="width: 200%; height: 200%; transform: scale(0.5); transform-origin: 0 0; background: #fff;">
+                            <iframe src="https://bminternational.com.pk/" title="BM International Live Preview" style="width: 100%; height: 100%; border: none; pointer-events: none;" loading="lazy"></iframe>
                         </div>
-                        -->
+                        
+                        <!-- Overlay for click -->
+                        <a href="https://bminternational.com.pk/" target="_blank" class="portfolio-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-decoration-none">
+                            <span class="btn btn-brand px-4 py-2 shadow-lg fw-bold border-0">
+                                Open Website <i class="fa-solid fa-arrow-up-right ms-2"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="portfolio-info px-2">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h4 fw-bold mb-0 text-dark">BM International</h3>
+                            <span class="badge bg-light text-dark border py-2 px-3 font-monospace rounded-pill">Textile Export</span>
+                        </div>
+                        <p class="text-secondary mb-4 fs-6">A comprehensive B2B textile sourcing and garment manufacturing platform. Built with modern web technologies to handle international export operations, quality control, and global logistics networking.</p>
+                        <a href="https://bminternational.com.pk/" target="_blank" class="text-accent-brand fw-bold text-decoration-none small text-uppercase" style="letter-spacing: 1px;">Visit Live Site <i class="fa-solid fa-angle-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="case-study-details mt-3">
-                            <div class="mb-2">
-                                <strong class="text-danger small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Problem:</strong>
-                                <p class="text-secondary small mb-0">Client's support team was manually answering repetitive customer questions, leading to slow response times and inconsistent answers.</p>
-                            </div>
-                            <div class="mb-2">
-                                <strong class="text-primary small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Solution:</strong>
-                                <p class="text-secondary small mb-0">Built a real-time natural language AI agent integrated with customer support transcripts to handle common queries automatically and escalate complex ones to humans.</p>
-                            </div>
-                            <div>
-                                <strong class="text-success small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Result:</strong>
-                                <p class="text-dark fw-bold small mb-0"><i class="fa-solid fa-arrow-trend-up me-1 text-success"></i> Reduced resolution times by 70%.</p>
-                            </div>
+            <!-- Project 2: NorthBridge Data Solutions -->
+            <div class="col-lg-6 wow">
+                <div class="portfolio-card bg-white rounded-4 border p-4 h-100 position-relative shadow-sm text-start" style="transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;">
+                    <div class="portfolio-preview rounded-3 overflow-hidden position-relative bg-light mb-4 border border-light-subtle shadow-sm" style="height: 340px;">
+                        <!-- Iframe for live site preview (scaled to fit more content) -->
+                        <div style="width: 200%; height: 200%; transform: scale(0.5); transform-origin: 0 0; background: #fff;">
+                            <iframe src="https://www.northbridgedatasolutions.com/" title="NorthBridge Live Preview" style="width: 100%; height: 100%; border: none; pointer-events: none;" loading="lazy"></iframe>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 subpage-card">
-                    <div class="position-relative">
-                        <img src="assets/img/services/ai_automations.jpg" class="card-img-top w-100" style="aspect-ratio: 4/3; object-fit: cover;" alt="n8n Hub Sync Pipeline">
-                        <span class="position-absolute bottom-0 end-0 bg-dark text-white text-uppercase font-monospace px-2 py-1 m-2 rounded-2" style="font-size: 10px; opacity: 0.85;">[ n8n Workflow Screenshot ]</span>
-                    </div>
-                    <div class="card-body p-4">
-                        <span class="text-accent-brand small fw-bold font-monospace">AI AUTOMATIONS</span>
-                        <h4 class="fw-bold mt-2 mb-3 text-dark border-bottom border-light pb-2">Slack & Hubspot Pipeline</h4>
                         
-                        <div class="case-study-details mt-3">
-                            <div class="mb-2">
-                                <strong class="text-danger small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Problem:</strong>
-                                <p class="text-secondary small mb-0">Leads submitted through forms were manually copied into HubSpot and manually shared with the sales team, causing delays and missed leads.</p>
-                            </div>
-                            <div class="mb-2">
-                                <strong class="text-primary small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Solution:</strong>
-                                <p class="text-secondary small mb-0">Built an end-to-end n8n workflow that automatically maps form entries, sends lead scores to HubSpot, and triggers instant Slack alerts to the team.</p>
-                            </div>
-                            <div>
-                                <strong class="text-success small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Result:</strong>
-                                <p class="text-dark fw-bold small mb-0"><i class="fa-solid fa-arrow-trend-up me-1 text-success"></i> Lead response time reduced from hours to under 5 minutes.</p>
-                            </div>
-                        </div>
+                        <!-- Overlay for click -->
+                        <a href="https://www.northbridgedatasolutions.com/" target="_blank" class="portfolio-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-decoration-none">
+                            <span class="btn btn-brand px-4 py-2 shadow-lg fw-bold border-0">
+                                Open Website <i class="fa-solid fa-arrow-up-right ms-2"></i>
+                            </span>
+                        </a>
                     </div>
-                </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 subpage-card">
-                    <div class="position-relative">
-                        <img src="assets/img/services/web_development.jpg" class="card-img-top w-100" style="aspect-ratio: 4/3; object-fit: cover;" alt="Bespoke E-commerce portal">
-                        <span class="position-absolute bottom-0 end-0 bg-dark text-white text-uppercase font-monospace px-2 py-1 m-2 rounded-2" style="font-size: 10px; opacity: 0.85;">[ Development Stack Screenshot ]</span>
-                    </div>
-                    <div class="card-body p-4">
-                        <span class="text-accent-brand small fw-bold font-monospace">WEB DEV</span>
-                        <h4 class="fw-bold mt-2 mb-3 text-dark border-bottom border-light pb-2">Fast-Loading Portal</h4>
-                        
-                        <div class="case-study-details mt-3">
-                            <div class="mb-2">
-                                <strong class="text-danger small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Problem:</strong>
-                                <p class="text-secondary small mb-0">Client needed a lightweight, high-performing e-commerce presence but existing options were slow and hard to maintain.</p>
-                            </div>
-                            <div class="mb-2">
-                                <strong class="text-primary small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Solution:</strong>
-                                <p class="text-secondary small mb-0">Built a bespoke lightweight single-page application with customized styling variables, optimized for performance.</p>
-                            </div>
-                            <div>
-                                <strong class="text-success small font-monospace text-uppercase d-block" style="letter-spacing: 1px;">Result:</strong>
-                                <p class="text-dark fw-bold small mb-0"><i class="fa-solid fa-arrow-trend-up me-1 text-success"></i> Achieved a 98/100 score on Google PageSpeed Insights.</p>
-                            </div>
+                    <div class="portfolio-info px-2">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h4 fw-bold mb-0 text-dark">NorthBridge Digital</h3>
+                            <span class="badge bg-light text-dark border py-2 px-3 font-monospace rounded-pill">AI Agency</span>
                         </div>
+                        <p class="text-secondary mb-4 fs-6">An agency platform delivering high-converting custom web stores, AI chatbots, graphics design, and LinkedIn outreach solutions. Engineered to scale business growth through data-driven digital strategies.</p>
+                        <a href="https://www.northbridgedatasolutions.com/" target="_blank" class="text-accent-brand fw-bold text-decoration-none small text-uppercase" style="letter-spacing: 1px;">Visit Live Site <i class="fa-solid fa-angle-right ms-1"></i></a>
                     </div>
                 </div>
             </div>

@@ -1035,3 +1035,30 @@ h6.text-accent-brand.font-monospace {
     font-size: 14px;
 }
 
+
+/* Live Portfolio Iframe Styles */
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(231, 127, 35, 0.4) !important;
+}
+.portfolio-overlay {
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.portfolio-card:hover .portfolio-overlay {
+    opacity: 1;
+}
+.portfolio-overlay .btn {
+    transform: translateY(25px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.portfolio-card:hover .portfolio-overlay .btn {
+    transform: translateY(0);
+}
+.portfolio-preview iframe {
+    transition: opacity 0.3s ease;
+}
