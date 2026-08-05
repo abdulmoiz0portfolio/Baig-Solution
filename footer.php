@@ -341,7 +341,7 @@
             webhookUrl: 'https://n8n.bminternational.com.pk/webhook/ae4e39aa-5247-4b22-b089-00e3cbf3216c/chat',
             showWelcomeScreen: true,
             initialMessages: [
-                'Hi! I am the Baig Solution Assistant. How can I help you today?'
+                'Hi! I am Muzaini, the AI Automation Expert here. How can I automate your business today?'
             ],
             i18n: {
                 en: {
