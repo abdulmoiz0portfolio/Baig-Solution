@@ -146,7 +146,7 @@
     <div class="container">
         <div class="text-center mb-5 max-w-700 mx-auto">
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">SERVICES WE PROVIDE</span>
-            <h2 class="display-5 fw-extrabold mb-3">Our Core Offerings</h2>
+            <h2 class="display-5 fw-extrabold mb-3 typewriter-anim">Our Core Offerings</h2>
             <p class="text-secondary fs-5">We combine strategy, design, and automation to scale your business.</p>
         </div>
         
@@ -223,7 +223,7 @@
     <div class="container max-w-1000">
         <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".1s">
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">CHOOSE YOUR SOLUTION</span>
-            <h2 class="display-6 fw-extrabold mb-3">AI Agents vs. AI Automations</h2>
+            <h2 class="display-6 fw-extrabold mb-3 typewriter-anim">AI Agents vs. AI Automations</h2>
             <p class="text-white-50 fs-5 mx-auto max-w-700">Not sure which service fits your business? Here is the core difference.</p>
         </div>
 
@@ -399,7 +399,7 @@
     <div class="container">
         <div class="text-center mb-5 max-w-700 mx-auto">
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">HOW WE WORK</span>
-            <h2 class="display-5 fw-extrabold mb-3">Our 4-Step Automation Process</h2>
+            <h2 class="display-5 fw-extrabold mb-3 typewriter-anim">Our 4-Step Automation Process</h2>
             <p class="text-secondary fs-5">A structured, collaborative approach to connecting your business operations.</p>
         </div>
         
@@ -450,7 +450,7 @@
     <div class="container">
         <div class="text-center mb-5 max-w-700 mx-auto">
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">CASE STUDIES</span>
-            <h2 class="display-5 fw-extrabold mb-3">Our Work in Action</h2>
+            <h2 class="display-5 fw-extrabold mb-3 typewriter-anim">Our Work in Action</h2>
             <p class="text-secondary fs-5">Take a look at how we deploy custom code and AI agents to transform businesses.</p>
         </div>
         
@@ -557,7 +557,7 @@
     <div class="container max-w-800">
         <div class="text-center mb-5">
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">TESTIMONIALS</span>
-            <h2 class="display-5 fw-extrabold mb-3">What Our Clients Say</h2>
+            <h2 class="display-5 fw-extrabold mb-3 typewriter-anim">What Our Clients Say</h2>
             <p class="text-secondary fs-5">Trusted by tech companies and service providers worldwide.</p>
         </div>
         
@@ -599,7 +599,7 @@
     <div class="container max-w-800">
         <div class="text-center mb-5">
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">QUESTIONS</span>
-            <h2 class="display-5 fw-extrabold mb-3">Frequently Asked Questions</h2>
+            <h2 class="display-5 fw-extrabold mb-3 typewriter-anim">Frequently Asked Questions</h2>
             <p class="text-secondary fs-5">Common queries answered about our development and AI processes.</p>
         </div>
         
@@ -658,7 +658,7 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-5">
                 <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">GET IN TOUCH</span>
-                <h2 class="display-6 fw-extrabold text-dark mb-4">Start Your Automation Journey</h2>
+                <h2 class="display-6 fw-extrabold text-dark mb-4 typewriter-anim">Start Your Automation Journey</h2>
                 <p class="text-secondary fs-5 mb-4">
                     Send us your details. Submitting this form writes directly to our Firestore database and triggers our notifications.
                 </p>

@@ -868,12 +868,9 @@ function initScrollAnimations() {
     });
 
     // 2. Writing / Staggered Text Reveal Effect for Headings
-    // Target main section headings (h2, h3) but ignore header/footer elements
-    const headings = document.querySelectorAll("h2:not(.modal-content-side h2), h3:not(.widget-title)");
+    // Target ONLY specific headings with '.typewriter-anim' class to avoid breaking complex HTML
+    const headings = document.querySelectorAll(".typewriter-anim");
     headings.forEach(heading => {
-        // Skip if it contains complex HTML children like icons (to avoid breaking them)
-        if (heading.querySelector("i") || heading.querySelector("svg") || heading.closest("header") || heading.closest("footer")) return;
-
         const text = heading.innerText;
         heading.innerHTML = "";
         
