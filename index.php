@@ -288,52 +288,53 @@
 
     <div class="tech-marquee-wrapper">
         <div class="tech-marquee-track">
+
             <!-- Set 1 (8 Core AI Automation Stack Logos) -->
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#EA4B71"><path d="M20.25 6a1.5 1.5 0 0 0-1.5 1.5v3.136l-3.327-5.76A1.5 1.5 0 0 0 14.125 4h-4.25a1.5 1.5 0 0 0-1.299.75L5.25 10.51 3.927 8.216A1.5 1.5 0 0 0 2.628 7.464H1.5v3h.427l2.023 3.504A1.5 1.5 0 0 0 5.25 14.72h4.25a1.5 1.5 0 0 0 1.3-.75l3.326-5.761v7.041a1.5 1.5 0 1 0 3 0V7.5a1.5 1.5 0 0 0-1.5-1.5z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=n8n.io&sz=128" alt="n8n" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">n8n</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#00C2FF"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=make.com&sz=128" alt="Make" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">Make</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#1877F2"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8L19 8v8l-7 3.5L5 16V8l7-3.2zM11 11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=gohighlevel.com&sz=128" alt="GoHighLevel" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">GoHighLevel</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#FF4A00"><path d="M4.9 19.5h14.2v-3.2H4.9v3.2zm6.2-15v6.5H4.9l8 8.6v-6.5h6.2l-8-8.6z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=zapier.com&sz=128" alt="Zapier" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">Zapier</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#10A37F"><path d="M22.28 9.87a5.98 5.98 0 0 0-.52-4.88 6 6 0 0 0-5.76-3.09 6 6 0 0 0-4.4 1.95A6 6 0 0 0 7.2 2.6a6 6 0 0 0-5.32 4.18 6 6 0 0 0 .76 6.37 5.98 5.98 0 0 0 .52 4.88 6 6 0 0 0 5.76 3.09 6 6 0 0 0 4.4-1.95 6 6 0 0 0 4.4 1.25 6 6 0 0 0 5.32-4.18 6 6 0 0 0-.76-6.37zm-9.78 10.37a4.2 4.2 0 0 1-2.4-.73l.14-.08 3.57-2.06a.9.9 0 0 0 .45-.78v-5.02l1.5.87a.08.08 0 0 1 .04.06v4.36a4.2 4.2 0 0 1-3.3 3.38zm-7.66-3.41a4.19 4.19 0 0 1-.54-2.45v-.16l3.57 2.06a.9.9 0 0 0 .9 0l4.35-2.51v1.74a.08.08 0 0 1-.04.07l-3.77 2.18a4.2 4.2 0 0 1-4.47-.93zm-1.44-8.4a4.19 4.19 0 0 1 1.86-1.73l.14.08 3.57 2.06a.9.9 0 0 0 .45.78v5.02l-1.5-.87a.08.08 0 0 1-.04-.06V9.35a4.2 4.2 0 0 1-4.48-4.92zm11.36-2.91a4.2 4.2 0 0 1 2.4.73l-.14.08-3.57 2.06a.9.9 0 0 0-.45.78v5.02l-1.5-.87a.08.08 0 0 1-.04-.07V6.9a4.2 4.2 0 0 1 3.3-3.38zm7.66 3.41c.36.75.54 1.58.54 2.45v.16l-3.57-2.06a.9.9 0 0 0-.9 0l-4.35 2.51V9.92a.08.08 0 0 1 .04-.07l3.77-2.18a4.2 4.2 0 0 1 4.47.93zm-2.85 7.15l-4.35-2.51v-5.02a.9.9 0 0 0-.45-.78l-4.35-2.51 1.5-.87a.08.08 0 0 1 .08 0l3.77 2.18a4.2 4.2 0 0 1 3.8 9.51z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" alt="OpenAI" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">OpenAI</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#D97757"><path d="M17.41 19.38h-3.48l-.88-2.61H9l-.88 2.61H4.64L9.5 5.62h3.45l4.46 13.76zM11.64 14l-1.6-4.83L8.44 14h3.2z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=anthropic.com&sz=128" alt="Claude" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">Claude</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#25D366"><path d="M12.012 2c-5.506 0-9.969 4.463-9.969 9.969 0 1.763.459 3.482 1.332 4.992l-1.375 5.039 5.166-1.355c1.455.794 3.09 1.213 4.846 1.213 5.506 0 9.969-4.463 9.969-9.969s-4.463-9.969-9.969-9.969zm5.82 14.162c-.244.686-1.228 1.258-2.008 1.424-.534.114-1.231.205-3.578-.767-2.999-1.242-4.93-4.298-5.08-4.498-.149-.2-1.218-1.624-1.218-3.098 0-1.474.773-2.198 1.047-2.497.274-.299.598-.374.797-.374.199 0 .399.002.573.01.187.009.436-.071.684.524.249.598.847 2.068.922 2.217.075.149.124.324.025.523-.099.199-.149.324-.299.498-.149.174-.313.39-.448.523-.149.149-.304.312-.131.61.174.299.774 1.278 1.661 2.068 1.141 1.018 2.102 1.333 2.401 1.482.299.149.474.124.648-.075.174-.199.747-.872.946-1.17.199-.299.399-.249.673-.149.274.099 1.744.822 2.043.971.299.149.498.224.573.349.074.124.074.723-.17 1.409z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=whatsapp.com&sz=128" alt="WhatsApp API" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">WhatsApp API</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#FF7A59"><path d="M17.43 1.5a2.57 2.57 0 0 0-2.57 2.57v3.08l-3.3 3.3a5.55 5.55 0 0 0-1.56-.23 5.7 5.7 0 0 0-5.7 5.7 5.7 5.7 0 0 0 5.7 5.7 5.67 5.67 0 0 0 5.61-4.88l3.62 2.09a2.56 2.56 0 1 0 1.28-2.22l-3.56-2.06a5.67 5.67 0 0 0-.25-1.92l3.29-3.29h.01a2.57 2.57 0 1 0-2.57-2.57zM10 18.66a2.95 2.95 0 1 1 0-5.9 2.95 2.95 0 0 1 0 5.9z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=128" alt="HubSpot" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">HubSpot</span>
             </div>
@@ -341,52 +342,53 @@
             <!-- Set 2 (Duplicated for Seamless 0-to-100% Looping) -->
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#EA4B71"><path d="M20.25 6a1.5 1.5 0 0 0-1.5 1.5v3.136l-3.327-5.76A1.5 1.5 0 0 0 14.125 4h-4.25a1.5 1.5 0 0 0-1.299.75L5.25 10.51 3.927 8.216A1.5 1.5 0 0 0 2.628 7.464H1.5v3h.427l2.023 3.504A1.5 1.5 0 0 0 5.25 14.72h4.25a1.5 1.5 0 0 0 1.3-.75l3.326-5.761v7.041a1.5 1.5 0 1 0 3 0V7.5a1.5 1.5 0 0 0-1.5-1.5z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=n8n.io&sz=128" alt="n8n" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">n8n</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#00C2FF"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=make.com&sz=128" alt="Make" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">Make</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#1877F2"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8L19 8v8l-7 3.5L5 16V8l7-3.2zM11 11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=gohighlevel.com&sz=128" alt="GoHighLevel" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">GoHighLevel</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#FF4A00"><path d="M4.9 19.5h14.2v-3.2H4.9v3.2zm6.2-15v6.5H4.9l8 8.6v-6.5h6.2l-8-8.6z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=zapier.com&sz=128" alt="Zapier" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">Zapier</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#10A37F"><path d="M22.28 9.87a5.98 5.98 0 0 0-.52-4.88 6 6 0 0 0-5.76-3.09 6 6 0 0 0-4.4 1.95A6 6 0 0 0 7.2 2.6a6 6 0 0 0-5.32 4.18 6 6 0 0 0 .76 6.37 5.98 5.98 0 0 0 .52 4.88 6 6 0 0 0 5.76 3.09 6 6 0 0 0 4.4-1.95 6 6 0 0 0 4.4 1.25 6 6 0 0 0 5.32-4.18 6 6 0 0 0-.76-6.37zm-9.78 10.37a4.2 4.2 0 0 1-2.4-.73l.14-.08 3.57-2.06a.9.9 0 0 0 .45-.78v-5.02l1.5.87a.08.08 0 0 1 .04.06v4.36a4.2 4.2 0 0 1-3.3 3.38zm-7.66-3.41a4.19 4.19 0 0 1-.54-2.45v-.16l3.57 2.06a.9.9 0 0 0 .9 0l4.35-2.51v1.74a.08.08 0 0 1-.04.07l-3.77 2.18a4.2 4.2 0 0 1-4.47-.93zm-1.44-8.4a4.19 4.19 0 0 1 1.86-1.73l.14.08 3.57 2.06a.9.9 0 0 0 .45.78v5.02l-1.5-.87a.08.08 0 0 1-.04-.06V9.35a4.2 4.2 0 0 1-4.48-4.92zm11.36-2.91a4.2 4.2 0 0 1 2.4.73l-.14.08-3.57 2.06a.9.9 0 0 0-.45.78v5.02l-1.5-.87a.08.08 0 0 1-.04-.07V6.9a4.2 4.2 0 0 1 3.3-3.38zm7.66 3.41c.36.75.54 1.58.54 2.45v.16l-3.57-2.06a.9.9 0 0 0-.9 0l-4.35 2.51V9.92a.08.08 0 0 1 .04-.07l3.77-2.18a4.2 4.2 0 0 1 4.47.93zm-2.85 7.15l-4.35-2.51v-5.02a.9.9 0 0 0-.45-.78l-4.35-2.51 1.5-.87a.08.08 0 0 1 .08 0l3.77 2.18a4.2 4.2 0 0 1 3.8 9.51z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" alt="OpenAI" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">OpenAI</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#D97757"><path d="M17.41 19.38h-3.48l-.88-2.61H9l-.88 2.61H4.64L9.5 5.62h3.45l4.46 13.76zM11.64 14l-1.6-4.83L8.44 14h3.2z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=anthropic.com&sz=128" alt="Claude" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">Claude</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#25D366"><path d="M12.012 2c-5.506 0-9.969 4.463-9.969 9.969 0 1.763.459 3.482 1.332 4.992l-1.375 5.039 5.166-1.355c1.455.794 3.09 1.213 4.846 1.213 5.506 0 9.969-4.463 9.969-9.969s-4.463-9.969-9.969-9.969zm5.82 14.162c-.244.686-1.228 1.258-2.008 1.424-.534.114-1.231.205-3.578-.767-2.999-1.242-4.93-4.298-5.08-4.498-.149-.2-1.218-1.624-1.218-3.098 0-1.474.773-2.198 1.047-2.497.274-.299.598-.374.797-.374.199 0 .399.002.573.01.187.009.436-.071.684.524.249.598.847 2.068.922 2.217.075.149.124.324.025.523-.099.199-.149.324-.299.498-.149.174-.313.39-.448.523-.149.149-.304.312-.131.61.174.299.774 1.278 1.661 2.068 1.141 1.018 2.102 1.333 2.401 1.482.299.149.474.124.648-.075.174-.199.747-.872.946-1.17.199-.299.399-.249.673-.149.274.099 1.744.822 2.043.971.299.149.498.224.573.349.074.124.074.723-.17 1.409z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=whatsapp.com&sz=128" alt="WhatsApp API" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">WhatsApp API</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="#FF7A59"><path d="M17.43 1.5a2.57 2.57 0 0 0-2.57 2.57v3.08l-3.3 3.3a5.55 5.55 0 0 0-1.56-.23 5.7 5.7 0 0 0-5.7 5.7 5.7 5.7 0 0 0 5.7 5.7 5.67 5.67 0 0 0 5.61-4.88l3.62 2.09a2.56 2.56 0 1 0 1.28-2.22l-3.56-2.06a5.67 5.67 0 0 0-.25-1.92l3.29-3.29h.01a2.57 2.57 0 1 0-2.57-2.57zM10 18.66a2.95 2.95 0 1 1 0-5.9 2.95 2.95 0 0 1 0 5.9z"/></svg>
+                    <img src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=128" alt="HubSpot" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">HubSpot</span>
             </div>
+
         </div>
     </div>
 </section>
