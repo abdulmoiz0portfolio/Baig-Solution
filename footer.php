@@ -355,6 +355,7 @@
             }
             .chat-wrapper { box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; border-radius: 12px !important; overflow: hidden; }
             #sticky-expert-btn:hover { right: 0; background: #cf6f1d; }
+            #in-chat-quick-replies::-webkit-scrollbar { display: none; }
         `;
         document.head.appendChild(style);
 
@@ -362,8 +363,7 @@
             webhookUrl: 'https://n8n.bminternational.com.pk/webhook/ae4e39aa-5247-4b22-b089-00e3cbf3216c/chat',
             showWelcomeScreen: true,
             initialMessages: [
-                'Hi! I am Muzaini, the AI Automation Expert here.',
-                'Type a number to ask quickly:\n1️⃣ What services do you offer?\n2️⃣ How much does automation cost?\n3️⃣ Connect me with a human expert.'
+                'Hi! I am Muzaini, the AI Automation Expert here. How can I help you scale today?'
             ],
             i18n: {
                 en: {
@@ -374,44 +374,89 @@
             }
         });
 
+        // Inject Native-looking Quick Replies inside the chat window
+        const observer = new MutationObserver((mutations, obs) => {
+            const chatLayout = document.querySelector('.chat-layout');
+            if (chatLayout && !document.getElementById('in-chat-quick-replies')) {
+                // Chat layout found, inject horizontal quick replies
+                const qrContainer = document.createElement('div');
+                qrContainer.id = 'in-chat-quick-replies';
+                // Positioned absolutely right above the input bar (approx 65px tall)
+                qrContainer.style.cssText = 'position: absolute; bottom: 65px; left: 0; width: 100%; display: flex; gap: 8px; overflow-x: auto; padding: 10px; background: rgba(255,255,255,0.95); backdrop-filter: blur(4px); white-space: nowrap; scrollbar-width: none; z-index: 100; border-top: 1px solid #eee; align-items: center;';
+                
+                const replies = [
+                    { icon: '🛠️', text: 'Services' },
+                    { icon: '💰', text: 'Pricing' },
+                    { icon: '📞', text: 'Connect Expert' }
+                ];
+
+                replies.forEach(r => {
+                    const btn = document.createElement('button');
+                    btn.innerHTML = `${r.icon} ${r.text}`;
+                    btn.style.cssText = 'background: white; border: 1px solid #ddd; padding: 6px 14px; border-radius: 4px; font-size: 13px; color: #333; cursor: pointer; flex-shrink: 0; font-family: "Outfit", sans-serif; display: flex; align-items: center; gap: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: background 0.2s, transform 0.1s;';
+                    
+                    btn.onmouseover = () => btn.style.background = '#f9f9f9';
+                    btn.onmouseout = () => btn.style.background = 'white';
+                    btn.onmousedown = () => btn.style.transform = 'scale(0.96)';
+                    btn.onmouseup = () => btn.style.transform = 'scale(1)';
+                    
+                    btn.onclick = () => {
+                        const textarea = document.querySelector('.chat-layout textarea') || document.querySelector('textarea');
+                        if (textarea) {
+                            const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, "value").set;
+                            
+                            let fullMsg = "";
+                            if (r.text === 'Services') fullMsg = "What services do you offer?";
+                            if (r.text === 'Pricing') fullMsg = "How much does automation cost?";
+                            if (r.text === 'Connect Expert') fullMsg = "I need to connect with an expert right now.";
+                            
+                            nativeInputValueSetter.call(textarea, fullMsg);
+                            textarea.dispatchEvent(new Event('input', { bubbles: true }));
+                            
+                            const enterEvent = new KeyboardEvent('keydown', {
+                                bubbles: true, cancelable: true, keyCode: 13, key: 'Enter'
+                            });
+                            textarea.dispatchEvent(enterEvent);
+                            
+                            // Hide quick replies after one is used to keep chat clean
+                            qrContainer.style.display = 'none';
+                        }
+                    };
+                    qrContainer.appendChild(btn);
+                });
+
+                chatLayout.appendChild(qrContainer);
+                // Keep observing in case chat is destroyed and recreated, but we don't disconnect.
+            }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+
         // Sticky button function to open chat and send lead capture message
         window.connectWithExpert = function() {
-            // Check if Chatbot API exists
             if (window.Chatbot && window.Chatbot.open) {
                 window.Chatbot.open();
             } else {
-                // Find the toggle button (usually a direct child of the chat wrapper or has specific SVG)
-                // In @n8n/chat, the main toggle button is often the last button in the wrapper or a direct child
                 const chatWrapper = document.querySelector('.chat-wrapper');
                 if (chatWrapper) {
-                    // Try to find the button that is NOT inside the chat-layout (the main toggle button)
                     const buttons = chatWrapper.querySelectorAll('button');
                     buttons.forEach(btn => {
-                        // The toggle button usually doesn't have inner text like 'Start Chatting' or send icon if it's just the bubble
                         if (!btn.closest('.chat-layout') || btn.classList.length > 0) {
-                            // If chat is closed, the toggle button is visible. We can just click the first button that isn't the send button.
-                            // The safest way is to click the button that controls the window.
                             btn.click();
                         }
                     });
                 } else {
-                    // Fallback broad search
                     const anyChatButton = document.querySelector('button[class*="toggle"], .chat-wrapper > button');
                     if (anyChatButton) anyChatButton.click();
                 }
             }
 
-            // Small delay to ensure chat is open and rendered
             setTimeout(() => {
-                // Find textarea
                 const textarea = document.querySelector('.chat-layout textarea') || document.querySelector('textarea');
                 if (textarea) {
-                    // Update value bypass Vue/React state
                     const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, "value").set;
                     nativeInputValueSetter.call(textarea, "I need to connect with an expert right now.");
                     textarea.dispatchEvent(new Event('input', { bubbles: true }));
                     
-                    // Simulate Enter keypress
                     const enterEvent = new KeyboardEvent('keydown', {
                         bubbles: true, cancelable: true, keyCode: 13, key: 'Enter'
                     });
