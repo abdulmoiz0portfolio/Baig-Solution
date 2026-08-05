@@ -371,17 +371,19 @@
                 right: 12px !important;
                 background: transparent;
                 border: none;
-                color: white;
-                font-size: 16px;
+                color: #ff4757; /* Bright red color */
+                font-size: 18px; /* Slightly larger for better visibility */
+                font-weight: bold;
                 cursor: pointer;
                 line-height: 1;
                 outline: none;
                 padding: 5px;
                 z-index: 10;
-                transition: transform 0.2s;
+                transition: transform 0.2s, color 0.2s;
             }
             #custom-chat-close:hover {
                 transform: scale(1.1);
+                color: #ff6b81;
             }
         `;
         document.head.appendChild(style);
@@ -453,7 +455,7 @@
                     closeBtn.id = 'custom-chat-close';
                     closeBtn.innerHTML = '✖';
                     closeBtn.onclick = () => {
-                        if (window.n8nChatToggle) window.n8nChatToggle.click(); // Click hidden toggle to close
+                        toggleChatState(); // Use the robust helper function to close
                         // Show the sticky button again when chat closes
                         const stickyBtn = document.getElementById('sticky-expert-btn');
                         if (stickyBtn) stickyBtn.style.display = 'flex';
