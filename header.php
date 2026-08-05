@@ -69,6 +69,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $active_meta['title']; ?></title>
+    <link rel="icon" type="image/jpeg" href="assets/img/logo/icon_light.jpg">
     <link rel="canonical" href="<?php echo $canonical_url; ?>">
     
     <!-- Meta SEO Tags -->
@@ -249,7 +250,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light py-0">
                 <a class="navbar-brand d-flex align-items-center" href="index">
-                    <span class="logo-icon"><i class="fa-solid fa-brain-circuit text-accent-brand me-2"></i></span>
+                    <img src="assets/img/logo/icon_light.jpg" alt="Baig Solution Logo" style="width: 32px; height: 32px; object-fit: cover; border-radius: 8px; mix-blend-mode: darken; margin-right: 8px; border: 1px solid rgba(0,0,0,0.1);">
                     <span class="logo-text">BAIG <span class="text-accent-brand">SOLUTION</span></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
