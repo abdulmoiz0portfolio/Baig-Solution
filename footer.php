@@ -343,7 +343,7 @@
             i18n: {
                 en: {
                     title: 'Baig Solution Support',
-                    subtitle: 'Powered by n8n (No AI agent)',
+                    subtitle: 'Powered by n8n',
                     getStarted: 'Start Chatting',
                 }
             }
