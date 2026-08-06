@@ -354,16 +354,11 @@
                 --chat--font-family: 'Outfit', sans-serif;
             }
             .chat-wrapper { 
-                box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; 
-                border-radius: 12px !important; 
-                overflow: hidden !important; 
                 z-index: 999999 !important; 
-                background: white !important;
-                border: none !important;
             }
             .chat-layout { 
-                box-shadow: none !important; 
-                border-radius: 0 !important; 
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; 
+                border-radius: 12px !important; 
                 border: none !important; 
             }
             #sticky-expert-btn:hover { right: 0; background: #cf6f1d; }
