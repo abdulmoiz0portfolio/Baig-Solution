@@ -435,24 +435,70 @@
         });
 
         const toggleChatState = () => {
-            const chatWrapper = document.querySelector('.chat-wrapper');
-            if (chatWrapper) {
-                const children = chatWrapper.children;
-                for (let i = 0; i < children.length; i++) {
-                    const el = children[i];
-                    // Skip the chat layout, styles, scripts etc. Find the toggle element.
-                    if (!el.classList.contains('chat-layout') && el.tagName !== 'STYLE' && el.tagName !== 'SCRIPT') {
-                        // Dispatch a full MouseEvent to ensure Vue.js picks it up even if heavily styled
-                        const clickEvent = new MouseEvent('click', {
-                            view: window,
-                            bubbles: true,
-                            cancelable: true
-                        });
-                        el.dispatchEvent(clickEvent);
-                        break;
+            const toggleContainer = document.querySelector('.chat-window-toggle') ||
+                                    document.querySelector('.chat-toggle') ||
+                                    (document.querySelector('.chat-window-wrapper') ? Array.from(document.querySelector('.chat-window-wrapper').children).find(el => !el.classList.contains('chat-window') && !el.classList.contains('chat-layout')) : null) ||
+                                    (document.querySelector('.chat-wrapper') ? Array.from(document.querySelector('.chat-wrapper').children).find(el => !el.classList.contains('chat-layout') && el.tagName !== 'STYLE' && el.tagName !== 'SCRIPT') : null);
+
+            if (!toggleContainer) return;
+
+            // Target inner interactive element if available, or toggleContainer itself
+            const targetEl = toggleContainer.querySelector('button') || 
+                             toggleContainer.querySelector('svg') || 
+                             toggleContainer.querySelector('[role="button"]') || 
+                             toggleContainer;
+
+            // Save original inline styles
+            const origContainerStyle = toggleContainer.getAttribute('style') || '';
+            const origTargetStyle = (targetEl !== toggleContainer) ? (targetEl.getAttribute('style') || '') : '';
+
+            // Temporarily unhide / restore dimensions and pointer-events so Vue 3 and browser process the click
+            toggleContainer.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; width: 60px !important; height: 60px !important; opacity: 0.01 !important; visibility: visible !important; pointer-events: auto !important; z-index: 9999999 !important; display: block !important;';
+            if (targetEl !== toggleContainer) {
+                targetEl.style.cssText = 'position: relative !important; width: 100% !important; height: 100% !important; opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; display: block !important;';
+            }
+
+            const eventOptions = { bubbles: true, cancelable: true, view: window, composed: true };
+
+            try {
+                targetEl.dispatchEvent(new PointerEvent('pointerdown', eventOptions));
+                targetEl.dispatchEvent(new MouseEvent('mousedown', eventOptions));
+                targetEl.dispatchEvent(new PointerEvent('pointerup', eventOptions));
+                targetEl.dispatchEvent(new MouseEvent('mouseup', eventOptions));
+                targetEl.dispatchEvent(new MouseEvent('click', eventOptions));
+                if (typeof targetEl.click === 'function') {
+                    targetEl.click();
+                }
+            } catch (e) {
+                console.error("Error toggling targetEl:", e);
+            }
+
+            if (targetEl !== toggleContainer) {
+                try {
+                    toggleContainer.dispatchEvent(new MouseEvent('click', eventOptions));
+                    if (typeof toggleContainer.click === 'function') {
+                        toggleContainer.click();
+                    }
+                } catch (e) {}
+            }
+
+            // Restore original styles after events complete
+            setTimeout(() => {
+                if (toggleContainer && typeof toggleContainer.setAttribute === 'function') {
+                    if (origContainerStyle) {
+                        toggleContainer.setAttribute('style', origContainerStyle);
+                    } else {
+                        toggleContainer.removeAttribute('style');
                     }
                 }
-            }
+                if (targetEl && targetEl !== toggleContainer && typeof targetEl.setAttribute === 'function') {
+                    if (origTargetStyle) {
+                        targetEl.setAttribute('style', origTargetStyle);
+                    } else {
+                        targetEl.removeAttribute('style');
+                    }
+                }
+            }, 100);
         };
 
         // Inject Native-looking Quick Replies and Custom Close Button
@@ -466,7 +512,11 @@
                     const closeBtn = document.createElement('button');
                     closeBtn.id = 'custom-chat-close';
                     closeBtn.innerHTML = '✖';
-                    closeBtn.onclick = () => {
+                    closeBtn.onclick = (e) => {
+                        if (e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                        }
                         toggleChatState(); // Use the robust helper function to close
                         // Show the sticky button again when chat closes
                         const stickyBtn = document.getElementById('sticky-expert-btn');

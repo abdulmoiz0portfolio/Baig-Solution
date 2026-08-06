@@ -53,6 +53,7 @@ window.addEventListener("load", () => {
 function setupNavigation() {
     const header = document.getElementById("header-sticky");
     window.addEventListener("scroll", () => {
+        if (!header) return;
         if (window.scrollY > 50) {
             header.style.padding = "5px 0";
             header.style.background = "rgba(255, 255, 255, 0.95)";
