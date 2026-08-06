@@ -353,35 +353,46 @@
                 --chat--color-font: #333333;
                 --chat--font-family: 'Outfit', sans-serif;
             }
-            .chat-wrapper { 
-                z-index: 999999 !important; 
+            .n8n-chat {
+                position: fixed !important;
+                bottom: 20px !important;
+                right: 20px !important;
+                width: 380px !important;
+                height: 600px !important;
+                max-width: calc(100vw - 40px) !important;
+                max-height: calc(100vh - 40px) !important;
+                z-index: 999999 !important;
+                pointer-events: none !important; 
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: flex-end !important;
+            }
+            .chat-window {
+                width: 100% !important;
+                max-height: 100% !important;
+                pointer-events: auto !important;
             }
             .chat-layout { 
                 box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; 
                 border-radius: 12px !important; 
-                border: none !important; 
+                border: none !important;
+                background: #ffffff !important;
+                width: 100% !important;
+                height: 100% !important;
+                display: flex !important;
+                flex-direction: column !important;
+                pointer-events: auto !important;
+                overflow: hidden !important;
+            }
+            .chat-body {
+                flex-grow: 1 !important;
+                overflow-y: auto !important;
+            }
+            .chat-window-toggle {
+                display: none !important;
             }
             #sticky-expert-btn:hover { right: 0; background: #cf6f1d; }
             #in-chat-quick-replies::-webkit-scrollbar { display: none; }
-            
-            /* Make default toggle smaller when chat is closed */
-            .chat-wrapper:not(:has(.chat-layout)) > *:not(.chat-layout) {
-                transform: scale(0.7);
-                transform-origin: bottom right;
-            }
-            
-            /* Completely remove default toggle from flow when chat is OPEN so it doesn't stretch the wrapper */
-            .chat-wrapper:has(.chat-layout) > *:not(.chat-layout) {
-                position: absolute !important;
-                left: -9999px !important;
-                width: 0 !important;
-                height: 0 !important;
-                overflow: hidden !important;
-                border: none !important;
-                box-shadow: none !important;
-                margin: 0 !important;
-                padding: 0 !important;
-            }
             
             /* Fix chat header layout to make it smaller and position X button */
             .chat-header {
