@@ -336,8 +336,8 @@
     </script>
 
     <!-- Single Sticky Lead Capture Button -->
-    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; right: -5px; transform: translateY(-50%); background: #e77f23; color: white; border: none; padding: 12px 20px 12px 24px; border-radius: 30px 0 0 30px; font-size: 15px; cursor: pointer; box-shadow: -4px 4px 15px rgba(0,0,0,0.2); font-weight: 600; z-index: 9000; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
-        <i class="fa-solid fa-headset"></i> Connect with an Expert
+    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; right: 0; transform: translate(calc(100% - 56px), -50%); background: #e77f23; color: white; border: none; padding: 12px 20px 12px 20px; border-radius: 30px 0 0 30px; font-size: 15px; cursor: pointer; box-shadow: -4px 4px 15px rgba(0,0,0,0.2); font-weight: 600; z-index: 9000; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease; display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-headset fs-5"></i> <span style="white-space: nowrap;">Connect with an Expert</span>
     </button>
 
     <!-- n8n Chat Widget Integration -->
@@ -392,7 +392,10 @@
             .chat-window-toggle {
                 display: none !important;
             }
-            #sticky-expert-btn:hover { right: 0; background: #cf6f1d; }
+            #sticky-expert-btn:hover { 
+                transform: translate(0, -50%) !important; 
+                background: #cf6f1d !important; 
+            }
             #in-chat-quick-replies::-webkit-scrollbar { display: none; }
             
             /* Fix chat header layout to make it smaller and position X button */
