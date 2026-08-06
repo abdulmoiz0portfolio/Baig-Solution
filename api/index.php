@@ -28,7 +28,8 @@ $allowed_pages = [
     'service',
     'Reviews',
     'privacy',
-    'terms'
+    'terms',
+    'invoice-maker'
 ];
 
 if (in_array($path, $allowed_pages)) {
