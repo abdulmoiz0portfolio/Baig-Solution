@@ -379,8 +379,6 @@
             .chat-wrapper:has(.chat-layout) > *:not(.chat-layout) {
                 position: absolute !important;
                 left: -9999px !important;
-                opacity: 0 !important;
-                pointer-events: none !important;
                 width: 0 !important;
                 height: 0 !important;
                 overflow: hidden !important;
@@ -441,8 +439,16 @@
             if (chatWrapper) {
                 const children = chatWrapper.children;
                 for (let i = 0; i < children.length; i++) {
-                    if (!children[i].classList.contains('chat-layout')) {
-                        children[i].click();
+                    const el = children[i];
+                    // Skip the chat layout, styles, scripts etc. Find the toggle element.
+                    if (!el.classList.contains('chat-layout') && el.tagName !== 'STYLE' && el.tagName !== 'SCRIPT') {
+                        // Dispatch a full MouseEvent to ensure Vue.js picks it up even if heavily styled
+                        const clickEvent = new MouseEvent('click', {
+                            view: window,
+                            bubbles: true,
+                            cancelable: true
+                        });
+                        el.dispatchEvent(clickEvent);
                         break;
                     }
                 }
