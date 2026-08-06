@@ -353,8 +353,19 @@
                 --chat--color-font: #333333;
                 --chat--font-family: 'Outfit', sans-serif;
             }
-            .chat-wrapper { z-index: 999999 !important; border: none !important; box-shadow: none !important; }
-            .chat-layout { box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important; border-radius: 12px !important; border: none !important; }
+            .chat-wrapper { 
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; 
+                border-radius: 12px !important; 
+                overflow: hidden !important; 
+                z-index: 999999 !important; 
+                background: white !important;
+                border: none !important;
+            }
+            .chat-layout { 
+                box-shadow: none !important; 
+                border-radius: 0 !important; 
+                border: none !important; 
+            }
             #sticky-expert-btn:hover { right: 0; background: #cf6f1d; }
             #in-chat-quick-replies::-webkit-scrollbar { display: none; }
             
@@ -364,17 +375,19 @@
                 transform-origin: bottom right;
             }
             
-            /* Hide the default n8n chat toggle bubble ONLY when chat is OPEN so it doesn't overlap */
+            /* Completely remove default toggle from flow when chat is OPEN so it doesn't stretch the wrapper */
             .chat-wrapper:has(.chat-layout) > *:not(.chat-layout) {
+                position: absolute !important;
+                left: -9999px !important;
                 opacity: 0 !important;
                 pointer-events: none !important;
-                position: absolute !important;
                 width: 0 !important;
                 height: 0 !important;
                 overflow: hidden !important;
-                z-index: -100 !important;
                 border: none !important;
                 box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
             
             /* Fix chat header layout to make it smaller and position X button */
