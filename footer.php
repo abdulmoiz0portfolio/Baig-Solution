@@ -353,13 +353,14 @@
                 --chat--color-font: #333333;
                 --chat--font-family: 'Outfit', sans-serif;
             }
-            .chat-wrapper { box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important; border-radius: 12px !important; overflow: hidden; z-index: 999999 !important; }
+            .chat-wrapper { z-index: 999999 !important; border: none !important; box-shadow: none !important; }
+            .chat-layout { box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important; border-radius: 12px !important; border: none !important; }
             #sticky-expert-btn:hover { right: 0; background: #cf6f1d; }
             #in-chat-quick-replies::-webkit-scrollbar { display: none; }
             
             /* Make default toggle smaller when chat is closed */
             .chat-wrapper:not(:has(.chat-layout)) > *:not(.chat-layout) {
-                transform: scale(0.85);
+                transform: scale(0.7);
                 transform-origin: bottom right;
             }
             
@@ -372,6 +373,8 @@
                 height: 0 !important;
                 overflow: hidden !important;
                 z-index: -100 !important;
+                border: none !important;
+                box-shadow: none !important;
             }
             
             /* Fix chat header layout to make it smaller and position X button */
