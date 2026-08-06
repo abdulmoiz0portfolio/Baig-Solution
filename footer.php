@@ -40,6 +40,7 @@
                             <li><a href="ai-automations">AI Automations (n8n/Make)</a></li>
                             <li><a href="website-development">Web & App Development</a></li>
                             <li><a href="product-shoot">Product Shoot</a></li>
+                            <li><a href="invoice-maker">Free Invoice Maker</a></li>
                         </ul>
                     </div>
                 </div>

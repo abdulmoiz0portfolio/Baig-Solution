@@ -53,6 +53,12 @@ $meta_config = [
         'desc' => 'Internal dashboard for Baig Solution administrators to track real-time contact leads, newsletter subscribers, and automated cost quote submissions.',
         'keywords' => 'Admin dashboard, lead tracking, CRM logs',
         'url' => 'admin'
+    ],
+    'invoice-maker' => [
+        'title' => 'Free Online Invoice Maker | Baig Solution',
+        'desc' => 'Generate professional, customizable invoices instantly with live math calculations, dynamic line items, and print/PDF export from Baig Solution.',
+        'keywords' => 'Free Invoice Maker, online invoice generator, Baig Solution invoice tool, automated invoice PDF, billing software',
+        'url' => 'invoice-maker'
     ]
 ];
 
@@ -267,8 +273,10 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 12px; padding: 10px;">
                                 <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="ai-agents">Autonomous AI Agents</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="ai-automations">AI Automations</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="ai-image-generator">AI Image Generator</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="website-development">Web & App Development</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="product-shoot">Product Shoot</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="invoice-maker">Free Invoice Maker</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="Reviews">Customer Ratings</a></li>
