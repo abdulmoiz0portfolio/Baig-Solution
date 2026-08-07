@@ -53,10 +53,10 @@
                                 <i class="fa-solid fa-envelope text-accent-brand me-2 mt-1"></i>
                                 <a href="mailto:bobrober2323@gmail.com">bobrober2323@gmail.com</a>
                             </li>
-                            <!-- <li class="d-flex mb-2">
+                            <li class="d-flex mb-2">
                                 <i class="fa-solid fa-phone text-accent-brand me-2 mt-1"></i>
                                 <a href="tel:+923366920141">+92 336 6920141</a>
-                            </li> -->
+                            </li>
                         </ul>
                     </div>
                 </div>
