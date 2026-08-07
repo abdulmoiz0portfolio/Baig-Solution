@@ -59,6 +59,18 @@ $meta_config = [
         'desc' => 'Generate professional, customizable invoices instantly with live math calculations, dynamic line items, and print/PDF export from Baig Solution.',
         'keywords' => 'Free Invoice Maker, online invoice generator, Baig Solution invoice tool, automated invoice PDF, billing software',
         'url' => 'invoice-maker'
+    ],
+    'blogs' => [
+        'title' => 'Insights & Updates | Baig Solution',
+        'desc' => 'Read our latest insights on AI automation, web development, and digital marketing strategies for growing your business.',
+        'keywords' => 'Baig Solution blog, AI automation insights, web development tips, business growth',
+        'url' => 'blogs'
+    ],
+    'blog-detail' => [
+        'title' => 'Blog Detail | Baig Solution',
+        'desc' => 'Read the full article and gain insights into AI automation, digital operations, and bespoke software development.',
+        'keywords' => 'Baig Solution blog, article',
+        'url' => 'blog-detail'
     ]
 ];
 
@@ -280,6 +292,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="Reviews">Customer Ratings</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blogs">Blogs</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact">Contact us</a></li>
                         <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
                             <a href="contact" class="btn btn-brand">Get Started <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></a>

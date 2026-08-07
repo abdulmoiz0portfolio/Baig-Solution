@@ -29,7 +29,9 @@ $allowed_pages = [
     'Reviews',
     'privacy',
     'terms',
-    'invoice-maker'
+    'invoice-maker',
+    'blogs',
+    'blog-detail'
 ];
 
 if (in_array($path, $allowed_pages)) {
