@@ -632,13 +632,13 @@
                             <a href="mailto:bobrober2323@gmail.com" class="text-dark text-decoration-none fw-bold">bobrober2323@gmail.com</a>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center">
+                    <!-- <div class="d-flex align-items-center">
                         <div class="icon-box me-3"><i class="fa-solid fa-phone text-accent-brand"></i></div>
                         <div>
                             <h6 class="mb-0 text-muted">Call Us</h6>
                             <a href="tel:+923366920141" class="text-dark text-decoration-none fw-bold">+92 336 6920141</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
