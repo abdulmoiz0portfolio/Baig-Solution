@@ -291,11 +291,11 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                                 <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="invoice-maker">Free Invoice Maker</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="Reviews">Customer Ratings</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blogs">Blogs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact">Contact us</a></li>
+                        <li class="nav-item"><a class="nav-link text-nowrap" href="Reviews">Customer Ratings</a></li>
+                        <li class="nav-item"><a class="nav-link text-nowrap" href="blogs">Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link text-nowrap" href="contact">Contact us</a></li>
                         <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                            <a href="contact" class="btn btn-brand">Get Started <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></a>
+                            <a href="contact" class="btn btn-brand text-nowrap">Get Started <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></a>
                         </li>
                     </ul>
                 </div>
