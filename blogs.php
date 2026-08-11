@@ -5,7 +5,7 @@ include 'header.php';
 // Helper function to parse n8n Markdown files
 function get_blogs() {
     $blogs = [];
-    $files = glob('content/articles/*.md');
+    $files = glob(__DIR__ . '/content/articles/*.md');
     if ($files) {
         foreach ($files as $file) {
             $content = file_get_contents($file);

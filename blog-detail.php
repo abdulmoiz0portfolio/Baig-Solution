@@ -3,7 +3,7 @@ $page_key = 'blog-detail';
 
 // 1. Get and sanitize the blog ID
 $id = isset($_GET['id']) ? preg_replace('/[^a-zA-Z0-9\-]/', '', $_GET['id']) : '';
-$file_path = "content/articles/{$id}.md";
+$file_path = __DIR__ . "/content/articles/{$id}.md";
 
 // 2. Validate file exists
 if (empty($id) || !file_exists($file_path)) {
