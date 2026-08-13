@@ -129,7 +129,7 @@
             <div class="col-12 col-lg-8">
                 <div class="section__header text-center" style="margin-bottom: 0;">
                     <h2 class="title title-anim toss-away-title" style="color: #222; font-size: 55px; font-weight: 800; line-height: 1.1; letter-spacing: -1px;">
-                        TIME TO TOSS AWAY & SAY<br><span style="color: #444;">GOODBYE TO</span>
+                        SAY GOODBYE TO THESE<br><span style="color: #444;">BUSINESS HEADACHES</span>
                     </h2>
                 </div>
             </div>
