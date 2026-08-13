@@ -459,17 +459,7 @@
             <div class="col-lg-6 wow">
                 <div class="portfolio-card bg-white rounded-4 border p-4 h-100 position-relative shadow-sm text-start" style="transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;">
                     <div class="portfolio-preview rounded-3 overflow-hidden position-relative bg-light mb-4 border border-light-subtle shadow-sm" style="height: 340px;">
-                        <!-- Iframe for live site preview (scaled to fit more content) -->
-                        <div style="width: 200%; height: 200%; transform: scale(0.5); transform-origin: 0 0; background: #fff;">
-                            <iframe src="https://bminternational.com.pk/" title="BM International Live Preview" style="width: 100%; height: 100%; border: none; pointer-events: none;" loading="lazy"></iframe>
-                        </div>
-                        
-                        <!-- Overlay for click -->
-                        <a href="https://bminternational.com.pk/" target="_blank" rel="noopener noreferrer" class="portfolio-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-decoration-none">
-                            <span class="btn btn-brand px-4 py-2 shadow-lg fw-bold border-0">
-                                Open Website <i class="fa-solid fa-arrow-up-right ms-2"></i>
-                            </span>
-                        </a>
+                        <img src="assets/img/services/web_development.jpg" alt="BM International" class="w-100 h-100 object-fit-cover">
                     </div>
                     <div class="portfolio-info px-2">
                         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -477,7 +467,6 @@
                             <span class="badge bg-light text-dark border py-2 px-3 font-monospace rounded-pill">Textile Export</span>
                         </div>
                         <p class="text-secondary mb-4 fs-6">A comprehensive B2B textile sourcing and garment manufacturing platform. Built with modern web technologies to handle international export operations, quality control, and global logistics networking.</p>
-                        <a href="https://bminternational.com.pk/" target="_blank" rel="noopener noreferrer" class="text-accent-brand fw-bold text-decoration-none small text-uppercase" style="letter-spacing: 1px;">Visit Live Site <i class="fa-solid fa-angle-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -486,17 +475,7 @@
             <div class="col-lg-6 wow">
                 <div class="portfolio-card bg-white rounded-4 border p-4 h-100 position-relative shadow-sm text-start" style="transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;">
                     <div class="portfolio-preview rounded-3 overflow-hidden position-relative bg-light mb-4 border border-light-subtle shadow-sm" style="height: 340px;">
-                        <!-- Iframe for live site preview (scaled to fit more content) -->
-                        <div style="width: 200%; height: 200%; transform: scale(0.5); transform-origin: 0 0; background: #fff;">
-                            <iframe src="https://www.northbridgedatasolutions.com/" title="NorthBridge Live Preview" style="width: 100%; height: 100%; border: none; pointer-events: none;" loading="lazy"></iframe>
-                        </div>
-                        
-                        <!-- Overlay for click -->
-                        <a href="https://www.northbridgedatasolutions.com/" target="_blank" rel="noopener noreferrer" class="portfolio-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-decoration-none">
-                            <span class="btn btn-brand px-4 py-2 shadow-lg fw-bold border-0">
-                                Open Website <i class="fa-solid fa-arrow-up-right ms-2"></i>
-                            </span>
-                        </a>
+                        <img src="assets/img/services/ai_agents.jpg" alt="NorthBridge Digital" class="w-100 h-100 object-fit-cover">
                     </div>
                     <div class="portfolio-info px-2">
                         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -504,7 +483,6 @@
                             <span class="badge bg-light text-dark border py-2 px-3 font-monospace rounded-pill">AI Agency</span>
                         </div>
                         <p class="text-secondary mb-4 fs-6">An agency platform delivering high-converting custom web stores, AI chatbots, graphics design, and LinkedIn outreach solutions. Engineered to scale business growth through data-driven digital strategies.</p>
-                        <a href="https://www.northbridgedatasolutions.com/" target="_blank" rel="noopener noreferrer" class="text-accent-brand fw-bold text-decoration-none small text-uppercase" style="letter-spacing: 1px;">Visit Live Site <i class="fa-solid fa-angle-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
