@@ -218,17 +218,29 @@ function initMatterJsPhysics() {
     
     Composite.add(world, [ground, leftWall, rightWall, topWall]);
 
-    // Pill texts
-    const pillTexts = [
+    // Pill texts — falls back to default pain-point set, or reads a custom
+    // JSON list from data-pills on the container (e.g. for benefit-themed sections)
+    const defaultPillTexts = [
         "Slow Websites", "High Bounce Rates", "Manual Workflows",
         "Lack of Brand Differentiation", "Lead Leakage", "Poor Conversion Rates",
         "Inconsistent Branding", "Scaling Difficulties", "Outdated Technology",
         "Hidden Operational Costs", "Technical Debt"
     ];
+    let pillTexts = defaultPillTexts;
+    if (container.dataset.pills) {
+        try {
+            const parsed = JSON.parse(container.dataset.pills);
+            if (Array.isArray(parsed) && parsed.length) pillTexts = parsed;
+        } catch (e) {
+            console.warn("Invalid data-pills JSON, using defaults.", e);
+        }
+    }
 
     const pills = [];
     const isMobile = window.innerWidth < 768;
     const displayPills = isMobile ? pillTexts.slice(0, 6) : pillTexts;
+
+    const pillTint = container.dataset.pillTint === "brand";
 
     displayPills.forEach((text, i) => {
         const el = document.createElement("div");
@@ -237,14 +249,14 @@ function initMatterJsPhysics() {
         el.style.position = "absolute";
         el.style.padding = isMobile ? "8px 16px" : "18px 45px";
         el.style.borderRadius = "100px";
-        el.style.color = "#333333";
+        el.style.color = pillTint ? "#a8541a" : "#333333";
         el.style.fontSize = isMobile ? "11px" : "20px";
         el.style.fontWeight = "500";
         el.style.whiteSpace = "nowrap";
         el.style.userSelect = "none";
         el.style.pointerEvents = "none";
-        el.style.background = "rgba(0, 0, 0, 0.05)";
-        el.style.border = "1px solid rgba(0, 0, 0, 0.1)";
+        el.style.background = pillTint ? "rgba(231, 127, 35, 0.08)" : "rgba(0, 0, 0, 0.05)";
+        el.style.border = pillTint ? "1px solid rgba(231, 127, 35, 0.3)" : "1px solid rgba(0, 0, 0, 0.1)";
         el.style.zIndex = "5";
         el.style.willChange = "transform";
 

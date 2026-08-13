@@ -101,6 +101,25 @@
 </section>
 <!-- Our Background & Expertise Section End -->
 
+<!-- Benefits Physics Section Start -->
+<section class="section toss-away" style="position: relative; overflow: hidden; padding: 0; background: #fdfdfd;">
+    <div class="container toss-away-container" style="position: absolute; top: 80px; left: 50%; transform: translateX(-50%); z-index: 99; pointer-events: none; width: 100%;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="section__header text-center" style="margin-bottom: 0;">
+                    <h2 class="title title-anim toss-away-title" style="color: #222; font-size: 55px; font-weight: 800; line-height: 1.1; letter-spacing: -1px;">
+                        WHAT YOU ACTUALLY<br><span style="color: #444;">GET</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="physics-container" class="physics-container" style="width: 100%; height: 600px; position: relative; cursor: grab; z-index: 1;" data-pill-tint="brand" data-pills='["Faster Lead Response", "24/7 Automated Support", "Fewer Manual Errors", "Real-Time Reporting", "Seamless CRM Sync", "More Qualified Leads", "Hours Saved Weekly", "Consistent Follow-Ups", "Scalable Operations", "Predictable Revenue Growth"]'>
+        <!-- Matter.js Canvas Injected Here -->
+    </div>
+</section>
+<!-- Benefits Physics Section End -->
+
 <!-- FAQ Section Start -->
 <section id="faq-section" class="section-padding bg-light-gray text-dark border-top border-light-subtle">
     <div class="container max-w-800">
