@@ -399,7 +399,7 @@ include 'header.php';
                 logo: 'assets/img/logo/icon_light.jpg',
                 name: 'Baig Solution',
                 tagline: 'Empowering Businesses with AI & Automation',
-                address: 'New Jersey, NJ, United States',
+                address: 'Remote / Worldwide',
                 phone: '+92 336 6920141',
                 email: 'bobrober2323@gmail.com',
                 website: 'https://baig-solution.vercel.app'

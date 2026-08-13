@@ -9,13 +9,13 @@ $meta_config = [
     'index' => [
         'title' => 'AI Automation Agency (n8n, Make, GoHighLevel) | Baig Solution',
         'desc' => 'Baig Solution is an AI-first agency building custom AI agents and workflow automations to connect your CRM, WhatsApp, and emails. Scale operations 24/7.',
-        'keywords' => 'AI Automation Agency, n8n, Make, GoHighLevel, Zapier, AI Agents, New Jersey, software development, CRM integration',
+        'keywords' => 'AI Automation Agency, n8n, Make, GoHighLevel, Zapier, AI Agents, software development, CRM integration',
         'url' => ''
     ],
     'about' => [
         'title' => 'Our Mission & Automation Experts | Baig Solution',
         'desc' => 'Meet Baig Solution. We design custom AI agent systems, API integrations, and e-commerce growth strategies to help small & mid-sized businesses automate operations.',
-        'keywords' => 'About Baig Solution, AI Engineers, New Jersey AI, CRM automation experts, n8n consultants',
+        'keywords' => 'About Baig Solution, AI Engineers, CRM automation experts, n8n consultants',
         'url' => 'about'
     ],
     'website-development' => [
@@ -45,7 +45,7 @@ $meta_config = [
     'contact' => [
         'title' => 'Book a Free AI Operations Audit & Consultation | Baig Solution',
         'desc' => 'Ready to automate your operations? Contact Baig Solution to schedule a free automation audit. We connect your calendar, CRM, and communication tools.',
-        'keywords' => 'Contact Baig Solution, AI operations audit, book consultation, New Jersey digital agency',
+        'keywords' => 'Contact Baig Solution, AI operations audit, book consultation, digital agency',
         'url' => 'contact'
     ],
     'admin' => [
@@ -76,7 +76,8 @@ $meta_config = [
 
 $active_meta = isset($meta_config[$page_key]) ? $meta_config[$page_key] : $meta_config['index'];
 $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'baigsolution.com';
-$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https" : "http";
+$forwarded_proto = isset($_SERVER['HTTP_X_FORWARDED_PROTO']) ? strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) : '';
+$protocol = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') || $forwarded_proto === 'https') ? "https" : "http";
 $canonical_url = "{$protocol}://{$host}/" . $active_meta['url'];
 $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
 ?>
@@ -129,51 +130,6 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     }
     </script>
 
-    <!-- Local Business Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Baig Solution",
-      "image": "<?php echo $og_image; ?>",
-      "@id": "<?php echo $protocol; ?>://<?php echo $host; ?>/#localbusiness",
-      "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
-      "telephone": "+92-336-6920141",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "New Jersey",
-        "addressRegion": "NJ",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.0583,
-        "longitude": -74.4057
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      "areaServed": [
-        {
-          "@type": "State",
-          "name": "New Jersey"
-        },
-        {
-          "@type": "Country",
-          "name": "United States"
-        }
-      ]
-    }
-    </script>
     <?php endif; ?>
 
     <!-- Service Schema -->
@@ -191,8 +147,8 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
       },
       "description": "<?php echo $active_meta['desc']; ?>",
       "areaServed": {
-        "@type": "Country",
-        "name": "United States"
+        "@type": "Place",
+        "name": "Worldwide"
       }
     }
     </script>

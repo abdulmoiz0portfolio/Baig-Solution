@@ -49,7 +49,7 @@
                     Baig Solution is an AI automation agency that helps businesses automate lead follow-up, CRM syncing, and customer support using tools like n8n, Make, and GoHighLevel. We build custom AI agents and workflow automations for small and mid-sized businesses.
                 </p>
                 <p class="text-muted mb-4">
-                    Headquartered in New Jersey (NJ, USA), we serve local businesses throughout the tri-state area as well as remote clients globally. By integrating advanced workflow engines directly into your tech stack, we eliminate hours of manual admin tasks every week.
+                    We work remotely with clients globally, integrating advanced workflow engines directly into your tech stack to eliminate hours of manual admin tasks every week.
                 </p>
                 
                 <!-- Key Expertise Indicators -->
