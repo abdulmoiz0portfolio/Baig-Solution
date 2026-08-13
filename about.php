@@ -152,7 +152,7 @@
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                     <div class="accordion-body text-muted py-3">
-                        Yes, absolutely. We integrate Firebase Firestore directly using secure client SDK parameters and build WAF (Web Application Firewalls) in PHP to sanitize inputs and block bots.
+                        Yes. Your data is protected by strict Firestore security rules that control exactly who can read or write it, and all form submissions are validated and sanitized server-side to block spam and malicious input.
                     </div>
                 </div>
             </div>
@@ -191,7 +191,7 @@
     "name": "Are my client leads and databases secure with your setup?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes, absolutely. We integrate Firebase Firestore directly using secure client SDK parameters and build WAF (Web Application Firewalls) in PHP to sanitize inputs and block bots."
+      "text": "Yes. Your data is protected by strict Firestore security rules that control exactly who can read or write it, and all form submissions are validated and sanitized server-side to block spam and malicious input."
     }
   },{
     "@type": "Question",
