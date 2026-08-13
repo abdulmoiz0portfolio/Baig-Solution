@@ -68,7 +68,7 @@ const http = require('http');
 
         console.log(`Pre-filled Company Info: Name="${companyName}", Email="${companyEmail}", Phone="${companyPhone}", Address="${companyAddress}", Web="${companyWebsite}"`);
 
-        if (companyName !== 'Baig Solution' || companyEmail !== 'bobrober2323@gmail.com' || companyPhone !== '+92 336 6920141' || !companyAddress.includes('Worldwide') || companyWebsite !== 'https://baigsolution.com') {
+        if (companyName !== 'Baig Solution' || companyEmail !== 'bobrober2323@gmail.com' || companyPhone !== '+92 336 6920141' || !companyAddress.includes('Worldwide') || companyWebsite !== 'https://baig-solution.vercel.app') {
             throw new Error('Pre-filled company details do not match expected Baig Solution info.');
         }
         console.log('✅ 3. Vue 3 instance mounted & pre-filled company details verified.');

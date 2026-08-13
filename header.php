@@ -75,7 +75,7 @@ $meta_config = [
 ];
 
 $active_meta = isset($meta_config[$page_key]) ? $meta_config[$page_key] : $meta_config['index'];
-$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'baigsolution.com';
+$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'baig-solution.vercel.app';
 $forwarded_proto = isset($_SERVER['HTTP_X_FORWARDED_PROTO']) ? strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) : '';
 $protocol = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') || $forwarded_proto === 'https') ? "https" : "http";
 $canonical_url = "{$protocol}://{$host}/" . $active_meta['url'];

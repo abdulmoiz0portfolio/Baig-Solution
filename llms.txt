@@ -1,22 +1,22 @@
 # Baig Solution
 
-Baig Solution is an AI automation agency headquartered in New Jersey (NJ, USA). We help small and mid-sized businesses automate operations, scale lead follow-up, coordinate CRM systems, and build custom AI support agents.
+Baig Solution is an AI automation agency that helps small and mid-sized businesses automate operations, scale lead follow-up, coordinate CRM systems, and build custom AI support agents. We work remotely with clients globally.
 
 ## Core Services
 
-- **Autonomous AI Agents** (https://baigsolution.com/ai-agents): Deploy custom AI assistants trained on internal PDFs/docs to handle customer support, pre-screen leads, and schedule calendar appointments 24/7.
-- **AI Automations** (https://baigsolution.com/ai-automations): Build end-to-end API integrations and workflow automation systems using n8n, Make, and GoHighLevel.
-- **Web & App Development** (https://baigsolution.com/website-development): High-performance, lightweight web applications and custom single-page apps optimized for page speed and conversion.
-- **Product Shoot** (https://baigsolution.com/product-shoot): Commercial product photography and studio shoots for e-commerce visuals.
+- **Autonomous AI Agents** (https://baig-solution.vercel.app/ai-agents): Deploy custom AI assistants trained on internal PDFs/docs to handle customer support, pre-screen leads, and schedule calendar appointments 24/7.
+- **AI Automations** (https://baig-solution.vercel.app/ai-automations): Build end-to-end API integrations and workflow automation systems using n8n, Make, and GoHighLevel.
+- **Web & App Development** (https://baig-solution.vercel.app/website-development): High-performance, lightweight web applications and custom single-page apps optimized for page speed and conversion.
+- **Product Shoot** (https://baig-solution.vercel.app/product-shoot): Commercial product photography and studio shoots for e-commerce visuals.
 
 ## Contact Information
 
-- **Email:** info@baigsolution.com
+- **Email:** bobrober2323@gmail.com
 - **Phone:** +92 336 6920141
-- **HQ Area served:** New Jersey, NJ, USA (serving global remote clients)
+- **Area served:** Worldwide (remote agency)
 
 ## Sitemap
 
-- Homepage: https://baigsolution.com/
-- About Us: https://baigsolution.com/about
-- Contact Us: https://baigsolution.com/contact
+- Homepage: https://baig-solution.vercel.app/
+- About Us: https://baig-solution.vercel.app/about
+- Contact Us: https://baig-solution.vercel.app/contact

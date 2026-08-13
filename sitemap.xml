@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://baigsolution.com/</loc>
+        <loc>https://baig-solution.vercel.app/</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://baigsolution.com/about</loc>
+        <loc>https://baig-solution.vercel.app/about</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://baigsolution.com/ai-agents</loc>
+        <loc>https://baig-solution.vercel.app/ai-agents</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://baigsolution.com/ai-automations</loc>
+        <loc>https://baig-solution.vercel.app/ai-automations</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://baigsolution.com/website-development</loc>
+        <loc>https://baig-solution.vercel.app/website-development</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://baigsolution.com/product-shoot</loc>
+        <loc>https://baig-solution.vercel.app/product-shoot</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://baigsolution.com/contact</loc>
+        <loc>https://baig-solution.vercel.app/contact</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
