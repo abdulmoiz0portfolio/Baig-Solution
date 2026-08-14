@@ -116,27 +116,47 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <meta name="twitter:description" content="<?php echo $active_meta['desc']; ?>">
     <meta name="twitter:image" content="<?php echo $og_image; ?>">
 
+    <!-- Hreflang Tags for SEO/GEO -->
+    <link rel="alternate" hreflang="x-default" href="<?php echo $canonical_url; ?>">
+    <link rel="alternate" hreflang="en" href="<?php echo $canonical_url; ?>">
+    <link rel="alternate" hreflang="en-us" href="<?php echo $canonical_url; ?>">
+    <link rel="alternate" hreflang="en-gb" href="<?php echo $canonical_url; ?>">
+    <link rel="alternate" hreflang="en-ca" href="<?php echo $canonical_url; ?>">
+    <link rel="alternate" hreflang="ar" href="<?php echo $canonical_url; ?>">
+
     <!-- JSON-LD Structured Data Schema -->
-    <?php if ($page_key === 'index'): ?>
-    <!-- Organization Schema -->
+    <!-- WebSite Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "WebSite",
       "name": "Baig Solution",
       "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
-      "logo": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
-      "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+92-336-6920141",
-        "contactType": "customer service",
-        "email": "bobrober2323@gmail.com"
-      }
+      "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7."
     }
     </script>
 
-    <?php endif; ?>
+    <!-- LocalBusiness & Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Baig Solution",
+      "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
+      "logo": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
+      "image": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
+      "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7.",
+      "telephone": "+92-336-6920141",
+      "email": "bobrober2323@gmail.com",
+      "areaServed": [
+        {"@type": "Country", "name": "USA"},
+        {"@type": "Country", "name": "Canada"},
+        {"@type": "Region", "name": "Europe"},
+        {"@type": "Region", "name": "Arabian Peninsula"},
+        {"@type": "Country", "name": "Global"}
+      ]
+    }
+    </script>
 
     <!-- Service Schema -->
     <?php if (in_array($page_key, ['ai-agents', 'ai-automations', 'website-development', 'product-shoot'])): ?>

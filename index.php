@@ -70,7 +70,7 @@
         <div class="row align-items-center g-5">
             <div class="col-lg-5">
                 <div class="about-image-wrapper wow fadeInLeft" data-wow-delay=".3s">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Team planning at Baig Solution" class="img-fluid rounded-4 shadow-sm border border-white border-4">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Team planning at Baig Solution" loading="lazy" class="img-fluid rounded-4 shadow-sm border border-white border-4">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -587,6 +587,38 @@
     </div>
 </section>
 <!-- FAQ Section End -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does an AI Automation workflow setup take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, standard workflow automations (like email pipelines, CRM syncing, or simple chatbots) take between 1 to 2 weeks to design, integrate, test, and launch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my client leads and databases secure with your setup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Your data is protected by strict Firestore security rules that control exactly who can read or write it, and all form submissions are validated and sanitized server-side to block spam and malicious input."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we link third-party tools like Slack or WhatsApp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we integrate n8n, Make, or custom API endpoints to route data triggers to WhatsApp business channels, Slack workspaces, or local Discord systems."
+      }
+    }
+  ]
+}
+</script>
 
 
 
