@@ -13,7 +13,7 @@ header("X-Frame-Options: SAMEORIGIN");
 header("X-XSS-Protection: 1; mode=block");
 header("X-Content-Type-Options: nosniff");
 header("Referrer-Policy: no-referrer-when-downgrade");
-header("Content-Security-Policy: default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; frame-src 'self' https:;");
+header("Content-Security-Policy: default-src 'self' https: wss: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; frame-src 'self' https:; connect-src 'self' https: wss:;");
 
 // 2. Prevent Bad Bots & Scanners
 $bad_bots = [
