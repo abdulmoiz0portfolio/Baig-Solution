@@ -60,6 +60,12 @@ $meta_config = [
         'keywords' => 'Free Invoice Maker, online invoice generator, Baig Solution invoice tool, automated invoice PDF, billing software',
         'url' => 'invoice-maker'
     ],
+    'voice-agent' => [
+        'title' => 'Talk to our AI Voice Agent | Baig Solution',
+        'desc' => 'Experience the future of customer support. Click to start a live voice conversation with our autonomous AI agent.',
+        'keywords' => 'AI Voice Agent, Vapi AI, Retell AI, conversational AI, voicebot demo',
+        'url' => 'voice-agent'
+    ],
     'blogs' => [
         'title' => 'Insights & Updates | Baig Solution',
         'desc' => 'Read our latest insights on AI automation, web development, and digital marketing strategies for growing your business.',
@@ -240,6 +246,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                             </a>
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 12px; padding: 10px;">
                                 <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="ai-agents">Autonomous AI Agents</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="voice-agent">Voice Agent Demo <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem;">NEW</span></a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="ai-automations">AI Automations</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="ai-image-generator">AI Image Generator</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="website-development">Web & App Development</a></li>
