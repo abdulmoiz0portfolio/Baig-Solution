@@ -737,8 +737,4 @@
 }
 </script>
 
-<!-- ElevenLabs Voice Widget -->
-<elevenlabs-convai agent-id="agent_9601kzzg80peez4vfzc2y94yhy1n"></elevenlabs-convai>
-<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-
 <?php include 'footer.php'; ?>

@@ -1,6 +1,12 @@
     </div> <!-- End smooth-content -->
     </div> <!-- End smooth-wrapper -->
 
+    <?php if ($page_key === 'index' || $page_key === 'voice-agent'): ?>
+    <!-- ElevenLabs Voice Widget -->
+    <elevenlabs-convai agent-id="agent_9601kzzg80peez4vfzc2y94yhy1n"></elevenlabs-convai>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    <?php endif; ?>
+
     <!-- Footer Section Start -->
     <footer class="footer-area bg-dark text-white pt-5 pb-3">
         <div class="container">
