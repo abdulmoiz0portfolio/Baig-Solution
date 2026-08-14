@@ -3,7 +3,7 @@
 
     <?php if ($page_key === 'index' || $page_key === 'voice-agent'): ?>
     <!-- ElevenLabs Voice Widget -->
-    <elevenlabs-convai agent-id="agent_9601kzzg80peez4vfzc2y94yhy1n"></elevenlabs-convai>
+    <elevenlabs-convai agent-id="agent_1601m004ny6efkns714nfr8vjvqm"></elevenlabs-convai>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
     <?php endif; ?>
 
