@@ -13,7 +13,7 @@
 </section>
 
 <!-- Detailed Contact Form Section -->
-<section class="section-padding bg-white text-dark">
+<section class="section-padding bg-transparent text-white">
     <div class="container">
         <div class="row g-5 justify-content-center">
             <div class="col-lg-8">
@@ -23,24 +23,24 @@
                     <form id="contact-firebase-form-page" novalidate>
                         <div class="row g-4">
                             <div class="col-md-6">
-                                <label for="contact-name-page" class="form-label text-muted fw-bold">Full Name</label>
-                                <input type="text" class="form-control border-light-subtle bg-white text-dark" id="contact-name-page" placeholder="John Doe" required>
+                                <label for="contact-name-page" class="form-label text-white fw-bold">Full Name</label>
+                                <input type="text" class="form-control border-light-subtle bg-transparent text-white" id="contact-name-page" placeholder="John Doe" required>
                             </div>
                             <div class="col-md-6">
-                                <label for="contact-email-page" class="form-label text-muted fw-bold">Email Address</label>
-                                <input type="email" class="form-control border-light-subtle bg-white text-dark" id="contact-email-page" placeholder="john@example.com" required>
+                                <label for="contact-email-page" class="form-label text-white fw-bold">Email Address</label>
+                                <input type="email" class="form-control border-light-subtle bg-transparent text-white" id="contact-email-page" placeholder="john@example.com" required>
                             </div>
                             <div class="col-md-6">
-                                <label for="contact-phone-page" class="form-label text-muted fw-bold">Phone</label>
-                                <input type="tel" class="form-control border-light-subtle bg-white text-dark" id="contact-phone-page" placeholder="+92 300 1234567">
+                                <label for="contact-phone-page" class="form-label text-white fw-bold">Phone</label>
+                                <input type="tel" class="form-control border-light-subtle bg-transparent text-white" id="contact-phone-page" placeholder="+92 300 1234567">
                             </div>
                             <div class="col-md-6">
-                                <label for="contact-biz-link-page" class="form-label text-muted fw-bold">Business / Freelancer Link</label>
-                                <input type="url" class="form-control border-light-subtle bg-white text-dark" id="contact-biz-link-page" placeholder="https://yourprofile.com">
+                                <label for="contact-biz-link-page" class="form-label text-white fw-bold">Business / Freelancer Link</label>
+                                <input type="url" class="form-control border-light-subtle bg-transparent text-white" id="contact-biz-link-page" placeholder="https://yourprofile.com">
                             </div>
                             <div class="col-12">
-                                <label for="contact-service-page" class="form-label text-muted fw-bold">Service Required</label>
-                                <select class="form-select border-light-subtle bg-white text-dark" id="contact-service-page" required>
+                                <label for="contact-service-page" class="form-label text-white fw-bold">Service Required</label>
+                                <select class="form-select border-light-subtle bg-transparent text-white" id="contact-service-page" required>
                                     <option value="" disabled selected>Select a Service</option>
                                     <option value="AI Agents">AI Agents Integration</option>
                                     <option value="AI Automations">AI Automations (n8n/Make)</option>
@@ -50,8 +50,8 @@
                                 </select>
                             </div>
                             <div class="col-12">
-                                <label for="contact-message-page" class="form-label text-muted fw-bold">Project Description</label>
-                                <textarea class="form-control border-light-subtle bg-white text-dark" id="contact-message-page" rows="5" placeholder="Tell us about your requirements..." required></textarea>
+                                <label for="contact-message-page" class="form-label text-white fw-bold">Project Description</label>
+                                <textarea class="form-control border-light-subtle bg-transparent text-white" id="contact-message-page" rows="5" placeholder="Tell us about your requirements..." required></textarea>
                             </div>
                             <div class="col-12 mt-2">
                                 <button type="submit" class="btn btn-brand w-100 py-3"><span>Send Message</span> <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></button>

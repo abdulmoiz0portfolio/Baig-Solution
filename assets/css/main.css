@@ -1192,3 +1192,6 @@ body:not(.light-theme) .border-light-subtle { border-color: rgba(255,255,255,0.1
 
 
 
+
+/* Fix Placeholder Text Color */
+.form-control::placeholder, .form-select::placeholder { color: rgba(255, 255, 255, 0.7) !important; opacity: 1; }
