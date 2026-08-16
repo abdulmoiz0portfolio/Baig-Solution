@@ -1,65 +1,45 @@
 <?php $page_key = 'index'; include 'header.php'; ?>
 
 <!-- Hero Section Start -->
-<section class="hero-section hero-3 position-relative d-flex align-items-center justify-content-center">
-    <div id="particle-canvas-container" class="position-absolute top-0 start-0 w-100 h-100 z-0"></div>
+<section class="hero-section position-relative d-flex align-items-center justify-content-center text-center" style="min-height: 100vh; background-color: #070913; overflow: hidden; padding-top: 100px;">
+    <!-- Abstract Glowing Orbs (Alpha Global Style) -->
+    <div class="position-absolute rounded-circle" style="background: radial-gradient(circle, rgba(59,130,246,0.35) 0%, rgba(0,0,0,0) 70%); width: 700px; height: 700px; top: -100px; left: -150px; filter: blur(80px); z-index: 0; pointer-events: none;"></div>
+    <div class="position-absolute rounded-circle" style="background: radial-gradient(circle, rgba(168,85,247,0.2) 0%, rgba(0,0,0,0) 70%); width: 600px; height: 600px; bottom: -50px; right: -100px; filter: blur(80px); z-index: 0; pointer-events: none;"></div>
     
-    <div class="container position-relative z-1 hero-content text-center py-5">
-        <h6 class="wow fadeInUp text-accent-brand font-monospace mb-3" data-wow-delay=".1s">Automatixes</h6>
-        <h1 class="wow fadeInUp display-4 fw-extrabold mb-3 text-dark" data-wow-delay=".2s">
-            We Build Systems That Work <br><span class="text-accent-brand">While You Sleep</span>
+    <!-- Placeholder for 3D elements (can be replaced with actual images later) -->
+    <div class="position-absolute" style="top: 20%; left: 15%; z-index: 0; opacity: 0.8; pointer-events: none;">
+        <svg width="150" height="150" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 0L193.301 50V150L100 200L6.69873 150V50L100 0Z" fill="#3B82F6" fill-opacity="0.8" style="transform: rotate(15deg);"/>
+        </svg>
+    </div>
+    <div class="position-absolute" style="bottom: 15%; right: 20%; z-index: 0; opacity: 0.6; pointer-events: none;">
+        <svg width="120" height="120" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 5L190 195H10L100 5Z" stroke="#A855F7" stroke-width="4" style="transform: rotate(-20deg);"/>
+        </svg>
+    </div>
+    
+    <div class="container position-relative z-1 hero-content py-5" style="color: #ffffff;">
+        <span class="badge rounded-pill border border-secondary text-light mb-4 px-4 py-2" style="background: rgba(255,255,255,0.03); letter-spacing: 2px; font-size: 0.75rem; text-transform: uppercase;">
+            <span style="color: #3B82F6;" class="me-2">?</span> DIGITAL AGENCY FOR AMBITIOUS BRANDS
+        </span>
+        
+        <h1 class="display-3 fw-bold mb-4" style="line-height: 1.15; letter-spacing: -1.5px; color: #ffffff;">
+            We Build Systems That Work <br>
+            <span style="color: #60A5FA;">While You Sleep.</span>
         </h1>
-        <p class="wow fadeInUp lead text-secondary max-w-700 mx-auto mb-4" data-wow-delay=".3s">
-            From lead capture to follow-up to reporting — we design automated systems that run your business operations 24/7, so nothing falls through the cracks and no opportunity gets missed.
+        
+        <p class="lead mx-auto mb-5" style="max-width: 650px; font-size: 1.15rem; color: #9ca3af;">
+            Automatixes designs, builds, and scales premium AI agents, automated workflows, and custom web applications for startups, SMBs, and enterprise teams � wherever they are in the world.
         </p>
 
-        <!-- Core Automation Benefits -->
-        <div class="hero-bullets max-w-600 mx-auto text-start my-4 wow fadeInUp" data-wow-delay=".4s" style="display: inline-block;">
-            <div class="d-flex align-items-start mb-2">
-                <i class="fa-solid fa-bolt text-accent-brand me-3 mt-1 fs-5"></i>
-                <span class="text-secondary fs-5">Leads followed up in seconds, not hours</span>
-            </div>
-            <div class="d-flex align-items-start mb-2">
-                <i class="fa-solid fa-arrows-rotate text-accent-brand me-3 mt-1 fs-5"></i>
-                <span class="text-secondary fs-5">Your tools connected — CRM, calendar, WhatsApp, email, all in sync</span>
-            </div>
-            <div class="d-flex align-items-start mb-2">
-                <i class="fa-solid fa-chart-simple text-accent-brand me-3 mt-1 fs-5"></i>
-                <span class="text-secondary fs-5">Real-time visibility into what's happening, without lifting a finger</span>
-            </div>
-        </div>
-        
-        <div class="hero-button justify-content-center d-flex align-items-center flex-column mt-4 wow fadeInUp" data-wow-delay=".5s">
-            <a href="contact" class="btn btn-brand btn-lg">
-                <span>Automate My Business</span>
-                <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span>
+        <div class="d-flex justify-content-center gap-3 flex-wrap wow fadeInUp" data-wow-delay=".4s">
+            <a href="contact" class="btn text-white rounded-pill px-5 py-3 fw-semibold d-flex align-items-center" style="background: linear-gradient(135deg, #60A5FA, #3B82F6); border: none; box-shadow: 0 10px 25px rgba(59,130,246,0.4); transition: transform 0.2s;">
+                Start Your Project <i class="fa-solid fa-arrow-right ms-2"></i>
             </a>
-            <p class="text-muted small mt-3 mb-0">
-                <i class="fa-solid fa-circle-check text-accent-brand me-1"></i> Trusted by growing businesses to save hours every week
-            </p>
-        </div>
-        
-        <!-- Scroll Down Indicator -->
-        <div class="scroll-down-container wow fadeInUp" data-wow-delay=".8s" style="margin-top: 60px;">
-            <a href="#about-section" class="mouse-wrapper">
-                <div class="mouse-scroll">
-                    <div class="mouse-button"></div>
-                </div>
+            <a href="#portfolio-section" class="btn rounded-pill px-5 py-3 fw-semibold border" style="background: rgba(255,255,255,0.05); color: #ffffff; border-color: rgba(255,255,255,0.1); transition: background 0.2s;">
+                View Our Work
             </a>
         </div>
-    </div>
-
-    <!-- Vertical Social Side Links -->
-    <div class="social-side-links wow fadeInRight d-none" data-wow-delay=".5s">
-        <a href="#" target="_blank" class="facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" target="_blank" class="instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" target="_blank" class="linkedin">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
     </div>
 </section>
 <!-- Hero Section End -->
@@ -795,4 +775,5 @@
 </script>
 
 <?php include 'footer.php'; ?>
+
 
