@@ -88,11 +88,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--text-primary) !important; font-weight: 700
 }
 
 /* Navbar */
-.navbar {
-    background: rgba(7, 9, 19, 0.8) !important;
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
+.navbar { background: transparent !important; }
 .nav-link {
     color: var(--text-secondary) !important;
     font-weight: 500;
@@ -1186,6 +1182,8 @@ body:not(.light-theme) .bg-white { background-color: #111827 !important; }
 body:not(.light-theme) .bg-light { background-color: #1a2332 !important; }
 body:not(.light-theme) .text-muted { color: #9ca3af !important; }
 body:not(.light-theme) .border-light-subtle { border-color: rgba(255,255,255,0.1) !important; }
+
+
 
 
 

@@ -216,7 +216,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=1.0.2">
+    <link rel="stylesheet" href="assets/css/main.css?v=1786909182.6736">
 </head>
 <body>
 
@@ -291,5 +291,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
 
     <div id="smooth-wrapper">
         <div id="smooth-content">
+
+
 
 
