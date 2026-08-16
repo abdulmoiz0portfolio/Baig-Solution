@@ -107,7 +107,7 @@
             </div>
         </div>
 
-        <!-- ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â VIDEO SHOWCASE (Standalone, with audio) ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â -->
+        <!-- ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â VIDEO SHOWCASE (Standalone, with audio) ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â -->
         <div class="row mt-5 pt-5 border-top border-light-subtle">
             <div class="col-12 text-center mb-4">
                 <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">VIDEO SHOWCASE</span>
@@ -134,7 +134,7 @@
             </div>
         </div>
 
-        <!-- ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â PRODUCT CAROUSEL (Video + Images in one place) ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â -->
+        <!-- ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â PRODUCT CAROUSEL (Video + Images in one place) ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â -->
         <div class="row mt-5">
             <!-- Heading removed per user request -->
             <div class="col-lg-5 col-md-8 mx-auto">
@@ -168,9 +168,9 @@
                     </div>
                     <!-- Dot indicators -->
                     <div class="carousel-dots">
-                        <button class="dot active" data-index="0">ÃƒÂ°Ã…Â¸Ã‚ÂÃ¢â‚¬â€</button>
-                        <button class="dot" data-index="1">ÃƒÂ°Ã…Â¸Ã…â€™Ã‚Â¯</button>
-                        <button class="dot" data-index="2">ÃƒÂ°Ã…Â¸Ã‚ÂÃ¢â‚¬Â</button>
+                        <button class="dot active" data-index="0">ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸Ãƒâ€šÃ‚ÂÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</button>
+                        <button class="dot" data-index="1">ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸Ãƒâ€¦Ã¢â‚¬â„¢Ãƒâ€šÃ‚Â¯</button>
+                        <button class="dot" data-index="2">ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸Ãƒâ€šÃ‚ÂÃƒÂ¢Ã¢â€šÂ¬Ã‚Â</button>
                     </div>
                 </div>
             </div>
@@ -179,15 +179,15 @@
 </section>
 
 <style>
-/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Dark showcase frame ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+/* ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ Dark showcase frame ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ */
 .showcase-dark-frame { background:#1a1a2e; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); box-shadow:0 25px 80px rgba(0,0,0,0.3); }
 .showcase-dark-header { background:linear-gradient(135deg,#0B4550,#1a1a2e); padding:14px 20px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(255,255,255,0.06); }
 .sdot { width:12px; height:12px; border-radius:50%; display:inline-block; }
 .sframe-title { color:rgba(255,255,255,0.7); font-size:14px; font-weight:500; flex:1; }
-.sframe-badge { background:rgba(230, 255, 43,0.15); color:#E6FF2B; padding:4px 14px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; border:1px solid rgba(230, 255, 43,0.2); }
+.sframe-badge { background:rgba(200, 224, 25,0.15); color:#C8E019; padding:4px 14px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; border:1px solid rgba(200, 224, 25,0.2); }
 .sframe-body { background:#0B4550; position:relative; }
 
-/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Carousel ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+/* ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ Carousel ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ */
 .carousel-slide { display:none; animation: fadeSlide 0.4s ease; }
 .carousel-slide.active { display:block; }
 @keyframes fadeSlide { from { opacity:0; transform:scale(0.98); } to { opacity:1; transform:scale(1); } }
@@ -195,11 +195,11 @@
 .carousel-nav-btn {
     position:absolute; top:50%; transform:translateY(-50%);
     width:48px; height:48px; border-radius:50%;
-    background:rgba(230, 255, 43,0.9); color:#fff; border:none;
+    background:rgba(200, 224, 25,0.9); color:#fff; border:none;
     font-size:18px; cursor:pointer; z-index:10;
     transition:all 0.3s ease; box-shadow:0 4px 15px rgba(0,0,0,0.3);
 }
-.carousel-nav-btn:hover { background:#E6FF2B; transform:translateY(-50%) scale(1.1); }
+.carousel-nav-btn:hover { background:#C8E019; transform:translateY(-50%) scale(1.1); }
 .prev-btn { left:16px; }
 .next-btn { right:16px; }
 
@@ -214,8 +214,8 @@
     cursor:pointer; transition:all 0.3s ease;
     display:flex; align-items:center; justify-content:center;
 }
-.carousel-dots .dot.active { border-color:#E6FF2B; background:rgba(230, 255, 43,0.2); color:#E6FF2B; }
-.carousel-dots .dot:hover { border-color:rgba(230, 255, 43,0.5); }
+.carousel-dots .dot.active { border-color:#C8E019; background:rgba(200, 224, 25,0.2); color:#C8E019; }
+.carousel-dots .dot:hover { border-color:rgba(200, 224, 25,0.5); }
 
 @media (max-width:768px) {
     .carousel-nav-btn { width:36px; height:36px; font-size:14px; }

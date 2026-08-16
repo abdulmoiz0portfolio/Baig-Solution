@@ -98,8 +98,8 @@ include 'header.php';
                             <div class="col-7">
                                 <select v-model="invoiceMeta.currency" id="currency-select" class="form-select form-select-sm fw-bold text-end">
                                     <option value="$">USD ($)</option>
-                                    <option value="ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬">EUR (ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬)</option>
-                                    <option value="Ãƒâ€šÃ‚Â£">GBP (Ãƒâ€šÃ‚Â£)</option>
+                                    <option value="ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬">EUR (ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬)</option>
+                                    <option value="ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â£">GBP (ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â£)</option>
                                     <option value="C$">CAD (C$)</option>
                                     <option value="Rs">PKR (Rs)</option>
                                 </select>
@@ -268,18 +268,18 @@ include 'header.php';
 }
 
 .btn-outline-brand {
-    color: #E6FF2B;
-    border-color: #E6FF2B;
+    color: #C8E019;
+    border-color: #C8E019;
     background-color: transparent;
 }
 .btn-outline-brand:hover {
     color: #ffffff;
-    background-color: #E6FF2B;
-    border-color: #E6FF2B;
+    background-color: #C8E019;
+    border-color: #C8E019;
 }
 
 .text-accent-brand {
-    color: #E6FF2B !important;
+    color: #C8E019 !important;
 }
 
 /* Print Styles */
