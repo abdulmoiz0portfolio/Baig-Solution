@@ -20,7 +20,7 @@
                 <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">OUR APPROACH</span>
                 <h2 class="display-6 fw-extrabold text-dark mb-4">High Performance & Dynamic Layouts</h2>
                 <p class="text-secondary fs-5 mb-4">
-                    Our developers write custom code using HTML5, modern CSS variables, Javascript frameworks, and Google Firestore BaaS. No slow builders or generic themesÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Âjust ultra-responsive, secure landing pages.
+                    Our developers write custom code using HTML5, modern CSS variables, Javascript frameworks, and Google Firestore BaaS. No slow builders or generic themesÃƒÂ¢Ã¢"šÂ¬Ã¢â‚¬Âjust ultra-responsive, secure landing pages.
                 </p>
                 <div class="row g-4">
                     <div class="col-sm-6">

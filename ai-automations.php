@@ -91,13 +91,13 @@
     </div>
 </section>
 
-<!-- ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â OUR WORK SHOWCASE SECTION ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â -->
+<!-- ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚Â¢Ãƒ"šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚Â¢Ãƒ"šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚Â¢Ãƒ"šÃ‚Â OUR WORK SHOWCASE SECTION ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚Â¢Ãƒ"šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚Â¢Ãƒ"šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚Â¢Ãƒ"šÃ‚Â -->
 <section class="section-padding bg-dark text-white" id="n8n-showcase">
     <div class="container">
         <div class="text-center mb-5">
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">OUR WORK</span>
             <h2 class="display-6 fw-extrabold text-white mb-3">n8n Automation Showcase</h2>
-            <p class="text-white-50 fs-5 mx-auto max-w-700">Real workflows we've built for our clients ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â watch them in action.</p>
+            <p class="text-white-50 fs-5 mx-auto max-w-700">Real workflows we've built for our clients ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢"šÂ¬Ã‚Â watch them in action.</p>
         </div>
 
         <!-- Video Showcase (First) -->
@@ -141,10 +141,10 @@
         </div>
     </div>
 </section>
-<!-- ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â OUR WORK SHOWCASE SECTION END ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â -->
+<!-- ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚Â¢Ãƒ"šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚Â¢Ãƒ"šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚Â¢Ãƒ"šÃ‚Â OUR WORK SHOWCASE SECTION END ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚Â¢Ãƒ"šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚Â¢Ãƒ"šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚Â¢Ãƒ"šÃ‚Â -->
 
 <style>
-/* ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ Showcase Frame (macOS-style window) ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ */
+/* ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ Showcase Frame (macOS-style window) ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ */
 .showcase-frame {
     background: #1a1a2e;
     border-radius: 16px;

@@ -159,7 +159,7 @@
         window.db = db;
         console.log("Firebase initialized successfully!");
 
-        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ auto-populate TESTIMONIALS section ---
+        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ auto-populate TESTIMONIALS section ---
         function escapeHTMLInner(str) {
             if (!str) return '';
             return String(str).replace(/[&<>'\"]/g, tag => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[tag] || tag));
@@ -197,7 +197,7 @@
                                     <div class="review-stars-display mt-1">${starsHtml}</div>
                                     ${profileLink}
                                 </div>
-                                <small class="text-muted">${d.rating} ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¹Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦</small>
+                                <small class="text-muted">${d.rating} ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¹Ãƒ"¦Ã¢â‚¬Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â¦</small>
                             </div>
                             <p class="text-secondary mb-0 mt-2" style="white-space:pre-line;">${escapeHTMLInner(d.comment)}</p>
                         </div>`;
@@ -326,7 +326,7 @@
                     if(averageRatingText) averageRatingText.innerHTML = `${avg} <i class="fa-solid fa-star text-accent-brand"></i>`;
                     if(reviewCountText) reviewCountText.textContent = `based on ${reviewCount} review${reviewCount > 1 ? 's' : ''}`;
                 } else {
-                    if(averageRatingText) averageRatingText.textContent = "0 ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¹Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦";
+                    if(averageRatingText) averageRatingText.textContent = "0 ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¹Ãƒ"¦Ã¢â‚¬Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â¦";
                     if(reviewCountText) reviewCountText.textContent = "(0 reviews)";
                     reviewsList.innerHTML = `<div class="col-12 text-center text-muted py-5 border rounded-4 bg-light">No reviews yet. Be the first to write a review!</div>`;
                 }
@@ -543,7 +543,7 @@
                 if (chatHeader && !document.getElementById('custom-chat-close')) {
                     const closeBtn = document.createElement('button');
                     closeBtn.id = 'custom-chat-close';
-                    closeBtn.innerHTML = 'ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ';
+                    closeBtn.innerHTML = 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢"šÂ¬Ã…"ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢"šÂ¬Ã…"';
                     closeBtn.onclick = (e) => {
                         if (e) {
                             e.preventDefault();
@@ -570,9 +570,9 @@
                         qrContainer.style.cssText = 'display: flex; gap: 8px; overflow-x: auto; padding: 10px; background: #f8f9fa; white-space: nowrap; scrollbar-width: none; border-top: 1px solid #eee; width: 100%; box-sizing: border-box;';
                         
                         const replies = [
-                            { icon: 'ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂºÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â', text: 'Services' },
-                            { icon: 'ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°', text: 'Pricing' },
-                            { icon: 'ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾', text: 'Connect Expert' }
+                            { icon: 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚ÂºÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¯ÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â¸ÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â', text: 'Services' },
+                            { icon: 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â°', text: 'Pricing' },
+                            { icon: 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"¦Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¾', text: 'Connect Expert' }
                         ];
 
                         replies.forEach(r => {
