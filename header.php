@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 include_once 'security.php'; 
 
 if (!isset($page_key)) {

@@ -17,7 +17,7 @@ if (empty($path)) {
 
 // Allowed dynamic PHP pages in root directory
 $allowed_pages = [
-    'index',
+    'index','portfolio','process','ai-image-generator','reviews',
     'about',
     'contact',
     'admin',
@@ -48,3 +48,4 @@ if (in_array($path, $allowed_pages)) {
     echo "404 - Page not allowed.";
 }
 ?>
+
