@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Automatixes Core Script (Aligned with SoftNest Technologies)
  * Frontend Interactions, Three.js Waves, Matter.js Physics Engine, and Firebase Integrations.
  */
@@ -56,12 +56,12 @@ function setupNavigation() {
         if (!header) return;
         if (window.scrollY > 50) {
             header.style.padding = "5px 0";
-            header.style.background = "rgba(255, 255, 255, 0.95)";
-            header.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.05)";
+            
+            
         } else {
             header.style.padding = "10px 0";
-            header.style.background = "rgba(255, 255, 255, 0.85)";
-            header.style.boxShadow = "none";
+            
+            
         }
     });
 
@@ -218,7 +218,7 @@ function initMatterJsPhysics() {
     
     Composite.add(world, [ground, leftWall, rightWall, topWall]);
 
-    // Pill texts — falls back to default pain-point set, or reads a custom
+    // Pill texts â€” falls back to default pain-point set, or reads a custom
     // JSON list from data-pills on the container (e.g. for benefit-themed sections)
     const defaultPillTexts = [
         "Slow Websites", "High Bounce Rates", "Manual Workflows",
@@ -606,7 +606,7 @@ function logSimulatedWebhook(logText) {
         return p.innerHTML;
     }
 
-    // Initialize real‑time testimonials (rating ≥ 4)
+    // Initialize realâ€‘time testimonials (rating â‰¥ 4)
     function initTestimonials() {
         const container = document.getElementById('testimonialsList');
         if (!container) return;
@@ -640,7 +640,7 @@ function logSimulatedWebhook(logText) {
                                             ${starsHtml}
                                         </div>
                                     </div>
-                                    <small class="text-muted">${data.rating} ★</small>
+                                    <small class="text-muted">${data.rating} â˜…</small>
                                 </div>
                                 <p class="text-secondary mb-0 mt-2" style="white-space: pre-line;">
                                     ${escapeHTML(data.comment)}
@@ -916,3 +916,4 @@ function initScrollAnimations() {
         observer.observe(heading);
     });
 }
+

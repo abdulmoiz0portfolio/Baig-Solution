@@ -29,7 +29,7 @@
         </h1>
         
         <p class="lead mx-auto mb-5" style="max-width: 650px; font-size: 1.15rem; color: #9ca3af;">
-            Automatixes designs, builds, and scales premium AI agents, automated workflows, and custom web applications for startups, SMBs, and enterprise teams — wherever they are in the world.
+            Automatixes designs, builds, and scales premium AI agents, automated workflows, and custom web applications for startups, SMBs, and enterprise teams â€” wherever they are in the world.
         </p>
 
         <div class="d-flex justify-content-center gap-3 flex-wrap wow fadeInUp" data-wow-delay=".4s">
@@ -125,7 +125,7 @@
 <section id="services-section" class="section-padding bg-light-gray text-dark">
     <div class="container">
         <div class="text-center mb-5 max-w-700 mx-auto">
-            <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">SERVICES WE PROVIDE</span>
+            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">SERVICES WE PROVIDE</span>
             <h2 class="display-5 fw-extrabold mb-3 typewriter-anim">Our Core Offerings</h2>
             <p class="text-secondary fs-5">We combine strategy, design, and automation to scale your business.</p>
         </div>
@@ -140,7 +140,7 @@
                     <div class="content">
                         <h3><a href="ai-agents" class="text-dark text-decoration-none">Autonomous AI Agents</a></h3>
                         <p class="text-muted">Smart digital agents that automate customer support, analyze complex business data, and execute tasks 24/7.</p>
-                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs â€” whatever fits your stack best.</p>
+                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs Ã¢â‚¬â€ whatever fits your stack best.</p>
                         <a href="ai-agents" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center" aria-label="Autonomous AI Agents"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                     <div class="content">
                         <h3><a href="ai-automations" class="text-dark text-decoration-none">End-to-End AI Automations</a></h3>
                         <p class="text-muted">Eliminate manual overhead by linking CRM platforms, pipelines, and smart triggers to automate workflows.</p>
-                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs â€” whatever fits your stack best.</p>
+                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs Ã¢â‚¬â€ whatever fits your stack best.</p>
                         <a href="ai-automations" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center" aria-label="End-to-End AI Automations"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
                     </div>
                 </div>
@@ -198,11 +198,11 @@
     </div>
 </section>
 
-<!-- â•â•â• AI Comparison Section Start â•â•â• -->
+<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â AI Comparison Section Start Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
 <section class="py-5 bg-dark text-white border-top border-light-subtle">
     <div class="container max-w-1000">
         <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".1s">
-            <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">CHOOSE YOUR SOLUTION</span>
+            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">CHOOSE YOUR SOLUTION</span>
             <h2 class="display-6 fw-extrabold mb-3 typewriter-anim">AIAgents vs AIAutomations</h2>
             <p class="text-white-50 fs-5 mx-auto max-w-700">Not sure which service fits your business? Here is the core difference.</p>
         </div>
@@ -250,7 +250,7 @@
         </div>
     </div>
 </section>
-<!-- â•â•â• AI Comparison Section End â•â•â• -->
+<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â AI Comparison Section End Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
 
 <!-- Technologies We're Using Marquee Section Start -->
 <section id="technologies-section" class="py-5 bg-light-gray text-dark border-top border-light-subtle overflow-hidden">
@@ -378,7 +378,7 @@
 <section id="process-section" class="section-padding bg-warm-peach text-dark border-top border-light-subtle">
     <div class="container">
         <div class="text-center mb-5 max-w-700 mx-auto">
-            <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">HOW WE WORK</span>
+            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">HOW WE WORK</span>
             <h2 class="display-5 fw-extrabold mb-3 typewriter-anim">Our 4-Step Automation Process</h2>
             <p class="text-secondary fs-5">A structured, collaborative approach to connecting your business operations.</p>
         </div>
@@ -429,7 +429,7 @@
 <section id="portfolio-section" class="section-padding bg-light-gray text-dark">
     <div class="container max-w-1000">
         <div class="text-center mb-5 max-w-700 mx-auto">
-            <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">SERVICES & CASE STUDIES</span>
+            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">SERVICES & CASE STUDIES</span>
             <h2 class="display-5 fw-extrabold mb-3 typewriter-anim">Our Work in Action</h2>
             <p class="text-secondary fs-5">Take a look at how we deploy custom code and AI agents to transform businesses.</p>
         </div>
@@ -481,7 +481,7 @@
 <!-- CTA Section Start -->
 <section class="cta-section section-padding bg-white border-top border-light-subtle text-center">
     <div class="container max-w-700">
-        <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">LET'S BUILD SOMETHING GREAT</span>
+        <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">LET'S BUILD SOMETHING GREAT</span>
         <h2 class="display-4 fw-extrabold mb-4 text-dark">Ready to grow your business online?</h2>
         <p class="fs-5 text-secondary mb-5">Book a free, no-pressure consultation. We'll review your goals and tell you exactly what it'll take.</p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
@@ -501,7 +501,7 @@
 <section id="testimonials-section" class="section-padding bg-light-gray text-dark border-top border-light-subtle">
     <div class="container max-w-800">
         <div class="text-center mb-5">
-            <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">TESTIMONIALS</span>
+            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">TESTIMONIALS</span>
             <h2 class="display-5 fw-extrabold mb-3 typewriter-anim">What Our Clients Say</h2>
             <p class="text-secondary fs-5">Trusted by tech companies and service providers worldwide.</p>
         </div>
@@ -543,7 +543,7 @@
 <section id="faq-section" class="section-padding bg-white text-dark border-top border-light-subtle">
     <div class="container max-w-800">
         <div class="text-center mb-5">
-            <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">QUESTIONS</span>
+            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">QUESTIONS</span>
             <h2 class="display-5 fw-extrabold mb-3 typewriter-anim">Frequently Asked Questions</h2>
             <p class="text-secondary fs-5">Common queries answered about our development and AI processes.</p>
         </div>
@@ -634,7 +634,7 @@
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-5">
-                <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">GET IN TOUCH</span>
+                <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">GET IN TOUCH</span>
                 <h2 class="display-6 fw-extrabold text-dark mb-4 typewriter-anim">Start Your Automation Journey</h2>
                 <p class="text-secondary fs-5 mb-4">
                     Send us your details. Submitting this form writes directly to our Firestore database and triggers our notifications.
@@ -775,6 +775,7 @@
 </script>
 
 <?php include 'footer.php'; ?>
+
 
 
 
