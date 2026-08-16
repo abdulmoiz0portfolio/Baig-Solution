@@ -107,7 +107,7 @@
             </div>
         </div>
 
-        <!-- ═══ VIDEO SHOWCASE (Standalone, with audio) ═══ -->
+        <!-- â•â•â• VIDEO SHOWCASE (Standalone, with audio) â•â•â• -->
         <div class="row mt-5 pt-5 border-top border-light-subtle">
             <div class="col-12 text-center mb-4">
                 <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">VIDEO SHOWCASE</span>
@@ -134,7 +134,7 @@
             </div>
         </div>
 
-        <!-- ═══ PRODUCT CAROUSEL (Video + Images in one place) ═══ -->
+        <!-- â•â•â• PRODUCT CAROUSEL (Video + Images in one place) â•â•â• -->
         <div class="row mt-5">
             <!-- Heading removed per user request -->
             <div class="col-lg-5 col-md-8 mx-auto">
@@ -168,9 +168,9 @@
                     </div>
                     <!-- Dot indicators -->
                     <div class="carousel-dots">
-                        <button class="dot active" data-index="0">🍗</button>
-                        <button class="dot" data-index="1">🌯</button>
-                        <button class="dot" data-index="2">🍔</button>
+                        <button class="dot active" data-index="0">ðŸ—</button>
+                        <button class="dot" data-index="1">ðŸŒ¯</button>
+                        <button class="dot" data-index="2">ðŸ”</button>
                     </div>
                 </div>
             </div>
@@ -179,15 +179,15 @@
 </section>
 
 <style>
-/* ── Dark showcase frame ── */
+/* â”€â”€ Dark showcase frame â”€â”€ */
 .showcase-dark-frame { background:#1a1a2e; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); box-shadow:0 25px 80px rgba(0,0,0,0.3); }
 .showcase-dark-header { background:linear-gradient(135deg,#0d0d1a,#1a1a2e); padding:14px 20px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(255,255,255,0.06); }
 .sdot { width:12px; height:12px; border-radius:50%; display:inline-block; }
 .sframe-title { color:rgba(255,255,255,0.7); font-size:14px; font-weight:500; flex:1; }
-.sframe-badge { background:rgba(231,127,35,0.15); color:#e77f23; padding:4px 14px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; border:1px solid rgba(231,127,35,0.2); }
+.sframe-badge { background:rgba(59, 130, 246,0.15); color:#3B82F6; padding:4px 14px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; border:1px solid rgba(59, 130, 246,0.2); }
 .sframe-body { background:#0d0d1a; position:relative; }
 
-/* ── Carousel ── */
+/* â”€â”€ Carousel â”€â”€ */
 .carousel-slide { display:none; animation: fadeSlide 0.4s ease; }
 .carousel-slide.active { display:block; }
 @keyframes fadeSlide { from { opacity:0; transform:scale(0.98); } to { opacity:1; transform:scale(1); } }
@@ -195,11 +195,11 @@
 .carousel-nav-btn {
     position:absolute; top:50%; transform:translateY(-50%);
     width:48px; height:48px; border-radius:50%;
-    background:rgba(231,127,35,0.9); color:#fff; border:none;
+    background:rgba(59, 130, 246,0.9); color:#fff; border:none;
     font-size:18px; cursor:pointer; z-index:10;
     transition:all 0.3s ease; box-shadow:0 4px 15px rgba(0,0,0,0.3);
 }
-.carousel-nav-btn:hover { background:#e77f23; transform:translateY(-50%) scale(1.1); }
+.carousel-nav-btn:hover { background:#3B82F6; transform:translateY(-50%) scale(1.1); }
 .prev-btn { left:16px; }
 .next-btn { right:16px; }
 
@@ -214,8 +214,8 @@
     cursor:pointer; transition:all 0.3s ease;
     display:flex; align-items:center; justify-content:center;
 }
-.carousel-dots .dot.active { border-color:#e77f23; background:rgba(231,127,35,0.2); color:#e77f23; }
-.carousel-dots .dot:hover { border-color:rgba(231,127,35,0.5); }
+.carousel-dots .dot.active { border-color:#3B82F6; background:rgba(59, 130, 246,0.2); color:#3B82F6; }
+.carousel-dots .dot:hover { border-color:rgba(59, 130, 246,0.5); }
 
 @media (max-width:768px) {
     .carousel-nav-btn { width:36px; height:36px; font-size:14px; }
@@ -271,3 +271,4 @@
 </section>
 
 <?php include 'footer.php'; ?>
+

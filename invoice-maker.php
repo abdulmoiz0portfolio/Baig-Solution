@@ -98,8 +98,8 @@ include 'header.php';
                             <div class="col-7">
                                 <select v-model="invoiceMeta.currency" id="currency-select" class="form-select form-select-sm fw-bold text-end">
                                     <option value="$">USD ($)</option>
-                                    <option value="€">EUR (€)</option>
-                                    <option value="£">GBP (£)</option>
+                                    <option value="â‚¬">EUR (â‚¬)</option>
+                                    <option value="Â£">GBP (Â£)</option>
                                     <option value="C$">CAD (C$)</option>
                                     <option value="Rs">PKR (Rs)</option>
                                 </select>
@@ -268,18 +268,18 @@ include 'header.php';
 }
 
 .btn-outline-brand {
-    color: #e77f23;
-    border-color: #e77f23;
+    color: #3B82F6;
+    border-color: #3B82F6;
     background-color: transparent;
 }
 .btn-outline-brand:hover {
     color: #ffffff;
-    background-color: #e77f23;
-    border-color: #e77f23;
+    background-color: #3B82F6;
+    border-color: #3B82F6;
 }
 
 .text-accent-brand {
-    color: #e77f23 !important;
+    color: #3B82F6 !important;
 }
 
 /* Print Styles */
@@ -570,3 +570,4 @@ include 'header.php';
 </script>
 
 <?php include 'footer.php'; ?>
+

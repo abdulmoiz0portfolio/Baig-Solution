@@ -34,7 +34,7 @@ async function smoothMove(page, startX, startY, endX, endY, steps = 50) {
           cursor.style.left = '0';
           cursor.style.zIndex = '999999';
           cursor.style.pointerEvents = 'none';
-          cursor.style.background = 'rgba(231, 127, 35, 0.7)';
+          cursor.style.background = 'rgba(59, 130, 246, 0.7)';
           cursor.style.border = '2px solid white';
           cursor.style.borderRadius = '50%';
           cursor.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
@@ -50,7 +50,7 @@ async function smoothMove(page, startX, startY, endX, endY, steps = 50) {
               cursor.style.transform = "translate(" + (e.clientX - 10) + "px, " + (e.clientY - 10) + "px) scale(0.8)";
           });
           document.addEventListener('mouseup', (e) => {
-              cursor.style.background = 'rgba(231, 127, 35, 0.7)';
+              cursor.style.background = 'rgba(59, 130, 246, 0.7)';
               cursor.style.transform = "translate(" + (e.clientX - 10) + "px, " + (e.clientY - 10) + "px) scale(1)";
           });
       });
@@ -110,3 +110,4 @@ async function smoothMove(page, startX, startY, endX, endY, steps = 50) {
   await browser.close();
   
 })();
+

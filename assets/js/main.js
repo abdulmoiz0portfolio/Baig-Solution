@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Automatixes Core Script (Aligned with SoftNest Technologies)
  * Frontend Interactions, Three.js Waves, Matter.js Physics Engine, and Firebase Integrations.
  */
@@ -255,8 +255,8 @@ function initMatterJsPhysics() {
         el.style.whiteSpace = "nowrap";
         el.style.userSelect = "none";
         el.style.pointerEvents = "none";
-        el.style.background = pillTint ? "rgba(231, 127, 35, 0.08)" : "rgba(0, 0, 0, 0.05)";
-        el.style.border = pillTint ? "1px solid rgba(231, 127, 35, 0.3)" : "1px solid rgba(0, 0, 0, 0.1)";
+        el.style.background = pillTint ? "rgba(59, 130, 246, 0.08)" : "rgba(0, 0, 0, 0.05)";
+        el.style.border = pillTint ? "1px solid rgba(59, 130, 246, 0.3)" : "1px solid rgba(0, 0, 0, 0.1)";
         el.style.zIndex = "5";
         el.style.willChange = "transform";
 
@@ -916,4 +916,5 @@ function initScrollAnimations() {
         observer.observe(heading);
     });
 }
+
 
