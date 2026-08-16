@@ -26,9 +26,7 @@
                             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                         </div>
                         <div class="mt-3">
-                            <button id="theme-toggle" class="btn btn-outline-light btn-sm rounded-pill px-3">
-                                <i class="fas fa-sun me-1"></i> Switch Theme
-                            </button>
+                            
                         </div>
                     </div>
                 </div>
@@ -649,16 +647,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const themeToggleBtn = document.getElementById('theme-toggle');
-            if (themeToggleBtn) {
-                themeToggleBtn.addEventListener('click', function() {
-                    const isLight = document.body.classList.toggle('light-theme');
-                    if (isLight) {
-                        localStorage.setItem('automatixes_theme', 'light');
-                    } else {
-                        localStorage.setItem('automatixes_theme', 'dark');
-                    }
-                });
+            
             }
         });
     </script>
@@ -667,3 +656,4 @@
     <script src="assets/js/main.js?v=1.0.2"></script>
 </body>
 </html>
+

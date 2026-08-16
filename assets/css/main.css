@@ -1,3 +1,110 @@
+/* Brand Variables & Theme Setup (Automatixes Deep Dark / Alpha Global Aesthetic) */
+:root {
+    --bg-base: #070913;
+    --bg-surface: #0B0F19;
+    --bg-surface-2: #111827;
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --text-muted: #94a3b8;
+    
+    --accent-blue: #3B82F6;
+    --accent-blue-light: #60A5FA;
+    --accent-purple: #8B5CF6;
+    
+    --font-jakarta: 'Inter', 'Space Grotesk', sans-serif;
+    --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body {
+    background-color: var(--bg-base) !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-jakarta);
+    overflow-x: hidden;
+}
+
+/* Global Overrides for Bootstrap Utilities to enforce Deep Dark Theme */
+.bg-white, .bg-light, .bg-warm-peach, .bg-light-gray { background-color: var(--bg-base) !important; }
+.text-dark { color: var(--text-primary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-muted { color: var(--text-muted) !important; }
+.border-light-subtle, .border { border-color: rgba(255,255,255,0.08) !important; }
+.shadow-sm, .shadow { box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important; }
+
+/* Cards & Surfaces */
+.card, .portfolio-card, .subpage-card, .contact-form-wrapper {
+    background: var(--bg-surface) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    backdrop-filter: blur(10px);
+}
+.card:hover, .portfolio-card:hover {
+    border-color: rgba(96, 165, 250, 0.3) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 { color: var(--text-primary) !important; font-weight: 700; }
+
+/* Buttons */
+.btn-brand, .btn-primary {
+    background: linear-gradient(135deg, var(--accent-blue-light), var(--accent-blue)) !important;
+    border: none !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+.btn-brand:hover, .btn-primary:hover {
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+}
+.btn-outline-dark {
+    background: rgba(255,255,255,0.05) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    color: white !important;
+}
+.btn-outline-dark:hover {
+    background: rgba(255,255,255,0.1) !important;
+}
+
+/* Forms */
+.form-control, .form-select {
+    background-color: var(--bg-surface-2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+.form-control:focus {
+    background-color: var(--bg-surface) !important;
+    border-color: var(--accent-blue-light) !important;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+    color: white !important;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(7, 9, 19, 0.8) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.nav-link {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: white !important;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-surface) !important;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Floating Glows (Reusables) */
+.glow-orb-blue {
+    position: absolute; background: radial-gradient(circle, rgba(59,130,246,0.3) 0%, rgba(0,0,0,0) 70%); filter: blur(60px); z-index: 0; pointer-events: none;
+}
+.glow-orb-purple {
+    position: absolute; background: radial-gradient(circle, rgba(139,92,246,0.2) 0%, rgba(0,0,0,0) 70%); filter: blur(60px); z-index: 0; pointer-events: none;
+}
 /* Brand Variables & Theme Setup (Automatixes Rebrand) */
 :root {
     /* Default Dark Theme (Automatixes SaaS) */
@@ -1070,4 +1177,5 @@ body:not(.light-theme) .bg-white { background-color: #111827 !important; }
 body:not(.light-theme) .bg-light { background-color: #1a2332 !important; }
 body:not(.light-theme) .text-muted { color: #9ca3af !important; }
 body:not(.light-theme) .border-light-subtle { border-color: rgba(255,255,255,0.1) !important; }
+
 

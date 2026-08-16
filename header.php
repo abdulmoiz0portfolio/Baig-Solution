@@ -219,14 +219,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <link rel="stylesheet" href="assets/css/main.css?v=1.0.2">
 </head>
 <body>
-    <!-- Theme Initializer to prevent flash -->
-    <script>
-        if (localStorage.getItem('automatixes_theme') === 'dark') {
-            document.body.classList.remove('light-theme');
-        } else {
-            document.body.classList.add('light-theme');
-        }
-    </script>
+
     
     <!-- Custom Mouse Cursor Follower -->
     <div class="mouse-cursor cursor-outer"></div>
@@ -263,31 +256,31 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                                <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="mainNavbar">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
                         <li class="nav-item"><a class="nav-link active" href="index">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about">About</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
-                            <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 12px; padding: 10px;">
-                                <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="ai-agents">Autonomous AI Agents</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="voice-agent">Voice Agent Demo <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem;">NEW</span></a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="ai-automations">AI Automations</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="ai-image-generator">AI Image Generator</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="website-development">Web & App Development</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="product-shoot">Product Shoot</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold text-secondary" href="invoice-maker">Free Invoice Maker</a></li>
+                            <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item py-2 fw-semibold" href="ai-agents">Autonomous AI Agents</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="voice-agent">Voice Agent Demo <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem;">NEW</span></a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="ai-automations">AI Automations</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="ai-image-generator">AI Image Generator</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="website-development">Web & App Development</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">Product Shoot</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="invoice-maker">Free Invoice Maker</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="reviews">Customer Ratings</a></li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="blogs">Blogs</a></li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="contact">Contact us</a></li>
-                        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                            <a href="contact" class="btn btn-brand text-nowrap">Get Started <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></a>
-                        </li>
                     </ul>
+                    <div class="d-none d-lg-block">
+                        <a href="contact" class="btn btn-brand rounded-pill px-4 py-2 fw-semibold text-nowrap">Get Started</a>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -296,3 +289,4 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
 
     <div id="smooth-wrapper">
         <div id="smooth-content">
+
