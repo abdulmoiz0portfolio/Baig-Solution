@@ -216,7 +216,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=1786922891.47791">
+    <link rel="stylesheet" href="assets/css/main.css?v=1786924272.64168">
 </head>
 <body>
 
