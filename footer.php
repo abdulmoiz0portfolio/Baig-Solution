@@ -159,7 +159,7 @@
         window.db = db;
         console.log("Firebase initialized successfully!");
 
-        // --- REAL-TIME TESTIMONIALS (rating >= 4) â†’ auto-populate TESTIMONIALS section ---
+        // --- REAL-TIME TESTIMONIALS (rating >= 4) Ã¢â€ â€™ auto-populate TESTIMONIALS section ---
         function escapeHTMLInner(str) {
             if (!str) return '';
             return String(str).replace(/[&<>'\"]/g, tag => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[tag] || tag));
@@ -197,7 +197,7 @@
                                     <div class="review-stars-display mt-1">${starsHtml}</div>
                                     ${profileLink}
                                 </div>
-                                <small class="text-muted">${d.rating} â˜…</small>
+                                <small class="text-muted">${d.rating} Ã¢Ëœâ€¦</small>
                             </div>
                             <p class="text-secondary mb-0 mt-2" style="white-space:pre-line;">${escapeHTMLInner(d.comment)}</p>
                         </div>`;
@@ -326,7 +326,7 @@
                     if(averageRatingText) averageRatingText.innerHTML = `${avg} <i class="fa-solid fa-star text-accent-brand"></i>`;
                     if(reviewCountText) reviewCountText.textContent = `based on ${reviewCount} review${reviewCount > 1 ? 's' : ''}`;
                 } else {
-                    if(averageRatingText) averageRatingText.textContent = "0 â˜…";
+                    if(averageRatingText) averageRatingText.textContent = "0 Ã¢Ëœâ€¦";
                     if(reviewCountText) reviewCountText.textContent = "(0 reviews)";
                     reviewsList.innerHTML = `<div class="col-12 text-center text-muted py-5 border rounded-4 bg-light">No reviews yet. Be the first to write a review!</div>`;
                 }
@@ -405,16 +405,16 @@
                 display: none !important;
             }
             @keyframes softPulse {
-                0% { box-shadow: 0 0 0 0 rgba(231, 127, 35, 0.4); }
-                70% { box-shadow: 0 0 0 15px rgba(231, 127, 35, 0); }
-                100% { box-shadow: 0 0 0 0 rgba(231, 127, 35, 0); }
+                0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+                70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
+                100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
             }
             #sticky-expert-btn {
                 animation: softPulse 2s infinite;
             }
             #sticky-expert-btn:hover { 
                 transform: translate(0, -50%) !important; 
-                background: #d67017 !important; 
+                background: #2563EB !important; 
                 animation: none;
                 box-shadow: -4px 4px 20px rgba(0,0,0,0.3) !important;
             }
@@ -543,7 +543,7 @@
                 if (chatHeader && !document.getElementById('custom-chat-close')) {
                     const closeBtn = document.createElement('button');
                     closeBtn.id = 'custom-chat-close';
-                    closeBtn.innerHTML = 'âœ–';
+                    closeBtn.innerHTML = 'Ã¢Å“â€“';
                     closeBtn.onclick = (e) => {
                         if (e) {
                             e.preventDefault();
@@ -570,9 +570,9 @@
                         qrContainer.style.cssText = 'display: flex; gap: 8px; overflow-x: auto; padding: 10px; background: #f8f9fa; white-space: nowrap; scrollbar-width: none; border-top: 1px solid #eee; width: 100%; box-sizing: border-box;';
                         
                         const replies = [
-                            { icon: 'ðŸ› ï¸', text: 'Services' },
-                            { icon: 'ðŸ’°', text: 'Pricing' },
-                            { icon: 'ðŸ“ž', text: 'Connect Expert' }
+                            { icon: 'Ã°Å¸â€ºÂ Ã¯Â¸Â', text: 'Services' },
+                            { icon: 'Ã°Å¸â€™Â°', text: 'Pricing' },
+                            { icon: 'Ã°Å¸â€œÅ¾', text: 'Connect Expert' }
                         ];
 
                         replies.forEach(r => {
@@ -656,5 +656,6 @@
     <script src="assets/js/main.js?v=1.0.2"></script>
 </body>
 </html>
+
 
 
