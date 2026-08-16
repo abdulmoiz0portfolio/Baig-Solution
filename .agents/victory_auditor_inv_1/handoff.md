@@ -12,7 +12,7 @@
 - **`ORIGINAL_REQUEST.md` Requirements**: R1 (Bootstrap 5, typography, color palette, header/footer links, SEO tags), R2 (Vue 3 CDN, editable pre-filled company & client details, invoice meta), R3 (dynamic line items table, 6 core services + custom entry, live Vue math calculations for Subtotal, Tax, Discount, Grand Total), R4 (Print/PDF export button & `@media print` stylesheet).
 - **`invoice-maker.php`**:
   - Contains Vue 3 CDN (`https://unpkg.com/vue@3/dist/vue.global.js`).
-  - Pre-filled Automatixes Company Details: Name `Automatixes`, Tagline `Empowering Businesses with AI & Automation`, Address `New Jersey, NJ, United States`, Phone `+92 336 6920141`, Email `bobrober2323@gmail.com`, Website `https://baigsolution.com`.
+  - Pre-filled Automatixes Company Details: Name `Automatixes`, Tagline `Empowering Businesses with AI & Automation`, Address `New Jersey, NJ, United States`, Phone `+92 336 6920141`, Email `contact@automatixes.com`, Website `https://baigsolution.com`.
   - Client Details inputs bound to reactive `client` ref (`name`, `company`, `address`, `email`, `phone`).
   - Invoice Meta bound to reactive `invoiceMeta` ref (`number`, `date`, `dueDate`, `currency`).
   - Line items table with 6 default services (`Autonomous AI Agents`, `AI Automations (n8n/Make)`, `Web & App Development`, `UI/UX Design`, `Commercial Product Shoot`, `Support & Maintenance`) + `custom` option.

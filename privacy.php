@@ -28,7 +28,7 @@
                 <p class="text-secondary mb-4">We may use third-party tools such as Firebase for database storage or Formspree for email routing. These services have their own privacy policies governing how they handle data.</p>
 
                 <h3 class="fw-bold mb-3">5. Contact Us</h3>
-                <p class="text-secondary mb-4">If you have any questions about this Privacy Policy, please contact us at bobrober2323@gmail.com.</p>
+                <p class="text-secondary mb-4">If you have any questions about this Privacy Policy, please contact us at contact@automatixes.com.</p>
             </div>
         </div>
     </div>

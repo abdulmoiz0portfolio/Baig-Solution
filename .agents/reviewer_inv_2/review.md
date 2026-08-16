@@ -31,7 +31,7 @@ No integrity violations, dummy logic, or self-certifying work patterns were dete
 
 ## Verified Claims
 
-- **Vue 3 Mounting & Pre-filled Company Data**: Pre-fills Automatixes details (`Automatixes`, `New Jersey, NJ`, `bobrober2323@gmail.com`, `+92 336 6920141`, `https://baigsolution.com`) into editable input fields. → Verified via `invoice-maker.php` lines 379–387 → **PASS**
+- **Vue 3 Mounting & Pre-filled Company Data**: Pre-fills Automatixes details (`Automatixes`, `New Jersey, NJ`, `contact@automatixes.com`, `+92 336 6920141`, `https://baigsolution.com`) into editable input fields. → Verified via `invoice-maker.php` lines 379–387 → **PASS**
 - **Dynamic Line Items & Min 1 Row Protection**: `addLineItem()` pushes new items, `removeLineItem()` splices rows with `lineItems.value.length > 1` guard, and template disables delete button when 1 row remains. → Verified via `invoice-maker.php` lines 171 & 467–471 → **PASS**
 - **Live Math Calculations & Multi-Currency Support**: Real-time computed properties for Subtotal, Tax, Discount, and Grand Total with fallback to `0` for empty inputs (`Number(val) || 0`). Supports `$`, `€`, `£`, `C$`, `Rs`. → Verified via `invoice-maker.php` lines 474–500 → **PASS**
 - **Custom Service Text Input**: `v-if="item.serviceSelect === 'custom'"` displays custom text field; `@input` handler updates `item.description`. → Verified via `invoice-maker.php` lines 151–159 & 447–453 → **PASS**

@@ -534,7 +534,7 @@ function bindFormSubmit(form, nameId, emailId, serviceId, messageId) {
             }
 
             // Send email via formsubmit.co
-            const emailPromise = fetch("https://formsubmit.co/ajax/bobrober2323@gmail.com", {
+            const emailPromise = fetch("https://formsubmit.co/ajax/contact@automatixes.com", {
                 method: "POST",
                 headers: { 
                     'Content-Type': 'application/json',

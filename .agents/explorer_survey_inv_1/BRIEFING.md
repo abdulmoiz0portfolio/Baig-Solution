@@ -26,7 +26,7 @@ Investigate header.php, footer.php, design system, fonts, colors, $meta_config, 
   - Vue 3 CDN is missing from `header.php`, must be included on `invoice-maker.php`.
   - Header Services dropdown and Footer Our Services list need links to `invoice-maker`.
   - Palette (`#1a1a1a`, `#e77f23`, `#ffffff`), typography (`Plus Jakarta Sans`), button styles (`.btn-brand`), form styling (`.form-control`), and subpage hero (`.subpage-hero`) fully documented.
-  - Pre-filled company details extracted (Automatixes, New Jersey USA, bobrober2323@gmail.com, +92 336 6920141).
+  - Pre-filled company details extracted (Automatixes, New Jersey USA, contact@automatixes.com, +92 336 6920141).
   - `@media print` rules documented for clean A4 printing.
 - **Unexplored areas**: None.
 

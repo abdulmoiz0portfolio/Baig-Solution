@@ -93,7 +93,7 @@ To verify `/invoice-maker.php` automatically, a new Playwright test script (`tes
 - Navigate to `http://localhost:3000/invoice-maker.php`.
 - Assert HTTP response status is 200.
 - Assert `#app` (or Vue root container) exists and Vue 3 reactive app has mounted.
-- Assert Company section defaults to Automatixes details (Company Name, Email: `bobrober2323@gmail.com`, Phone: `+92 336 6920141`, Location: `New Jersey, NJ`).
+- Assert Company section defaults to Automatixes details (Company Name, Email: `contact@automatixes.com`, Phone: `+92 336 6920141`, Location: `New Jersey, NJ`).
 - Assert initial line item row exists with default values.
 
 #### Suite 2: Dynamic Line Item CRUD & Live Calculation Reactivity

@@ -236,7 +236,7 @@ include 'header.php';
             <!-- Footer Sign-off / Thank you -->
             <div class="text-center pt-4 border-top text-muted small mt-2">
                 <p class="mb-0 fw-semibold">Thank you for your business!</p>
-                <p class="mb-0 text-secondary">If you have any questions regarding this invoice, please contact <a href="mailto:bobrober2323@gmail.com" class="text-accent-brand text-decoration-none">bobrober2323@gmail.com</a></p>
+                <p class="mb-0 text-secondary">If you have any questions regarding this invoice, please contact <a href="mailto:contact@automatixes.com" class="text-accent-brand text-decoration-none">contact@automatixes.com</a></p>
             </div>
 
             <!-- Watermark Footer (Print Only) -->
@@ -401,7 +401,7 @@ include 'header.php';
                 tagline: 'Empowering Businesses with AI & Automation',
                 address: 'Remote / Worldwide',
                 phone: '+92 336 6920141',
-                email: 'bobrober2323@gmail.com',
+                email: 'contact@automatixes.com',
                 website: 'https://automatixes.com'
             });
 

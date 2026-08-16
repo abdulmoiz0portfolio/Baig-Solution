@@ -1064,3 +1064,10 @@ h6.text-accent-brand.font-monospace {
 .portfolio-preview iframe {
     transition: opacity 0.3s ease;
 }
+
+body:not(.light-theme) .text-dark { color: #ffffff !important; }
+body:not(.light-theme) .bg-white { background-color: #111827 !important; }
+body:not(.light-theme) .bg-light { background-color: #1a2332 !important; }
+body:not(.light-theme) .text-muted { color: #9ca3af !important; }
+body:not(.light-theme) .border-light-subtle { border-color: rgba(255,255,255,0.1) !important; }
+

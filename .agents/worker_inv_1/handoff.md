@@ -43,7 +43,7 @@ All assigned features for Milestones M1, M2, and M3 of the Automatixes Invoice M
      - Tagline: `Empowering Businesses with AI & Automation`
      - Address: `New Jersey, NJ, United States`
      - Phone: `+92 336 6920141`
-     - Email: `bobrober2323@gmail.com`
+     - Email: `contact@automatixes.com`
      - Website: `https://baigsolution.com`
    - Client Inputs: Contact Name (`#client-name-input`), Company (`#client-company-input`), Address (`#client-address-input`), Email (`#client-email-input`), Phone (`#client-phone-input`).
    - Invoice Metadata: Invoice Number (`#invoice-number-input`), Date (`#invoice-date-input`), Due Date (`#invoice-duedate-input`), Currency Selector (`#currency-select`, supporting `$`, `€`, `£`, `C$`, `Rs`).

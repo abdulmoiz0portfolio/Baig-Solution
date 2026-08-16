@@ -31,7 +31,7 @@
          </ul>
      </div>
      ```
-   - `footer.php:48-59`: Pre-filled Contact Info: Email `bobrober2323@gmail.com`, Phone `+92 336 6920141`.
+   - `footer.php:48-59`: Pre-filled Contact Info: Email `contact@automatixes.com`, Phone `+92 336 6920141`.
 
 3. **`assets/css/main.css` Design System**:
    - `main.css:2-15`: Brand variables: `--text-dark: #1a1a1a`, `--accent-brand: #e77f23`, `--accent-brand-hover: #cf6e1b`, `--bg-light: #ffffff`, `--bg-warm-peach: #fff5eb`, `--bg-light-gray: #f8f8fa`, `--text-secondary: #444444`, `--text-muted: #666666`, `--font-jakarta: 'Plus Jakarta Sans', sans-serif`.
@@ -42,7 +42,7 @@
 4. **Company & Schema Information**:
    - `header.php:97-158`: Organization and LocalBusiness JSON-LD schema details:
      - Name: `Automatixes`
-     - Email: `bobrober2323@gmail.com`
+     - Email: `contact@automatixes.com`
      - Phone: `+92-336-6920141`
      - Location: `New Jersey, NJ, US`
      - Website: `https://baigsolution.com`

@@ -30,7 +30,7 @@
 
 ## Interface Contracts
 ### `/invoice-maker.php` Vue Data Model & Methods
-- `company`: `{ name: 'Automatixes', address: 'New Jersey, NJ, United States', phone: '+92 336 6920141', email: 'bobrober2323@gmail.com', website: 'https://baigsolution.com' }`
+- `company`: `{ name: 'Automatixes', address: 'New Jersey, NJ, United States', phone: '+92 336 6920141', email: 'contact@automatixes.com', website: 'https://baigsolution.com' }`
 - `client`: `{ name: '', company: '', address: '', email: '', phone: '' }`
 - `invoiceMeta`: `{ number: 'INV-1001', date: YYYY-MM-DD, dueDate: YYYY-MM-DD, currency: '$' }`
 - `lineItems`: `[{ description: 'Autonomous AI Agents', quantity: 1, price: 500.00 }]`

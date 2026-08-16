@@ -21,7 +21,7 @@
 
 1. **`invoice-maker.php`**:
    - Integrated Vue 3 CDN (`https://unpkg.com/vue@3/dist/vue.global.js`).
-   - Pre-filled Automatixes Company Details (editable): `Automatixes`, `New Jersey, NJ, United States`, `+92 336 6920141`, `bobrober2323@gmail.com`, `https://baigsolution.com`.
+   - Pre-filled Automatixes Company Details (editable): `Automatixes`, `New Jersey, NJ, United States`, `+92 336 6920141`, `contact@automatixes.com`, `https://baigsolution.com`.
    - Editable Client Details: Name, Company, Address, Email, Phone.
    - Invoice Metadata: Invoice Number, Date, Due Date, Currency Selector (`$`, `€`, `£`, `C$`, `Rs`).
    - Dynamic Line Items Table: 6 default core services + custom entry option, unit price & quantity inputs, line item totals, add/remove row controls (min 1 row protection).

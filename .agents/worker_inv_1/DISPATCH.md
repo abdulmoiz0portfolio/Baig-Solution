@@ -21,7 +21,7 @@ Working directory: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.
    - Name: `Automatixes`
    - Address: `New Jersey, NJ, United States`
    - Phone: `+92 336 6920141`
-   - Email: `bobrober2323@gmail.com`
+   - Email: `contact@automatixes.com`
    - Website: `https://baigsolution.com`
    - Tagline: `Empowering Businesses with AI & Automation`
 5. Editable Client Details: Client Name, Company Name, Address, Email, Phone.

@@ -147,7 +147,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
       "image": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
       "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7.",
       "telephone": "+92-336-6920141",
-      "email": "bobrober2323@gmail.com",
+      "email": "contact@automatixes.com",
       "areaServed": [
         {"@type": "Country", "name": "USA"},
         {"@type": "Country", "name": "Canada"},

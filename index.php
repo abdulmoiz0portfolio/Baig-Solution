@@ -639,7 +639,7 @@
                         <div class="icon-box me-3"><i class="fa-solid fa-envelope text-accent-brand"></i></div>
                         <div>
                             <h6 class="mb-0 text-muted">Email Us</h6>
-                            <a href="mailto:bobrober2323@gmail.com" class="text-dark text-decoration-none fw-bold">bobrober2323@gmail.com</a>
+                            <a href="mailto:contact@automatixes.com" class="text-dark text-decoration-none fw-bold">contact@automatixes.com</a>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">

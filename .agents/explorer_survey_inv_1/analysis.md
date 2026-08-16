@@ -158,7 +158,7 @@ The following company details were extracted from `header.php`, `footer.php`, `a
 | **Company Name** | Automatixes |
 | **Address** | New Jersey, NJ, United States |
 | **Phone** | +92 336 6920141 |
-| **Email** | bobrober2323@gmail.com |
+| **Email** | contact@automatixes.com |
 | **Website** | https://baigsolution.com |
 | **Logo (Square)** | `assets/img/logo/icon_light.jpg` |
 | **Logo (Wordmark)** | `assets/img/logo/wordmark_dark.jpg` |
@@ -193,7 +193,7 @@ createApp({
             company: {
                 name: 'Automatixes',
                 address: 'New Jersey, NJ, United States',
-                email: 'bobrober2323@gmail.com',
+                email: 'contact@automatixes.com',
                 phone: '+92 336 6920141',
                 website: 'https://baigsolution.com'
             },

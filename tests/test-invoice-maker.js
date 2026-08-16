@@ -68,7 +68,7 @@ const http = require('http');
 
         console.log(`Pre-filled Company Info: Name="${companyName}", Email="${companyEmail}", Phone="${companyPhone}", Address="${companyAddress}", Web="${companyWebsite}"`);
 
-        if (companyName !== 'Automatixes' || companyEmail !== 'bobrober2323@gmail.com' || companyPhone !== '+92 336 6920141' || !companyAddress.includes('Worldwide') || companyWebsite !== 'https://automatixes.com') {
+        if (companyName !== 'Automatixes' || companyEmail !== 'contact@automatixes.com' || companyPhone !== '+92 336 6920141' || !companyAddress.includes('Worldwide') || companyWebsite !== 'https://automatixes.com') {
             throw new Error('Pre-filled company details do not match expected Automatixes info.');
         }
         console.log('✅ 3. Vue 3 instance mounted & pre-filled company details verified.');

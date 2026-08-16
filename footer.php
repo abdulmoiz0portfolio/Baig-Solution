@@ -63,7 +63,7 @@
 
                             <li class="d-flex mb-2">
                                 <i class="fa-solid fa-envelope text-accent-brand me-2 mt-1"></i>
-                                <a href="mailto:bobrober2323@gmail.com">bobrober2323@gmail.com</a>
+                                <a href="mailto:contact@automatixes.com">contact@automatixes.com</a>
                             </li>
                             <li class="d-flex mb-2">
                                 <i class="fa-solid fa-phone text-accent-brand me-2 mt-1"></i>
@@ -97,7 +97,7 @@
                 <div class="modal-logo">
                     <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; mix-blend-mode: darken; border: 1px solid rgba(0,0,0,0.1); display: block; margin: 0 auto;">
                 </div>
-                <h2 style="font-size: 28px; margin-bottom: 10px; color: #1a1a1a;">Exclusive 10% Discount!</h2>
+                <h2 style="font-size: 28px; margin-bottom: 10px; ">Exclusive 10% Discount!</h2>
                 <p style="font-size: 15px; color: #666; margin-bottom: 25px;">Subscribe to our newsletter and save <b>10%</b> on your first project with us.</p>
                 <form id="popup-newsletter-form" class="modal-form" novalidate style="max-width: 500px; margin: 0 auto;">
                     <div class="input-group-custom" style="display: flex; flex-direction: column; align-items: center;">

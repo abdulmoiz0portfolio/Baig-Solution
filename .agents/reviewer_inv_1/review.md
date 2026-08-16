@@ -56,7 +56,7 @@ While the core Vue 3 client-side logic (`subtotal`, `taxAmount`, `discountAmount
 | Line Item Totals & Subtotal Math | `invoice-maker.php:474-480` | Reduced math calculation formula validation | **PASS** |
 | Tax, Discount & Grand Total Math | `invoice-maker.php:482-495` | Formula inspection: $\text{GrandTotal} = \text{Subtotal} + \text{Tax} - \text{Discount}$ | **PASS** |
 | Header & Footer Integration Links | `header.php:279`, `footer.php:43` | Code inspection for `href="invoice-maker"` | **PASS** |
-| Pre-filled Automatixes Company Details | `invoice-maker.php:380-387` | Property verification (`Automatixes`, `bobrober2323@gmail.com`) | **PASS** |
+| Pre-filled Automatixes Company Details | `invoice-maker.php:380-387` | Property verification (`Automatixes`, `contact@automatixes.com`) | **PASS** |
 | E2E Test Suite Passed Output Claim | `worker_inv_1/handoff.md:121` | Code trace of `dev-server.js` HTML output vs test assertion | **FAIL** (Integrity Violation) |
 
 ---

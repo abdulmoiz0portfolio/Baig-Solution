@@ -60,7 +60,7 @@ The Vue 3 reactive data model (`reactive` or `ref` inside `setup()`) must follow
   company: {
     name: 'Automatixes',
     tagline: 'AI Agents, Automations & Web Development',
-    email: 'bobrober2323@gmail.com',
+    email: 'contact@automatixes.com',
     phone: '+92 336 6920141',
     address: 'New Jersey, NJ, United States',
     website: 'baigsolution.com',
@@ -154,7 +154,7 @@ All calculated values must be wrapped in Vue `computed` properties so they updat
 ### 5. Pre-filled Automatixes Company Details
 - **Name**: Automatixes
 - **Tagline**: AI Agents, Automations & Web Development
-- **Email**: bobrober2323@gmail.com
+- **Email**: contact@automatixes.com
 - **Phone**: +92 336 6920141
 - **Address**: New Jersey, NJ, United States
 - **Website**: baigsolution.com
