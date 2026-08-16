@@ -1,4 +1,4 @@
-<?php $page_key = 'index'; include 'header.php'; ?>
+﻿<&bull;php $page_key = 'index'; include 'header.php'; &bull;>
 
 <!-- Hero Section Start -->
 <section class="hero-section position-relative d-flex align-items-center justify-content-center text-center" style="min-height: 100vh; background-color: #070913; overflow: hidden; padding-top: 100px;">
@@ -20,7 +20,7 @@
     
     <div class="container position-relative z-1 hero-content py-5" style="color: #ffffff;">
         <span class="badge rounded-pill border border-secondary text-light mb-4 px-4 py-2" style="background: rgba(255,255,255,0.03); letter-spacing: 2px; font-size: 0.75rem; text-transform: uppercase;">
-            <span style="color: #3B82F6;" class="me-2">?</span> DIGITAL AGENCY FOR AMBITIOUS BRANDS
+            <span style="color: #3B82F6;" class="me-2">&bull;</span> DIGITAL AGENCY FOR AMBITIOUS BRANDS
         </span>
         
         <h1 class="display-3 fw-bold mb-4" style="line-height: 1.15; letter-spacing: -1.5px; color: #ffffff;">
@@ -29,7 +29,7 @@
         </h1>
         
         <p class="lead mx-auto mb-5" style="max-width: 650px; font-size: 1.15rem; color: #9ca3af;">
-            Automatixes designs, builds, and scales premium AI agents, automated workflows, and custom web applications for startups, SMBs, and enterprise teams � wherever they are in the world.
+            Automatixes designs, builds, and scales premium AI agents, automated workflows, and custom web applications for startups, SMBs, and enterprise teams — wherever they are in the world.
         </p>
 
         <div class="d-flex justify-content-center gap-3 flex-wrap wow fadeInUp" data-wow-delay=".4s">
@@ -50,7 +50,7 @@
         <div class="row align-items-center g-5">
             <div class="col-lg-5">
                 <div class="about-image-wrapper wow fadeInLeft" data-wow-delay=".3s">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Team planning at Automatixes" loading="lazy" class="img-fluid rounded-4 shadow-sm border border-white border-4">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978&bull;auto=format&fit=crop&w=600&q=80" alt="Team planning at Automatixes" loading="lazy" class="img-fluid rounded-4 shadow-sm border border-white border-4">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -140,7 +140,7 @@
                     <div class="content">
                         <h3><a href="ai-agents" class="text-dark text-decoration-none">Autonomous AI Agents</a></h3>
                         <p class="text-muted">Smart digital agents that automate customer support, analyze complex business data, and execute tasks 24/7.</p>
-                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs — whatever fits your stack best.</p>
+                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs â€” whatever fits your stack best.</p>
                         <a href="ai-agents" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center" aria-label="Autonomous AI Agents"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                     <div class="content">
                         <h3><a href="ai-automations" class="text-dark text-decoration-none">End-to-End AI Automations</a></h3>
                         <p class="text-muted">Eliminate manual overhead by linking CRM platforms, pipelines, and smart triggers to automate workflows.</p>
-                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs — whatever fits your stack best.</p>
+                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs â€” whatever fits your stack best.</p>
                         <a href="ai-automations" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center" aria-label="End-to-End AI Automations"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
                     </div>
                 </div>
@@ -198,13 +198,13 @@
     </div>
 </section>
 
-<!-- ═══ AI Comparison Section Start ═══ -->
+<!-- â•â•â• AI Comparison Section Start â•â•â• -->
 <section class="py-5 bg-dark text-white border-top border-light-subtle">
     <div class="container max-w-1000">
         <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".1s">
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">CHOOSE YOUR SOLUTION</span>
             <h2 class="display-6 fw-extrabold mb-3 typewriter-anim">AIAgents vs AIAutomations</h2>
-            <p class="text-white-50 fs-5 mx-auto max-w-700">Not sure which service fits your business? Here is the core difference.</p>
+            <p class="text-white-50 fs-5 mx-auto max-w-700">Not sure which service fits your business&bull; Here is the core difference.</p>
         </div>
 
         <div class="row g-4 align-items-stretch">
@@ -250,7 +250,7 @@
         </div>
     </div>
 </section>
-<!-- ═══ AI Comparison Section End ═══ -->
+<!-- â•â•â• AI Comparison Section End â•â•â• -->
 
 <!-- Technologies We're Using Marquee Section Start -->
 <section id="technologies-section" class="py-5 bg-light-gray text-dark border-top border-light-subtle overflow-hidden">
@@ -272,49 +272,49 @@
             <!-- Set 1 (8 Core AI Automation Stack Logos) -->
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=n8n.io&sz=128" alt="n8n" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=n8n.io&sz=128" alt="n8n" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">n8n</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=make.com&sz=128" alt="Make" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=make.com&sz=128" alt="Make" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">Make</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=gohighlevel.com&sz=128" alt="GoHighLevel" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=gohighlevel.com&sz=128" alt="GoHighLevel" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">GoHighLevel</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=zapier.com&sz=128" alt="Zapier" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=zapier.com&sz=128" alt="Zapier" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">Zapier</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" alt="OpenAI" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=openai.com&sz=128" alt="OpenAI" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">OpenAI</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=anthropic.com&sz=128" alt="Claude" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=anthropic.com&sz=128" alt="Claude" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">Claude</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=whatsapp.com&sz=128" alt="WhatsApp API" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=whatsapp.com&sz=128" alt="WhatsApp API" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">WhatsApp API</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=128" alt="HubSpot" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=hubspot.com&sz=128" alt="HubSpot" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">HubSpot</span>
             </div>
@@ -322,49 +322,49 @@
             <!-- Set 2 (Duplicated for Seamless 0-to-100% Looping) -->
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=n8n.io&sz=128" alt="n8n" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=n8n.io&sz=128" alt="n8n" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">n8n</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=make.com&sz=128" alt="Make" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=make.com&sz=128" alt="Make" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">Make</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=gohighlevel.com&sz=128" alt="GoHighLevel" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=gohighlevel.com&sz=128" alt="GoHighLevel" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">GoHighLevel</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=zapier.com&sz=128" alt="Zapier" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=zapier.com&sz=128" alt="Zapier" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">Zapier</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" alt="OpenAI" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=openai.com&sz=128" alt="OpenAI" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">OpenAI</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=anthropic.com&sz=128" alt="Claude" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=anthropic.com&sz=128" alt="Claude" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">Claude</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=whatsapp.com&sz=128" alt="WhatsApp API" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=whatsapp.com&sz=128" alt="WhatsApp API" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">WhatsApp API</span>
             </div>
             <div class="tech-item">
                 <div class="tech-item-icon">
-                    <img src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=128" alt="HubSpot" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
+                    <img src="https://www.google.com/s2/favicons&bull;domain=hubspot.com&sz=128" alt="HubSpot" style="width:40px; height:40px; object-fit:contain; border-radius:8px;">
                 </div>
                 <span class="tech-item-name">HubSpot</span>
             </div>
@@ -482,7 +482,7 @@
 <section class="cta-section section-padding bg-white border-top border-light-subtle text-center">
     <div class="container max-w-700">
         <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">LET'S BUILD SOMETHING GREAT</span>
-        <h2 class="display-4 fw-extrabold mb-4 text-dark">Ready to grow your business online?</h2>
+        <h2 class="display-4 fw-extrabold mb-4 text-dark">Ready to grow your business online&bull;</h2>
         <p class="fs-5 text-secondary mb-5">Book a free, no-pressure consultation. We'll review your goals and tell you exactly what it'll take.</p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
             <a href="contact" class="btn btn-brand btn-lg px-5 py-3 shadow-sm">
@@ -553,7 +553,7 @@
             <div class="accordion-item bg-transparent border-bottom border-light-subtle">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        How long does an AI Automation workflow setup take?
+                        How long does an AI Automation workflow setup take&bull;
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
@@ -566,7 +566,7 @@
             <div class="accordion-item bg-transparent border-bottom border-light-subtle">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Are my client leads and databases secure with your setup?
+                        Are my client leads and databases secure with your setup&bull;
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
@@ -579,7 +579,7 @@
             <div class="accordion-item bg-transparent border-bottom border-light-subtle">
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Can we link third-party tools like Slack or WhatsApp?
+                        Can we link third-party tools like Slack or WhatsApp&bull;
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
@@ -599,7 +599,7 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How long does an AI Automation workflow setup take?",
+      "name": "How long does an AI Automation workflow setup take&bull;",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Generally, standard workflow automations (like email pipelines, CRM syncing, or simple chatbots) take between 1 to 2 weeks to design, integrate, test, and launch."
@@ -607,7 +607,7 @@
     },
     {
       "@type": "Question",
-      "name": "Are my client leads and databases secure with your setup?",
+      "name": "Are my client leads and databases secure with your setup&bull;",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes. Your data is protected by strict Firestore security rules that control exactly who can read or write it, and all form submissions are validated and sanitized server-side to block spam and malicious input."
@@ -615,7 +615,7 @@
     },
     {
       "@type": "Question",
-      "name": "Can we link third-party tools like Slack or WhatsApp?",
+      "name": "Can we link third-party tools like Slack or WhatsApp&bull;",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes, we integrate n8n, Make, or custom API endpoints to route data triggers to WhatsApp business channels, Slack workspaces, or local Discord systems."
@@ -711,21 +711,21 @@
   "@type": "FAQPage",
   "mainEntity": [{
     "@type": "Question",
-    "name": "How long does an AI Automation workflow setup take?",
+    "name": "How long does an AI Automation workflow setup take&bull;",
     "acceptedAnswer": {
       "@type": "Answer",
       "text": "Generally, standard workflow automations (like email pipelines, CRM syncing, or simple chatbots) take between 1 to 2 weeks to design, integrate, test, and launch."
     }
   },{
     "@type": "Question",
-    "name": "Are my client leads and databases secure with your setup?",
+    "name": "Are my client leads and databases secure with your setup&bull;",
     "acceptedAnswer": {
       "@type": "Answer",
       "text": "Yes. Your data is protected by strict Firestore security rules that control exactly who can read or write it, and all form submissions are validated and sanitized server-side to block spam and malicious input."
     }
   },{
     "@type": "Question",
-    "name": "Can we link third-party tools like Slack or WhatsApp?",
+    "name": "Can we link third-party tools like Slack or WhatsApp&bull;",
     "acceptedAnswer": {
       "@type": "Answer",
       "text": "Yes, we integrate n8n, Make, or custom API endpoints to route data triggers to WhatsApp business channels, Slack workspaces, or local Discord systems."
@@ -774,6 +774,7 @@
 }
 </script>
 
-<?php include 'footer.php'; ?>
+<&bull;php include 'footer.php'; &bull;>
+
 
 

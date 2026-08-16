@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 include_once 'security.php'; 
 
 if (!isset($page_key)) {
@@ -249,9 +249,9 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <!-- Header Navigation Start -->
     <header id="header-sticky" class="header-nav">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light py-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-0">
                 <a class="navbar-brand d-flex align-items-center" href="index">
-                    <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 140px; height: auto; object-fit: contain;">
+                    <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 140px; height: auto; object-fit: contain; filter: brightness(0) invert(1);">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -275,6 +275,8 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="reviews">Customer Ratings</a></li>
+                                                <li class="nav-item"><a class="nav-link text-nowrap" href="portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link text-nowrap" href="process">Process</a></li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="blogs">Blogs</a></li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="contact">Contact us</a></li>
                     </ul>
@@ -289,4 +291,5 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
 
     <div id="smooth-wrapper">
         <div id="smooth-content">
+
 

@@ -1,3 +1,12 @@
+﻿.header-nav {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+.header-nav.sticky {
+    background: rgba(7, 9, 19, 0.9) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
 /* Brand Variables & Theme Setup (Automatixes Deep Dark / Alpha Global Aesthetic) */
 :root {
     --bg-base: #070913;
@@ -1177,5 +1186,6 @@ body:not(.light-theme) .bg-white { background-color: #111827 !important; }
 body:not(.light-theme) .bg-light { background-color: #1a2332 !important; }
 body:not(.light-theme) .text-muted { color: #9ca3af !important; }
 body:not(.light-theme) .border-light-subtle { border-color: rgba(255,255,255,0.1) !important; }
+
 
 
