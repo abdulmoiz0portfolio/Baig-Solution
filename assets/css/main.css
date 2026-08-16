@@ -3,7 +3,7 @@
     background-color: var(--bg-base) !important;
 }
 .header-nav.sticky {
-    background: rgba(7, 9, 19, 0.9) !important;
+    background: rgba(11, 69, 80, 0.98) !important;
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
@@ -483,9 +483,9 @@ h6.text-accent-brand.font-monospace {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(11, 69, 80, 0.95);
     backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding: 10px 0;
     transition: var(--transition-smooth);
 }
