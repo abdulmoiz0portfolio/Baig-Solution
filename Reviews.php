@@ -46,14 +46,14 @@
                                 <input type="url" class="form-control border-light-subtle bg-white text-dark" id="review-link" placeholder="https://yourprofile.com">
                             </div>
                             <div class="col-md-6">
-                                <label for="review-rating" class="form-label text-muted fw-bold">Rating (1â€‘5)</label>
+                                <label for="review-rating" class="form-label text-muted fw-bold">Rating (1Ã¢â‚¬â€˜5)</label>
                                 <select class="form-select border-light-subtle bg-white text-dark" id="review-rating" required>
                                     <option value="" disabled selected>Select Rating</option>
-                                    <option value="1">1 â˜…</option>
-                                    <option value="2">2 â˜…â˜…</option>
-                                    <option value="3">3 â˜…â˜…â˜…</option>
-                                    <option value="4">4 â˜…â˜…â˜…â˜…</option>
-                                    <option value="5">5 â˜…â˜…â˜…â˜…â˜…</option>
+                                    <option value="1">1 Ã¢Ëœâ€¦</option>
+                                    <option value="2">2 Ã¢Ëœâ€¦Ã¢Ëœâ€¦</option>
+                                    <option value="3">3 Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</option>
+                                    <option value="4">4 Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</option>
+                                    <option value="5">5 Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</option>
                                 </select>
                             </div>
                             <div class="col-12">
@@ -79,13 +79,13 @@
     <div class="container text-center">
         <h5 class="fw-bold mb-3">Share this page</h5>
         <div class="d-flex justify-content-center gap-3">
-            <a href="https://wa.me/?text=https://automatixes.com/Reviews" target="_blank" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #3B82F6; border-color: #3B82F6; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#3B82F6'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#3B82F6';">
+            <a href="https://wa.me/?text=https://automatixes.com/Reviews" target="_blank" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #E6FF2B; border-color: #E6FF2B; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#E6FF2B'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#E6FF2B';">
                 <i class="fa-brands fa-whatsapp fa-lg"></i>
             </a>
-            <a href="https://twitter.com/intent/tweet?url=https://automatixes.com/Reviews" target="_blank" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #3B82F6; border-color: #3B82F6; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#3B82F6'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#3B82F6';">
+            <a href="https://twitter.com/intent/tweet?url=https://automatixes.com/Reviews" target="_blank" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #E6FF2B; border-color: #E6FF2B; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#E6FF2B'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#E6FF2B';">
                 <i class="fa-brands fa-x-twitter fa-lg"></i>
             </a>
-            <button onclick="copyReviewLink()" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #3B82F6; border-color: #3B82F6; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#3B82F6'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#3B82F6';">
+            <button onclick="copyReviewLink()" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #E6FF2B; border-color: #E6FF2B; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#E6FF2B'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#E6FF2B';">
                 <i class="fa-solid fa-link fa-lg"></i>
             </button>
         </div>
@@ -104,7 +104,7 @@ function copyReviewLink() {
                 timer: 2000,
                 background: '#ffffff',
                 color: '#1a1a1a',
-                iconColor: '#3B82F6'
+                iconColor: '#E6FF2B'
             });
         } else {
             alert("Link copied to clipboard!");
@@ -118,7 +118,7 @@ function copyReviewLink() {
         <div class="text-center mb-5">
             <h2 class="display-6 fw-extrabold text-dark">What Our Clients Say</h2>
             <p class="text-muted">
-                Average: <strong id="averageRating">0 â˜…</strong>
+                Average: <strong id="averageRating">0 Ã¢Ëœâ€¦</strong>
                 &nbsp;<span id="reviewCount" class="text-muted small">(0 reviews)</span>
             </p>
         </div>
@@ -131,4 +131,5 @@ function copyReviewLink() {
 </section>
 
 <?php include 'footer.php'; ?>
+
 

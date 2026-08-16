@@ -102,3 +102,4 @@ async function generateImage() {
 </script>
 
 <?php include 'footer.php'; ?>
+

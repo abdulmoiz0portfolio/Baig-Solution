@@ -3,13 +3,13 @@
 <!-- Hero Section Start -->
 <section class="hero-section position-relative d-flex align-items-center justify-content-center text-center" style="min-height: 100vh; background-color: #070913; overflow: hidden; padding-top: 100px;">
     <!-- Abstract Glowing Orbs (Automatixes Style) -->
-    <div class="position-absolute rounded-circle" style="background: radial-gradient(circle, rgba(59,130,246,0.35) 0%, rgba(0,0,0,0) 70%); width: 700px; height: 700px; top: -100px; left: -150px; filter: blur(80px); z-index: 0; pointer-events: none;"></div>
+    <div class="position-absolute rounded-circle" style="background: radial-gradient(circle, rgba(230, 255, 43,0.35) 0%, rgba(0,0,0,0) 70%); width: 700px; height: 700px; top: -100px; left: -150px; filter: blur(80px); z-index: 0; pointer-events: none;"></div>
     <div class="position-absolute rounded-circle" style="background: radial-gradient(circle, rgba(168,85,247,0.2) 0%, rgba(0,0,0,0) 70%); width: 600px; height: 600px; bottom: -50px; right: -100px; filter: blur(80px); z-index: 0; pointer-events: none;"></div>
     
     <!-- Placeholder for 3D elements (can be replaced with actual images later) -->
     <div class="position-absolute" style="top: 20%; left: 15%; z-index: 0; opacity: 0.8; pointer-events: none;">
         <svg width="150" height="150" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 0L193.301 50V150L100 200L6.69873 150V50L100 0Z" fill="#3B82F6" fill-opacity="0.8" style="transform: rotate(15deg);"/>
+            <path d="M100 0L193.301 50V150L100 200L6.69873 150V50L100 0Z" fill="#E6FF2B" fill-opacity="0.8" style="transform: rotate(15deg);"/>
         </svg>
     </div>
     <div class="position-absolute" style="bottom: 15%; right: 20%; z-index: 0; opacity: 0.6; pointer-events: none;">
@@ -20,20 +20,20 @@
     
     <div class="container position-relative z-1 hero-content py-5" style="color: #ffffff;">
         <span class="badge rounded-pill border border-secondary text-light mb-4 px-4 py-2" style="background: rgba(255,255,255,0.03); letter-spacing: 2px; font-size: 0.75rem; text-transform: uppercase;">
-            <span style="color: #3B82F6;" class="me-2">✦</span> DIGITAL AGENCY FOR AMBITIOUS BRANDS
+            <span style="color: #E6FF2B;" class="me-2">âœ¦</span> DIGITAL AGENCY FOR AMBITIOUS BRANDS
         </span>
         
         <h1 class="display-3 fw-bold mb-4" style="line-height: 1.15; letter-spacing: -1.5px; color: #ffffff;">
             We Build Systems That Work <br>
-            <span style="color: #60A5FA;">While You Sleep.</span>
+            <span style="color: #0D6171;">While You Sleep.</span>
         </h1>
         
         <p class="lead mx-auto mb-5" style="max-width: 650px; font-size: 1.15rem; color: #9ca3af;">
-            Automatixes designs, builds, and scales premium AI agents, automated workflows, and custom web applications for startups, SMBs, and enterprise teams Ã¢â‚¬â€ wherever they are in the world.
+            Automatixes designs, builds, and scales premium AI agents, automated workflows, and custom web applications for startups, SMBs, and enterprise teams ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â wherever they are in the world.
         </p>
 
         <div class="d-flex justify-content-center gap-3 flex-wrap wow fadeInUp" data-wow-delay=".4s">
-            <a href="contact" class="btn text-white rounded-pill px-5 py-3 fw-semibold d-flex align-items-center" style="background: linear-gradient(135deg, #60A5FA, #3B82F6); border: none; box-shadow: 0 10px 25px rgba(59,130,246,0.4); transition: transform 0.2s;">
+            <a href="contact" class="btn text-white rounded-pill px-5 py-3 fw-semibold d-flex align-items-center" style="background: linear-gradient(135deg, #0D6171, #E6FF2B); border: none; box-shadow: 0 10px 25px rgba(230, 255, 43,0.4); transition: transform 0.2s;">
                 Start Your Project <i class="fa-solid fa-arrow-right ms-2"></i>
             </a>
             <a href="#portfolio-section" class="btn rounded-pill px-5 py-3 fw-semibold border" style="background: rgba(255,255,255,0.05); color: #ffffff; border-color: rgba(255,255,255,0.1); transition: background 0.2s;">
@@ -140,7 +140,7 @@
                     <div class="content">
                         <h3><a href="ai-agents" class="text-dark text-decoration-none">Autonomous AI Agents</a></h3>
                         <p class="text-muted">Smart digital agents that automate customer support, analyze complex business data, and execute tasks 24/7.</p>
-                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â whatever fits your stack best.</p>
+                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â whatever fits your stack best.</p>
                         <a href="ai-agents" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center" aria-label="Autonomous AI Agents"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                     <div class="content">
                         <h3><a href="ai-automations" class="text-dark text-decoration-none">End-to-End AI Automations</a></h3>
                         <p class="text-muted">Eliminate manual overhead by linking CRM platforms, pipelines, and smart triggers to automate workflows.</p>
-                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â whatever fits your stack best.</p>
+                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â whatever fits your stack best.</p>
                         <a href="ai-automations" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center" aria-label="End-to-End AI Automations"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
                     </div>
                 </div>
@@ -198,7 +198,7 @@
     </div>
 </section>
 
-<!-- ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â AI Comparison Section Start ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â -->
+<!-- ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â AI Comparison Section Start ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â -->
 <section class="py-5 bg-dark text-white border-top border-light-subtle">
     <div class="container max-w-1000">
         <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".1s">
@@ -250,7 +250,7 @@
         </div>
     </div>
 </section>
-<!-- ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â AI Comparison Section End ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â -->
+<!-- ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â AI Comparison Section End ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â -->
 
 <!-- Technologies We're Using Marquee Section Start -->
 <section id="technologies-section" class="py-5 bg-light-gray text-dark border-top border-light-subtle overflow-hidden">
@@ -775,6 +775,7 @@
 </script>
 
 <?php include 'footer.php'; ?>
+
 
 
 

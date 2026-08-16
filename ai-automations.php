@@ -91,13 +91,13 @@
     </div>
 </section>
 
-<!-- â•â•â• OUR WORK SHOWCASE SECTION â•â•â• -->
+<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â OUR WORK SHOWCASE SECTION Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
 <section class="section-padding bg-dark text-white" id="n8n-showcase">
     <div class="container">
         <div class="text-center mb-5">
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">OUR WORK</span>
             <h2 class="display-6 fw-extrabold text-white mb-3">n8n Automation Showcase</h2>
-            <p class="text-white-50 fs-5 mx-auto max-w-700">Real workflows we've built for our clients â€” watch them in action.</p>
+            <p class="text-white-50 fs-5 mx-auto max-w-700">Real workflows we've built for our clients Ã¢â‚¬â€ watch them in action.</p>
         </div>
 
         <!-- Video Showcase (First) -->
@@ -141,16 +141,16 @@
         </div>
     </div>
 </section>
-<!-- â•â•â• OUR WORK SHOWCASE SECTION END â•â•â• -->
+<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â OUR WORK SHOWCASE SECTION END Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
 
 <style>
-/* â”€â”€ Showcase Frame (macOS-style window) â”€â”€ */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Showcase Frame (macOS-style window) Ã¢â€â‚¬Ã¢â€â‚¬ */
 .showcase-frame {
     background: #1a1a2e;
     border-radius: 16px;
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 25px 80px rgba(0,0,0,0.5), 0 0 40px rgba(59, 130, 246,0.08);
+    box-shadow: 0 25px 80px rgba(0,0,0,0.5), 0 0 40px rgba(230, 255, 43,0.08);
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -180,15 +180,15 @@
     flex: 1;
 }
 .frame-badge {
-    background: rgba(59, 130, 246,0.15);
-    color: #3B82F6;
+    background: rgba(230, 255, 43,0.15);
+    color: #E6FF2B;
     padding: 4px 14px;
     border-radius: 100px;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border: 1px solid rgba(59, 130, 246,0.2);
+    border: 1px solid rgba(230, 255, 43,0.2);
 }
 .showcase-frame-body {
     position: relative;
@@ -318,4 +318,5 @@
 </section>
 
 <?php include 'footer.php'; ?>
+
 

@@ -159,7 +159,7 @@
         window.db = db;
         console.log("Firebase initialized successfully!");
 
-        // --- REAL-TIME TESTIMONIALS (rating >= 4) Ã¢â€ â€™ auto-populate TESTIMONIALS section ---
+        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ auto-populate TESTIMONIALS section ---
         function escapeHTMLInner(str) {
             if (!str) return '';
             return String(str).replace(/[&<>'\"]/g, tag => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[tag] || tag));
@@ -197,7 +197,7 @@
                                     <div class="review-stars-display mt-1">${starsHtml}</div>
                                     ${profileLink}
                                 </div>
-                                <small class="text-muted">${d.rating} Ã¢Ëœâ€¦</small>
+                                <small class="text-muted">${d.rating} ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦</small>
                             </div>
                             <p class="text-secondary mb-0 mt-2" style="white-space:pre-line;">${escapeHTMLInner(d.comment)}</p>
                         </div>`;
@@ -219,7 +219,7 @@
                 const comment = (document.getElementById('review-comment')?.value || '').trim();
 
                 if (!name || !email || !rating || !comment) {
-                    Swal.fire({ title: 'Required Fields', text: 'Please fill in Name, Email, Rating and Review.', icon: 'warning', confirmButtonColor: '#3B82F6', background: '#ffffff', color: '#1a1a1a' });
+                    Swal.fire({ title: 'Required Fields', text: 'Please fill in Name, Email, Rating and Review.', icon: 'warning', confirmButtonColor: '#E6FF2B', background: '#ffffff', color: '#1a1a1a' });
                     return;
                 }
 
@@ -242,11 +242,11 @@
                         }),
                         new Promise((_, rej) => setTimeout(() => rej(new Error('Timeout')), 4000))
                     ]);
-                    Swal.fire({ title: 'Thank you!', text: 'Your review has been submitted successfully.', icon: 'success', confirmButtonColor: '#3B82F6', background: '#ffffff', color: '#1a1a1a' });
+                    Swal.fire({ title: 'Thank you!', text: 'Your review has been submitted successfully.', icon: 'success', confirmButtonColor: '#E6FF2B', background: '#ffffff', color: '#1a1a1a' });
                     newReviewForm.reset();
                 } catch (err) {
                     if (err.message === 'Timeout') {
-                        Swal.fire({ title: 'Thank you!', text: 'Your review has been submitted.', icon: 'success', confirmButtonColor: '#3B82F6', background: '#ffffff', color: '#1a1a1a' });
+                        Swal.fire({ title: 'Thank you!', text: 'Your review has been submitted.', icon: 'success', confirmButtonColor: '#E6FF2B', background: '#ffffff', color: '#1a1a1a' });
                         newReviewForm.reset();
                     } else {
                         Swal.fire({ title: 'Error', text: err.message, icon: 'error', confirmButtonColor: '#ff4a5a' });
@@ -326,7 +326,7 @@
                     if(averageRatingText) averageRatingText.innerHTML = `${avg} <i class="fa-solid fa-star text-accent-brand"></i>`;
                     if(reviewCountText) reviewCountText.textContent = `based on ${reviewCount} review${reviewCount > 1 ? 's' : ''}`;
                 } else {
-                    if(averageRatingText) averageRatingText.textContent = "0 Ã¢Ëœâ€¦";
+                    if(averageRatingText) averageRatingText.textContent = "0 ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦";
                     if(reviewCountText) reviewCountText.textContent = "(0 reviews)";
                     reviewsList.innerHTML = `<div class="col-12 text-center text-muted py-5 border rounded-4 bg-light">No reviews yet. Be the first to write a review!</div>`;
                 }
@@ -348,7 +348,7 @@
     </script>
 
     <!-- Single Sticky Lead Capture Button -->
-    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; right: 0; transform: translate(calc(100% - 60px), -50%); background: #3B82F6; color: white; border: none; padding: 12px 20px 12px 20px; border-radius: 30px 0 0 30px; font-size: 15px; cursor: pointer; outline: none !important; box-shadow: -4px 4px 15px rgba(0,0,0,0.2); font-weight: 600; z-index: 9000; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, box-shadow 0.3s ease; display: flex; align-items: center; gap: 8px;">
+    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; right: 0; transform: translate(calc(100% - 60px), -50%); background: #E6FF2B; color: white; border: none; padding: 12px 20px 12px 20px; border-radius: 30px 0 0 30px; font-size: 15px; cursor: pointer; outline: none !important; box-shadow: -4px 4px 15px rgba(0,0,0,0.2); font-weight: 600; z-index: 9000; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, box-shadow 0.3s ease; display: flex; align-items: center; gap: 8px;">
         <i class="fa-solid fa-headset fs-5"></i> <span style="white-space: nowrap;">Connect with an Expert</span>
     </button>
 
@@ -361,7 +361,7 @@
         style.innerHTML = `
             :root {
                 --chat--color-primary: #1a1a1a;
-                --chat--color-secondary: #3B82F6;
+                --chat--color-secondary: #E6FF2B;
                 --chat--color-background: #ffffff;
                 --chat--color-font: #333333;
                 --chat--font-family: 'Outfit', sans-serif;
@@ -405,16 +405,16 @@
                 display: none !important;
             }
             @keyframes softPulse {
-                0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
-                70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
-                100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+                0% { box-shadow: 0 0 0 0 rgba(230, 255, 43, 0.4); }
+                70% { box-shadow: 0 0 0 15px rgba(230, 255, 43, 0); }
+                100% { box-shadow: 0 0 0 0 rgba(230, 255, 43, 0); }
             }
             #sticky-expert-btn {
                 animation: softPulse 2s infinite;
             }
             #sticky-expert-btn:hover { 
                 transform: translate(0, -50%) !important; 
-                background: #2563EB !important; 
+                background: #D4F01A !important; 
                 animation: none;
                 box-shadow: -4px 4px 20px rgba(0,0,0,0.3) !important;
             }
@@ -543,7 +543,7 @@
                 if (chatHeader && !document.getElementById('custom-chat-close')) {
                     const closeBtn = document.createElement('button');
                     closeBtn.id = 'custom-chat-close';
-                    closeBtn.innerHTML = 'Ã¢Å“â€“';
+                    closeBtn.innerHTML = 'ÃƒÂ¢Ã…â€œÃ¢â‚¬â€œ';
                     closeBtn.onclick = (e) => {
                         if (e) {
                             e.preventDefault();
@@ -570,9 +570,9 @@
                         qrContainer.style.cssText = 'display: flex; gap: 8px; overflow-x: auto; padding: 10px; background: #f8f9fa; white-space: nowrap; scrollbar-width: none; border-top: 1px solid #eee; width: 100%; box-sizing: border-box;';
                         
                         const replies = [
-                            { icon: 'Ã°Å¸â€ºÂ Ã¯Â¸Â', text: 'Services' },
-                            { icon: 'Ã°Å¸â€™Â°', text: 'Pricing' },
-                            { icon: 'Ã°Å¸â€œÅ¾', text: 'Connect Expert' }
+                            { icon: 'ÃƒÂ°Ã…Â¸Ã¢â‚¬ÂºÃ‚Â ÃƒÂ¯Ã‚Â¸Ã‚Â', text: 'Services' },
+                            { icon: 'ÃƒÂ°Ã…Â¸Ã¢â‚¬â„¢Ã‚Â°', text: 'Pricing' },
+                            { icon: 'ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã…Â¾', text: 'Connect Expert' }
                         ];
 
                         replies.forEach(r => {
@@ -656,6 +656,7 @@
     <script src="assets/js/main.js?v=1.0.2"></script>
 </body>
 </html>
+
 
 
 

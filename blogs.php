@@ -113,3 +113,4 @@ $all_blogs = get_blogs();
 </style>
 
 <?php include 'footer.php'; ?>
+
