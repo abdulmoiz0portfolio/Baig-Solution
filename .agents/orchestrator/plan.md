@@ -1,7 +1,7 @@
 # Execution Plan — n8n Chat Toggle Logic Fix
 
 ## Overview
-Fix the n8n chat toggle logic on the Baig Solution website so that the custom "Connect with an Expert" button reliably opens the chat, and the custom "✖" button reliably closes it, overcoming Vue.js event suppression. Perform automated verification.
+Fix the n8n chat toggle logic on the Automatixes website so that the custom "Connect with an Expert" button reliably opens the chat, and the custom "✖" button reliably closes it, overcoming Vue.js event suppression. Perform automated verification.
 
 ## Milestones
 

@@ -1,9 +1,9 @@
 <?php $page_key = 'contact'; include 'header.php'; ?>
 <!-- SEO Override for Reviews page -->
 <script>
-    document.title = 'Customer Ratings & Reviews | Baig Solution';
-    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Read real client reviews and ratings for Baig Solution. Share your experience with our AI automation, web development, and product photography services.');
-    document.querySelector('link[rel="canonical"]')?.setAttribute('href', 'https://baig-solution.vercel.app/Reviews');
+    document.title = 'Customer Ratings & Reviews | Automatixes';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Read real client reviews and ratings for Automatixes. Share your experience with our AI automation, web development, and product photography services.');
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', 'https://automatixes.com/Reviews');
 </script>
 
 <!-- Reviews Hero -->
@@ -13,7 +13,7 @@
         <h1 class="display-4 fw-extrabold text-dark">Ratings &amp; Reviews</h1>
         <div class="title-underline"></div>
         <p class="lead text-secondary mx-auto mt-4 max-w-700">
-            Share your experience with Baig Solution. Your feedback helps us grow.
+            Share your experience with Automatixes. Your feedback helps us grow.
         </p>
     </div>
 </section>
@@ -79,10 +79,10 @@
     <div class="container text-center">
         <h5 class="fw-bold mb-3">Share this page</h5>
         <div class="d-flex justify-content-center gap-3">
-            <a href="https://wa.me/?text=https://baig-solution.vercel.app/Reviews" target="_blank" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #e77f23; border-color: #e77f23; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#e77f23'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e77f23';">
+            <a href="https://wa.me/?text=https://automatixes.com/Reviews" target="_blank" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #e77f23; border-color: #e77f23; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#e77f23'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e77f23';">
                 <i class="fa-brands fa-whatsapp fa-lg"></i>
             </a>
-            <a href="https://twitter.com/intent/tweet?url=https://baig-solution.vercel.app/Reviews" target="_blank" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #e77f23; border-color: #e77f23; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#e77f23'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e77f23';">
+            <a href="https://twitter.com/intent/tweet?url=https://automatixes.com/Reviews" target="_blank" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #e77f23; border-color: #e77f23; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#e77f23'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e77f23';">
                 <i class="fa-brands fa-x-twitter fa-lg"></i>
             </a>
             <button onclick="copyReviewLink()" class="btn btn-outline-brand rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; color: #e77f23; border-color: #e77f23; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#e77f23'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e77f23';">
@@ -93,7 +93,7 @@
 </section>
 <script>
 function copyReviewLink() {
-    navigator.clipboard.writeText('https://baig-solution.vercel.app/Reviews').then(() => {
+    navigator.clipboard.writeText('https://automatixes.com/Reviews').then(() => {
         if(typeof Swal !== 'undefined'){
             Swal.fire({
                 toast: true,

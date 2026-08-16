@@ -4,7 +4,7 @@
 <section class="subpage-hero text-center text-dark">
     <div class="container">
         <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">GET IN TOUCH</span>
-        <h1 class="display-4 fw-extrabold text-dark">Contact Baig Solution</h1>
+        <h1 class="display-4 fw-extrabold text-dark">Contact Automatixes</h1>
         <div class="title-underline"></div>
         <p class="lead text-secondary mx-auto mt-4 max-w-700">
             Have questions about AI integrations or need a web build? Send us a message below.

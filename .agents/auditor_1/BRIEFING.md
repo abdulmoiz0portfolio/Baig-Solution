@@ -6,7 +6,7 @@ Perform forensic integrity auditing on the chat toggle solution (`footer.php`, `
 ## 🔒 My Identity
 - Archetype: forensic_auditor
 - Roles: critic, specialist, auditor
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\auditor_1
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\auditor_1
 - Original parent: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa
 - Target: footer.php, assets/js/main.js, tests/test-chat-toggle.js
 

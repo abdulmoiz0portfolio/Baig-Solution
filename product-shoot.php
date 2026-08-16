@@ -261,7 +261,7 @@
     <div class="container text-center max-w-700">
         <h2 class="display-6 fw-extrabold text-dark mb-3">Boost Your Brand Visuals</h2>
         <p class="text-secondary fs-5 mb-4">
-            Looking to run a product shoot for your e-commerce store or website launch? Connect with Baig Solution today.
+            Looking to run a product shoot for your e-commerce store or website launch? Connect with Automatixes today.
         </p>
         <a href="contact" class="btn btn-brand btn-lg">
             <span>Book Free Consultation</span>

@@ -2,14 +2,14 @@
 
 **Agent**: `explorer_survey_inv_2`  
 **Date**: 2026-08-06  
-**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\explorer_survey_inv_2`
+**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_inv_2`
 
 ---
 
 ## 1. Observation
 
 1. **Dev Server Script (`dev-server.js`)**:
-   - Location: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\dev-server.js`
+   - Location: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\dev-server.js`
    - Express server listening on port `3000`.
    - Function `processPhpIncludes(filePath)` at lines 17–33:
      ```javascript
@@ -86,10 +86,10 @@
 
 1. **Verify Dev Server**:
    - Run: `node dev-server.js`
-   - Inspect output: `Baig Solution PHP Emulator Server running at http://localhost:3000`
+   - Inspect output: `Automatixes PHP Emulator Server running at http://localhost:3000`
 2. **Verify Existing Tests**:
    - Run: `node tests/test-chat-toggle.js`
    - Result: `VERIFICATION PASSED SUCCESSFULLY`
 3. **Verify File Artifacts**:
-   - Inspect `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\explorer_survey_inv_2\analysis.md`
-   - Inspect `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\explorer_survey_inv_2\handoff.md`
+   - Inspect `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_inv_2\analysis.md`
+   - Inspect `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_inv_2\handoff.md`

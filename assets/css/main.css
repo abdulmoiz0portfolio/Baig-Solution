@@ -1,83 +1,85 @@
-/* Brand Variables & Theme Setup (Aligned with SoftNest Technologies) */
+/* Brand Variables & Theme Setup (Automatixes Rebrand) */
 :root {
-    --bg-light: #ffffff;
-    --bg-warm-peach: #fff5eb;
-    --bg-light-gray: #f8f8fa;
-    --bg-preloader: #fff8f2;
-    --text-dark: #1a1a1a;
-    --text-muted: #666666;
-    --text-secondary: #444444;
-    --accent-brand: #e77f23; /* Warm Accent Orange */
-    --accent-brand-hover: #cf6e1b;
-    --accent-brand-glow: rgba(231, 127, 35, 0.35);
-    --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+    /* Default Dark Theme (Automatixes SaaS) */
+    --bg-light: #0B0F14;
+    --bg-warm-peach: #111827;
+    --bg-light-gray: #1a2332;
+    --bg-preloader: #080b0f;
+    --text-dark: #ffffff;
+    --text-muted: #9ca3af;
+    --text-secondary: #e5e7eb;
+    --accent-brand: #3B82F6; /* Electric Blue */
+    --accent-brand-hover: #2563eb;
+    --accent-brand-glow: rgba(59, 130, 246, 0.35);
+    --font-jakarta: 'Inter', 'Space Grotesk', sans-serif;
     --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-body.dark-theme {
-    --bg-light: #0d0e12;
-    --bg-warm-peach: #191b22;
-    --bg-light-gray: #121319;
-    --bg-preloader: #08090b;
-    --text-dark: #ffffff;
-    --text-muted: #a0a5b5;
-    --text-secondary: #cdd2e0;
+body.light-theme {
+    /* Light Theme Toggle Option */
+    --bg-light: #ffffff;
+    --bg-warm-peach: #f8fafc;
+    --bg-light-gray: #f1f5f9;
+    --bg-preloader: #ffffff;
+    --text-dark: #0B0F14;
+    --text-muted: #64748b;
+    --text-secondary: #334155;
 }
 
-body.dark-theme .card-service-item, 
-body.dark-theme .subpage-card,
-body.dark-theme .contact-form-wrapper,
-body.dark-theme .newsletter-modal-content,
-body.dark-theme .card {
-    background: #151720 !important;
+body:not(.light-theme) .card-service-item, 
+body:not(.light-theme) .subpage-card,
+body:not(.light-theme) .contact-form-wrapper,
+body:not(.light-theme) .newsletter-modal-content,
+body:not(.light-theme) .card {
+    background: #111827 !important;
     border-color: rgba(255, 255, 255, 0.05) !important;
 }
 
-body.dark-theme .card-service-item h3 a,
-body.dark-theme .card-service-item h3,
-body.dark-theme .contact-form-wrapper h3,
-body.dark-theme .toss-away-title,
-body.dark-theme h1,
-body.dark-theme h2,
-body.dark-theme h3,
-body.dark-theme h4,
-body.dark-theme h5,
-body.dark-theme h6 {
+body:not(.light-theme) .card-service-item h3 a,
+body:not(.light-theme) .card-service-item h3,
+body:not(.light-theme) .contact-form-wrapper h3,
+body:not(.light-theme) .toss-away-title,
+body:not(.light-theme) h1,
+body:not(.light-theme) h2,
+body:not(.light-theme) h3,
+body:not(.light-theme) h4,
+body:not(.light-theme) h5,
+body:not(.light-theme) h6 {
     color: #ffffff !important;
 }
 
-body.dark-theme .form-control,
-body.dark-theme .form-select {
-    background-color: #1a1c24;
+body:not(.light-theme) .form-control,
+body:not(.light-theme) .form-select {
+    background-color: #1a2332;
     border-color: rgba(255, 255, 255, 0.1);
     color: #ffffff;
 }
 
-body.dark-theme .form-control:focus,
-body.dark-theme .form-select:focus {
-    background-color: #1a1c24;
+body:not(.light-theme) .form-control:focus,
+body:not(.light-theme) .form-select:focus {
+    background-color: #1a2332;
     color: #ffffff;
 }
 
-body.dark-theme .dropdown-menu {
-    background: rgba(13, 14, 18, 0.95) !important;
+body:not(.light-theme) .dropdown-menu {
+    background: rgba(11, 15, 20, 0.95) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-body.dark-theme .dropdown-item {
-    color: #cdd2e0 !important;
+body:not(.light-theme) .dropdown-item {
+    color: #e5e7eb !important;
 }
 
-body.dark-theme .dropdown-item:hover {
-    background-color: rgba(231, 127, 35, 0.15) !important;
+body:not(.light-theme) .dropdown-item:hover {
+    background-color: rgba(59, 130, 246, 0.15) !important;
     color: var(--accent-brand) !important;
 }
 
-body.dark-theme .table-hover tbody tr:hover {
-    background-color: rgba(231, 127, 35, 0.08) !important;
+body:not(.light-theme) .table-hover tbody tr:hover {
+    background-color: rgba(59, 130, 246, 0.08) !important;
 }
 
-body.dark-theme td, body.dark-theme th {
+body:not(.light-theme) td, body:not(.light-theme) th {
     color: #ffffff !important;
 }
 

@@ -1,12 +1,12 @@
 # BRIEFING — 2026-08-06T19:54:26Z
 
 ## Mission
-Adversarial verification of Baig Solution Invoice Maker implementation, test execution, regression testing for chat toggle, and link/DOM integrity checks.
+Adversarial verification of Automatixes Invoice Maker implementation, test execution, regression testing for chat toggle, and link/DOM integrity checks.
 
 ## 🔒 My Identity
 - Archetype: critic / specialist
 - Roles: critic, specialist
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\challenger_inv_2
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\challenger_inv_2
 - Original parent: 8e048f14-819f-4dd4-8940-b211380beeba
 - Milestone: M3 (Automated Verification & Adversarial Stress Testing)
 - Instance: 2 of 2

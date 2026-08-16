@@ -1,4 +1,4 @@
-# Detailed Feature & Technical Specifications: Baig Solution Invoice Maker (`/invoice-maker.php`)
+# Detailed Feature & Technical Specifications: Automatixes Invoice Maker (`/invoice-maker.php`)
 
 ## Features Discovered
 
@@ -9,10 +9,10 @@
 | 3 | UI & Navigation | Header Dropdown Link | Add "Invoice Maker" link under the "Services" navigation dropdown menu in `header.php`. | Mouse hover/click on Services dropdown | Navigation to `/invoice-maker` | Standard 404 if file does not exist. | Dispatch & ORIGINAL_REQUEST R1 |
 | 4 | UI & Navigation | Footer Link | Add "Invoice Maker" under "Our Services" list in `footer.php`. | Footer navigation link click | Navigation to `/invoice-maker` | Standard link navigation error. | Dispatch & ORIGINAL_REQUEST R1 |
 | 5 | SEO & Metadata | SEO Meta Config Entry | Register `$meta_config['invoice-maker']` in `header.php` with title, meta description, keywords, and canonical URL. | `$page_key = 'invoice-maker'` variable | Dynamic HTML `<title>`, `<meta name="description">`, `<meta name="keywords">`, `<link rel="canonical">` | Fallback to `$meta_config['index']` if key missing. | Dispatch & ORIGINAL_REQUEST R1 |
-| 6 | Data Management | Pre-filled Company Info | Provide default reactive company state pre-loaded with Baig Solution business details, editable by user. | Input fields for company name, tagline, email, phone, address, website | Rendered company header on screen and print invoice | Sanitized input text; defaults restored if cleared. | Dispatch & ORIGINAL_REQUEST R2/R4 |
+| 6 | Data Management | Pre-filled Company Info | Provide default reactive company state pre-loaded with Automatixes business details, editable by user. | Input fields for company name, tagline, email, phone, address, website | Rendered company header on screen and print invoice | Sanitized input text; defaults restored if cleared. | Dispatch & ORIGINAL_REQUEST R2/R4 |
 | 7 | Data Management | Client Information Section | Provide input fields for client contact and company details. | Client name, company name, email, phone, billing address | Rendered "Bill To" section on screen and print invoice | Text input formatting handled via Vue binding. | Dispatch & ORIGINAL_REQUEST R2 |
 | 8 | Data Management | Invoice Meta Information | Manage invoice details including invoice number, issue date, due date, currency selector, and notes. | Invoice #, Issue Date, Due Date, Currency dropdown, Notes text | Formatted invoice header and metadata badge | Dates default to today and today + 14 days if left empty. | Dispatch & ORIGINAL_REQUEST R2 |
-| 9 | Line Items | Default 6 Core Services Dropdown | Quick-select dropdown in each row loaded with 6 Baig Solution core services + custom entry option. | Dropdown select action | Description field populated with selected service name | Selecting custom enables free text input. | Dispatch & ORIGINAL_REQUEST R3 |
+| 9 | Line Items | Default 6 Core Services Dropdown | Quick-select dropdown in each row loaded with 6 Automatixes core services + custom entry option. | Dropdown select action | Description field populated with selected service name | Selecting custom enables free text input. | Dispatch & ORIGINAL_REQUEST R3 |
 | 10 | Line Items | Dynamic Row Management | Allow users to add new item rows (`addLineItem`) or delete existing rows (`removeLineItem`). | "Add Line Item" button click, "Delete" button click | Row added to table array or removed from table array | Deletion disabled when only 1 row remains to prevent empty invoices. | Dispatch & ORIGINAL_REQUEST R3 |
 | 11 | Calculation | Subtotal Live Calculation | Compute total cost for each row (`qty * price`) and sum all rows reactively. | Quantity (numeric input), Unit Price (numeric input) | Live updating Subtotal display | Non-numeric or negative inputs clamped to 0 or valid float. | Dispatch & ORIGINAL_REQUEST R3 |
 | 12 | Calculation | Tax & Discount Calculation | Apply percentage/fixed tax and discount rates to subtotal in real time. | Tax Rate %, Discount Rate % or Amount, Discount Type toggle | Tax amount, Discount amount live displays | Tax/Discount clamped to 0–100% or subtotal max. | Dispatch & ORIGINAL_REQUEST R3 |
@@ -42,7 +42,7 @@
 ## Detailed Technical Specifications
 
 ### 1. Architecture & Vue 3 Setup
-- **File Location**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\invoice-maker.php`
+- **File Location**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\invoice-maker.php`
 - **Dependencies**:
   - PHP 7.4+ compatibility (uses `header.php` and `footer.php` includes).
   - Vue 3 via CDN: `<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>` included before application mount script.
@@ -58,7 +58,7 @@ The Vue 3 reactive data model (`reactive` or `ref` inside `setup()`) must follow
 ```javascript
 {
   company: {
-    name: 'Baig Solution',
+    name: 'Automatixes',
     tagline: 'AI Agents, Automations & Web Development',
     email: 'bobrober2323@gmail.com',
     phone: '+92 336 6920141',
@@ -78,7 +78,7 @@ The Vue 3 reactive data model (`reactive` or `ref` inside `setup()`) must follow
     date: '2026-08-06',    // Format YYYY-MM-DD
     dueDate: '2026-08-20', // Format YYYY-MM-DD (Date + 14 days)
     currency: '$',         // Selected currency symbol
-    notes: 'Thank you for choosing Baig Solution. Payment is due within 14 days of invoice date.'
+    notes: 'Thank you for choosing Automatixes. Payment is due within 14 days of invoice date.'
   },
   currencies: [
     { label: 'USD ($)', symbol: '$' },
@@ -151,8 +151,8 @@ The Vue 3 reactive data model (`reactive` or `ref` inside `setup()`) must follow
 
 All calculated values must be wrapped in Vue `computed` properties so they update instantaneously in the DOM without requiring form submit actions or button triggers.
 
-### 5. Pre-filled Baig Solution Company Details
-- **Name**: Baig Solution
+### 5. Pre-filled Automatixes Company Details
+- **Name**: Automatixes
 - **Tagline**: AI Agents, Automations & Web Development
 - **Email**: bobrober2323@gmail.com
 - **Phone**: +92 336 6920141
@@ -166,9 +166,9 @@ All calculated values must be wrapped in Vue `computed` properties so they updat
 Add entry to `$meta_config` array:
 ```php
 'invoice-maker' => [
-    'title' => 'Free Online Invoice Generator | Baig Solution',
-    'desc' => 'Create and download professional PDF invoices online. Pre-loaded with Baig Solution AI & web development services, real-time total calculation, and instant print export.',
-    'keywords' => 'Invoice Generator, Free Invoice Maker, Baig Solution Invoice, AI Services Quote, Printable Invoice PDF',
+    'title' => 'Free Online Invoice Generator | Automatixes',
+    'desc' => 'Create and download professional PDF invoices online. Pre-loaded with Automatixes AI & web development services, real-time total calculation, and instant print export.',
+    'keywords' => 'Invoice Generator, Free Invoice Maker, Automatixes Invoice, AI Services Quote, Printable Invoice PDF',
     'url' => 'invoice-maker'
 ]
 ```

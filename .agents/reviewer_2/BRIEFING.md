@@ -6,7 +6,7 @@ Review and stress-test the work done by worker_m1_1 on footer.php, assets/js/mai
 ## 🔒 My Identity
 - Archetype: reviewer_2
 - Roles: reviewer, critic
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_2
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_2
 - Original parent: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa
 - Milestone: M1 (Floating Chat Toggle)
 - Instance: 1 of 1

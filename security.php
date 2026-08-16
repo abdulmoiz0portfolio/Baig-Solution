@@ -1,6 +1,6 @@
 <?php
 /**
- * Baig Solution Web Application Firewall (WAF) & Security Suite
+ * Automatixes Web Application Firewall (WAF) & Security Suite
  * Shields the PHP application from common web attacks (XSS, SQLi, bad bots, and directory traversing).
  */
 
@@ -24,7 +24,7 @@ $user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? strtolower($_SERVER['HTTP_USE
 foreach ($bad_bots as $bot) {
     if ($bot !== '' && strpos($user_agent, $bot) !== false) {
         http_response_code(403);
-        die("<h1>403 Forbidden</h1><p>Access denied by Baig Solution Security Firewall.</p>");
+        die("<h1>403 Forbidden</h1><p>Access denied by Automatixes Security Firewall.</p>");
     }
 }
 
@@ -65,7 +65,7 @@ function sanitize_input_filter(&$value) {
         foreach ($blocked_patterns as $pattern) {
             if (preg_match($pattern, $value)) {
                 http_response_code(400);
-                die("<h1>400 Bad Request</h1><p>Suspicious activity blocked by Baig Solution Security Firewall.</p>");
+                die("<h1>400 Bad Request</h1><p>Suspicious activity blocked by Automatixes Security Firewall.</p>");
             }
         }
         $value = htmlspecialchars(trim($value), ENT_QUOTES, 'UTF-8');

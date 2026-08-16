@@ -11,12 +11,12 @@ All 3 remediation items requested following Iteration 1 have been implemented co
 ## Verified Claims
 
 ### 1. `dev-server.js` PHP Meta Title Handling
-- **Claim**: `dev-server.js` extracts page-specific `$meta_config` from `header.php` when `$page_key = 'invoice-maker'` is present, properly substituting `<?php echo $active_meta['title']; ?>` with `"Free Online Invoice Maker | Baig Solution"`.
+- **Claim**: `dev-server.js` extracts page-specific `$meta_config` from `header.php` when `$page_key = 'invoice-maker'` is present, properly substituting `<?php echo $active_meta['title']; ?>` with `"Free Online Invoice Maker | Automatixes"`.
 - **Verification Method**: Code analysis of `dev-server.js` (`parseMetaConfig` and `getProcessedHtml`).
 - **Details**:
   - `parseMetaConfig` parses `$meta_config` array from `header.php` via regex and stores page keys (`index`, `invoice-maker`, etc.) with their title, desc, keywords, and url.
   - `getProcessedHtml` extracts `$page_key` from target PHP files (e.g., `$page_key = 'invoice-maker';`), looks up `activeMeta`, expands `header.php` includes, and substitutes meta tags before stripping remaining PHP tags.
-  - Generates `<title>Free Online Invoice Maker | Baig Solution</title>`, resolving Playwright test step 2 failure.
+  - Generates `<title>Free Online Invoice Maker | Automatixes</title>`, resolving Playwright test step 2 failure.
 - **Result**: PASS
 
 ### 2. `invoice-maker.php` Custom Service Select Print Styling

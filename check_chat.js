@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://baig-solution.vercel.app/');
+    await page.goto('https://automatixes.com/');
     
     // Wait for chat to load
     await new Promise(r => setTimeout(r, 5000));

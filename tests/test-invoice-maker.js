@@ -51,8 +51,8 @@ const http = require('http');
         // Verify Page Title from $meta_config
         const pageTitle = await page.title();
         console.log(`Page title: "${pageTitle}"`);
-        if (!pageTitle.includes('Free Online Invoice Maker | Baig Solution')) {
-            throw new Error(`Page title mismatch. Expected "Free Online Invoice Maker | Baig Solution", got "${pageTitle}"`);
+        if (!pageTitle.includes('Free Online Invoice Maker | Automatixes')) {
+            throw new Error(`Page title mismatch. Expected "Free Online Invoice Maker | Automatixes", got "${pageTitle}"`);
         }
         console.log('✅ 2. Meta title verified from $meta_config.');
 
@@ -68,8 +68,8 @@ const http = require('http');
 
         console.log(`Pre-filled Company Info: Name="${companyName}", Email="${companyEmail}", Phone="${companyPhone}", Address="${companyAddress}", Web="${companyWebsite}"`);
 
-        if (companyName !== 'Baig Solution' || companyEmail !== 'bobrober2323@gmail.com' || companyPhone !== '+92 336 6920141' || !companyAddress.includes('Worldwide') || companyWebsite !== 'https://baig-solution.vercel.app') {
-            throw new Error('Pre-filled company details do not match expected Baig Solution info.');
+        if (companyName !== 'Automatixes' || companyEmail !== 'bobrober2323@gmail.com' || companyPhone !== '+92 336 6920141' || !companyAddress.includes('Worldwide') || companyWebsite !== 'https://automatixes.com') {
+            throw new Error('Pre-filled company details do not match expected Automatixes info.');
         }
         console.log('✅ 3. Vue 3 instance mounted & pre-filled company details verified.');
 

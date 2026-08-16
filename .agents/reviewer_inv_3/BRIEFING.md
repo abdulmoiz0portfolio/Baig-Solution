@@ -6,7 +6,7 @@ Review remediation fixes in dev-server.js, invoice-maker.php, and tests/test-inv
 ## 🔒 My Identity
 - Archetype: teamwork_preview_reviewer
 - Roles: reviewer, critic
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_inv_3
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_inv_3
 - Original parent: 8e048f14-819f-4dd4-8940-b211380beeba
 - Milestone: M3 (Verification & Remediation Review)
 - Instance: 1 of 1
@@ -44,7 +44,7 @@ Review remediation fixes in dev-server.js, invoice-maker.php, and tests/test-inv
 - **Untested angles**: None.
 
 ## Artifact Index
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_inv_3\BRIEFING.md` — persistent working memory
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_inv_3\DISPATCH.md` — dispatch instructions
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_inv_3\review.md` — review report
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_inv_3\handoff.md` — handoff report
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_inv_3\BRIEFING.md` — persistent working memory
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_inv_3\DISPATCH.md` — dispatch instructions
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_inv_3\review.md` — review report
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_inv_3\handoff.md` — handoff report

@@ -1,19 +1,19 @@
 # BRIEFING — 2026-08-06T19:49:30Z
 
 ## Mission
-Build and integrate `/invoice-maker.php` with Vue 3 (CDN), real-time invoice calculations, pre-filled Baig Solution details, site integration (header/footer links and SEO), `@media print` A4 styling, and end-to-end Playwright automated verification.
+Build and integrate `/invoice-maker.php` with Vue 3 (CDN), real-time invoice calculations, pre-filled Automatixes details, site integration (header/footer links and SEO), `@media print` A4 styling, and end-to-end Playwright automated verification.
 
 ## 🔒 My Identity
 - Archetype: implementer / qa / specialist
 - Roles: implementer, qa, specialist
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\worker_inv_1
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\worker_inv_1
 - Original parent: 8e048f14-819f-4dd4-8940-b211380beeba
 - Milestone: M1, M2, M3 (Completed)
 
 ## 🔒 Key Constraints
 - Pure Vue 3 (via CDN) logic, no build steps/transpilation.
-- UI matching Baig Solution design system (`Plus Jakarta Sans`/`Outfit`, `#1a1a1a`, `#e77f23`, `#ffffff`, `#fff5eb`, `.btn-brand`, Bootstrap 5).
-- Pre-filled Baig Solution company details (editable).
+- UI matching Automatixes design system (`Plus Jakarta Sans`/`Outfit`, `#1a1a1a`, `#e77f23`, `#ffffff`, `#fff5eb`, `.btn-brand`, Bootstrap 5).
+- Pre-filled Automatixes company details (editable).
 - Editable client details & invoice meta (Invoice #, Dates, Currency selector).
 - Dynamic line items with 6 default services + custom option, add/remove row capability.
 - Real-time Vue computed calculations: row total, subtotal, tax %, discount %, grand total.

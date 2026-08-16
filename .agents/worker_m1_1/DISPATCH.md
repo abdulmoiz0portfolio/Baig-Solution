@@ -1,12 +1,12 @@
 ## 2026-08-06T06:28:59Z
-You are worker_m1_1 working in directory `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\worker_m1_1`.
+You are worker_m1_1 working in directory `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\worker_m1_1`.
 
 MANDATORY INTEGRITY WARNING:
 DO NOT CHEAT. All implementations must be genuine. DO NOT hardcode test results, create dummy/facade implementations, or circumvent the intended task. A teamwork_preview_auditor will independently verify your work. Integrity violations WILL be detected and your work WILL be rejected.
 
 Context & Task:
-Read ORIGINAL_REQUEST.md at `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\ORIGINAL_REQUEST.md` and PROJECT.md at `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\PROJECT.md`.
-Also inspect `footer.php` and `dev-server.js` at `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution`.
+Read ORIGINAL_REQUEST.md at `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\ORIGINAL_REQUEST.md` and PROJECT.md at `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\PROJECT.md`.
+Also inspect `footer.php` and `dev-server.js` at `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes`.
 
 Requirements to implement:
 1. R1: Fix Chat Open Action in `footer.php`. Clicking `#sticky-expert-btn` ("Connect with an Expert") must reliably open the n8n chat window (`.chat-layout`).
@@ -27,4 +27,4 @@ Verification:
 - Execute your automated verification test script.
 - Document all modified files, exact fix applied, verification commands, and test output in your handoff report.
 
-Write your report to `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\worker_m1_1\handoff.md`. Send a message to parent when finished.
+Write your report to `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\worker_m1_1\handoff.md`. Send a message to parent when finished.

@@ -1,9 +1,9 @@
 # Handoff Report — Project Orchestrator
 
-**Project**: Baig Solution Invoice Maker (`/invoice-maker.php`)  
+**Project**: Automatixes Invoice Maker (`/invoice-maker.php`)  
 **Role**: Project Orchestrator (`teamwork_preview_orchestrator` / `self`)  
 **Date**: 2026-08-06  
-**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\orchestrator`  
+**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\orchestrator`  
 
 ---
 
@@ -21,7 +21,7 @@
 
 1. **`invoice-maker.php`**:
    - Integrated Vue 3 CDN (`https://unpkg.com/vue@3/dist/vue.global.js`).
-   - Pre-filled Baig Solution Company Details (editable): `Baig Solution`, `New Jersey, NJ, United States`, `+92 336 6920141`, `bobrober2323@gmail.com`, `https://baigsolution.com`.
+   - Pre-filled Automatixes Company Details (editable): `Automatixes`, `New Jersey, NJ, United States`, `+92 336 6920141`, `bobrober2323@gmail.com`, `https://baigsolution.com`.
    - Editable Client Details: Name, Company, Address, Email, Phone.
    - Invoice Metadata: Invoice Number, Date, Due Date, Currency Selector (`$`, `€`, `£`, `C$`, `Rs`).
    - Dynamic Line Items Table: 6 default core services + custom entry option, unit price & quantity inputs, line item totals, add/remove row controls (min 1 row protection).
@@ -34,7 +34,7 @@
    - Added link in Footer "Our Services" list (`<a href="invoice-maker">Free Invoice Maker</a>`).
 
 3. **`dev-server.js` Enhancement**:
-   - Enhanced PHP include parsing and added `$page_key` meta title resolution to dynamically inject page titles from `$meta_config` in `header.php` (`Free Online Invoice Maker | Baig Solution`).
+   - Enhanced PHP include parsing and added `$page_key` meta title resolution to dynamically inject page titles from `$meta_config` in `header.php` (`Free Online Invoice Maker | Automatixes`).
 
 4. **Automated Verification (`tests/test-invoice-maker.js`)**:
    - Written Playwright E2E test script covering status 200 load, `$meta_config` title, Vue 3 mount, header/footer links, dynamic line item CRUD, live math calculations, and `@media print` CSS emulation.
@@ -52,10 +52,10 @@
 
 ## 4. Key Artifacts
 
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\invoice-maker.php` — Invoice Maker main page
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\header.php` — Header navigation & SEO config
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\footer.php` — Footer links
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\dev-server.js` — Dev server with PHP include & title parser
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\tests\test-invoice-maker.js` — Automated E2E test suite
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\PROJECT.md` — Feature inventory & milestone status
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\orchestrator\GATE_STATUS.md` — Gate status log
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\invoice-maker.php` — Invoice Maker main page
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\header.php` — Header navigation & SEO config
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\footer.php` — Footer links
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\dev-server.js` — Dev server with PHP include & title parser
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\tests\test-invoice-maker.js` — Automated E2E test suite
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\PROJECT.md` — Feature inventory & milestone status
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\orchestrator\GATE_STATUS.md` — Gate status log

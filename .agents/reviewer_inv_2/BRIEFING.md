@@ -6,7 +6,7 @@ Review robustness, edge cases, design system compliance, and print CSS for the i
 ## 🔒 My Identity
 - Archetype: teamwork_preview_reviewer
 - Roles: reviewer, critic
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_inv_2
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_inv_2
 - Original parent: 8e048f14-819f-4dd4-8940-b211380beeba
 - Milestone: Review & Verification
 - Instance: 2 of 2
@@ -21,7 +21,7 @@ Review robustness, edge cases, design system compliance, and print CSS for the i
 - Updated: 2026-08-06T14:51:50Z
 
 ## Review Scope
-- **Files to review**: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\tools\invoice-maker\index.html, C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\tools\invoice-maker\invoice.js, tests/test-invoice-maker.js, assets CSS/JS
+- **Files to review**: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\tools\invoice-maker\index.html, C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\tools\invoice-maker\invoice.js, tests/test-invoice-maker.js, assets CSS/JS
 - **Interface contracts**: PROJECT.md, ORIGINAL_REQUEST.md
 - **Review criteria**: Robustness (row deletion min 1 protection, tax/discount zero/negative rates, multi-currency, custom service text), Design system compliance (`#1a1a1a`, `#e77f23`, fonts, `.btn-brand`), Print Export (`@media print` rules for hidden navbar/footer/chat/preloader/buttons/borders), Test execution (passing automated tests).
 
@@ -42,7 +42,7 @@ Review robustness, edge cases, design system compliance, and print CSS for the i
 - Generated review.md and handoff.md.
 
 ## Artifact Index
-- C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_inv_2\BRIEFING.md — Persistent briefing index
-- C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_inv_2\progress.md — Liveness heartbeat
-- C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_inv_2\review.md — Final review report
-- C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_inv_2\handoff.md — Final handoff report
+- C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_inv_2\BRIEFING.md — Persistent briefing index
+- C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_inv_2\progress.md — Liveness heartbeat
+- C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_inv_2\review.md — Final review report
+- C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_inv_2\handoff.md — Final handoff report

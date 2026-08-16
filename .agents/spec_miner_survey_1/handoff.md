@@ -2,7 +2,7 @@
 
 ## 1. Observation
 
-Direct code inspection of `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\footer.php` and `ORIGINAL_REQUEST.md` reveals the exact architecture of the n8n chat widget integration, custom controls, Vue.js interaction layer, and the root causes of failure for R1 and R2.
+Direct code inspection of `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\footer.php` and `ORIGINAL_REQUEST.md` reveals the exact architecture of the n8n chat widget integration, custom controls, Vue.js interaction layer, and the root causes of failure for R1 and R2.
 
 ### Key File Locations & Line References
 
@@ -137,7 +137,7 @@ Direct code inspection of `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-s
 
 ## 5. Caveats
 
-No caveats. All code paths, DOM class names, selectors, and event handlers in `baig-solution` have been fully probed.
+No caveats. All code paths, DOM class names, selectors, and event handlers in `automatixes` have been fully probed.
 
 ---
 
@@ -160,7 +160,7 @@ No caveats. All code paths, DOM class names, selectors, and event handlers in `b
 ## 7. Verification Method
 
 1. **Local Server Execution**:
-   Run `node dev-server.js` from `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution` to serve website locally on `http://localhost:3000`.
+   Run `node dev-server.js` from `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes` to serve website locally on `http://localhost:3000`.
 2. **DOM Inspection Verification**:
    - Check `#sticky-expert-btn` exists on page load.
    - Click `#sticky-expert-btn`, verify `.chat-layout` exists and is visible, `#sticky-expert-btn` display is `none`.

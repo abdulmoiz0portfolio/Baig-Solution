@@ -6,13 +6,13 @@ Explore the n8n chat widget and Vue.js codebase to analyze toggle logic, sticky 
 ## 🔒 My Identity
 - Archetype: explorer
 - Roles: codebase investigation, analysis, synthesis
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\explorer_survey_1
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_1
 - Original parent: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa
 - Milestone: codebase exploration & toggle issue analysis
 
 ## 🔒 Key Constraints
 - Read-only investigation — do NOT implement code changes in project source code
-- All metadata / outputs must be written in C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\explorer_survey_1
+- All metadata / outputs must be written in C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_1
 
 ## Current Parent
 - Conversation ID: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa

@@ -3,21 +3,21 @@
 ## 1. Observation
 
 ### Codebase & Spec Source Evidence
-1. **Original Request**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\ORIGINAL_REQUEST.md`
+1. **Original Request**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\ORIGINAL_REQUEST.md`
    - Lines 37, 44-55:
      ```
-     Build a professional "Invoice Maker" page for the Baig Solution website (/invoice-maker.php) using Vue 3 (via CDN) for client-side logic and @media print for PDF generation...
+     Build a professional "Invoice Maker" page for the Automatixes website (/invoice-maker.php) using Vue 3 (via CDN) for client-side logic and @media print for PDF generation...
      ### R1. UI and Integration
      Build the UI using the site's existing Bootstrap 5 framework, typography (Outfit / Plus Jakarta Sans), and color palette (#1a1a1a, #e77f23, #ffffff). Integrate header.php and footer.php. Add the page to header dropdown and footer list. Add SEO meta tags to $meta_config.
      ### R2. Invoice Data & Reactivity
-     Use Vue 3 (via CDN) to manage invoice state... Company section pre-filled with Baig Solution details...
+     Use Vue 3 (via CDN) to manage invoice state... Company section pre-filled with Automatixes details...
      ### R3. Line Items and Calculations
      Dynamic line items table... 6 core services (AI Agents, Automations, Web & App Development, UI/UX Design, Product Shoot, Support)... Live calculate Subtotal, Tax (%), Discount, and Grand Total.
      ### R4. Print/PDF Export
      "Print / Download PDF" button triggering window.print()... @media print stylesheet hiding navbar, footer, form controls.
      ```
 
-2. **Header Configuration & Routing**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\header.php`
+2. **Header Configuration & Routing**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\header.php`
    - Lines 8-57: `$meta_config` array structure containing page metadata keys (`index`, `about`, `website-development`, `ai-agents`, `ai-automations`, `product-shoot`, `contact`, `admin`).
    - Lines 263-273: Services dropdown navbar item:
      ```html
@@ -27,10 +27,10 @@
          ...
      ```
 
-3. **Footer Configuration**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\footer.php`
+3. **Footer Configuration**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\footer.php`
    - Lines 37-44: "Our Services" footer widget list.
 
-4. **Design Tokens & Theme**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\assets\css\main.css`
+4. **Design Tokens & Theme**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\assets\css\main.css`
    - Lines 2-15:
      ```css
      :root {
@@ -42,7 +42,7 @@
      }
      ```
 
-5. **Dev Server Routing**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\dev-server.js`
+5. **Dev Server Routing**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\dev-server.js`
    - Lines 36-64: Dynamic route handling automatically appends `.php` to requests like `/invoice-maker` and processes PHP `include` tags.
 
 ---
@@ -82,12 +82,12 @@ All specifications for `/invoice-maker.php` have been fully mined, enumerated, a
 ## 5. Verification Method
 
 To verify the mined specifications:
-1. Inspect `specs.md` in `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\spec_miner_survey_inv_1\specs.md`.
+1. Inspect `specs.md` in `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\spec_miner_survey_inv_1\specs.md`.
 2. Confirm coverage of:
    - 15 Discovered Features table
    - 10 Edge Cases table
    - Vue 3 state structure
-   - Pre-filled Baig Solution company details
+   - Pre-filled Automatixes company details
    - 6 core services (Autonomous AI Agents, AI Automations, Web & App Development, UI/UX Design, Product Shoot, Support & Maintenance)
    - Real-time calculation math formulas
    - `header.php` and `footer.php` code patches

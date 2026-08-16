@@ -6,14 +6,14 @@ Empirically stress-test n8n chat toggle fix on http://localhost:3000 and verify 
 ## 🔒 My Identity
 - Archetype: EMPIRICAL CHALLENGER
 - Roles: critic, specialist
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\challenger_1
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\challenger_1
 - Original parent: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa
 - Milestone: chat toggle stress-testing
 - Instance: 1 of 1
 
 ## 🔒 Key Constraints
 - Review-only — do NOT modify implementation code
-- Write outputs only to C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\challenger_1
+- Write outputs only to C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\challenger_1
 
 ## Current Parent
 - Conversation ID: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa

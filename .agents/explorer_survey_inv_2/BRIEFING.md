@@ -6,7 +6,7 @@ Investigate local dev server setup, test infrastructure, package dependencies, a
 ## 🔒 My Identity
 - Archetype: teamwork_preview_explorer
 - Roles: Explorer Subagent
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\explorer_survey_inv_2
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_inv_2
 - Original parent: 8e048f14-819f-4dd4-8940-b211380beeba
 - Milestone: Environment & Automated Testing Survey
 

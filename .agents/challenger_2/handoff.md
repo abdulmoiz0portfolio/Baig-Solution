@@ -7,7 +7,7 @@
 ## 1. Observation
 
 - **Test Execution Command**:
-  Executed `node tests/test-chat-toggle.js` in `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution`.
+  Executed `node tests/test-chat-toggle.js` in `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes`.
   **Verbatim Execution Log Output**:
   ```text
   Launching headless browser for chat toggle verification...

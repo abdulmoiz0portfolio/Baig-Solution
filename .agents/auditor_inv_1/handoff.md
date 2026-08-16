@@ -2,7 +2,7 @@
 
 **Agent**: `auditor_inv_1` (Forensic Integrity Auditor)  
 **Date**: 2026-08-06  
-**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\auditor_inv_1`  
+**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\auditor_inv_1`  
 **Verdict**: CLEAN  
 
 ---
@@ -11,23 +11,23 @@
 
 Direct code inspection of work products produced by `worker_inv_1`:
 
-1. **`invoice-maker.php` (`C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\invoice-maker.php`)**:
+1. **`invoice-maker.php` (`C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\invoice-maker.php`)**:
    - Lines 375–550: Implements Vue 3 options setup using `ref` and `computed`.
    - Lines 474–495: `subtotal`, `taxAmount`, `discountAmount`, `grandTotal` are implemented as reactive `computed` functions using `reduce()` and percentage math calculations.
    - Lines 447–471: `addLineItem`, `removeLineItem`, and `handleServiceChange` dynamically update the line item state array.
    - Lines 277–367: `@media print` rules hide non-printable UI components (`header`, `#header-sticky`, `footer`, `#sticky-expert-btn`, `.n8n-chat`, `.no-print`, `.btn`, `.subpage-hero`) and format input controls into borderless A4 text.
 
-2. **`header.php` (`C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\header.php`)**:
+2. **`header.php` (`C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\header.php`)**:
    - Lines 57–62: Added `$meta_config['invoice-maker']` title, desc, keywords, and url.
    - Line 279: Added `<a class="dropdown-item ... " href="invoice-maker">Free Invoice Maker</a>` under `#servicesDropdown`.
 
-3. **`footer.php` (`C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\footer.php`)**:
+3. **`footer.php` (`C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\footer.php`)**:
    - Line 43: Added `<li><a href="invoice-maker">Free Invoice Maker</a></li>` under "Our Services".
 
-4. **`dev-server.js` (`C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\dev-server.js`)**:
+4. **`dev-server.js` (`C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\dev-server.js`)**:
    - Lines 25–41: Updated `processPhpIncludes` with regex `/<\?php[\s\S]*?\?>/g` to replace PHP `include`/`require` statements with recursively loaded file contents.
 
-5. **`tests/test-invoice-maker.js` (`C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\tests\test-invoice-maker.js`)**:
+5. **`tests/test-invoice-maker.js` (`C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\tests\test-invoice-maker.js`)**:
    - Playwright test script verifying status 200, title match, Vue pre-filled company info, navigation links, dynamic line item addition/deletion, real-time math calculation, and print media element visibility.
 
 ---

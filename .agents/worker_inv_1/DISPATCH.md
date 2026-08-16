@@ -1,24 +1,24 @@
 # Task Assignment for worker_inv_1
 
 You are `worker_inv_1`, an implementation worker subagent (`teamwork_preview_worker`).
-Working directory: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\worker_inv_1`
+Working directory: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\worker_inv_1`
 
 ## References & Scope
-- `ORIGINAL_REQUEST.md`: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\ORIGINAL_REQUEST.md`
-- `PROJECT.md`: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\PROJECT.md`
+- `ORIGINAL_REQUEST.md`: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\ORIGINAL_REQUEST.md`
+- `PROJECT.md`: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\PROJECT.md`
 - Survey Handoffs:
-  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\explorer_survey_inv_1\handoff.md`
-  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\spec_miner_survey_inv_1\handoff.md`
-  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\explorer_survey_inv_2\handoff.md`
+  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_inv_1\handoff.md`
+  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\spec_miner_survey_inv_1\handoff.md`
+  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_inv_2\handoff.md`
 
 ## Assignment & Requirements
 
 ### Part 1: Build `/invoice-maker.php` (Milestone M1)
 1. Use PHP includes for `header.php` and `footer.php`. Note: Set `<?php $page_key = 'invoice-maker'; ?> <?php include 'header.php'; ?>` with separate PHP tags so `dev-server.js` regex matches properly.
 2. Load Vue 3 via CDN (`https://unpkg.com/vue@3/dist/vue.global.js`).
-3. Build a clean, responsive UI matching Baig Solution's design system (`Plus Jakarta Sans`/`Outfit`, `#1a1a1a`, `#e77f23`, `#ffffff`, `#fff5eb`, `.btn-brand`, Bootstrap 5 cards/tables/inputs).
+3. Build a clean, responsive UI matching Automatixes's design system (`Plus Jakarta Sans`/`Outfit`, `#1a1a1a`, `#e77f23`, `#ffffff`, `#fff5eb`, `.btn-brand`, Bootstrap 5 cards/tables/inputs).
 4. Pre-fill Company Details:
-   - Name: `Baig Solution`
+   - Name: `Automatixes`
    - Address: `New Jersey, NJ, United States`
    - Phone: `+92 336 6920141`
    - Email: `bobrober2323@gmail.com`
@@ -43,7 +43,7 @@ Working directory: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution
 
 ### Part 2: Site Integration (Milestone M2)
 1. `header.php`:
-   - Add `$meta_config['invoice-maker']` entry with title (`Free Online Invoice Maker | Baig Solution`), description, and keywords.
+   - Add `$meta_config['invoice-maker']` entry with title (`Free Online Invoice Maker | Automatixes`), description, and keywords.
    - Add `<a class="dropdown-item" href="invoice-maker">Free Invoice Maker</a>` inside `#servicesDropdown` menu.
 2. `footer.php`:
    - Add `<li><a href="invoice-maker">Free Invoice Maker</a></li>` under "Our Services" list.
@@ -64,4 +64,4 @@ Working directory: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution
 ## Mandatory Integrity Constraint
 DO NOT CHEAT. All implementations must be genuine. DO NOT hardcode test results, create dummy/facade implementations, or circumvent the intended task. A teamwork_preview_auditor will independently verify your work. Integrity violations WILL be detected and your work WILL be rejected.
 
-Write your code changes, run test verification, and output a detailed handoff report in `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\worker_inv_1\handoff.md`.
+Write your code changes, run test verification, and output a detailed handoff report in `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\worker_inv_1\handoff.md`.

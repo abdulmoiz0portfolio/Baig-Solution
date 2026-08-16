@@ -3,7 +3,7 @@
 <!-- About Hero Section -->
 <section class="subpage-hero text-center text-dark">
     <div class="container">
-        <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">ABOUT BAIG SOLUTION</span>
+        <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">ABOUT Automatixes</span>
         <h1 class="display-4 fw-extrabold text-dark">Empowering Growth Through AI</h1>
         <div class="title-underline"></div>
         <p class="lead text-secondary mx-auto mt-4 max-w-700">
@@ -46,7 +46,7 @@
                 <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">ABOUT OUR AGENCY</span>
                 <h2 class="display-6 fw-extrabold text-dark mb-4">AI Automation & Digital Excellence</h2>
                 <p class="text-secondary fs-5 mb-4">
-                    Baig Solution is an AI automation agency that helps businesses automate lead follow-up, CRM syncing, and customer support using tools like n8n, Make, and GoHighLevel. We build custom AI agents and workflow automations for small and mid-sized businesses.
+                    Automatixes is an AI automation agency that helps businesses automate lead follow-up, CRM syncing, and customer support using tools like n8n, Make, and GoHighLevel. We build custom AI agents and workflow automations for small and mid-sized businesses.
                 </p>
                 <p class="text-muted mb-4">
                     We work remotely with clients globally, integrating advanced workflow engines directly into your tech stack to eliminate hours of manual admin tasks every week.

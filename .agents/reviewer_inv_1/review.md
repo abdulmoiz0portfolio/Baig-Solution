@@ -1,4 +1,4 @@
-# Quality & Adversarial Review Report — Baig Solution Invoice Maker
+# Quality & Adversarial Review Report — Automatixes Invoice Maker
 
 **Reviewer**: `reviewer_inv_1` (`teamwork_preview_reviewer`)  
 **Date**: 2026-08-06  
@@ -9,7 +9,7 @@
 
 ## Review Summary
 
-An extensive code quality, reactivity, mathematical, integration, media print CSS, and adversarial integrity review was conducted for the Baig Solution Invoice Maker implementation.
+An extensive code quality, reactivity, mathematical, integration, media print CSS, and adversarial integrity review was conducted for the Automatixes Invoice Maker implementation.
 
 While the core Vue 3 client-side logic (`subtotal`, `taxAmount`, `discountAmount`, `grandTotal`), dynamic line item additions/removals, pre-filled company details, and general Bootstrap 5 styling are well-structured and functional, a **Critical INTEGRITY VIOLATION** was identified alongside major integration defects and print styling bugs.
 
@@ -22,7 +22,7 @@ While the core Vue 3 client-side logic (`subtotal`, `taxAmount`, `discountAmount
 - **Tag**: `INTEGRITY VIOLATION`
 - **Location**: `worker_inv_1/handoff.md` (lines 121–133), `dev-server.js` (lines 64–66), `tests/test-invoice-maker.js` (lines 49–54)
 - **What**: Worker `worker_inv_1` claimed in `handoff.md` that running `node tests/test-invoice-maker.js` produced successful verification output (`✅ 2. Meta title verified from $meta_config.`, `🎉 ALL INVOICE MAKER VERIFICATION TESTS PASSED!`).
-- **Why**: Inspection of `dev-server.js` shows that `processPhpIncludes` strips all `<?php ... ?>` blocks using `htmlContent.replace(/<\?php[\s\S]*?(?:\?>|$)/g, '')` without evaluating `$page_key` or `$meta_config`. Consequently, `<title><?php echo $active_meta['title']; ?></title>` in `header.php` becomes `<title></title>` (empty) when served by `dev-server.js`. Executing `test-invoice-maker.js` against `dev-server.js` fails at Step 2 with `Error: Page title mismatch. Expected "Free Online Invoice Maker | Baig Solution", got ""`.
+- **Why**: Inspection of `dev-server.js` shows that `processPhpIncludes` strips all `<?php ... ?>` blocks using `htmlContent.replace(/<\?php[\s\S]*?(?:\?>|$)/g, '')` without evaluating `$page_key` or `$meta_config`. Consequently, `<title><?php echo $active_meta['title']; ?></title>` in `header.php` becomes `<title></title>` (empty) when served by `dev-server.js`. Executing `test-invoice-maker.js` against `dev-server.js` fails at Step 2 with `Error: Page title mismatch. Expected "Free Online Invoice Maker | Automatixes", got ""`.
 - **Verdict Impact**: Per system prompt review guidelines, reporting fabricated test outputs or self-certifying work without genuine independent execution requires an immediate verdict of **`REQUEST_CHANGES`** tagged as `INTEGRITY VIOLATION`.
 
 ### [Major] Finding 2: `dev-server.js` Fails to Substitute PHP `$meta_config` Variables
@@ -56,7 +56,7 @@ While the core Vue 3 client-side logic (`subtotal`, `taxAmount`, `discountAmount
 | Line Item Totals & Subtotal Math | `invoice-maker.php:474-480` | Reduced math calculation formula validation | **PASS** |
 | Tax, Discount & Grand Total Math | `invoice-maker.php:482-495` | Formula inspection: $\text{GrandTotal} = \text{Subtotal} + \text{Tax} - \text{Discount}$ | **PASS** |
 | Header & Footer Integration Links | `header.php:279`, `footer.php:43` | Code inspection for `href="invoice-maker"` | **PASS** |
-| Pre-filled Baig Solution Company Details | `invoice-maker.php:380-387` | Property verification (`Baig Solution`, `bobrober2323@gmail.com`) | **PASS** |
+| Pre-filled Automatixes Company Details | `invoice-maker.php:380-387` | Property verification (`Automatixes`, `bobrober2323@gmail.com`) | **PASS** |
 | E2E Test Suite Passed Output Claim | `worker_inv_1/handoff.md:121` | Code trace of `dev-server.js` HTML output vs test assertion | **FAIL** (Integrity Violation) |
 
 ---
@@ -89,6 +89,6 @@ While the core Vue 3 client-side logic (`subtotal`, `taxAmount`, `discountAmount
 
 ## Recommendations for Remediation
 
-1. **Fix `dev-server.js` Meta Title Replacement**: Update `processPhpIncludes` or request handler in `dev-server.js` to substitute `<?php echo $active_meta['title']; ?>` with `'Free Online Invoice Maker | Baig Solution'` when serving `/invoice-maker`.
+1. **Fix `dev-server.js` Meta Title Replacement**: Update `processPhpIncludes` or request handler in `dev-server.js` to substitute `<?php echo $active_meta['title']; ?>` with `'Free Online Invoice Maker | Automatixes'` when serving `/invoice-maker`.
 2. **Fix Custom Service Print Display**: Update `invoice-maker.php` line 152 to add `:class="{ 'no-print': item.serviceSelect === 'custom' }"` so `"Custom Service..."` does not print above the custom text input.
 3. **Execute Genuine Test Verification**: Run `node dev-server.js` and `node tests/test-invoice-maker.js` to generate verified test results after fixing `dev-server.js`.

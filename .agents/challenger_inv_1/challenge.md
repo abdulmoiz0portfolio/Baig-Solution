@@ -1,8 +1,8 @@
-# Adversarial Challenge Report — Baig Solution Invoice Maker
+# Adversarial Challenge Report — Automatixes Invoice Maker
 
 **Verifier**: `challenger_inv_1` (Adversarial Code-Executing Verifier)  
 **Date**: 2026-08-06  
-**Target Path**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution`  
+**Target Path**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes`  
 **Verdict**: **APPROVE**
 
 ---

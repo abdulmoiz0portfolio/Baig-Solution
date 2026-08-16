@@ -2,7 +2,7 @@
 
 **Agent**: `auditor_inv_2` (Forensic Integrity Auditor)  
 **Date**: 2026-08-06  
-**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\auditor_inv_2`  
+**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\auditor_inv_2`  
 **Verdict**: `CLEAN`  
 
 ---
@@ -11,7 +11,7 @@
 
 1. **`dev-server.js` (lines 46–98)**:
    - `parseMetaConfig(headerPath)` parses `$meta_config` array from `header.php` via regex.
-   - `getProcessedHtml(filePath)` detects `$page_key` in target PHP files (`$page_key = 'invoice-maker';`), extracts matching `$active_meta` entry, replaces `<?php echo $active_meta['title']; ?>` with `"Free Online Invoice Maker | Baig Solution"`, processes includes recursively, and strips remaining PHP tags.
+   - `getProcessedHtml(filePath)` detects `$page_key` in target PHP files (`$page_key = 'invoice-maker';`), extracts matching `$active_meta` entry, replaces `<?php echo $active_meta['title']; ?>` with `"Free Online Invoice Maker | Automatixes"`, processes includes recursively, and strips remaining PHP tags.
 2. **`invoice-maker.php` (line 152)**:
    - Contains `:class="{ 'no-print': item.serviceSelect === 'custom' }"` on `<select>`.
    - When `"custom"` service is selected, `.no-print` class is dynamically added, hiding `<select>` (`display: none !important`) in `@media print` so only the custom text input prints.

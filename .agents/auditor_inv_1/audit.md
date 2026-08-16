@@ -1,4 +1,4 @@
-# Forensic Audit Report — Baig Solution Invoice Maker
+# Forensic Audit Report — Automatixes Invoice Maker
 
 **Work Product**: `/invoice-maker.php`, `header.php`, `footer.php`, `dev-server.js`, `tests/test-invoice-maker.js`  
 **Profile**: General Project  

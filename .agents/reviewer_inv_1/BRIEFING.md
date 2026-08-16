@@ -1,12 +1,12 @@
 # BRIEFING — 2026-08-06T19:52:00Z
 
 ## Mission
-Review and stress-test the Baig Solution Invoice Maker implementation (`invoice-maker.php`, `header.php`, `footer.php`, `dev-server.js`, `tests/test-invoice-maker.js`) and issue an evidence-based verdict (`APPROVE` or `REQUEST_CHANGES`).
+Review and stress-test the Automatixes Invoice Maker implementation (`invoice-maker.php`, `header.php`, `footer.php`, `dev-server.js`, `tests/test-invoice-maker.js`) and issue an evidence-based verdict (`APPROVE` or `REQUEST_CHANGES`).
 
 ## 🔒 My Identity
 - Archetype: reviewer_critic
 - Roles: reviewer, critic
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_inv_1
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_inv_1
 - Original parent: 8e048f14-819f-4dd4-8940-b211380beeba
 - Milestone: M1, M2, M3 review
 - Instance: 1 of 1

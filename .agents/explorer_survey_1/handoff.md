@@ -1,8 +1,8 @@
 # Investigation & Handoff Report — n8n Chat Widget & Vue.js Toggle Logic
 
 **Agent**: `explorer_survey_1`  
-**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\explorer_survey_1`  
-**Target Codebase**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution`  
+**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_1`  
+**Target Codebase**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes`  
 
 ---
 

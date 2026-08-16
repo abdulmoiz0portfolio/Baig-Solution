@@ -1,6 +1,6 @@
 <?php
 /**
- * Baig Solution Vercel Serverless PHP Router
+ * Automatixes Vercel Serverless PHP Router
  * Routes incoming URLs to corresponding PHP files in the root folder.
  */
 

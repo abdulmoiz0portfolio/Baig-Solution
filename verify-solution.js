@@ -10,10 +10,10 @@ const title = titleMatch ? titleMatch[1] : '';
 
 console.log('Processed HTML Title:', `"${title}"`);
 
-if (title === 'Free Online Invoice Maker | Baig Solution') {
+if (title === 'Free Online Invoice Maker | Automatixes') {
     console.log('✅ Fix 1 PASSED: Title correctly populated from $meta_config["invoice-maker"].');
 } else {
-    console.error('❌ Fix 1 FAILED: Expected "Free Online Invoice Maker | Baig Solution", got:', `"${title}"`);
+    console.error('❌ Fix 1 FAILED: Expected "Free Online Invoice Maker | Automatixes", got:', `"${title}"`);
     process.exit(1);
 }
 

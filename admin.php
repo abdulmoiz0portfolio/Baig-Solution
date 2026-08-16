@@ -3,7 +3,7 @@
 <!-- Admin Header Section -->
 <section class="subpage-hero text-center text-dark">
     <div class="container">
-        <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">BAIG SOLUTION CRM</span>
+        <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">Automatixes CRM</span>
         <h1 class="display-4 fw-extrabold text-dark">Lead Logs & Database Viewer</h1>
         <div class="title-underline"></div>
         <p class="lead text-secondary mx-auto mt-4 max-w-700">

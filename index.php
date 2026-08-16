@@ -5,7 +5,7 @@
     <div id="particle-canvas-container" class="position-absolute top-0 start-0 w-100 h-100 z-0"></div>
     
     <div class="container position-relative z-1 hero-content text-center py-5">
-        <h6 class="wow fadeInUp text-accent-brand font-monospace mb-3" data-wow-delay=".1s">Baig Solution</h6>
+        <h6 class="wow fadeInUp text-accent-brand font-monospace mb-3" data-wow-delay=".1s">Automatixes</h6>
         <h1 class="wow fadeInUp display-4 fw-extrabold mb-3 text-dark" data-wow-delay=".2s">
             We Build Systems That Work <br><span class="text-accent-brand">While You Sleep</span>
         </h1>
@@ -70,21 +70,21 @@
         <div class="row align-items-center g-5">
             <div class="col-lg-5">
                 <div class="about-image-wrapper wow fadeInLeft" data-wow-delay=".3s">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Team planning at Baig Solution" loading="lazy" class="img-fluid rounded-4 shadow-sm border border-white border-4">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Team planning at Automatixes" loading="lazy" class="img-fluid rounded-4 shadow-sm border border-white border-4">
                 </div>
             </div>
             <div class="col-lg-7">
                 <div class="about-content ps-lg-4">
                     <div class="section-title">
                         <div class="sub-title bg-color-2 wow fadeInUp mb-3">
-                            <span>About Baig Solution</span>
+                            <span>About Automatixes</span>
                         </div>
                         <h2 class="wow fadeInUp text-dark fw-extrabold display-5 mb-4" data-wow-delay=".3s">
                             Who We Are
                         </h2>
                     </div>
                     <p class="mt-3 wow fadeInUp text-secondary fs-5" data-wow-delay=".5s">
-                        Baig Solution is an AI automation agency that helps businesses automate lead follow-up, CRM syncing, and customer support using tools like n8n, Make, and GoHighLevel. We build custom AI agents and workflow automations for small and mid-sized businesses.
+                        Automatixes is an AI automation agency that helps businesses automate lead follow-up, CRM syncing, and customer support using tools like n8n, Make, and GoHighLevel. We build custom AI agents and workflow automations for small and mid-sized businesses.
                     </p>
                     
                     <h5 class="fw-bold text-dark mt-4 mb-3 wow fadeInUp" data-wow-delay=".3s">Who We Serve:</h5>
@@ -506,7 +506,7 @@
                 <div class="carousel-item active text-center py-4">
                     <div class="fs-2 text-accent-brand mb-3"><i class="fa-solid fa-quote-left"></i></div>
                     <p class="fs-5 text-secondary px-md-5 italic">
-                        "Baig Solution transformed our sales onboarding. They built a custom n8n lead scoring agent that synced our calendar, CRM, and emails seamlessly. The team was fast, professional, and precise!"
+                        "Automatixes transformed our sales onboarding. They built a custom n8n lead scoring agent that synced our calendar, CRM, and emails seamlessly. The team was fast, professional, and precise!"
                     </p>
                     <h5 class="fw-bold text-dark mt-4 mb-1">M. Ibrahim</h5>
                     <p class="text-muted small">CEO, TechVantage Corp</p>
@@ -735,7 +735,7 @@
   "@type": "Review",
   "itemReviewed": {
     "@type": "LocalBusiness",
-    "name": "Baig Solution"
+    "name": "Automatixes"
   },
   "author": {
     "@type": "Person",
@@ -745,7 +745,7 @@
     "@type": "Rating",
     "ratingValue": "5"
   },
-  "reviewBody": "Baig Solution transformed our sales onboarding. They built a custom n8n lead scoring agent that synced our calendar, CRM, and emails seamlessly. The team was fast, professional, and precise!"
+  "reviewBody": "Automatixes transformed our sales onboarding. They built a custom n8n lead scoring agent that synced our calendar, CRM, and emails seamlessly. The team was fast, professional, and precise!"
 }
 </script>
 
@@ -755,7 +755,7 @@
   "@type": "Review",
   "itemReviewed": {
     "@type": "LocalBusiness",
-    "name": "Baig Solution"
+    "name": "Automatixes"
   },
   "author": {
     "@type": "Person",

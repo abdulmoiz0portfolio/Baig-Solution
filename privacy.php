@@ -6,7 +6,7 @@
         <h1 class="display-4 fw-extrabold text-dark">Privacy Policy</h1>
         <div class="title-underline"></div>
         <p class="lead text-secondary mt-4">
-            Last updated: August 2026. This Privacy Policy explains how Baig Solution collects, uses, and protects your information.
+            Last updated: August 2026. This Privacy Policy explains how Automatixes collects, uses, and protects your information.
         </p>
     </div>
 </section>

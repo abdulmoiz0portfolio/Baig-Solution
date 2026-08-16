@@ -2,14 +2,14 @@
 
 **Reviewer Agent**: `reviewer_inv_2` (`teamwork_preview_reviewer`)  
 **Date**: 2026-08-06  
-**Target**: Baig Solution Invoice Maker (`/invoice-maker.php`, `header.php`, `footer.php`, `dev-server.js`, `tests/test-invoice-maker.js`)  
+**Target**: Automatixes Invoice Maker (`/invoice-maker.php`, `header.php`, `footer.php`, `dev-server.js`, `tests/test-invoice-maker.js`)  
 **Verdict**: **APPROVE**
 
 ---
 
 ## Review Summary
 
-The implementation of the Baig Solution Free Online Invoice Maker (`/invoice-maker.php`) by `worker_inv_1` meets all requirements specified in `ORIGINAL_REQUEST.md` and `PROJECT.md`. The Vue 3 client-side application provides robust reactivity, live math calculations (Subtotal, Tax, Discount, Grand Total), dynamic line item additions/deletions with minimum 1 row protection, multi-currency support, custom service description input, and seamless styling matching the Baig Solution design system (`#1a1a1a`, `#e77f23`, `Outfit`/`Plus Jakarta Sans`, `.btn-brand`).
+The implementation of the Automatixes Free Online Invoice Maker (`/invoice-maker.php`) by `worker_inv_1` meets all requirements specified in `ORIGINAL_REQUEST.md` and `PROJECT.md`. The Vue 3 client-side application provides robust reactivity, live math calculations (Subtotal, Tax, Discount, Grand Total), dynamic line item additions/deletions with minimum 1 row protection, multi-currency support, custom service description input, and seamless styling matching the Automatixes design system (`#1a1a1a`, `#e77f23`, `Outfit`/`Plus Jakarta Sans`, `.btn-brand`).
 
 The `@media print` CSS rules effectively transform the web page into an A4 print/PDF layout by suppressing non-printable elements (header, footer, n8n chat widget, sticky buttons, hero section, action buttons) and rendering form inputs as borderless transparent text.
 
@@ -31,7 +31,7 @@ No integrity violations, dummy logic, or self-certifying work patterns were dete
 
 ## Verified Claims
 
-- **Vue 3 Mounting & Pre-filled Company Data**: Pre-fills Baig Solution details (`Baig Solution`, `New Jersey, NJ`, `bobrober2323@gmail.com`, `+92 336 6920141`, `https://baigsolution.com`) into editable input fields. → Verified via `invoice-maker.php` lines 379–387 → **PASS**
+- **Vue 3 Mounting & Pre-filled Company Data**: Pre-fills Automatixes details (`Automatixes`, `New Jersey, NJ`, `bobrober2323@gmail.com`, `+92 336 6920141`, `https://baigsolution.com`) into editable input fields. → Verified via `invoice-maker.php` lines 379–387 → **PASS**
 - **Dynamic Line Items & Min 1 Row Protection**: `addLineItem()` pushes new items, `removeLineItem()` splices rows with `lineItems.value.length > 1` guard, and template disables delete button when 1 row remains. → Verified via `invoice-maker.php` lines 171 & 467–471 → **PASS**
 - **Live Math Calculations & Multi-Currency Support**: Real-time computed properties for Subtotal, Tax, Discount, and Grand Total with fallback to `0` for empty inputs (`Number(val) || 0`). Supports `$`, `€`, `£`, `C$`, `Rs`. → Verified via `invoice-maker.php` lines 474–500 → **PASS**
 - **Custom Service Text Input**: `v-if="item.serviceSelect === 'custom'"` displays custom text field; `@input` handler updates `item.description`. → Verified via `invoice-maker.php` lines 151–159 & 447–453 → **PASS**

@@ -14,16 +14,21 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-widget">
                         <a href="index" class="footer-logo mb-3 d-inline-block text-decoration-none">
-                            <img src="assets/img/logo/wordmark_dark.jpg" alt="Baig Solution" style="height: 48px; border-radius: 8px; mix-blend-mode: lighten;">
+                            <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes" style="height: 48px; border-radius: 8px; mix-blend-mode: lighten;">
                         </a>
                         <p class="text-muted">
-                            At Baig Solution, we operate at the intersection of AI agents, sophisticated workflow automation, and custom web development. Let us help automate your growth.
+                            At Automatixes, we operate at the intersection of AI agents, sophisticated workflow automation, and custom web development. Let us help automate your growth.
                         </p>
                         <div class="social-links mt-4">
                             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                             <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="mt-3">
+                            <button id="theme-toggle" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                                <i class="fas fa-sun me-1"></i> Switch Theme
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -73,7 +78,7 @@
             
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0 text-muted">&copy; 2026 Baig Solution. All rights reserved.</p>
+                    <p class="mb-0 text-muted">&copy; 2026 Automatixes. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
                     <a href="privacy" class="text-muted text-decoration-none me-3">Privacy Policy</a>
@@ -90,7 +95,7 @@
             <button class="close-modal" id="closeModal">&times;</button>
             <div class="modal-content-side" style="padding: 40px 30px; text-align: center;">
                 <div class="modal-logo">
-                    <img src="assets/img/logo/icon_light.jpg" alt="Baig Solution Logo" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; mix-blend-mode: darken; border: 1px solid rgba(0,0,0,0.1); display: block; margin: 0 auto;">
+                    <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; mix-blend-mode: darken; border: 1px solid rgba(0,0,0,0.1); display: block; margin: 0 auto;">
                 </div>
                 <h2 style="font-size: 28px; margin-bottom: 10px; color: #1a1a1a;">Exclusive 10% Discount!</h2>
                 <p style="font-size: 15px; color: #666; margin-bottom: 25px;">Subscribe to our newsletter and save <b>10%</b> on your first project with us.</p>
@@ -214,7 +219,7 @@
                 const comment = (document.getElementById('review-comment')?.value || '').trim();
 
                 if (!name || !email || !rating || !comment) {
-                    Swal.fire({ title: 'Required Fields', text: 'Please fill in Name, Email, Rating and Review.', icon: 'warning', confirmButtonColor: '#e77f23', background: '#ffffff', color: '#1a1a1a' });
+                    Swal.fire({ title: 'Required Fields', text: 'Please fill in Name, Email, Rating and Review.', icon: 'warning', confirmButtonColor: '#3B82F6', background: '#ffffff', color: '#1a1a1a' });
                     return;
                 }
 
@@ -237,11 +242,11 @@
                         }),
                         new Promise((_, rej) => setTimeout(() => rej(new Error('Timeout')), 4000))
                     ]);
-                    Swal.fire({ title: 'Thank you!', text: 'Your review has been submitted successfully.', icon: 'success', confirmButtonColor: '#e77f23', background: '#ffffff', color: '#1a1a1a' });
+                    Swal.fire({ title: 'Thank you!', text: 'Your review has been submitted successfully.', icon: 'success', confirmButtonColor: '#3B82F6', background: '#ffffff', color: '#1a1a1a' });
                     newReviewForm.reset();
                 } catch (err) {
                     if (err.message === 'Timeout') {
-                        Swal.fire({ title: 'Thank you!', text: 'Your review has been submitted.', icon: 'success', confirmButtonColor: '#e77f23', background: '#ffffff', color: '#1a1a1a' });
+                        Swal.fire({ title: 'Thank you!', text: 'Your review has been submitted.', icon: 'success', confirmButtonColor: '#3B82F6', background: '#ffffff', color: '#1a1a1a' });
                         newReviewForm.reset();
                     } else {
                         Swal.fire({ title: 'Error', text: err.message, icon: 'error', confirmButtonColor: '#ff4a5a' });
@@ -343,7 +348,7 @@
     </script>
 
     <!-- Single Sticky Lead Capture Button -->
-    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; right: 0; transform: translate(calc(100% - 60px), -50%); background: #e77f23; color: white; border: none; padding: 12px 20px 12px 20px; border-radius: 30px 0 0 30px; font-size: 15px; cursor: pointer; box-shadow: -4px 4px 15px rgba(0,0,0,0.2); font-weight: 600; z-index: 9000; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, box-shadow 0.3s ease; display: flex; align-items: center; gap: 8px;">
+    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; right: 0; transform: translate(calc(100% - 60px), -50%); background: #3B82F6; color: white; border: none; padding: 12px 20px 12px 20px; border-radius: 30px 0 0 30px; font-size: 15px; cursor: pointer; box-shadow: -4px 4px 15px rgba(0,0,0,0.2); font-weight: 600; z-index: 9000; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, box-shadow 0.3s ease; display: flex; align-items: center; gap: 8px;">
         <i class="fa-solid fa-headset fs-5"></i> <span style="white-space: nowrap;">Connect with an Expert</span>
     </button>
 
@@ -351,12 +356,12 @@
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
         
-        // Add custom styling for the chat widget to match Baig Solution theme
+        // Add custom styling for the chat widget to match Automatixes theme
         const style = document.createElement('style');
         style.innerHTML = `
             :root {
                 --chat--color-primary: #1a1a1a;
-                --chat--color-secondary: #e77f23;
+                --chat--color-secondary: #3B82F6;
                 --chat--color-background: #ffffff;
                 --chat--color-font: #333333;
                 --chat--font-family: 'Outfit', sans-serif;
@@ -454,7 +459,7 @@
             ],
             i18n: {
                 en: {
-                    title: 'Baig Solution Support',
+                    title: 'Automatixes Support',
                     subtitle: '24/7 AI Automation Expert',
                     getStarted: 'Start Chatting',
                 }
@@ -640,6 +645,22 @@
 
 
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', function() {
+                    const isLight = document.body.classList.toggle('light-theme');
+                    if (isLight) {
+                        localStorage.setItem('automatixes_theme', 'light');
+                    } else {
+                        localStorage.setItem('automatixes_theme', 'dark');
+                    }
+                });
+            }
+        });
+    </script>
+    
     <!-- Custom Main JS -->
     <script src="assets/js/main.js?v=1.0.2"></script>
 </body>

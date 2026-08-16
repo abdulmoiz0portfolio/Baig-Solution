@@ -3,7 +3,7 @@
 ## 1. Observation
 
 ### 1.1 Project Structure & File Layout
-- **Root Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution`
+- **Root Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes`
 - **Application Type**: Multi-page website built with PHP templates (`index.php`, `header.php`, `footer.php`, `about.php`, `contact.php`, `service.php`, `ai-agents.php`, `ai-automations.php`, `product-shoot.php`, `Reviews.php`, `admin.php`, `privacy.php`, `terms.php`).
 - **Static Assets**: CSS and JS files located under `assets/css/main.css` and `assets/js/main.js`.
 - **Third-Party Libraries & CDNs**:
@@ -21,7 +21,7 @@
 - **Dependencies (`package.json`)**:
   ```json
   {
-    "name": "baig-solution",
+    "name": "automatixes",
     "version": "1.0.0",
     "main": "dev-server.js",
     "scripts": {
@@ -115,7 +115,7 @@ To verify the local server and test setup:
    ```bash
    node dev-server.js
    ```
-   Confirm console output: `Baig Solution PHP Emulator Server running at http://localhost:3000`.
+   Confirm console output: `Automatixes PHP Emulator Server running at http://localhost:3000`.
 
 2. **Browser Verification (agent-browser / Playwright)**:
    - Open `http://localhost:3000`.

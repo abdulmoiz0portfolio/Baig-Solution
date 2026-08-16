@@ -6,7 +6,7 @@ Review M1 chat toggle implementation, verify code quality, correctness, R1, R2, 
 ## 🔒 My Identity
 - Archetype: reviewer_1
 - Roles: reviewer, critic
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_1
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_1
 - Original parent: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa
 - Milestone: M1
 - Instance: 1 of 1

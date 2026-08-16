@@ -2,7 +2,7 @@
 
 **Agent**: `reviewer_inv_2` (`teamwork_preview_reviewer`)  
 **Date**: 2026-08-06  
-**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\reviewer_inv_2`
+**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\reviewer_inv_2`
 
 ---
 
@@ -35,7 +35,7 @@ Key observations:
 1. **Reactivity & Calculation Integrity**:
    - The Vue 3 application logic correctly handles zero, float, multi-currency, and empty string inputs, ensuring all calculations remain accurate and responsive without throwing runtime errors or producing malformed UI values.
 2. **Layout & Print Presentation**:
-   - The design system rules strictly adhere to Baig Solution brand guidelines. The `@media print` rules isolate the invoice body card into an A4 document while eliminating all interactive controls and navigation Chrome.
+   - The design system rules strictly adhere to Automatixes brand guidelines. The `@media print` rules isolate the invoice body card into an A4 document while eliminating all interactive controls and navigation Chrome.
 3. **Adversarial & Integrity Verification**:
    - Code inspection confirmed no hardcoded test values or dummy functions. All logic relies on genuine Vue 3 state mutations and real Playwright browser assertions.
 

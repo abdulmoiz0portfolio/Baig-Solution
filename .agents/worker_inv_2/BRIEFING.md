@@ -6,7 +6,7 @@ Fix dev-server PHP meta title handling, invoice-maker.php custom service print s
 ## 🔒 My Identity
 - Archetype: teamwork_preview_worker
 - Roles: implementer, qa, specialist
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\worker_inv_2
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\worker_inv_2
 - Original parent: 8e048f14-819f-4dd4-8940-b211380beeba
 - Milestone: Fixes for Invoice Maker dev-server title, print styling, and E2E test verification
 

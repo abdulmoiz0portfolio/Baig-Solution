@@ -1,12 +1,12 @@
 # BRIEFING — 2026-08-06T06:44:00+05:00
 
 ## Mission
-Conduct a full 3-phase Victory Audit for the Baig Solution n8n chat toggle fix project.
+Conduct a full 3-phase Victory Audit for the Automatixes n8n chat toggle fix project.
 
 ## 🔒 My Identity
 - Archetype: victory_auditor
 - Roles: critic, specialist, auditor, victory_verifier
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\victory_auditor_1
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\victory_auditor_1
 - Original parent: 0476f127-8f86-4cb7-abab-46d28ddf5119
 - Target: full project (n8n chat toggle fix)
 
@@ -20,7 +20,7 @@ Conduct a full 3-phase Victory Audit for the Baig Solution n8n chat toggle fix p
 - Updated: 2026-08-06T06:44:00+05:00
 
 ## Audit Scope
-- **Work product**: Baig Solution website n8n chat toggle implementation and test suite
+- **Work product**: Automatixes website n8n chat toggle implementation and test suite
 - **Profile loaded**: General Project
 - **Audit type**: Victory Audit (Phase A Timeline & Provenance, Phase B Integrity Check, Phase C Independent Test Execution)
 
@@ -38,6 +38,6 @@ Conduct a full 3-phase Victory Audit for the Baig Solution n8n chat toggle fix p
 - Confirmed victory based on independent empirical execution and forensic inspection.
 
 ## Artifact Index
-- C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\victory_auditor_1\DISPATCH.md — Dispatch log
-- C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\victory_auditor_1\BRIEFING.md — Persistent briefing index
-- C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\victory_auditor_1\handoff.md — Handoff report
+- C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\victory_auditor_1\DISPATCH.md — Dispatch log
+- C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\victory_auditor_1\BRIEFING.md — Persistent briefing index
+- C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\victory_auditor_1\handoff.md — Handoff report

@@ -7,81 +7,81 @@ if (!isset($page_key)) {
 
 $meta_config = [
     'index' => [
-        'title' => 'AI Automation Agency (n8n, Make, GoHighLevel) | Baig Solution',
-        'desc' => 'Baig Solution is an AI-first agency building custom AI agents and workflow automations to connect your CRM, WhatsApp, and emails. Scale operations 24/7.',
+        'title' => 'AI Automation Agency (n8n, Make, GoHighLevel) | Automatixes',
+        'desc' => 'Automatixes is an AI-first agency building custom AI agents and workflow automations to connect your CRM, WhatsApp, and emails. Scale operations 24/7.',
         'keywords' => 'AI Automation Agency, n8n, Make, GoHighLevel, Zapier, AI Agents, software development, CRM integration',
         'url' => ''
     ],
     'about' => [
-        'title' => 'Our Mission & Automation Experts | Baig Solution',
-        'desc' => 'Meet Baig Solution. We design custom AI agent systems, API integrations, and e-commerce growth strategies to help small & mid-sized businesses automate operations.',
-        'keywords' => 'About Baig Solution, AI Engineers, CRM automation experts, n8n consultants',
+        'title' => 'Our Mission & Automation Experts | Automatixes',
+        'desc' => 'Meet Automatixes. We design custom AI agent systems, API integrations, and e-commerce growth strategies to help small & mid-sized businesses automate operations.',
+        'keywords' => 'About Automatixes, AI Engineers, CRM automation experts, n8n consultants',
         'url' => 'about'
     ],
     'website-development' => [
-        'title' => 'Bespoke Web & App Development Services | Baig Solution',
+        'title' => 'Bespoke Web & App Development Services | Automatixes',
         'desc' => 'High-performance, secure, responsive web applications and custom single-page apps optimized for speed and automated lead conversion. Start today.',
         'keywords' => 'Bespoke Web Development, Next.js, Firebase, Single Page Apps, SEO Optimization',
         'url' => 'website-development'
     ],
     'ai-agents' => [
-        'title' => 'Custom Autonomous AI Support Agents | Baig Solution',
+        'title' => 'Custom Autonomous AI Support Agents | Automatixes',
         'desc' => 'Deploy natural language AI support agents trained on your custom knowledge base. Qualify leads and answer customer service queries 24/7 with zero hallucination.',
         'keywords' => 'Autonomous AI Agents, AI chatbot, custom RAG, customer service automation, document indexing',
         'url' => 'ai-agents'
     ],
     'ai-automations' => [
-        'title' => 'Workflow & CRM Automation (n8n, Make) | Baig Solution',
+        'title' => 'Workflow & CRM Automation (n8n, Make) | Automatixes',
         'desc' => 'Eliminate manual admin tasks. We build end-to-end automations connecting HubSpot, Slack, WhatsApp, and email platforms to streamline lead management.',
         'keywords' => 'AI Automations, n8n agency, Make.com integration, HubSpot workflow, Zapier triggers',
         'url' => 'ai-automations'
     ],
     'product-shoot' => [
-        'title' => 'Commercial Product Photography & Studio Shoots | Baig Solution',
+        'title' => 'Commercial Product Photography & Studio Shoots | Automatixes',
         'desc' => 'High-end e-commerce product shoots featuring studio lighting and expert prop styling that increases brand conversion rates. Browse our portfolio.',
         'keywords' => 'Product Shoot Photography, e-commerce photography, luxury product studio, backlighting styling',
         'url' => 'product-shoot'
     ],
     'contact' => [
-        'title' => 'Book a Free AI Operations Audit & Consultation | Baig Solution',
-        'desc' => 'Ready to automate your operations? Contact Baig Solution to schedule a free automation audit. We connect your calendar, CRM, and communication tools.',
-        'keywords' => 'Contact Baig Solution, AI operations audit, book consultation, digital agency',
+        'title' => 'Book a Free AI Operations Audit & Consultation | Automatixes',
+        'desc' => 'Ready to automate your operations? Contact Automatixes to schedule a free automation audit. We connect your calendar, CRM, and communication tools.',
+        'keywords' => 'Contact Automatixes, AI operations audit, book consultation, digital agency',
         'url' => 'contact'
     ],
     'admin' => [
-        'title' => 'CRM Lead Logs Control Panel | Baig Solution',
-        'desc' => 'Internal dashboard for Baig Solution administrators to track real-time contact leads, newsletter subscribers, and automated cost quote submissions.',
+        'title' => 'CRM Lead Logs Control Panel | Automatixes',
+        'desc' => 'Internal dashboard for Automatixes administrators to track real-time contact leads, newsletter subscribers, and automated cost quote submissions.',
         'keywords' => 'Admin dashboard, lead tracking, CRM logs',
         'url' => 'admin'
     ],
     'invoice-maker' => [
-        'title' => 'Free Online Invoice Maker | Baig Solution',
-        'desc' => 'Generate professional, customizable invoices instantly with live math calculations, dynamic line items, and print/PDF export from Baig Solution.',
-        'keywords' => 'Free Invoice Maker, online invoice generator, Baig Solution invoice tool, automated invoice PDF, billing software',
+        'title' => 'Free Online Invoice Maker | Automatixes',
+        'desc' => 'Generate professional, customizable invoices instantly with live math calculations, dynamic line items, and print/PDF export from Automatixes.',
+        'keywords' => 'Free Invoice Maker, online invoice generator, Automatixes invoice tool, automated invoice PDF, billing software',
         'url' => 'invoice-maker'
     ],
     'voice-agent' => [
-        'title' => 'Talk to our AI Voice Agent | Baig Solution',
+        'title' => 'Talk to our AI Voice Agent | Automatixes',
         'desc' => 'Experience the future of customer support. Click to start a live voice conversation with our autonomous AI agent.',
         'keywords' => 'AI Voice Agent, Vapi AI, Retell AI, conversational AI, voicebot demo',
         'url' => 'voice-agent'
     ],
     'blogs' => [
-        'title' => 'Insights & Updates | Baig Solution',
+        'title' => 'Insights & Updates | Automatixes',
         'desc' => 'Read our latest insights on AI automation, web development, and digital marketing strategies for growing your business.',
-        'keywords' => 'Baig Solution blog, AI automation insights, web development tips, business growth',
+        'keywords' => 'Automatixes blog, AI automation insights, web development tips, business growth',
         'url' => 'blogs'
     ],
     'blog-detail' => [
-        'title' => 'Blog Detail | Baig Solution',
+        'title' => 'Blog Detail | Automatixes',
         'desc' => 'Read the full article and gain insights into AI automation, digital operations, and bespoke software development.',
-        'keywords' => 'Baig Solution blog, article',
+        'keywords' => 'Automatixes blog, article',
         'url' => 'blog-detail'
     ]
 ];
 
 $active_meta = isset($meta_config[$page_key]) ? $meta_config[$page_key] : $meta_config['index'];
-$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'baig-solution.vercel.app';
+$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'automatixes.com';
 $forwarded_proto = isset($_SERVER['HTTP_X_FORWARDED_PROTO']) ? strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) : '';
 $protocol = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') || $forwarded_proto === 'https') ? "https" : "http";
 $canonical_url = "{$protocol}://{$host}/" . $active_meta['url'];
@@ -94,13 +94,13 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $active_meta['title']; ?></title>
-    <link rel="icon" type="image/jpeg" href="assets/img/logo/icon_light.jpg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="canonical" href="<?php echo $canonical_url; ?>">
     
     <!-- Meta SEO Tags -->
     <meta name="description" content="<?php echo $active_meta['desc']; ?>">
     <meta name="keywords" content="<?php echo $active_meta['keywords']; ?>">
-    <meta name="author" content="Baig Solution">
+    <meta name="author" content="Automatixes">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -130,7 +130,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Baig Solution",
+      "name": "Automatixes",
       "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
       "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7."
     }
@@ -141,7 +141,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "name": "Baig Solution",
+      "name": "Automatixes",
       "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
       "logo": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
       "image": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
@@ -165,10 +165,10 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
       "@context": "https://schema.org",
       "@type": "Service",
       "name": "<?php echo $active_meta['title']; ?>",
-      "serviceType": "<?php echo str_replace(' | Baig Solution', '', $active_meta['title']); ?>",
+      "serviceType": "<?php echo str_replace(' | Automatixes', '', $active_meta['title']); ?>",
       "provider": {
         "@type": "Organization",
-        "name": "Baig Solution",
+        "name": "Automatixes",
         "url": "<?php echo $protocol; ?>://<?php echo $host; ?>"
       },
       "description": "<?php echo $active_meta['desc']; ?>",
@@ -194,7 +194,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
       },{
         "@type": "ListItem",
         "position": 2,
-        "name": "<?php echo str_replace(' | Baig Solution', '', $active_meta['title']); ?>",
+        "name": "<?php echo str_replace(' | Automatixes', '', $active_meta['title']); ?>",
         "item": "<?php echo $canonical_url; ?>"
       }]
     }
@@ -207,10 +207,10 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <!-- FontAwesome CDN for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
-    <!-- Google Fonts: Plus Jakarta Sans / Outfit -->
+    <!-- Google Fonts: Space Grotesk / Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     
     <!-- n8n Chat Widget CSS -->
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
@@ -219,6 +219,13 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <link rel="stylesheet" href="assets/css/main.css?v=1.0.2">
 </head>
 <body>
+    <!-- Theme Initializer to prevent flash -->
+    <script>
+        if (localStorage.getItem('automatixes_theme') === 'light') {
+            document.body.classList.add('light-theme');
+        }
+    </script>
+    
     <!-- Custom Mouse Cursor Follower -->
     <div class="mouse-cursor cursor-outer"></div>
     <div class="mouse-cursor cursor-inner"></div>
@@ -250,8 +257,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light py-0">
                 <a class="navbar-brand d-flex align-items-center" href="index">
-                    <img src="assets/img/logo/icon_light.jpg" alt="Baig Solution Logo" style="width: 32px; height: 32px; object-fit: cover; border-radius: 8px; mix-blend-mode: darken; margin-right: 8px; border: 1px solid rgba(0,0,0,0.1);">
-                    <span class="logo-text">BAIG <span class="text-accent-brand">SOLUTION</span></span>
+                    <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 140px; height: auto; object-fit: contain;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

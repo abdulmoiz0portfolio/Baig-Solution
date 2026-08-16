@@ -1,12 +1,12 @@
 # BRIEFING — 2026-08-06T20:13:00Z
 
 ## Mission
-Forensic integrity audit of Iteration 2 work products for the Baig Solution Invoice Maker project.
+Forensic integrity audit of Iteration 2 work products for the Automatixes Invoice Maker project.
 
 ## 🔒 My Identity
 - Archetype: forensic_auditor
 - Roles: critic, specialist, auditor
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\auditor_inv_2
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\auditor_inv_2
 - Original parent: 8e048f14-819f-4dd4-8940-b211380beeba
 - Target: Iteration 2 work products (dev-server.js, invoice-maker.php, tests/test-invoice-maker.js)
 

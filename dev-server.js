@@ -75,8 +75,8 @@ function getProcessedHtml(filePath) {
     const headerPath = path.join(__dirname, 'header.php');
     const metaConfig = parseMetaConfig(headerPath);
     const activeMeta = metaConfig[pageKey] || metaConfig['index'] || {
-        title: 'AI Automation Agency (n8n, Make, GoHighLevel) | Baig Solution',
-        desc: 'Baig Solution is an AI-first agency building custom AI agents and workflow automations.',
+        title: 'AI Automation Agency (n8n, Make, GoHighLevel) | Automatixes',
+        desc: 'Automatixes is an AI-first agency building custom AI agents and workflow automations.',
         keywords: 'AI Automation Agency, n8n, Make',
         url: ''
     };
@@ -131,6 +131,6 @@ module.exports = { processPhpIncludes, parseMetaConfig, getProcessedHtml };
 // Start Server if run directly
 if (require.main === module) {
     app.listen(PORT, () => {
-        console.log(`Baig Solution PHP Emulator Server running at http://localhost:${PORT}`);
+        console.log(`Automatixes PHP Emulator Server running at http://localhost:${PORT}`);
     });
 }

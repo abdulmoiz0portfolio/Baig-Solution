@@ -1,5 +1,5 @@
 /**
- * Baig Solution Core Script (Aligned with SoftNest Technologies)
+ * Automatixes Core Script (Aligned with SoftNest Technologies)
  * Frontend Interactions, Three.js Waves, Matter.js Physics Engine, and Firebase Integrations.
  */
 
@@ -430,7 +430,7 @@ function initNewsletterPopup() {
                     title: 'Success!',
                     text: 'You have successfully subscribed. Your 10% discount is active!',
                     icon: 'success',
-                    confirmButtonColor: '#e77f23',
+                    confirmButtonColor: '#3B82F6',
                     background: '#ffffff',
                     color: '#1a1a1a'
                 });
@@ -486,7 +486,7 @@ function bindFormSubmit(form, nameId, emailId, serviceId, messageId) {
                 title: 'Required Fields',
                 text: 'Please fill in all details.',
                 icon: 'warning',
-                confirmButtonColor: '#e77f23',
+                confirmButtonColor: '#3B82F6',
                 background: '#ffffff',
                 color: '#1a1a1a'
             });
@@ -565,7 +565,7 @@ function bindFormSubmit(form, nameId, emailId, serviceId, messageId) {
                 title: 'Message Sent!',
                 text: 'Your details have been written to the database. We will speak soon.',
                 icon: 'success',
-                confirmButtonColor: '#e77f23',
+                confirmButtonColor: '#3B82F6',
                 background: '#ffffff',
                 color: '#1a1a1a'
             });
@@ -825,7 +825,7 @@ function initCostCalculator() {
                     title: 'Success!',
                     text: 'Your project calculation query has been submitted successfully.',
                     icon: 'success',
-                    confirmButtonColor: '#e77f23'
+                    confirmButtonColor: '#3B82F6'
                 });
                 
                 leadForm.reset();

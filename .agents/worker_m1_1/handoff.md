@@ -10,9 +10,9 @@
   - In `assets/js/main.js:57`, a scroll listener threw `TypeError: Cannot read properties of null (reading 'style')` on pages where `#header-sticky` did not exist.
 
 - **Files Modified**:
-  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\footer.php` (Lines 437-526)
-  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\assets\js\main.js` (Line 56)
-  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\tests\test-chat-toggle.js` (Created automated test script)
+  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\footer.php` (Lines 437-526)
+  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\assets\js\main.js` (Line 56)
+  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\tests\test-chat-toggle.js` (Created automated test script)
 
 ## 2. Logic Chain
 1. **Fixing Chat Open (R1) & Close (R2) in `footer.php`**:

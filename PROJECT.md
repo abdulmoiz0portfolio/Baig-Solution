@@ -1,4 +1,4 @@
-# Project: Baig Solution Invoice Maker
+# Project: Automatixes Invoice Maker
 
 ## Architecture
 - `/invoice-maker.php`: Main Invoice Maker web page built with Vue 3 (via CDN), Bootstrap 5 styling, dynamic reactivity, and `@media print` CSS.
@@ -12,7 +12,7 @@
 | # | Feature | Description | Milestone | Source |
 |---|---------|-------------|-----------|--------|
 | 1 | Vue 3 App & Layout | Page `/invoice-maker.php` with Vue 3 CDN, mounting point `#app`, and Bootstrap 5 responsive layout | M1 | ORIGINAL_REQUEST R1, R2 |
-| 2 | Company & Client Sections | Pre-filled Baig Solution company details (editable) and editable client info fields | M1 | ORIGINAL_REQUEST R2 |
+| 2 | Company & Client Sections | Pre-filled Automatixes company details (editable) and editable client info fields | M1 | ORIGINAL_REQUEST R2 |
 | 3 | Dynamic Line Items | Line items table allowing add/remove rows, quantity, unit price, and core service dropdown + custom entry | M1 | ORIGINAL_REQUEST R3 |
 | 4 | Live Math Calculations | Live calculated Subtotal, Tax %, Discount, and Grand Total with currency selector | M1 | ORIGINAL_REQUEST R3 |
 | 5 | Print / PDF Export | "Print / Download PDF" button and `@media print` stylesheet for A4-ready PDF print output | M1 | ORIGINAL_REQUEST R4 |
@@ -30,7 +30,7 @@
 
 ## Interface Contracts
 ### `/invoice-maker.php` Vue Data Model & Methods
-- `company`: `{ name: 'Baig Solution', address: 'New Jersey, NJ, United States', phone: '+92 336 6920141', email: 'bobrober2323@gmail.com', website: 'https://baigsolution.com' }`
+- `company`: `{ name: 'Automatixes', address: 'New Jersey, NJ, United States', phone: '+92 336 6920141', email: 'bobrober2323@gmail.com', website: 'https://baigsolution.com' }`
 - `client`: `{ name: '', company: '', address: '', email: '', phone: '' }`
 - `invoiceMeta`: `{ number: 'INV-1001', date: YYYY-MM-DD, dueDate: YYYY-MM-DD, currency: '$' }`
 - `lineItems`: `[{ description: 'Autonomous AI Agents', quantity: 1, price: 500.00 }]`
@@ -42,7 +42,7 @@
 ### Header & Footer Links
 - Header dropdown item: `<a class="dropdown-item" href="invoice-maker">Free Invoice Maker</a>`
 - Footer services item: `<li><a href="invoice-maker">Free Invoice Maker</a></li>`
-- `$meta_config['invoice-maker']`: `{ title: 'Free Online Invoice Maker | Baig Solution', description: '...', keywords: '...' }`
+- `$meta_config['invoice-maker']`: `{ title: 'Free Online Invoice Maker | Automatixes', description: '...', keywords: '...' }`
 
 ## Code Layout
 - `/invoice-maker.php`: New PHP/HTML/Vue file.

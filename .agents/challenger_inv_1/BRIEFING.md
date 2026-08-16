@@ -6,7 +6,7 @@ Adversarial stress-test and empirical verification of Invoice Maker calculation 
 ## 🔒 My Identity
 - Archetype: empirical challenger
 - Roles: critic, specialist
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\challenger_inv_1
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\challenger_inv_1
 - Original parent: 8e048f14-819f-4dd4-8940-b211380beeba
 - Milestone: M1, M2, M3 Stress Test & Verification
 - Instance: 1 of 1
@@ -30,9 +30,9 @@ Adversarial stress-test and empirical verification of Invoice Maker calculation 
 - Verdict: **APPROVE**.
 
 ## Artifact Index
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\challenger_inv_1\challenge.md` — Challenge report with stress test results and verdict.
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\challenger_inv_1\handoff.md` — Handoff report following 5-component structure.
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\challenger_inv_1\stress_test.js` — Stress test suite script.
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\challenger_inv_1\challenge.md` — Challenge report with stress test results and verdict.
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\challenger_inv_1\handoff.md` — Handoff report following 5-component structure.
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\challenger_inv_1\stress_test.js` — Stress test suite script.
 
 ## Attack Surface
 - **Hypotheses tested**: Floating point rounding issues in tax/discount calculations, row deletion minimum limit bypass, currency symbol updates in all totals, print CSS rule completeness.

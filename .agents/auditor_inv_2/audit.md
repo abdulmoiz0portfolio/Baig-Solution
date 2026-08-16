@@ -1,6 +1,6 @@
 # Forensic Audit Report — Iteration 2
 
-**Work Product**: Baig Solution Invoice Maker & Local Dev Infrastructure (`dev-server.js`, `invoice-maker.php`, `tests/test-invoice-maker.js`)  
+**Work Product**: Automatixes Invoice Maker & Local Dev Infrastructure (`dev-server.js`, `invoice-maker.php`, `tests/test-invoice-maker.js`)  
 **Auditor Agent**: `auditor_inv_2`  
 **Profile**: General Project  
 **Integrity Mode**: `development`  
@@ -27,7 +27,7 @@ Zero evidence of hardcoded test results, facade implementations, pre-populated r
 - **Pre-populated Artifact Detection**: **PASS** — No pre-existing log files, mock outputs, or fabricated test result artifacts exist in the repository.
 
 ### Phase 2: Behavioral & Logic Verification
-- **PHP Meta Title Resolution (`dev-server.js`)**: **PASS** — `parseMetaConfig()` dynamically extracts `$meta_config` array from `header.php`. `getProcessedHtml()` parses `$page_key` from target PHP files (resolving `'invoice-maker'` for `invoice-maker.php`) and substitutes `<?php echo $active_meta['title']; ?>` with `'Free Online Invoice Maker | Baig Solution'`.
+- **PHP Meta Title Resolution (`dev-server.js`)**: **PASS** — `parseMetaConfig()` dynamically extracts `$meta_config` array from `header.php`. `getProcessedHtml()` parses `$page_key` from target PHP files (resolving `'invoice-maker'` for `invoice-maker.php`) and substitutes `<?php echo $active_meta['title']; ?>` with `'Free Online Invoice Maker | Automatixes'`.
 - **Print CSS & Custom Service Dropdown (`invoice-maker.php`)**: **PASS** — `:class="{ 'no-print': item.serviceSelect === 'custom' }"` dynamically applies `.no-print` (`display: none !important`) to `<select>` when custom service is selected, preventing overlapping dropdown text in print view.
 - **E2E Test Suite Integrity (`tests/test-invoice-maker.js`)**: **PASS** — Pre-seeding `localStorage.setItem('newsletterSeen_baig', 'true')` via `context.addInitScript()` prevents `#newsletterModal` pointer interception. Playwright test suite performs actual DOM interactions (clicks, fills, selections) and verifies live computed mathematical results ($3,000 subtotal, $300 tax, $150 discount = $3,150 grand total) and print media CSS styles.
 

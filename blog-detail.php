@@ -28,7 +28,7 @@ $raw_body = isset($parts[2]) ? $parts[2] : $content;
 $title = preg_match('/title:\s*"([^"]+)"/', $frontmatter, $matches) ? $matches[1] : 'Untitled';
 $category = preg_match('/category:\s*"([^"]+)"/', $frontmatter, $matches) ? ucfirst(trim($matches[1])) : 'General';
 $date = preg_match('/date:\s*"([^"]+)"/', $frontmatter, $matches) ? $matches[1] : date('Y-m-d');
-$author = preg_match('/author:\s*"([^"]+)"/', $frontmatter, $matches) ? $matches[1] : 'Baig Solution';
+$author = preg_match('/author:\s*"([^"]+)"/', $frontmatter, $matches) ? $matches[1] : 'Automatixes';
 $image = preg_match('/image:\s*"([^"]+)"/', $frontmatter, $matches) ? $matches[1] : 'assets/img/services/ai_agents.jpg';
 
 if (strpos($image, '/') === 0) {
@@ -46,9 +46,9 @@ if (preg_match('/<body[^>]*>(.*?)<\/body>/is', $raw_body, $body_match)) {
 // Dynamically override header metadata for this specific blog
 $meta_config = [
     'blog-detail' => [
-        'title' => $title . ' | Baig Solution',
+        'title' => $title . ' | Automatixes',
         'desc' => substr(strip_tags($html_body), 0, 150) . '...',
-        'keywords' => $category . ', Baig Solution Blog, Automation',
+        'keywords' => $category . ', Automatixes Blog, Automation',
         'url' => 'blog-detail?id=' . $id
     ]
 ];

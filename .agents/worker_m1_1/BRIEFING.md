@@ -6,7 +6,7 @@ Fix the n8n chat toggle logic in `footer.php` so that `#sticky-expert-btn` opens
 ## 🔒 My Identity
 - Archetype: worker_m1_1
 - Roles: implementer, qa, specialist
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\worker_m1_1
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\worker_m1_1
 - Original parent: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa
 - Milestone: M1 & M2
 

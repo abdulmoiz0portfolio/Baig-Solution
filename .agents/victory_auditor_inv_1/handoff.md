@@ -1,9 +1,9 @@
 # Handoff Report — Victory Auditor
 
-**Project**: Baig Solution Invoice Maker (`/invoice-maker.php`)  
+**Project**: Automatixes Invoice Maker (`/invoice-maker.php`)  
 **Role**: Victory Auditor (`victory_auditor_inv_1`)  
 **Date**: 2026-08-06  
-**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\victory_auditor_inv_1`  
+**Working Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\victory_auditor_inv_1`  
 
 ---
 
@@ -12,14 +12,14 @@
 - **`ORIGINAL_REQUEST.md` Requirements**: R1 (Bootstrap 5, typography, color palette, header/footer links, SEO tags), R2 (Vue 3 CDN, editable pre-filled company & client details, invoice meta), R3 (dynamic line items table, 6 core services + custom entry, live Vue math calculations for Subtotal, Tax, Discount, Grand Total), R4 (Print/PDF export button & `@media print` stylesheet).
 - **`invoice-maker.php`**:
   - Contains Vue 3 CDN (`https://unpkg.com/vue@3/dist/vue.global.js`).
-  - Pre-filled Baig Solution Company Details: Name `Baig Solution`, Tagline `Empowering Businesses with AI & Automation`, Address `New Jersey, NJ, United States`, Phone `+92 336 6920141`, Email `bobrober2323@gmail.com`, Website `https://baigsolution.com`.
+  - Pre-filled Automatixes Company Details: Name `Automatixes`, Tagline `Empowering Businesses with AI & Automation`, Address `New Jersey, NJ, United States`, Phone `+92 336 6920141`, Email `bobrober2323@gmail.com`, Website `https://baigsolution.com`.
   - Client Details inputs bound to reactive `client` ref (`name`, `company`, `address`, `email`, `phone`).
   - Invoice Meta bound to reactive `invoiceMeta` ref (`number`, `date`, `dueDate`, `currency`).
   - Line items table with 6 default services (`Autonomous AI Agents`, `AI Automations (n8n/Make)`, `Web & App Development`, `UI/UX Design`, `Commercial Product Shoot`, `Support & Maintenance`) + `custom` option.
   - Vue 3 computed properties for live math: `subtotal`, `taxAmount`, `discountAmount`, `grandTotal`.
   - `@media print` CSS rules hiding `header`, `#header-sticky`, `footer`, `.footer-area`, `#sticky-expert-btn`, `.no-print`, `.btn`, `.subpage-hero`, `.n8n-chat`, `.chat-layout` and turning inputs into borderless text.
 - **`header.php`**:
-  - `$meta_config['invoice-maker']` defined with title `'Free Online Invoice Maker | Baig Solution'`, description, keywords, and URL `'invoice-maker'`.
+  - `$meta_config['invoice-maker']` defined with title `'Free Online Invoice Maker | Automatixes'`, description, keywords, and URL `'invoice-maker'`.
   - Header dropdown item: `<a class="dropdown-item py-2 fw-semibold text-secondary" href="invoice-maker">Free Invoice Maker</a>`.
 - **`footer.php`**:
   - Footer services item: `<li><a href="invoice-maker">Free Invoice Maker</a></li>`.
@@ -52,7 +52,7 @@
 
 ## 4. Conclusion
 
-All requirements R1-R4 and acceptance criteria specified in `ORIGINAL_REQUEST.md` for the Baig Solution Invoice Maker feature (`/invoice-maker.php`) have been completely and authentically satisfied.
+All requirements R1-R4 and acceptance criteria specified in `ORIGINAL_REQUEST.md` for the Automatixes Invoice Maker feature (`/invoice-maker.php`) have been completely and authentically satisfied.
 
 **VERDICT**: **VICTORY CONFIRMED**
 

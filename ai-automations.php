@@ -133,7 +133,7 @@
                         <span class="frame-badge" style="font-size:10px; padding:3px 10px;">n8n</span>
                     </div>
                     <div class="showcase-frame-body">
-                        <img src="assets/media/n8n/n8n-workflow.webp" alt="n8n Automation Workflow Architecture by Baig Solution" class="showcase-image" style="max-height: 250px; object-fit: contain; padding: 15px;" loading="lazy">
+                        <img src="assets/media/n8n/n8n-workflow.webp" alt="n8n Automation Workflow Architecture by Automatixes" class="showcase-image" style="max-height: 250px; object-fit: contain; padding: 15px;" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -308,7 +308,7 @@
     <div class="container text-center max-w-700">
         <h2 class="display-6 fw-extrabold text-dark mb-3">Ready to Automate Your Business?</h2>
         <p class="text-secondary fs-5 mb-4">
-            Get in touch with Baig Solution today. Our specialists will design a custom automation plan tailored to your tools and goals.
+            Get in touch with Automatixes today. Our specialists will design a custom automation plan tailored to your tools and goals.
         </p>
         <a href="contact" class="btn btn-brand btn-lg">
             <span>Book Free Consultation</span>

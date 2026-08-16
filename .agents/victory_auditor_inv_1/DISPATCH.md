@@ -1,8 +1,8 @@
 ## 2026-08-06T15:14:29Z
-You are the Victory Auditor for the Baig Solution Invoice Maker project.
-Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution
-Agent metadata directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\victory_auditor_inv_1
-Original request file: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\ORIGINAL_REQUEST.md
+You are the Victory Auditor for the Automatixes Invoice Maker project.
+Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes
+Agent metadata directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\victory_auditor_inv_1
+Original request file: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\ORIGINAL_REQUEST.md
 
 The Project Orchestrator has claimed victory for the Invoice Maker feature (/invoice-maker.php). Your task is to perform an independent 3-phase audit to verify if all requirements in ORIGINAL_REQUEST.md are completely satisfied:
 

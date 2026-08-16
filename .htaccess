@@ -1,4 +1,4 @@
-# Baig Solution Apache Security Configurations
+# Automatixes Apache Security Configurations
 
 # Disable Directory Browsing
 Options -Indexes

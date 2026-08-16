@@ -1,4 +1,4 @@
-# Handoff Report — Codebase Survey for Baig Solution Invoice Maker
+# Handoff Report — Codebase Survey for Automatixes Invoice Maker
 
 ## 1. Observation
 
@@ -41,7 +41,7 @@
 
 4. **Company & Schema Information**:
    - `header.php:97-158`: Organization and LocalBusiness JSON-LD schema details:
-     - Name: `Baig Solution`
+     - Name: `Automatixes`
      - Email: `bobrober2323@gmail.com`
      - Phone: `+92-336-6920141`
      - Location: `New Jersey, NJ, US`
@@ -64,7 +64,7 @@
 4. **Observation 4 (`assets/css/main.css:2-15, 268-290, 672-682, 833-852`)** defines the exact colors (`#1a1a1a`, `#e77f23`, `#ffffff`), typography (`Plus Jakarta Sans`), button styles (`.btn-brand`), form controls (`.form-control`, `.form-select`), and hero layout (`.subpage-hero`).
    - **Step 4 Logic**: Using these exact classes and CSS variables in `invoice-maker.php` ensures complete design system consistency.
 
-5. **Observation 5 (`header.php:97-158` & `footer.php:48-59`)** provides verified company details for Baig Solution.
+5. **Observation 5 (`header.php:97-158` & `footer.php:48-59`)** provides verified company details for Automatixes.
    - **Step 5 Logic**: Pre-filling the company section of the Invoice Maker with these exact details meets Requirement R2 while remaining user-editable in Vue state.
 
 6. **Step 6 Logic for `@media print`**: To satisfy Requirement R4 (clean A4 PDF generation), `@media print` rules must hide `#header-sticky`, `footer.footer-area`, `#sticky-expert-btn`, `.newsletter-modal`, `#preloader`, and input borders/buttons, displaying only a clean invoice document.
@@ -81,11 +81,11 @@
 
 ## 4. Conclusion
 
-The codebase analysis for Baig Solution is complete. We have identified all required integration points:
+The codebase analysis for Automatixes is complete. We have identified all required integration points:
 1. `header.php`: Update `$meta_config` with `'invoice-maker'` metadata and add "Free Invoice Maker" to the "Services" dropdown.
 2. `footer.php`: Add "Free Invoice Maker" link to the "Our Services" list.
 3. `invoice-maker.php`: Create the page incorporating `.subpage-hero`, Vue 3 CDN, pre-filled company details, dynamic line items (with 6 core service options), live subtotal/tax/discount/grand total calculations, and `@media print` styles for clean A4 printing.
-4. Detailed implementation specs are written in `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\explorer_survey_inv_1\analysis.md`.
+4. Detailed implementation specs are written in `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_inv_1\analysis.md`.
 
 ---
 
@@ -97,6 +97,6 @@ To independently verify these findings:
    - View `footer.php` lines 37-44 (Our Services menu).
    - View `assets/css/main.css` lines 2-15 (`:root` variables) and lines 268-290 (`.btn-brand`).
 2. **Analysis Report Verification**:
-   - Inspect `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\explorer_survey_inv_1\analysis.md` for exact code proposals.
+   - Inspect `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_inv_1\analysis.md` for exact code proposals.
 3. **Invalidation Conditions**:
    - If `$meta_config` does not support new keys without editing `header.php`, or if `header.php` already contained Vue 3 (it does not).

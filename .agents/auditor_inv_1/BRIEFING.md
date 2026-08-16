@@ -1,14 +1,14 @@
 # BRIEFING — 2026-08-06T19:51:48+05:00
 
 ## Mission
-Perform independent forensic integrity audit on Baig Solution Invoice Maker work products and determine verdict (CLEAN or INTEGRITY VIOLATION).
+Perform independent forensic integrity audit on Automatixes Invoice Maker work products and determine verdict (CLEAN or INTEGRITY VIOLATION).
 
 ## 🔒 My Identity
 - Archetype: forensic_auditor
 - Roles: critic, specialist, auditor
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\auditor_inv_1
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\auditor_inv_1
 - Original parent: 8e048f14-819f-4dd4-8940-b211380beeba
-- Target: Baig Solution Invoice Maker (Milestones M1, M2, M3)
+- Target: Automatixes Invoice Maker (Milestones M1, M2, M3)
 
 ## 🔒 Key Constraints
 - Audit-only — do NOT modify implementation code
@@ -35,5 +35,5 @@ Perform independent forensic integrity audit on Baig Solution Invoice Maker work
 - Confirmed implementation authenticity. Generated audit.md and handoff.md with CLEAN verdict.
 
 ## Artifact Index
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\auditor_inv_1\audit.md` — Forensic Audit Report
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\auditor_inv_1\handoff.md` — 5-Component Handoff Report
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\auditor_inv_1\audit.md` — Forensic Audit Report
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\auditor_inv_1\handoff.md` — 5-Component Handoff Report

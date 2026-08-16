@@ -6,13 +6,13 @@ Orchestrate and lead the team to implement the Invoice Maker feature (`/invoice-
 ## 🔒 My Identity
 - Archetype: self (Project Orchestrator)
 - Roles: orchestrator, user_liaison, human_reporter, successor
-- Working directory: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\orchestrator`
+- Working directory: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\orchestrator`
 - Original parent: parent
 - Original parent conversation ID: 35903339-098d-4826-927d-ff7cc360500e
 
 ## 🔒 My Workflow
 - **Pattern**: Project Pattern (Survey -> Assess -> Decompose -> Iteration Loop: Explorer -> Worker -> Reviewer -> Challenger -> Auditor -> Gate check)
-- **Scope document**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\PROJECT.md`
+- **Scope document**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\PROJECT.md`
 1. **Decompose**: Survey codebase, build feature inventory & plan milestones.
 2. **Dispatch & Execute**:
    - Iteration Loop: Explorer -> Worker -> Reviewer -> Challenger -> Auditor -> Gate check.
@@ -70,9 +70,9 @@ Orchestrate and lead the team to implement the Invoice Maker feature (`/invoice-
 - Safety timer: none
 
 ## Artifact Index
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\ORIGINAL_REQUEST.md` — Original request
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\orchestrator\DISPATCH.md` — Dispatch log
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\orchestrator\progress.md` — Progress tracker
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\PROJECT.md` — Project scope & feature inventory
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\orchestrator\GATE_STATUS.md` — Gate status log
-- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\orchestrator\handoff.md` — Final Orchestrator Handoff
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\ORIGINAL_REQUEST.md` — Original request
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\orchestrator\DISPATCH.md` — Dispatch log
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\orchestrator\progress.md` — Progress tracker
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\PROJECT.md` — Project scope & feature inventory
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\orchestrator\GATE_STATUS.md` — Gate status log
+- `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\orchestrator\handoff.md` — Final Orchestrator Handoff

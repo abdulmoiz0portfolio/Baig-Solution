@@ -1,12 +1,12 @@
 # BRIEFING — 2026-08-06T19:44:00Z
 
 ## Mission
-Mine and document all detailed specifications for the Invoice Maker feature (`/invoice-maker.php`) on the Baig Solution website.
+Mine and document all detailed specifications for the Invoice Maker feature (`/invoice-maker.php`) on the Automatixes website.
 
 ## 🔒 My Identity
 - Archetype: teamwork_preview_spec_miner
 - Roles: Specification Miner
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\spec_miner_survey_inv_1
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\spec_miner_survey_inv_1
 - Original parent: 8e048f14-819f-4dd4-8940-b211380beeba
 - Milestone: Specification Mining
 

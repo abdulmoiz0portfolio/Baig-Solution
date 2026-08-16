@@ -1,14 +1,14 @@
 # BRIEFING — 2026-08-06T15:16:00Z
 
 ## Mission
-Independent 3-phase victory audit of the Baig Solution Invoice Maker project (/invoice-maker.php).
+Independent 3-phase victory audit of the Automatixes Invoice Maker project (/invoice-maker.php).
 
 ## 🔒 My Identity
 - Archetype: victory_auditor
 - Roles: critic, specialist, auditor, victory_verifier
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution\.agents\victory_auditor_inv_1
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\victory_auditor_inv_1
 - Original parent: 35903339-098d-4826-927d-ff7cc360500e
-- Target: Baig Solution Invoice Maker feature (/invoice-maker.php)
+- Target: Automatixes Invoice Maker feature (/invoice-maker.php)
 
 ## 🔒 Key Constraints
 - Audit-only — do NOT modify implementation code
@@ -20,7 +20,7 @@ Independent 3-phase victory audit of the Baig Solution Invoice Maker project (/i
 - Updated: 2026-08-06T15:16:00Z
 
 ## Audit Scope
-- **Work product**: C:\Users\Moiz Baig\.gemini\antigravity\scratch\baig-solution (specifically invoice-maker.php, header.php, footer.php, dev-server.js, tests/test-invoice-maker.js)
+- **Work product**: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes (specifically invoice-maker.php, header.php, footer.php, dev-server.js, tests/test-invoice-maker.js)
 - **Profile loaded**: General Project / Victory Audit
 - **Audit type**: Victory Audit (Phase A, B, C)
 
