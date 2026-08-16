@@ -7,7 +7,7 @@
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
-/* Brand Variables & Theme Setup (Automatixes Deep Dark / Alpha Global Aesthetic) */
+/* Brand Variables & Theme Setup (Automatixes Deep Dark Theme) */
 :root {
     --bg-base: #070913;
     --bg-surface: #0B0F19;

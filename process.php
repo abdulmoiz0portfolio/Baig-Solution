@@ -6,7 +6,7 @@ include 'header.php';
 <section class="section-padding bg-base text-center py-5 mt-5" style="min-height: 70vh;">
     <div class="container py-5 mt-5">
         <h1 class="display-4 fw-bold text-white mb-4">Our Process</h1>
-        <p class="lead text-secondary">This page is under construction. It will feature the Alpha Global style Our Process section.</p>
+        <p class="lead text-secondary">This page is under construction. It will feature the Automatixes style Our Process section.</p>
     </div>
 </section>
 
