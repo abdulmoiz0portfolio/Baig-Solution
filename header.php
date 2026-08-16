@@ -221,7 +221,9 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
 <body>
     <!-- Theme Initializer to prevent flash -->
     <script>
-        if (localStorage.getItem('automatixes_theme') === 'light') {
+        if (localStorage.getItem('automatixes_theme') === 'dark') {
+            document.body.classList.remove('light-theme');
+        } else {
             document.body.classList.add('light-theme');
         }
     </script>
