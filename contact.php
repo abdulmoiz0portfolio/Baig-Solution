@@ -64,7 +64,7 @@
                 <div class="text-center mt-5 p-4 rounded-4 border bg-light">
                     <p class="text-muted mb-2 fw-semibold"><i class="fa-solid fa-star text-accent-brand me-2"></i>Happy with our service?</p>
                     <h5 class="fw-extrabold text-dark mb-3">Leave a Review &amp; Help Others Decide</h5>
-                    <a href="Reviews" class="btn btn-brand px-4 py-2">
+                    <a href="reviews" class="btn btn-brand px-4 py-2">
                         <span>Write a Review</span>
                         <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span>
                     </a>

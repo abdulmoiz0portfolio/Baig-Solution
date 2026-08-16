@@ -19,7 +19,7 @@
                         <p class="text-muted">
                             At Automatixes, we operate at the intersection of AI agents, sophisticated workflow automation, and custom web development. Let us help automate your growth.
                         </p>
-                        <div class="social-links mt-4">
+                        <div class="social-links mt-4 d-none">
                             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                             <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
@@ -38,7 +38,9 @@
                         <ul class="list-unstyled footer-menu">
                             <li><a href="index">Home</a></li>
                             <li><a href="about">About Us</a></li>
-                            <li><a href="service">Our Services</a></li>
+                            <li><a href="ai-agents">AI Agents</a></li>
+                            <li><a href="ai-automations">AI Automations</a></li>
+                            <li><a href="website-development">Web Development</a></li>
                             <li><a href="blogs">Blogs</a></li>
                             <li><a href="contact">Contact Us</a></li>
                         </ul>

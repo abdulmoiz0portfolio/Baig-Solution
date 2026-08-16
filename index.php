@@ -50,7 +50,7 @@
     </div>
 
     <!-- Vertical Social Side Links -->
-    <div class="social-side-links wow fadeInRight" data-wow-delay=".5s">
+    <div class="social-side-links wow fadeInRight d-none" data-wow-delay=".5s">
         <a href="#" target="_blank" class="facebook">
             <i class="fab fa-facebook-f"></i>
         </a>
