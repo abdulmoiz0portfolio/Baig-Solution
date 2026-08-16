@@ -1,4 +1,4 @@
-﻿<?php $page_key = 'index'; include 'header.php'; ?>
+<?php $page_key = 'index'; include 'header.php'; ?>
 
 <!-- Hero Section Start -->
 <section class="hero-section position-relative d-flex align-items-center justify-content-center text-center" style="min-height: 100vh; background-color: #070913; overflow: hidden; padding-top: 100px;">

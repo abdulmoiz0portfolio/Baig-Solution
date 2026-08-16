@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 $page_key = 'page'; 
 include 'header.php'; 
 ?>
