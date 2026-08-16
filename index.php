@@ -1,7 +1,7 @@
 <?php $page_key = 'index'; include 'header.php'; ?>
 
 <!-- Hero Section Start -->
-<section class="hero-section position-relative d-flex align-items-center justify-content-center text-center" style="min-height: 100vh; background-color: #070913; overflow: hidden; padding-top: 100px;">
+<section class="hero-section position-relative d-flex align-items-center justify-content-center text-center" style="min-height: 100vh; background-color: #0B4550; overflow: hidden; padding-top: 100px;">
     <!-- Abstract Glowing Orbs (Automatixes Style) -->
     <div class="position-absolute rounded-circle" style="background: radial-gradient(circle, rgba(230, 255, 43,0.35) 0%, rgba(0,0,0,0) 70%); width: 700px; height: 700px; top: -100px; left: -150px; filter: blur(80px); z-index: 0; pointer-events: none;"></div>
     <div class="position-absolute rounded-circle" style="background: radial-gradient(circle, rgba(168,85,247,0.2) 0%, rgba(0,0,0,0) 70%); width: 600px; height: 600px; bottom: -50px; right: -100px; filter: blur(80px); z-index: 0; pointer-events: none;"></div>
@@ -20,7 +20,7 @@
     
     <div class="container position-relative z-1 hero-content py-5" style="color: #ffffff;">
         <span class="badge rounded-pill border border-secondary text-light mb-4 px-4 py-2" style="background: rgba(255,255,255,0.03); letter-spacing: 2px; font-size: 0.75rem; text-transform: uppercase;">
-            <span style="color: #E6FF2B;" class="me-2">âœ¦</span> DIGITAL AGENCY FOR AMBITIOUS BRANDS
+            <span style="color: #E6FF2B;" class="me-2">Ã¢Å“Â¦</span> DIGITAL AGENCY FOR AMBITIOUS BRANDS
         </span>
         
         <h1 class="display-3 fw-bold mb-4" style="line-height: 1.15; letter-spacing: -1.5px; color: #ffffff;">
@@ -29,7 +29,7 @@
         </h1>
         
         <p class="lead mx-auto mb-5" style="max-width: 650px; font-size: 1.15rem; color: #9ca3af;">
-            Automatixes designs, builds, and scales premium AI agents, automated workflows, and custom web applications for startups, SMBs, and enterprise teams ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â wherever they are in the world.
+            Automatixes designs, builds, and scales premium AI agents, automated workflows, and custom web applications for startups, SMBs, and enterprise teams ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â wherever they are in the world.
         </p>
 
         <div class="d-flex justify-content-center gap-3 flex-wrap wow fadeInUp" data-wow-delay=".4s">
@@ -140,7 +140,7 @@
                     <div class="content">
                         <h3><a href="ai-agents" class="text-dark text-decoration-none">Autonomous AI Agents</a></h3>
                         <p class="text-muted">Smart digital agents that automate customer support, analyze complex business data, and execute tasks 24/7.</p>
-                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â whatever fits your stack best.</p>
+                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â whatever fits your stack best.</p>
                         <a href="ai-agents" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center" aria-label="Autonomous AI Agents"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                     <div class="content">
                         <h3><a href="ai-automations" class="text-dark text-decoration-none">End-to-End AI Automations</a></h3>
                         <p class="text-muted">Eliminate manual overhead by linking CRM platforms, pipelines, and smart triggers to automate workflows.</p>
-                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â whatever fits your stack best.</p>
+                        <p class="text-accent-brand small fw-semibold mt-2 mb-0" style="font-size: 13px;"><i class="fa-solid fa-circle-nodes me-1"></i> We work with n8n, Make, GoHighLevel, Zapier & custom APIs ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â whatever fits your stack best.</p>
                         <a href="ai-automations" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center" aria-label="End-to-End AI Automations"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
                     </div>
                 </div>
@@ -198,7 +198,7 @@
     </div>
 </section>
 
-<!-- ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â AI Comparison Section Start ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â -->
+<!-- ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â AI Comparison Section Start ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â -->
 <section class="py-5 bg-dark text-white border-top border-light-subtle">
     <div class="container max-w-1000">
         <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".1s">
@@ -210,7 +210,7 @@
         <div class="row g-4 align-items-stretch">
             <!-- AI Agents Column -->
             <div class="col-md-6 wow fadeInLeft" data-wow-delay=".2s">
-                <div class="p-4 p-md-5 h-100 rounded-4 d-flex flex-column" style="background: linear-gradient(145deg, #161625, #0d0d1a); border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.3);">
+                <div class="p-4 p-md-5 h-100 rounded-4 d-flex flex-column" style="background: linear-gradient(145deg, #0B4550, #0B4550); border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.3);">
                     <div class="d-flex align-items-center mb-4">
                         <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 56px; height: 56px; font-size: 24px;">
                             <i class="fa-solid fa-robot"></i>
@@ -230,7 +230,7 @@
 
             <!-- AI Automations Column -->
             <div class="col-md-6 wow fadeInRight" data-wow-delay=".3s">
-                <div class="p-4 p-md-5 h-100 rounded-4 d-flex flex-column" style="background: linear-gradient(145deg, #161625, #0d0d1a); border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.3);">
+                <div class="p-4 p-md-5 h-100 rounded-4 d-flex flex-column" style="background: linear-gradient(145deg, #0B4550, #0B4550); border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.3);">
                     <div class="d-flex align-items-center mb-4">
                         <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 56px; height: 56px; font-size: 24px;">
                             <i class="fa-solid fa-gears"></i>
@@ -250,7 +250,7 @@
         </div>
     </div>
 </section>
-<!-- ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â AI Comparison Section End ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢Ãƒâ€šÃ‚Â -->
+<!-- ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â AI Comparison Section End ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â -->
 
 <!-- Technologies We're Using Marquee Section Start -->
 <section id="technologies-section" class="py-5 bg-light-gray text-dark border-top border-light-subtle overflow-hidden">
@@ -775,6 +775,7 @@
 </script>
 
 <?php include 'footer.php'; ?>
+
 
 
 

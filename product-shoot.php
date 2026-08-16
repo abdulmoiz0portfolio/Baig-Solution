@@ -107,7 +107,7 @@
             </div>
         </div>
 
-        <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â VIDEO SHOWCASE (Standalone, with audio) Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+        <!-- ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â VIDEO SHOWCASE (Standalone, with audio) ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â -->
         <div class="row mt-5 pt-5 border-top border-light-subtle">
             <div class="col-12 text-center mb-4">
                 <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">VIDEO SHOWCASE</span>
@@ -134,7 +134,7 @@
             </div>
         </div>
 
-        <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â PRODUCT CAROUSEL (Video + Images in one place) Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+        <!-- ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â PRODUCT CAROUSEL (Video + Images in one place) ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â -->
         <div class="row mt-5">
             <!-- Heading removed per user request -->
             <div class="col-lg-5 col-md-8 mx-auto">
@@ -151,15 +151,15 @@
                     <div class="sframe-body" style="position:relative; min-height:400px;">
                         <!-- Slide 0: Chicken Bucket -->
                         <div class="carousel-slide active" data-slide="0">
-                            <img src="assets/img/products/chicken-bucket.webp" alt="Crispy Fried Chicken Bucket" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;background:#0d0d1a;" loading="lazy">
+                            <img src="assets/img/products/chicken-bucket.webp" alt="Crispy Fried Chicken Bucket" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;background:#0B4550;" loading="lazy">
                         </div>
                         <!-- Slide 1: Chicken Wrap -->
                         <div class="carousel-slide" data-slide="1">
-                            <img src="assets/img/products/chicken-wrap.webp" alt="Gourmet Chicken Wrap" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;background:#0d0d1a;" loading="lazy">
+                            <img src="assets/img/products/chicken-wrap.webp" alt="Gourmet Chicken Wrap" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;background:#0B4550;" loading="lazy">
                         </div>
                         <!-- Slide 2: Chicken Burger -->
                         <div class="carousel-slide" data-slide="2">
-                            <img src="assets/img/products/chicken-burger.webp" alt="Premium Chicken Burger" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;background:#0d0d1a;" loading="lazy">
+                            <img src="assets/img/products/chicken-burger.webp" alt="Premium Chicken Burger" style="width:100%;height:auto;display:block;max-height:700px;object-fit:cover;background:#0B4550;" loading="lazy">
                         </div>
 
                         <!-- Prev / Next Buttons -->
@@ -168,9 +168,9 @@
                     </div>
                     <!-- Dot indicators -->
                     <div class="carousel-dots">
-                        <button class="dot active" data-index="0">Ã°Å¸Ââ€”</button>
-                        <button class="dot" data-index="1">Ã°Å¸Å’Â¯</button>
-                        <button class="dot" data-index="2">Ã°Å¸Ââ€</button>
+                        <button class="dot active" data-index="0">ÃƒÂ°Ã…Â¸Ã‚ÂÃ¢â‚¬â€</button>
+                        <button class="dot" data-index="1">ÃƒÂ°Ã…Â¸Ã…â€™Ã‚Â¯</button>
+                        <button class="dot" data-index="2">ÃƒÂ°Ã…Â¸Ã‚ÂÃ¢â‚¬Â</button>
                     </div>
                 </div>
             </div>
@@ -179,15 +179,15 @@
 </section>
 
 <style>
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Dark showcase frame Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Dark showcase frame ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
 .showcase-dark-frame { background:#1a1a2e; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); box-shadow:0 25px 80px rgba(0,0,0,0.3); }
-.showcase-dark-header { background:linear-gradient(135deg,#0d0d1a,#1a1a2e); padding:14px 20px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(255,255,255,0.06); }
+.showcase-dark-header { background:linear-gradient(135deg,#0B4550,#1a1a2e); padding:14px 20px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(255,255,255,0.06); }
 .sdot { width:12px; height:12px; border-radius:50%; display:inline-block; }
 .sframe-title { color:rgba(255,255,255,0.7); font-size:14px; font-weight:500; flex:1; }
 .sframe-badge { background:rgba(230, 255, 43,0.15); color:#E6FF2B; padding:4px 14px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; border:1px solid rgba(230, 255, 43,0.2); }
-.sframe-body { background:#0d0d1a; position:relative; }
+.sframe-body { background:#0B4550; position:relative; }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Carousel Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Carousel ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
 .carousel-slide { display:none; animation: fadeSlide 0.4s ease; }
 .carousel-slide.active { display:block; }
 @keyframes fadeSlide { from { opacity:0; transform:scale(0.98); } to { opacity:1; transform:scale(1); } }
@@ -205,7 +205,7 @@
 
 .carousel-dots {
     display:flex; justify-content:center; gap:10px; padding:16px;
-    background:linear-gradient(135deg,#0d0d1a,#1a1a2e);
+    background:linear-gradient(135deg,#0B4550,#1a1a2e);
 }
 .carousel-dots .dot {
     width:40px; height:40px; border-radius:50%;
@@ -271,5 +271,6 @@
 </section>
 
 <?php include 'footer.php'; ?>
+
 
 

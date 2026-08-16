@@ -98,8 +98,8 @@ include 'header.php';
                             <div class="col-7">
                                 <select v-model="invoiceMeta.currency" id="currency-select" class="form-select form-select-sm fw-bold text-end">
                                     <option value="$">USD ($)</option>
-                                    <option value="Ã¢â€šÂ¬">EUR (Ã¢â€šÂ¬)</option>
-                                    <option value="Ã‚Â£">GBP (Ã‚Â£)</option>
+                                    <option value="ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬">EUR (ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬)</option>
+                                    <option value="Ãƒâ€šÃ‚Â£">GBP (Ãƒâ€šÃ‚Â£)</option>
                                     <option value="C$">CAD (C$)</option>
                                     <option value="Rs">PKR (Rs)</option>
                                 </select>
@@ -570,5 +570,6 @@ include 'header.php';
 </script>
 
 <?php include 'footer.php'; ?>
+
 
 

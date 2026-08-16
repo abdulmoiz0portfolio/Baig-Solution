@@ -159,7 +159,7 @@
         window.db = db;
         console.log("Firebase initialized successfully!");
 
-        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ auto-populate TESTIMONIALS section ---
+        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ auto-populate TESTIMONIALS section ---
         function escapeHTMLInner(str) {
             if (!str) return '';
             return String(str).replace(/[&<>'\"]/g, tag => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[tag] || tag));
@@ -197,7 +197,7 @@
                                     <div class="review-stars-display mt-1">${starsHtml}</div>
                                     ${profileLink}
                                 </div>
-                                <small class="text-muted">${d.rating} ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦</small>
+                                <small class="text-muted">${d.rating} ÃƒÆ’Ã‚Â¢Ãƒâ€¹Ã…â€œÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦</small>
                             </div>
                             <p class="text-secondary mb-0 mt-2" style="white-space:pre-line;">${escapeHTMLInner(d.comment)}</p>
                         </div>`;
@@ -326,7 +326,7 @@
                     if(averageRatingText) averageRatingText.innerHTML = `${avg} <i class="fa-solid fa-star text-accent-brand"></i>`;
                     if(reviewCountText) reviewCountText.textContent = `based on ${reviewCount} review${reviewCount > 1 ? 's' : ''}`;
                 } else {
-                    if(averageRatingText) averageRatingText.textContent = "0 ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦";
+                    if(averageRatingText) averageRatingText.textContent = "0 ÃƒÆ’Ã‚Â¢Ãƒâ€¹Ã…â€œÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦";
                     if(reviewCountText) reviewCountText.textContent = "(0 reviews)";
                     reviewsList.innerHTML = `<div class="col-12 text-center text-muted py-5 border rounded-4 bg-light">No reviews yet. Be the first to write a review!</div>`;
                 }
@@ -543,7 +543,7 @@
                 if (chatHeader && !document.getElementById('custom-chat-close')) {
                     const closeBtn = document.createElement('button');
                     closeBtn.id = 'custom-chat-close';
-                    closeBtn.innerHTML = 'ÃƒÂ¢Ã…â€œÃ¢â‚¬â€œ';
+                    closeBtn.innerHTML = 'ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬Å“ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“';
                     closeBtn.onclick = (e) => {
                         if (e) {
                             e.preventDefault();
@@ -570,9 +570,9 @@
                         qrContainer.style.cssText = 'display: flex; gap: 8px; overflow-x: auto; padding: 10px; background: #f8f9fa; white-space: nowrap; scrollbar-width: none; border-top: 1px solid #eee; width: 100%; box-sizing: border-box;';
                         
                         const replies = [
-                            { icon: 'ÃƒÂ°Ã…Â¸Ã¢â‚¬ÂºÃ‚Â ÃƒÂ¯Ã‚Â¸Ã‚Â', text: 'Services' },
-                            { icon: 'ÃƒÂ°Ã…Â¸Ã¢â‚¬â„¢Ã‚Â°', text: 'Pricing' },
-                            { icon: 'ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã…Â¾', text: 'Connect Expert' }
+                            { icon: 'ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂºÃƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â', text: 'Services' },
+                            { icon: 'ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢Ãƒâ€šÃ‚Â°', text: 'Pricing' },
+                            { icon: 'ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒâ€¦Ã‚Â¾', text: 'Connect Expert' }
                         ];
 
                         replies.forEach(r => {
@@ -656,6 +656,7 @@
     <script src="assets/js/main.js?v=1.0.2"></script>
 </body>
 </html>
+
 
 
 

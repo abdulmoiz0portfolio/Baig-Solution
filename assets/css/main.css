@@ -9,9 +9,9 @@
 }
 /* Brand Variables & Theme Setup (Automatixes Deep Dark Theme) */
 :root {
-    --bg-base: #070913;
-    --bg-surface: #0B0F19;
-    --bg-surface-2: #111827;
+    --bg-base: #0B4550;
+    --bg-surface: #0B4550;
+    --bg-surface-2: #0B4550;
     --text-primary: #F9F7F2;
     --text-secondary: #F9F7F2;
     --text-muted: #898A8D;
@@ -113,10 +113,10 @@ footer {
 /* Brand Variables & Theme Setup (Automatixes Rebrand) */
 :root {
     /* Default Dark Theme (Automatixes SaaS) */
-    --bg-light: #0B0F14;
-    --bg-warm-peach: #111827;
-    --bg-light-gray: #1a2332;
-    --bg-preloader: #080b0f;
+    --bg-light: #0B4550;
+    --bg-warm-peach: #0B4550;
+    --bg-light-gray: #0B4550;
+    --bg-preloader: #0B4550;
     --text-dark: #F9F7F2;
     --text-muted: #898A8D;
     --text-secondary: #F9F7F2;
@@ -133,7 +133,7 @@ body.light-theme {
     --bg-warm-peach: #f8fafc;
     --bg-light-gray: #f1f5f9;
     --bg-preloader: #ffffff;
-    --text-dark: #0B0F14;
+    --text-dark: #0B4550;
     --text-muted: #64748b;
     --text-secondary: #334155;
 }
@@ -143,7 +143,7 @@ body:not(.light-theme) .subpage-card,
 body:not(.light-theme) .contact-form-wrapper,
 body:not(.light-theme) .newsletter-modal-content,
 body:not(.light-theme) .card {
-    background: #111827 !important;
+    background: #0B4550 !important;
     border-color: rgba(255, 255, 255, 0.05) !important;
 }
 
@@ -162,14 +162,14 @@ body:not(.light-theme) h6 {
 
 body:not(.light-theme) .form-control,
 body:not(.light-theme) .form-select {
-    background-color: #1a2332;
+    background-color: #0B4550;
     border-color: rgba(255, 255, 255, 0.1);
     color: #ffffff;
 }
 
 body:not(.light-theme) .form-control:focus,
 body:not(.light-theme) .form-select:focus {
-    background-color: #1a2332;
+    background-color: #0B4550;
     color: #ffffff;
 }
 
@@ -433,9 +433,9 @@ h6.text-accent-brand.font-monospace {
     opacity: 1;
 }
 
-/* Button Hover State: Pill turns solid black/dark (#111111) */
+/* Button Hover State: Pill turns solid black/dark (#0B4550) */
 .btn-brand:hover {
-    background-color: #111111 !important;
+    background-color: #0B4550 !important;
     color: #ffffff !important;
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
@@ -1179,10 +1179,11 @@ h6.text-accent-brand.font-monospace {
 }
 
 body:not(.light-theme) .text-dark { color: #ffffff !important; }
-body:not(.light-theme) .bg-white { background-color: #111827 !important; }
-body:not(.light-theme) .bg-light { background-color: #1a2332 !important; }
+body:not(.light-theme) .bg-white { background-color: #0B4550 !important; }
+body:not(.light-theme) .bg-light { background-color: #0B4550 !important; }
 body:not(.light-theme) .text-muted { color: #9ca3af !important; }
 body:not(.light-theme) .border-light-subtle { border-color: rgba(255,255,255,0.1) !important; }
+
 
 
 

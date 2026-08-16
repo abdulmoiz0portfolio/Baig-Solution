@@ -91,13 +91,13 @@
     </div>
 </section>
 
-<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â OUR WORK SHOWCASE SECTION Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+<!-- ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â OUR WORK SHOWCASE SECTION ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â -->
 <section class="section-padding bg-dark text-white" id="n8n-showcase">
     <div class="container">
         <div class="text-center mb-5">
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">OUR WORK</span>
             <h2 class="display-6 fw-extrabold text-white mb-3">n8n Automation Showcase</h2>
-            <p class="text-white-50 fs-5 mx-auto max-w-700">Real workflows we've built for our clients Ã¢â‚¬â€ watch them in action.</p>
+            <p class="text-white-50 fs-5 mx-auto max-w-700">Real workflows we've built for our clients ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â watch them in action.</p>
         </div>
 
         <!-- Video Showcase (First) -->
@@ -141,10 +141,10 @@
         </div>
     </div>
 </section>
-<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â OUR WORK SHOWCASE SECTION END Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+<!-- ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â OUR WORK SHOWCASE SECTION END ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â -->
 
 <style>
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Showcase Frame (macOS-style window) Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Showcase Frame (macOS-style window) ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
 .showcase-frame {
     background: #1a1a2e;
     border-radius: 16px;
@@ -160,7 +160,7 @@
     transform: translateY(0);
 }
 .showcase-frame-header {
-    background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 100%);
+    background: linear-gradient(135deg, #0B4550 0%, #1a1a2e 100%);
     padding: 14px 20px;
     display: flex;
     align-items: center;
@@ -193,7 +193,7 @@
 .showcase-frame-body {
     position: relative;
     width: 100%;
-    background: #0d0d1a;
+    background: #0B4550;
 }
 .showcase-video {
     width: 100%;
@@ -208,7 +208,7 @@
     display: block;
     max-height: 600px;
     object-fit: contain;
-    background: #0d0d1a;
+    background: #0B4550;
     padding: 10px;
 }
 
@@ -318,5 +318,6 @@
 </section>
 
 <?php include 'footer.php'; ?>
+
 
 

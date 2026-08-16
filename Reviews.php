@@ -46,14 +46,14 @@
                                 <input type="url" class="form-control border-light-subtle bg-white text-dark" id="review-link" placeholder="https://yourprofile.com">
                             </div>
                             <div class="col-md-6">
-                                <label for="review-rating" class="form-label text-muted fw-bold">Rating (1Ã¢â‚¬â€˜5)</label>
+                                <label for="review-rating" class="form-label text-muted fw-bold">Rating (1ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Ëœ5)</label>
                                 <select class="form-select border-light-subtle bg-white text-dark" id="review-rating" required>
                                     <option value="" disabled selected>Select Rating</option>
-                                    <option value="1">1 Ã¢Ëœâ€¦</option>
-                                    <option value="2">2 Ã¢Ëœâ€¦Ã¢Ëœâ€¦</option>
-                                    <option value="3">3 Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</option>
-                                    <option value="4">4 Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</option>
-                                    <option value="5">5 Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</option>
+                                    <option value="1">1 ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦</option>
+                                    <option value="2">2 ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦</option>
+                                    <option value="3">3 ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦</option>
+                                    <option value="4">4 ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦</option>
+                                    <option value="5">5 ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦</option>
                                 </select>
                             </div>
                             <div class="col-12">
@@ -118,7 +118,7 @@ function copyReviewLink() {
         <div class="text-center mb-5">
             <h2 class="display-6 fw-extrabold text-dark">What Our Clients Say</h2>
             <p class="text-muted">
-                Average: <strong id="averageRating">0 Ã¢Ëœâ€¦</strong>
+                Average: <strong id="averageRating">0 ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦</strong>
                 &nbsp;<span id="reviewCount" class="text-muted small">(0 reviews)</span>
             </p>
         </div>
@@ -131,5 +131,6 @@ function copyReviewLink() {
 </section>
 
 <?php include 'footer.php'; ?>
+
 
 
