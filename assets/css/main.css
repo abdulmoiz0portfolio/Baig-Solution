@@ -1,6 +1,6 @@
 .header-nav {
-    background: transparent !important;
-    background-color: transparent !important;
+    background: var(--bg-base) !important;
+    background-color: var(--bg-base) !important;
 }
 .header-nav.sticky {
     background: rgba(7, 9, 19, 0.9) !important;
@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--text-primary) !important; font-weight: 700
 }
 
 /* Navbar */
-.navbar { background: transparent !important; }
+.navbar { background: var(--bg-base) !important; }
 .nav-link {
     color: var(--text-secondary) !important;
     font-weight: 500;
