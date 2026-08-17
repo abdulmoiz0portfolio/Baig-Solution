@@ -1,52 +1,41 @@
-# Project: Automatixes Invoice Maker
+# Project: Custom Mouse Cursor Effect (QClay Redesign)
 
 ## Architecture
-- `/invoice-maker.php`: Main Invoice Maker web page built with Vue 3 (via CDN), Bootstrap 5 styling, dynamic reactivity, and `@media print` CSS.
-- `header.php`: Navigation header, `$meta_config` SEO tags, and Services dropdown links.
-- `footer.php`: Footer section with "Our Services" list and global n8n chat widget.
-- `assets/css/main.css`: Core design system stylesheet.
-- `dev-server.js`: Node Express server providing local development environment with dynamic PHP include & `$page_key` meta title resolution at `http://localhost:3000`.
-- `tests/test-invoice-maker.js`: Automated E2E verification test suite using Playwright.
+- **DOM Structure**: Global `<div class="mouse-cursor cursor-outer" aria-hidden="true"></div>` and `<div class="mouse-cursor cursor-inner" aria-hidden="true"></div>` in `header.php` (lines 225–226) and `index.html` (lines 103–104).
+- **Styling Architecture**: `assets/css/main.css` Section 06.1 defining `.mouse-cursor`, `.cursor-inner`, `.cursor-outer`, `.cursor-hover`, hover states with site accent `#e77f23`, subtle backdrop blur, and touch suppression `@media (hover: none) and (pointer: coarse)`.
+- **Interaction Architecture**: `assets/js/main.js` `initCustomCursor()` utilizing `gsap.quickTo` coordinate pipelines for smooth 120fps trailing lag, mouseenter/mouseleave window boundary handling, event delegation for `.nav-link`, `.btn`, `[data-cursor]`, and `window.cursorFollower` export.
 
 ## Feature Inventory
-| # | Feature | Description | Milestone | Source |
-|---|---------|-------------|-----------|--------|
-| 1 | Vue 3 App & Layout | Page `/invoice-maker.php` with Vue 3 CDN, mounting point `#app`, and Bootstrap 5 responsive layout | M1 | ORIGINAL_REQUEST R1, R2 |
-| 2 | Company & Client Sections | Pre-filled Automatixes company details (editable) and editable client info fields | M1 | ORIGINAL_REQUEST R2 |
-| 3 | Dynamic Line Items | Line items table allowing add/remove rows, quantity, unit price, and core service dropdown + custom entry | M1 | ORIGINAL_REQUEST R3 |
-| 4 | Live Math Calculations | Live calculated Subtotal, Tax %, Discount, and Grand Total with currency selector | M1 | ORIGINAL_REQUEST R3 |
-| 5 | Print / PDF Export | "Print / Download PDF" button and `@media print` stylesheet for A4-ready PDF print output | M1 | ORIGINAL_REQUEST R4 |
-| 6 | Header SEO & Navigation | SEO `$meta_config['invoice-maker']` and link in Header "Services" dropdown | M2 | ORIGINAL_REQUEST R1 |
-| 7 | Footer Links Integration | Link to Invoice Maker in Footer "Our Services" list | M2 | ORIGINAL_REQUEST R1 |
-| 8 | Server Include & Title Fix | Ensure `dev-server.js` properly parses PHP include tags and populates `<title>` from `$meta_config` | M2 | Explorer 2 & Reviewer 1 Finding |
-| 9 | Automated E2E Verification | Automated test script `tests/test-invoice-maker.js` verifying Vue logic, math, print styles, and navigation | M3 | ORIGINAL_REQUEST R3 |
+| # | Feature | Description | Milestone | Source | Status |
+|---|---------|-------------|-----------|--------|--------|
+| 1 | Visual Elements | Ensure `.cursor-outer` and `.cursor-inner` DOM elements exist with `aria-hidden="true"` | M1 | ORIGINAL_REQUEST §1 | DONE |
+| 2 | CSS Styling | Define outer ring (semi-transparent, subtle blur, `pointer-events: none`) and inner solid dot | M1 | ORIGINAL_REQUEST §2 | DONE |
+| 3 | Touch Suppression | Hide cursor elements under `@media (hover: none) and (pointer: coarse)` | M1 | ORIGINAL_REQUEST §2 | DONE |
+| 4 | JS Trailing Tracking | Smooth trailing lag using `requestAnimationFrame` / `gsap.quickTo` tracking `mousemove` | M2 | ORIGINAL_REQUEST §3 | DONE |
+| 5 | Hover Interactions | Enlarge outer cursor and shift color to `#e77f23` on hover over `.nav-link`, `.btn`, `[data-cursor]` | M2 | ORIGINAL_REQUEST §3 | DONE |
+| 6 | Performance & API | <5% frame-time impact, 0 console errors, `window.cursorFollower` export, cross-browser compatibility | M2 | ORIGINAL_REQUEST §4 | DONE |
+| 7 | Full Verification | Pass E2E test runner suite, Reviewer approval, Challenger testing, Forensic Integrity Audit | M3 | System Workflow | DONE |
 
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
 |---|------|-------|-------------|--------|
-| M1 | Invoice Maker UI & Vue Logic | Implement `/invoice-maker.php` with Vue 3 reactivity, line items, totals math, pre-filled company info, client fields, and `@media print` CSS | none | DONE |
-| M2 | Header/Footer Integration & Server Fix | Add SEO `$meta_config`, update header dropdown and footer list, fix `dev-server.js` include parsing & title resolution | M1 | DONE |
-| M3 | Automated E2E Test Suite | Create and execute `tests/test-invoice-maker.js` verifying full functionality and print styling | M1, M2 | DONE |
+| 1 | M1: DOM & CSS Cursor Styling | Verify DOM in `header.php`/`index.html`, style `.cursor-inner`, `.cursor-outer`, `#e77f23` accent, subtle blur, `pointer-events: none`, touch media queries in `assets/css/main.css` | none | DONE |
+| 2 | M2: JS Tracking & Hover Logic | Update `assets/js/main.js` `initCustomCursor()` with `gsap.quickTo` / rAF, hover delegation on `.nav-link`, `.btn`, `[data-cursor]`, window boundary events, export `window.cursorFollower` | M1 | DONE |
+| 3 | M3: Verification & Auditing | Run full test suite (`node tests/e2e-test-runner.js`), Reviewer verification, Challenger empirical stress test, Forensic integrity audit | M1, M2 | DONE |
 
 ## Interface Contracts
-### `/invoice-maker.php` Vue Data Model & Methods
-- `company`: `{ name: 'Automatixes', address: 'New Jersey, NJ, United States', phone: '+92 336 6920141', email: 'contact@automatixes.com', website: 'https://baigsolution.com' }`
-- `client`: `{ name: '', company: '', address: '', email: '', phone: '' }`
-- `invoiceMeta`: `{ number: 'INV-1001', date: YYYY-MM-DD, dueDate: YYYY-MM-DD, currency: '$' }`
-- `lineItems`: `[{ description: 'Autonomous AI Agents', quantity: 1, price: 500.00 }]`
-- `taxRate`: percentage (e.g. 5)
-- `discountRate`: percentage (e.g. 0)
-- Computed properties: `subtotal`, `taxAmount`, `discountAmount`, `grandTotal`
-- Methods: `addLineItem()`, `removeLineItem(index)`, `triggerPrint()`
+### `assets/css/main.css` ↔ `assets/js/main.js`
+- Classes toggled by JS: `.cursor-hover`, `.cursor-hidden`, `.cursor-active`, `.cursor-outer`, `.cursor-inner`, `.cursor-view`, `.cursor-drag`, `.cursor-magnetic`.
+- CSS properties: `pointer-events: none` on `.mouse-cursor`, `z-index: 999998` on `.cursor-outer`, `z-index: 999999` on `.cursor-inner`.
+- Hover style: Accent color `#e77f23` applied during hover states.
 
-### Header & Footer Links
-- Header dropdown item: `<a class="dropdown-item" href="invoice-maker">Free Invoice Maker</a>`
-- Footer services item: `<li><a href="invoice-maker">Free Invoice Maker</a></li>`
-- `$meta_config['invoice-maker']`: `{ title: 'Free Online Invoice Maker | Automatixes', description: '...', keywords: '...' }`
+### `assets/js/main.js` ↔ External Environment / Tests
+- Global API: `window.cursorFollower = { outer, inner, xOuter, yOuter, xInner, yInner, setHover, resetHover, show, hide, moveTo }`.
+- Performance: <1% frame-time overhead (<0.01ms/frame), 0 memory allocations in `mousemove`.
 
 ## Code Layout
-- `/invoice-maker.php`: New PHP/HTML/Vue file.
-- `header.php`: Navigation and SEO config.
-- `footer.php`: Footer navigation links.
-- `dev-server.js`: Node Express local dev server.
-- `tests/test-invoice-maker.js`: E2E test script.
+- `header.php`: Global HTML header with `<div class="mouse-cursor cursor-outer" aria-hidden="true"></div>` & `<div class="mouse-cursor cursor-inner" aria-hidden="true"></div>`.
+- `index.html`: Static HTML fallback with identical cursor elements.
+- `assets/css/main.css`: Primary styling (Section 06.1 Custom Cursor lines 557–713, and cleaned Section 10.2 lines 1968–1996).
+- `assets/js/main.js`: Main JavaScript logic (lines 669–826 `initCustomCursor()`).
+- `tests/e2e-test-runner.js`: Verification test runner.

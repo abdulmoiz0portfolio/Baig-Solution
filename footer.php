@@ -36,8 +36,7 @@
                         <ul class="list-unstyled footer-menu">
                             <li><a href="index">Home</a></li>
                             <li><a href="about">About Us</a></li>
-                            <li><a href="ai-agents">AI Agents</a></li>
-                            <li><a href="ai-automations">AI Automations</a></li>
+                            <li><a href="ai-automated-solutions">AI Automated Solutions</a></li>
                             <li><a href="website-development">Web Development</a></li>
                             <li><a href="blogs">Blogs</a></li>
                             <li><a href="contact">Contact Us</a></li>
@@ -48,8 +47,7 @@
                     <div class="footer-widget">
                         <h5 class="widget-title">Our Services</h5>
                         <ul class="list-unstyled footer-menu">
-                            <li><a href="ai-agents">AI Agents Integration</a></li>
-                            <li><a href="ai-automations">AI Automations (n8n/Make)</a></li>
+                            <li><a href="ai-automated-solutions">AI Automated Solutions</a></li>
                             <li><a href="website-development">Web & App Development</a></li>
                             <li><a href="product-shoot">Product Shoot</a></li>
                             <li><a href="invoice-maker">Free Invoice Maker</a></li>
@@ -124,6 +122,9 @@
 
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Studio Freight / Lenis v1.1.x Smooth Scroll Engine -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
     <!-- GSAP for scroll animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -645,13 +646,6 @@
 
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            }
-        });
-    </script>
-    
     <!-- Custom Main JS -->
     <script src="assets/js/main.js?v=1.0.2"></script>
 </body>

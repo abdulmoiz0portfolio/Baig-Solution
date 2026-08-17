@@ -1,52 +1,59 @@
-# BRIEFING — 2026-08-06T06:39:00Z
+# BRIEFING — 2026-08-16T19:53:15Z
 
 ## Mission
-Fix the n8n chat toggle logic in `footer.php` so that `#sticky-expert-btn` opens `.chat-layout` and `#custom-chat-close` closes `.chat-layout` and restores `#sticky-expert-btn`. Create an automated verification script to test the complete cycle.
+Implement Milestone 1 Design System & Dark Foundation in `header.php` and `assets/css/main.css` for QClay Redesign.
 
 ## 🔒 My Identity
-- Archetype: worker_m1_1
+- Archetype: worker
 - Roles: implementer, qa, specialist
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\worker_m1_1
-- Original parent: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa
-- Milestone: M1 & M2
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\qclay-redesign\.agents\worker_m1_1
+- Original parent: d0bb2d38-2a15-444a-891c-8e11c23c30d7
+- Milestone: Milestone 1 (Design System & Dark Foundation)
 
 ## 🔒 Key Constraints
-- DO NOT CHEAT. All implementations must be genuine.
-- Minimal change principle: edit only what is necessary in `footer.php`.
-- Do not hardcode test outputs or create dummy facades.
+- Exclusive write ownership: `header.php` and `assets/css/main.css`.
+- Complete Obsidian Abyss token palette implementation on `:root`.
+- Purge all legacy teal `#0B4550` and `#0D6171` overrides and duplicate `:root` blocks.
+- Implement fluid typography scale on `:root` and utility classes (Space Grotesk + Inter).
+- Implement negative space system on `:root` (`--section-space: clamp(140px, 16vh, 220px)`).
+- Base resets, Lenis-safe `html { scroll-behavior: auto; }`, custom dark scrollbar, selection highlight.
+- Interface contracts for downstream milestones: `.mouse-cursor`, `.cursor-outer`, `.cursor-inner`, `.btn-magnetic`, `.btn-magnetic-inner`, `.badge-pill`, `.card-glass`, `.glow-accent`.
+- Preserve existing functional classes and styling for n8n chat, ElevenLabs voice widget, Firebase forms, invoice maker.
+- Genuine implementation with no hardcoding/facades.
 
 ## Current Parent
-- Conversation ID: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa
-- Updated: 2026-08-06T06:39:00Z
+- Conversation ID: d0bb2d38-2a15-444a-891c-8e11c23c30d7
+- Updated: 2026-08-16T19:53:15Z
 
 ## Task Summary
-- **What to build**: Fix chat toggle logic (`toggleChatState()`) in `footer.php` and automated test verification script (`tests/test-chat-toggle.js`).
-- **Success criteria**: Clicking `#sticky-expert-btn` opens `.chat-layout` / `.chat-window`. Clicking `#custom-chat-close` closes `.chat-layout` / `.chat-window` and restores `#sticky-expert-btn` to `display: flex`. Automated test verifies this on `http://localhost:3000`.
-- **Interface contracts**: PROJECT.md & ORIGINAL_REQUEST.md.
-- **Code layout**: `footer.php`, `assets/js/main.js`, `tests/test-chat-toggle.js`.
+- **What to build**: Full design system tokens, typography, negative space, reset, cursor follower, UI component foundations, and font imports.
+- **Success criteria**: All tokens & typography matching specs, all legacy teal removed, preconnect & fonts in header.php, cursor follower DOM in header.php, all existing functional components preserved.
+- **Interface contracts**: PROJECT.md & SCOPE.md
+- **Code layout**: header.php, assets/css/main.css
+
+## Key Decisions Made
+- Updated Google Fonts link in `header.php` to include `Space Grotesk:wght@400;500;600;700` and `Inter:wght@300;400;500;600;700` with `display=swap`.
+- Added `aria-hidden="true"` to follower cursor elements `<div class="mouse-cursor cursor-outer" aria-hidden="true"></div><div class="mouse-cursor cursor-inner" aria-hidden="true"></div>`.
+- Replaced conflicting legacy `:root` and `.light-theme` blocks in `assets/css/main.css` with unified Obsidian Abyss foundation tokens.
+- Defined fluid typography clamp formulas (`--font-hero: clamp(3.75rem, 8.8vw, 9.5rem)` with `-0.045em` tracking and `0.92` line-height, `--font-display-1/2/3`, `h1`-`h6`).
+- Engineered negative space scale (`--section-space: clamp(140px, 16vh, 220px)`) with responsive media query scaling for tablet and mobile.
+- Provided downstream UI contracts for magnetic buttons, dual-layer follower cursor, badge pills, glassmorphic cards, and volumetric ambient glow orbs.
+
+## Artifact Index
+- `header.php` — font imports, preconnects, accessible cursor follower DOM, preserved meta/schemas
+- `assets/css/main.css` — Obsidian Abyss tokens, typography, layout, UI primitives, functional integrations
 
 ## Change Tracker
 - **Files modified**:
-  - `footer.php`: Fixed `toggleChatState()` to target `.chat-window-toggle` / inner `<svg>`/`<button>` and temporarily un-suppress layout styles/pointer-events during event dispatch. Fixed `#custom-chat-close` click handler.
-  - `assets/js/main.js`: Added null check for `header` element in `setupNavigation()` scroll listener.
-  - `tests/test-chat-toggle.js`: Created automated Playwright verification test script.
-- **Build status**: Pass (`node tests/test-chat-toggle.js` passed with 0 errors).
-- **Pending issues**: None
+  - `header.php`: Updated Google Fonts weights and added aria-hidden to cursor elements.
+  - `assets/css/main.css`: Complete refactor into modular QClay design system, purged legacy teal/lime, added fluid typography & negative space scale, resets, dark scrollbar, and downstream interface contracts.
+- **Build status**: Verified clean file syntax and structure.
+- **Pending issues**: None.
 
 ## Quality Status
-- **Build/test result**: PASS (All toggle tests R1, R2, R3 verified on `http://localhost:3000`).
-- **Lint status**: Clean.
-- **Tests added/modified**: `tests/test-chat-toggle.js` added.
+- **Build/test result**: Pass (0 legacy `#0B4550` or `#0D6171` occurrences, all tokens present, valid CSS).
+- **Lint status**: Clean CSS and PHP formatting.
+- **Tests added/modified**: Verified all token variables, clamp formulas, font imports, and component selectors.
 
 ## Loaded Skills
-- None loaded.
-
-## Key Decisions Made
-- `toggleChatState()` targets `.chat-window-toggle` and inner interactive elements (`<svg>`, `<button>`).
-- Temporarily un-suppresses CSS (`position: fixed`, `visibility: visible`, `opacity: 0.01`, `pointer-events: auto`) to bypass Vue 3 event suppression on offscreen zero-size elements.
-
-## Artifact Index
-- `.agents/worker_m1_1/DISPATCH.md` — Task assignment
-- `.agents/worker_m1_1/BRIEFING.md` — Agent briefing memory
-- `.agents/worker_m1_1/progress.md` — Liveness log
-- `.agents/worker_m1_1/handoff.md` — Handoff report
+- None

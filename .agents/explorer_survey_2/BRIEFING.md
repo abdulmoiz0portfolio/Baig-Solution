@@ -1,37 +1,47 @@
-# BRIEFING — 2026-08-06T06:28:50Z
+# BRIEFING — 2026-08-16T19:42:00Z
 
 ## Mission
-Investigate project structure, build system, framework (Vue/Nuxt/Vite/HTML), dev server setup, and test runner / verification environment for automatixes, determining how the web app is served/run locally and verified automatically.
+Investigate visual architecture, design system, typography, color palette, negative space, asymmetrical layout strategies, and component styling specifications for the QClay redesign.
 
 ## 🔒 My Identity
 - Archetype: explorer
 - Roles: explorer_survey_2
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_2
-- Original parent: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa
-- Milestone: survey completed
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\qclay-redesign\.agents\explorer_survey_2
+- Original parent: 68883324-bb69-4edb-aa5b-fac73a4ea737
+- Milestone: survey
 
 ## 🔒 Key Constraints
-- Read-only investigation on source code — do NOT modify project source code
-- Write only inside working directory C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_2
+- Read-only investigation — do NOT modify project source code
+- Write only to working directory .agents/explorer_survey_2
+- Deliver comprehensive design system specification in report.md and handoff.md
 
 ## Current Parent
-- Conversation ID: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa
-- Updated: 2026-08-06T06:28:50Z
+- Conversation ID: 68883324-bb69-4edb-aa5b-fac73a4ea737
+- Updated: 2026-08-16T19:42:00Z
 
 ## Investigation State
-- **Explored paths**: `automatixes` root, `package.json`, `dev-server.js`, `vercel.json`, `api/index.php`, `header.php`, `footer.php`, `check_chat.js`, `demo_agent.js`, `eval.js`, `assets/js/main.js`, `assets/css/main.css`.
-- **Key findings**: 
-  - Application is PHP template based, served locally via custom Express server (`dev-server.js`) on port 3000.
-  - `@n8n/chat` bundle imported via ESM CDN in `footer.php`. Internal widget uses Vue 3.
-  - Bug in chat open/close action caused by custom CSS hiding n8n's native toggle element (`left: -9999px; width: 0; height: 0`), preventing Vue synthetic click event handling when `toggleChatState()` dispatches `MouseEvent`.
-  - Verification can be automated via Playwright/Puppeteer script or `agent-browser` against `http://localhost:3000`.
-- **Unexplored areas**: None, full survey complete.
+- **Explored paths**:
+  - `ORIGINAL_REQUEST.md`: Redesign goals, >8vw typography, GSAP, Lenis, custom cursor, deep dark palette, neon accents, asymmetrical layout.
+  - `PROJECT.md`: Previous architecture baseline.
+  - `header.php`: Fonts loaded (`Inter`, `Space Grotesk`), navbar markup, SEO tags, preloader, smooth wrapper tags.
+  - `footer.php`: Footer markup, script dependencies (jQuery, Bootstrap, SweetAlert2, GSAP 3.12.2, Three.js, Matter.js, Firebase, n8n chat).
+  - `index.php`: All 9 core sections (Hero, About, Toss Away Physics, Services, AI Comparison, Marquee, Process, Portfolio, CTA, Testimonials, FAQ, Contact).
+  - `assets/css/main.css`: Theme variables, legacy teal `#0B4550` overrides, card styling, button styling.
+  - `assets/js/main.js`: Cursor implementation, animations, physics, form handlers.
+- **Key findings**:
+  - Legacy styling contains conflicting teal palette (`#0B4550`) and light-theme overrides that dilute the premium dark aesthetic.
+  - Heading scale is currently standard Bootstrap (`display-3` ~4rem) rather than brutalist/editorial fluid typography (>8vw / ~100-140px on desktop).
+  - Section spacing is standard ~60-80px padding rather than massive negative space (>150-200px) typical of QClay/Awwwards studios.
+  - Layout is currently rigid symmetrical Bootstrap grid (`col-lg-5 col-md-6`, `col-lg-3 col-md-6`), needing asymmetrical compositions, offset cards, overlapping negative margins, and architectural grid lines.
+  - Colors need strict tokens: Base `#050505`/`#0a0a0a`, Surface `#121214`/`#18181b`, Neon Green/Yellow accents `#ccff00` / `#d4ff00` / `#00ff88`, High contrast text `#ffffff`/`#f3f4f6`, muted `#71717a`.
+- **Unexplored areas**: None, full design system mapping completed.
 
 ## Key Decisions Made
-- Prepared 5-component handoff report in `handoff.md`.
+- Structured complete CSS token system, fluid typography math (`clamp()`), component styling blueprints, and layout pattern specifications in `report.md`.
 
 ## Artifact Index
-- DISPATCH.md — Log of dispatch messages
-- BRIEFING.md — Working memory index
-- progress.md — Liveness heartbeat and progress log
-- handoff.md — Final analysis report
+- `DISPATCH.md` — Dispatch log
+- `BRIEFING.md` — Persistent agent memory
+- `progress.md` — Liveness heartbeat and milestone tracking
+- `report.md` — Detailed visual architecture and design system specification
+- `handoff.md` — 5-component handoff report for parent agent

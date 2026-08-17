@@ -1,123 +1,65 @@
-# Handoff Report: Project Structure, Build System, and Chat Toggle Investigation
+# Handoff Report — Explorer Survey 2
+## Visual Architecture & Design System Specification for QClay Redesign
 
-## 1. Observation
+### 1. Observation
 
-### 1.1 Project Structure & File Layout
-- **Root Directory**: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes`
-- **Application Type**: Multi-page website built with PHP templates (`index.php`, `header.php`, `footer.php`, `about.php`, `contact.php`, `service.php`, `ai-agents.php`, `ai-automations.php`, `product-shoot.php`, `Reviews.php`, `admin.php`, `privacy.php`, `terms.php`).
-- **Static Assets**: CSS and JS files located under `assets/css/main.css` and `assets/js/main.js`.
-- **Third-Party Libraries & CDNs**:
-  - Bootstrap 5 (`bootstrap.bundle.min.js`, `bootstrap.min.css`)
-  - jQuery 3.7.1
-  - FontAwesome 6.4.2
-  - SweetAlert2
-  - GSAP 3.12.2 (ScrollTrigger)
-  - Three.js & Matter.js
-  - Firebase Web SDK v10.7.1 (Firestore integration for customer reviews)
-  - `@n8n/chat` bundle loaded dynamically via ESM import (`https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js`)
-
-### 1.2 Development & Build Environment
-- **Runtime Environment**: Node.js v24.18.0, npm v11.16.0.
-- **Dependencies (`package.json`)**:
-  ```json
-  {
-    "name": "automatixes",
-    "version": "1.0.0",
-    "main": "dev-server.js",
-    "scripts": {
-      "start": "node dev-server.js",
-      "dev": "node dev-server.js"
-    },
-    "dependencies": {
-      "express": "^4.19.2",
-      "cors": "^2.8.5"
-    }
-  }
-  ```
-- **Local Dev Server (`dev-server.js`)**:
-  - An Express-based HTTP server running on port `3000`.
-  - It emulates PHP template inclusion by matching `<?php include '...'; ?>` / `require` regex patterns recursively (`processPhpIncludes()`), stripping leftover PHP code, setting `Content-Type: text/html`, and serving static assets from `/assets`.
-- **Deployment Routing (`vercel.json` & `api/index.php`)**:
-  - Production deployments on Vercel route request paths to `api/index.php` running `vercel-php@0.9.0`.
-
-### 1.3 n8n Chat Widget & Custom Toggle Implementation Details
-- **Chat Container & Trigger Setup (`footer.php` lines 337-563)**:
-  - Sticky button `#sticky-expert-btn` rendered in HTML with `onclick="connectWithExpert()"`.
-  - `@n8n/chat` initialized via `createChat({ webhookUrl: '...', ... })`. `@n8n/chat` injects `.chat-wrapper` containing `.chat-layout` (when open) and a native toggle button.
-  - `toggleChatState()` function finds the first non-`.chat-layout` child inside `.chat-wrapper` and dispatches `new MouseEvent('click', { bubbles: true, cancelable: true })`.
-  - `#custom-chat-close` button is dynamically created via `MutationObserver` and appended inside the chat header. Its `onclick` triggers `toggleChatState()` and sets `#sticky-expert-btn` display back to `flex`.
-  - CSS rule in `footer.php` lines 379-389:
-    ```css
-    .chat-wrapper:has(.chat-layout) > *:not(.chat-layout) {
-        position: absolute !important;
-        left: -9999px !important;
-        width: 0 !important;
-        height: 0 !important;
-        overflow: hidden !important;
-        border: none !important;
-        box-shadow: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    ```
+1. **Original Request Requirements (`.agents/ORIGINAL_REQUEST.md`)**:
+   - Lines 83–94: Requires massive sans-serif typography (`Space Grotesk`, `Inter`), massive headings (`>8vw` font size for hero), drastically increased negative space between sections (`>150px`), deep dark base (`#050505` / `#0a0a0a`), high-contrast text (`#ffffff`), neon yellow/green accents (`#ccff00` / `#d4ff00` / `#00ff88`), asymmetrical layout strategies, custom cursor with hover expansion, magnetic button effects, GSAP scroll-triggered animations, and Lenis smooth scrolling.
+2. **Existing Legacy CSS Conflicts (`assets/css/main.css`)**:
+   - Lines 11–25: `:root` defines `--bg-base: #0B4550`, `--accent-blue: #0B4550`, `--accent-blue-light: #0D6171`. This legacy teal color scheme conflicts with the required ultra-deep dark aesthetic.
+   - Lines 123–128: `--accent-brand: #C8E019; /* Electric Blue */` — variable names and comments are desynchronized.
+   - Lines 35, 130–197: Overrides for `.bg-white, .bg-light, .bg-warm-peach, .bg-light-gray` and `body.light-theme` force backgrounds back to `#0B4550` or white rather than a unified obsidian dark theme.
+3. **Current HTML Structure & Section Sizing (`index.php`)**:
+   - Line 26: Hero heading uses standard Bootstrap `.display-3` (`<h1 class="display-3 fw-bold mb-4">`) rather than fluid `>8vw` editorial scale.
+   - Line 48: Sections use `.section-padding bg-warm-peach` which defaults to standard Bootstrap spacing (~60px) rather than massive negative space (`>150px`).
+   - Lines 133–197, 386–423, 437–477: Services, Process, and Portfolio use standard symmetrical Bootstrap multi-column grids (`col-lg-5 col-md-6`, `col-lg-3 col-md-6`, `col-lg-4 col-md-6`) without asymmetrical staggering, overlapping depth layers, or architectural grid lines.
+4. **Script & Library Environment (`header.php` and `footer.php`)**:
+   - `header.php` lines 210–213: Already imports Google Fonts `Space Grotesk` (500, 600, 700) and `Inter` (300, 400, 500, 600).
+   - `footer.php` lines 129–137: Already includes GSAP 3.12.2, ScrollTrigger, Three.js r128, and Matter.js 0.19.0.
+   - `header.php` line 292: `#smooth-wrapper` and `#smooth-content` containers are present.
 
 ---
 
-## 2. Logic Chain
+### 2. Logic Chain
 
-1. **Local Execution Mechanism**:
-   - Running `node dev-server.js` starts the PHP emulator server at `http://localhost:3000`.
-   - Any client request to `http://localhost:3000/` serves `index.php` with `header.php` and `footer.php` stitched together, rendering the full UI including the sticky orange button and loading the n8n chat widget bundle.
-
-2. **Analysis of Chat Toggle Failures (R1 & R2)**:
-   - **Vue 3 Event Handler Interaction**: `@n8n/chat` is compiled from Vue 3. In Vue 3, click events on native toggle elements are managed via internal Vue event listeners.
-   - **CSS Hiding Interference**: When `.chat-layout` is rendered (chat open), the CSS rule `.chat-wrapper:has(.chat-layout) > *:not(.chat-layout)` hides the native toggle button by moving it offscreen (`left: -9999px`) and setting its size to `0x0`.
-   - **Click Suppression**: When `#custom-chat-close` calls `toggleChatState()`, or `#sticky-expert-btn` calls `connectWithExpert()`, `dispatchEvent` on a zero-sized, hidden Vue component element fails to trigger Vue's internal reactive state transition.
-   - **State Desynchronization**: On close, the close button reshons `#sticky-expert-btn` in DOM, but `.chat-layout` remains rendered because the underlying n8n Vue state was not updated.
-
-3. **Automated Verification Setup**:
-   - Automated testing can be executed against the local dev server at `http://localhost:3000`.
-   - Verification tools available: Node Playwright/Puppeteer script (e.g. `check_chat.js` or a new test script) or `agent-browser` CLI commands targeting `http://localhost:3000`.
+1. **From Observation 1 & 2**: The legacy CSS files contain conflicting `#0B4550` teal palettes and light-theme overrides. To achieve the QClay aesthetic, the color token architecture must be rewritten to establish an ultra-deep obsidian base (`--bg-void: #050505; --bg-base: #0a0a0a; --bg-surface-1: #111113;`) with high-voltage neon yellow/green accents (`--accent-neon: #ccff00; --accent-neon-bright: #d4ff00; --accent-emerald: #00ff88;`).
+2. **From Observation 1 & 3**: Standard Bootstrap display utilities (`display-3` ~4rem) fail the `>8vw` requirement. Implementing fluid CSS `clamp(3.75rem, 8.8vw, 9.5rem)` in `Space Grotesk` with tight tracking (`-0.045em`) and line-height `0.92` ensures the hero text dynamically scales across all screens to meet the exact editorial standard.
+3. **From Observation 1 & 3**: Standard section padding (~60-80px) produces a cramped corporate look. Upgrading `.section-qclay` to `padding: clamp(140px, 16vh, 220px) 0;` guarantees negative space $>150\text{px}$ on desktop viewports.
+4. **From Observation 1 & 3**: Symmetrical 3-column Bootstrap card grids are visually monotonous. Introducing 5 distinct asymmetrical patterns (7:5 offset duet, negative margin overlapping cascades, architectural grid lines with uneven cell ratios, alternating masonry banners, and monospace floating coordinate stamps) breaks the standard grid into an award-winning layout.
+5. **From Observation 1 & 4**: GSAP, ScrollTrigger, Space Grotesk, and Inter are already loaded in `header.php` and `footer.php`. The foundation is ready for seamless integration of custom cursor expansion, magnetic button attraction, Lenis smooth scrolling, and character/word text reveals.
 
 ---
 
-## 3. Caveats
+### 3. Caveats
 
-- **Network Dependency**: The n8n chat widget loads its bundle from jsDelivr CDN (`cdn.jsdelivr.net`) and connects to webhook `https://n8n.bminternational.com.pk/webhook/...`. Automated test scripts require active internet connectivity to load `@n8n/chat`.
-- **Command Execution Permission**: In this environment, running long-lived processes via `run_command` requires user approval or daemon management. Automated test scripts should launch the server or verify against an active port.
-
----
-
-## 4. Conclusion
-
-1. **How the Web App is Served Locally**:
-   - Built as a Node Express-based PHP emulator.
-   - Command to run locally: `node dev-server.js` or `npm start` (serves app on `http://localhost:3000`).
-
-2. **Core Cause of the Issue**:
-   - Custom toggle logic relies on dispatching DOM `click` events to n8n's native toggle button inside `.chat-wrapper`.
-   - Because `@n8n/chat` uses Vue 3 and CSS hides/zeroes out the native toggle when chat is active (`left: -9999px; width: 0; height: 0`), simulated click events are suppressed by Vue's event handlers or fail to reach the component.
-
-3. **Recommended Fix Strategy for Implementer**:
-   - Direct DOM state manipulation or proper toggle targeting (e.g. programmatically invoking n8n's toggle API or maintaining/triggering click on n8n chat toggle before CSS hides it or modifying CSS visibility so click events reach Vue's event handlers).
-
-4. **Automated Verification Method**:
-   - Run `node dev-server.js`.
-   - Execute a Node Playwright script or `agent-browser` commands against `http://localhost:3000` to test the full open/close toggle cycle.
+- **Caveat 1**: Local testing requires running `dev-server.js` (or PHP built-in server) to resolve dynamic PHP includes and `$page_key` meta tags.
+- **Caveat 2**: Lenis smooth scroll script should be loaded via CDN (`https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js`) in `footer.php` or `header.php` if not already bundled.
+- **Caveat 3**: All child service pages (`about.php`, `ai-agents.php`, `contact.php`, etc.) share `header.php` and `footer.php`, so global CSS token updates will immediately modernize the full site, but individual page hero banners should also receive the `.display-section` / `Space Grotesk` typography treatment.
 
 ---
 
-## 5. Verification Method
+### 4. Conclusion
 
-To verify the local server and test setup:
+A complete, actionable visual architecture and design system specification has been generated and documented in `C:\Users\Moiz Baig\.gemini\antigravity\scratch\qclay-redesign\.agents\explorer_survey_2\report.md`. 
 
-1. **Start Dev Server**:
-   ```bash
-   node dev-server.js
-   ```
-   Confirm console output: `Automatixes PHP Emulator Server running at http://localhost:3000`.
+Key deliverables ready for implementation:
+1. **Full CSS Custom Properties Token Map** (`--bg-void: #050505`, `--accent-neon: #ccff00`, `--text-primary: #ffffff`, `--border-subtle: rgba(255,255,255,0.07)`).
+2. **Fluid Clamp Typography Scale** (`clamp(3.75rem, 8.8vw, 9.5rem)` for hero, `clamp(2.5rem, 5.8vw, 5.5rem)` for section titles).
+3. **Negative Space System** (`clamp(140px, 16vh, 220px)` section padding).
+4. **5 Asymmetrical Grid-Breaking Strategies** (7:5 split, overlapping cascade, architectural lines, masonry scale, coordinate stamps).
+5. **Component-by-Component Styling Blueprints** across Nav, Hero, Services, Physics Sandbox, Portfolio, Marquee, Process, Testimonials, CTA, and Footer.
+6. **Micro-interaction Specifications** for dual-layer custom cursor, magnetic button physics, and Lenis smooth scroll.
 
-2. **Browser Verification (agent-browser / Playwright)**:
-   - Open `http://localhost:3000`.
-   - Click `#sticky-expert-btn`. Verify `.chat-layout` becomes visible in DOM.
-   - Click `#custom-chat-close`. Verify `.chat-layout` is removed from DOM and `#sticky-expert-btn` is visible.
+---
+
+### 5. Verification Method
+
+1. **Inspect Report Artifact**:
+   - Path: `C:\Users\Moiz Baig\.gemini\antigravity\scratch\qclay-redesign\.agents\explorer_survey_2\report.md`
+   - Verify that all CSS tokens, clamp formulas, negative space values, component blueprints, and interaction rules are defined.
+2. **Verify Codebase Alignment**:
+   - Check `assets/css/main.css` against the proposed CSS rules in `report.md`.
+   - Check `index.php` section classes against the `.section-qclay` and asymmetrical layout classes.
+3. **Local Dev Server Execution**:
+   - Command: `node dev-server.js` (at port 3000).
+   - Test that pages render with deep dark theme, massive typography, smooth scrolling, and custom cursor.

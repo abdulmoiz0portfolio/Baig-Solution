@@ -1,38 +1,35 @@
-# BRIEFING — 2026-08-06T06:29:55Z
+# BRIEFING — 2026-08-16T19:45:00Z
 
 ## Mission
-Explore the n8n chat widget and Vue.js codebase to analyze toggle logic, sticky buttons, close button, and why simulated clicks fail or are suppressed.
+Investigate and map the site structure, files, templates (PHP/HTML), CSS/JS stylesheets, assets, components, headers/footers, and server/runtime setup for the QClay Redesign Project in `qclay-redesign`.
 
 ## 🔒 My Identity
 - Archetype: explorer
-- Roles: codebase investigation, analysis, synthesis
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_1
-- Original parent: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa
-- Milestone: codebase exploration & toggle issue analysis
+- Roles: survey, analysis, synthesis
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\qclay-redesign\.agents\explorer_survey_1
+- Original parent: 68883324-bb69-4edb-aa5b-fac73a4ea737
+- Milestone: Survey & Architecture Mapping
 
 ## 🔒 Key Constraints
-- Read-only investigation — do NOT implement code changes in project source code
-- All metadata / outputs must be written in C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\.agents\explorer_survey_1
+- Read-only investigation — do NOT implement
+- Write all findings and reports inside working directory: .agents/explorer_survey_1
+- Follow Handoff Protocol (Observation, Logic Chain, Caveats, Conclusion, Verification Method)
 
 ## Current Parent
-- Conversation ID: dbb31fb7-6c5e-4fdf-9a99-6c3b2d5bb2fa
-- Updated: 2026-08-06T06:29:55Z
+- Conversation ID: 68883324-bb69-4edb-aa5b-fac73a4ea737
+- Updated: 2026-08-16T19:45:00Z
 
 ## Investigation State
-- **Explored paths**: `footer.php`, `assets/js/main.js`, `dev-server.js`, `check_chat.js`, `demo_agent.js`, `eval.js`, `header.php`, `package.json`
-- **Key findings**: 
-  1. `toggleChatState()` targets parent container `div` instead of deep `<button>` element with Vue `@click` handler.
-  2. Synthetic `MouseEvent('click')` dispatched on parent `div` does not invoke inner `<button>`'s event listeners or native `.click()`.
-  3. CSS rule `.chat-wrapper:has(.chat-layout) > *:not(.chat-layout)` applies `width: 0; height: 0; left: -9999px` to toggle launcher, causing browser and Vue to suppress/ignore clicks during close action.
-  4. Closing needs to target `@n8n/chat`'s native header close button inside `.chat-layout` using native `.click()`.
-- **Unexplored areas**: None (codebase fully explored for this milestone).
+- **Explored paths**: `dev-server.js`, `package.json`, `PROJECT.md`, `vercel.json`, `api/index.php`, `api/generate-image.js`, `.htaccess`, `security.php`, `header.php`, `footer.php`, `index.php`, `about.php`, `service.php`, `ai-agents.php`, `ai-automations.php`, `ai-image-generator.php`, `website-development.php`, `product-shoot.php`, `voice-agent.php`, `invoice-maker.php`, `blogs.php`, `blog-detail.php`, `Reviews.php`, `contact.php`, `admin.php`, `portfolio.php`, `process.php`, `privacy.php`, `terms.php`, `assets/css/main.css`, `assets/js/main.js`, `content/articles/*.md`, `assets/img/**`.
+- **Key findings**: Complete survey compiled. Express dev server emulates PHP includes and `$meta_config` SEO tags. Core integrations identified (n8n chat widget with synthetic toggle, ElevenLabs voice widget, Firebase Firestore reviews & lead forms, Vue 3 invoice maker, Markdown blog engine). Gap analysis mapped against QClay redesign requirements (massive typography, Lenis smooth scrolling, advanced GSAP triggers, magnetic cursor, broken-grid layout).
+- **Unexplored areas**: None for survey scope.
 
 ## Key Decisions Made
-- Performed complete static code analysis and event model tracing.
-- Documented findings, root causes, and actionable implementation blueprint in handoff report.
+- Baseline survey completed and written to `report.md`.
+- Self-contained 5-component handoff written to `handoff.md`.
 
 ## Artifact Index
-- DISPATCH.md — Dispatch instructions log
-- BRIEFING.md — Working memory index
-- progress.md — Heartbeat progress tracking
-- handoff.md — Final investigation report
+- `.agents/explorer_survey_1/DISPATCH.md` — Inbound instructions log
+- `.agents/explorer_survey_1/progress.md` — Progress tracker
+- `.agents/explorer_survey_1/report.md` — Comprehensive site audit & architecture report
+- `.agents/explorer_survey_1/handoff.md` — Standard 5-component handoff report

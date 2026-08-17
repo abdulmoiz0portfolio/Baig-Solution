@@ -1,72 +1,83 @@
-# Handoff Report — worker_m1_1
+# Handoff Report: Milestone 1 (Design System & Dark Foundation)
+
+**Agent**: Worker 1 (`worker_m1_1`)  
+**Recipient**: Parent Sub-Orchestrator (`d0bb2d38-2a15-444a-891c-8e11c23c30d7`)  
+**Milestone**: Milestone 1 (Design System & Dark Foundation)  
+**Date**: 2026-08-17  
+**Handoff Type**: Hard Handoff (Task Complete)  
+
+---
 
 ## 1. Observation
-- **Initial State & Bug Diagnosis**:
-  - `footer.php` uses n8n chat widget (`@n8n/chat`).
-  - `@n8n/chat` creates container structure: `.chat-window-wrapper.n8n-chat` containing `.chat-window` (which holds `.chat-layout.chat-wrapper`) and `.chat-window-toggle` (holding `<svg>`).
-  - Custom CSS in `footer.php` hid the native toggle element when chat was open via `.chat-wrapper:has(.chat-layout) > *:not(.chat-layout)` and `.chat-window-wrapper:has(.chat-layout) .chat-window-toggle`, setting `position: absolute !important; left: -9999px !important; width: 0 !important; height: 0 !important; overflow: hidden !important;`.
-  - In Vue 3 and modern browsers, dispatching `MouseEvent('click')` on off-screen, zero-sized elements or parent wrappers without targeting inner interactive nodes (`button`/`svg`) causes Vue 3 event processing to suppress or ignore the click events.
-  - As a result, clicking `#sticky-expert-btn` ("Connect with an Expert") or clicking `#custom-chat-close` ("✖") failed to toggle the n8n chat state reliably.
-  - In `assets/js/main.js:57`, a scroll listener threw `TypeError: Cannot read properties of null (reading 'style')` on pages where `#header-sticky` did not exist.
 
-- **Files Modified**:
-  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\footer.php` (Lines 437-526)
-  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\assets\js\main.js` (Line 56)
-  - `C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes\tests\test-chat-toggle.js` (Created automated test script)
+Direct file audits and code inspections confirmed:
+1. **`header.php`**:
+   - Lines 211–214:
+     ```html
+     <!-- Google Fonts: Space Grotesk / Inter -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+     ```
+   - Lines 224–226:
+     ```html
+     <!-- Custom Mouse Cursor Follower -->
+     <div class="mouse-cursor cursor-outer" aria-hidden="true"></div>
+     <div class="mouse-cursor cursor-inner" aria-hidden="true"></div>
+     ```
+   - SEO metadata, OpenGraph, JSON-LD schemas, security includes, Bootstrap 5 CDN, FontAwesome CDN, and n8n chat CSS are all intact.
+
+2. **`assets/css/main.css`**:
+   - Complete Obsidian Abyss token palette (`--bg-void: #050505;`, `--bg-base: #0a0a0a;`, `--bg-surface-1: #111113;`, `--bg-surface-2: #18181b;`, `--bg-surface-3: #222226;`, `--bg-glass: rgba(18, 18, 20, 0.72);`).
+   - Neon accent palette (`--accent-neon: #ccff00;`, `--accent-neon-bright: #d4ff00;`, `--accent-emerald: #00ff88;`, `--accent-neon-glow: rgba(204, 255, 0, 0.15);`).
+   - High-contrast text tokens (`--text-primary: #ffffff;`, `--text-secondary: #94a3b8;`, `--text-muted: #64748b;`).
+   - Fluid typography scale (`--font-heading: 'Space Grotesk', ...;`, `--font-body: 'Inter', ...;`, `--font-hero: clamp(3.75rem, 8.8vw, 9.5rem);` with `-0.045em` tracking and `0.92` line-height, `--font-display-1/2/3`, `h1`-`h6`).
+   - Negative space scale (`--section-space: clamp(140px, 16vh, 220px);`) with responsive mobile/tablet media query adjustments.
+   - Resets & utilities: `box-sizing: border-box;`, `html { scroll-behavior: auto; }`, neon `::selection`, dark custom scrollbar.
+   - Downstream contracts: `.mouse-cursor`, `.cursor-outer`, `.cursor-inner`, `.btn-magnetic`, `.btn-magnetic-inner`, `.badge-pill`, `.card-glass`, `.glow-accent`.
+   - Purged all legacy teal (`#0B4550`, `#0D6171`, `#114550`), legacy lime (`#C8E019`), duplicate `:root` blocks, and light-theme overrides.
+   - Preserved third-party and subpage styles including n8n chat, ElevenLabs, Firebase forms, Matter.js physics section, and Invoice Maker print rules (`@media print`).
+
+---
 
 ## 2. Logic Chain
-1. **Fixing Chat Open (R1) & Close (R2) in `footer.php`**:
-   - `toggleChatState()` was updated to locate `.chat-window-toggle` or `.chat-toggle` or fallback child elements of `.chat-window-wrapper`/`.chat-wrapper`.
-   - It targets the inner interactive element (`svg`, `button`, or `[role="button"]`).
-   - Prior to dispatching click events, `toggleChatState()` temporarily overrides inline styles on the toggle container and target node (`position: fixed !important; top: 0 !important; left: 0 !important; width: 60px !important; height: 60px !important; opacity: 0.01 !important; visibility: visible !important; pointer-events: auto !important; z-index: 9999999 !important; display: block !important;`).
-   - It dispatches a full pointer and mouse event sequence (`pointerdown`, `mousedown`, `pointerup`, `mouseup`, `click`, `.click()`).
-   - After event processing, a `setTimeout` callback restores original inline styles with null-safety checks.
-   - `#custom-chat-close` event handler in `footer.php` was updated with `e.preventDefault()` and `e.stopPropagation()`, triggering `toggleChatState()` to unmount the chat window and resetting `#sticky-expert-btn` style to `display: flex`.
 
-2. **Fixing Page Error in `assets/js/main.js`**:
-   - Added guard `if (!header) return;` inside `setupNavigation()` scroll event listener to eliminate `TypeError: Cannot read properties of null (reading 'style')`.
+1. **Step 1: Upstream Verification**: Reviewed `ORIGINAL_REQUEST.md`, `PROJECT.md`, `SCOPE.md`, and the 3 explorer reports (`explorer_m1_1/report.md`, `explorer_m1_2/report.md`, `explorer_m1_3/report.md`). Spot-checked all claims against live files.
+2. **Step 2: Font Pipeline**: In `header.php`, Space Grotesk was missing weight 400 and Inter was missing weight 700. Adding these ensures proper rendering of lighter subheads and bold CTA/button text without synthetic font weight distortion. Preconnects eliminate DNS/TLS latency.
+3. **Step 3: Follower Cursor DOM**: Added `aria-hidden="true"` to prevent screen reader announcements of decorative cursor divs.
+4. **Step 4: Design System Unification**: The legacy stylesheet contained duplicate `:root` definitions and forced teal overrides (`body:not(.light-theme)`). Removing duplicate definitions and unifying tokens under Obsidian Abyss gives all pages and components a single, coherent source of truth.
+5. **Step 5: Mathematical Typography & Spacing Calibration**: Using CSS `clamp()` enables seamless fluid scaling across viewports from 375px mobile to 4K displays. Setting `--font-hero: clamp(3.75rem, 8.8vw, 9.5rem)` fulfills the requirement of >8vw scaling while bounding maximum expansion. Setting `--section-space: clamp(140px, 16vh, 220px)` provides >150px vertical spacing on desktop (1080p = 172.8px), scaling safely with viewport height.
+6. **Step 6: Lenis & Downstream Interface Compatibility**: Retaining `html { scroll-behavior: auto; }` ensures compatibility with the Lenis smooth scroll engine to be introduced in Milestone 2. Providing standard classes for `.btn-magnetic`, `.card-glass`, `.badge-pill`, and `.mouse-cursor` guarantees smooth integration for Milestones 2, 3, and 4.
 
-3. **Automated Verification Script (R3)**:
-   - Created `tests/test-chat-toggle.js` using Playwright.
-   - Launches headless browser, navigates to `http://localhost:3000/`.
-   - Asserts initial state: `#sticky-expert-btn` display is `flex`, chat window is closed (`rect.width === 0`).
-   - Clicks `#sticky-expert-btn` -> Asserts chat window opens (`rect.width > 0`) and `#sticky-expert-btn` display becomes `none`.
-   - Clicks `#custom-chat-close` -> Asserts chat window closes (`rect.width === 0`) and `#sticky-expert-btn` display is restored to `flex`.
-   - Execution finishes with exit code `0` and 0 errors.
+---
 
 ## 3. Caveats
-- No caveats. All requirements (R1, R2, R3) have been fully met and programmatically verified against the running server (`http://localhost:3000`).
+
+- **No Caveats**: All tasks assigned to Milestone 1 have been implemented completely and genuinely. Subpages using custom markup (e.g. `index.php`, `ai-agents.php`) will receive full layout rewrites in Milestone 4, but already inherit the global dark theme and typography from Milestone 1.
+
+---
 
 ## 4. Conclusion
-- The chat toggle mechanism in `footer.php` is now 100% reliable for both opening via `#sticky-expert-btn` and closing via `#custom-chat-close`.
-- The sticky button correctly transitions between `display: flex` (when chat is closed) and `display: none` (when chat is open).
-- Automated test script `tests/test-chat-toggle.js` runs cleanly against `dev-server.js` and passes all assertions.
+
+Milestone 1 is complete. `header.php` and `assets/css/main.css` are updated with the full Obsidian Abyss token foundation, Space Grotesk / Inter typography scale, >150px negative space utilities, accessible follower cursor DOM, and clean reset/scrollbar styling. All legacy teal is purged and third-party integrations are preserved.
+
+---
 
 ## 5. Verification Method
-Execute the following verification command from the project root:
 
-```bash
-node tests/test-chat-toggle.js
-```
+To independently verify the implementation:
 
-**Expected Output**:
-```text
-Launching headless browser for chat toggle verification...
-Navigating to http://localhost:3000...
-Waiting for .chat-window-wrapper to attach...
-Initial State -> Sticky Btn display: "flex", Chat Window Open: false
-Clicking #sticky-expert-btn ("Connect with an Expert")...
-Waiting for chat window to open...
-Open State -> Sticky Btn display: "none", Chat Window Open: true
-Waiting for #custom-chat-close ("✖") button...
-Clicking #custom-chat-close ("✖") red button...
-Waiting for chat window to close...
-Closed State -> Sticky Btn display: "flex", Chat Window Open: false
---------------------------------------------------
-✅ VERIFICATION PASSED SUCCESSFULLY:
- - R1: #sticky-expert-btn reliably opens chat window
- - R2: #custom-chat-close reliably closes chat window and restores #sticky-expert-btn
- - R3: Automated verification script executed cleanly
---------------------------------------------------
-```
-Exit code: `0`
+1. **Google Fonts Verification**:
+   Inspect `header.php` (line 213) to confirm `<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">`.
+2. **Cursor DOM Follower Verification**:
+   Inspect `header.php` (lines 225-226) to confirm `<div class="mouse-cursor cursor-outer" aria-hidden="true"></div><div class="mouse-cursor cursor-inner" aria-hidden="true"></div>`.
+3. **Design Tokens & Typography Inspection**:
+   Inspect `assets/css/main.css` `:root` (lines 9–113) to confirm:
+   - `--bg-void: #050505;`
+   - `--accent-neon: #ccff00;`
+   - `--font-hero: clamp(3.75rem, 8.8vw, 9.5rem);`
+   - `--section-space: clamp(140px, 16vh, 220px);`
+4. **Legacy Teal Absence Verification**:
+   Confirm zero occurrences of `#0B4550` and `#0D6171` in `assets/css/main.css`.
+5. **Report Reference**:
+   Full implementation report available at `C:\Users\Moiz Baig\.gemini\antigravity\scratch\qclay-redesign\.agents\worker_m1_1\report.md`.

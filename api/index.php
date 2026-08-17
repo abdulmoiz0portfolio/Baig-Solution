@@ -22,8 +22,8 @@ $allowed_pages = [
     'contact',
     'admin',
     'website-development',
-    'ai-agents',
-    'ai-automations',
+    
+    'ai-automated-solutions',
     'product-shoot',
     'service',
     'Reviews',
@@ -48,6 +48,7 @@ if (in_array($path, $allowed_pages)) {
     echo "404 - Page not allowed.";
 }
 ?>
+
 
 
 

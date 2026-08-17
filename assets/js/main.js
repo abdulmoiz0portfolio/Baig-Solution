@@ -4,6 +4,9 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+    // 0. Smooth Scroll Engine (Lenis v1.1.x) & GSAP ScrollTrigger Synchronization (F4 & F5)
+    initSmoothScroll();
+
     // Custom cursor setup (Orange Ring & Dot follower)
     initCustomCursor();
 
@@ -29,8 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // 7. Interactive cost calculator
     initCostCalculator();
 
-    // 8. Site-wide scroll animations & writing effect
+    // 8. Site-wide scroll animations & Kinetic Text Reveals (F6)
+    initKineticTextReveals();
     initScrollAnimations();
+
+    // 9. Parallax & Dynamic Infinite Marquee (F7)
+    initParallax();
+    initMarqueeVelocity();
 });
 
 // Window Load Handler for Preloader
@@ -334,6 +342,7 @@ function initNewsletterPopup() {
     if (!newsletterSeen) {
         setTimeout(() => {
             modal.style.display = "flex";
+            if (window.lenis) window.lenis.stop();
             setTimeout(() => {
                 modal.classList.add("active");
             }, 10);
@@ -344,6 +353,7 @@ function initNewsletterPopup() {
         modal.classList.remove("active");
         setTimeout(() => {
             modal.style.display = "none";
+            if (window.lenis) window.lenis.start();
         }, 500);
         localStorage.setItem("newsletterSeen_baig", "true");
     }
@@ -654,7 +664,7 @@ function logSimulatedWebhook(logText) {
     }
 
 /**
- * Custom Mouse Cursor Follower setup with GSAP trailing animations
+ * Custom Mouse Cursor Follower setup with GSAP quickTo trailing animations (F8)
  */
 function initCustomCursor() {
     const cursorOuter = document.querySelector(".cursor-outer");
@@ -662,48 +672,158 @@ function initCustomCursor() {
     
     if (!cursorOuter || !cursorInner) return;
     
-    // Position starts off-screen
-    gsap.set([cursorOuter, cursorInner], { xPercent: -50, yPercent: -50, x: -100, y: -100 });
-    
-    window.addEventListener("mousemove", (e) => {
-        // Inner cursor: fast tracking
-        gsap.to(cursorInner, {
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.05,
-            ease: "power2.out"
-        });
-        
-        // Outer cursor: smooth lagging trail
-        gsap.to(cursorOuter, {
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.2,
-            ease: "power2.out"
-        });
+    // Check if touch device / coarse pointer
+    const isTouch = window.matchMedia && window.matchMedia("(pointer: coarse), (hover: none)").matches;
+    if (isTouch) {
+        cursorOuter.style.display = "none";
+        cursorInner.style.display = "none";
+        return;
+    }
+
+    if (typeof gsap === "undefined") {
+        console.warn("GSAP is not defined for custom cursor.");
+        return;
+    }
+
+    // Set initial off-screen coordinates and ensure pointer-events: none
+    gsap.set([cursorOuter, cursorInner], {
+        xPercent: -50,
+        yPercent: -50,
+        x: -100,
+        y: -100,
+        opacity: 0
     });
-    
-    // Expand outer ring on hover over interactive links or elements (excluding card-service-item & icon-arrow to eliminate ghost circle)
+
+    // 120fps hardware-accelerated quickTo setters
+    // Inner cursor restored to 0.05 sweet spot for snappy but smooth tracking
+    const xInner = gsap.quickTo(cursorInner, "x", { duration: 0.05, ease: "power2.out" });
+    const yInner = gsap.quickTo(cursorInner, "y", { duration: 0.05, ease: "power2.out" });
+    const xOuter = gsap.quickTo(cursorOuter, "x", { duration: 0.2, ease: "power2.out" });
+    const yOuter = gsap.quickTo(cursorOuter, "y", { duration: 0.2, ease: "power2.out" });
+
+    let isVisible = false;
+
+    // Window Mousemove tracking
+    window.addEventListener("mousemove", (e) => {
+        if (!isVisible) {
+            isVisible = true;
+            cursorOuter.classList.remove("cursor-hidden");
+            cursorInner.classList.remove("cursor-hidden");
+            gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.25, overwrite: "auto" });
+        }
+
+        // Inner cursor: fast snappy tracking
+        xInner(e.clientX);
+        yInner(e.clientY);
+
+        // Outer cursor: smooth lagging trail
+        xOuter(e.clientX);
+        yOuter(e.clientY);
+    });
+
+    // Window mouseleave / mouseenter opacity transitions (document boundary guard)
+    document.addEventListener("mouseleave", () => {
+        isVisible = false;
+        cursorOuter.classList.add("cursor-hidden");
+        cursorInner.classList.add("cursor-hidden");
+        gsap.to([cursorOuter, cursorInner], { opacity: 0, duration: 0.25, overwrite: "auto" });
+    });
+
+    document.addEventListener("mouseenter", () => {
+        isVisible = true;
+        cursorOuter.classList.remove("cursor-hidden");
+        cursorInner.classList.remove("cursor-hidden");
+        gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.25, overwrite: "auto" });
+    });
+
+    // Delegated Hover Handling on interactive elements
     document.body.addEventListener("mouseover", (e) => {
-        if (e.target.closest(".icon-arrow, .card-service-item")) {
-            cursorOuter.classList.remove("cursor-hover");
-            cursorInner.classList.remove("cursor-hover");
+        if (e.target.closest(".icon-arrow, .card-service-item") && !e.target.closest(".btn, a, button, [data-cursor]")) {
+            cursorOuter.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
+            cursorInner.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
             return;
         }
-        const target = e.target.closest("a, button, .btn, .physics-pill, .close-modal");
-        if (target) {
+
+        const customCursorTarget = e.target.closest("[data-cursor]");
+        if (customCursorTarget) {
+            const cursorType = customCursorTarget.getAttribute("data-cursor");
+            if (cursorType === "view") {
+                cursorOuter.classList.add("cursor-view");
+                cursorInner.classList.add("cursor-view");
+                return;
+            } else if (cursorType === "drag") {
+                cursorOuter.classList.add("cursor-drag");
+                cursorInner.classList.add("cursor-drag");
+                return;
+            } else if (cursorType === "magnetic") {
+                cursorOuter.classList.add("cursor-magnetic", "cursor-hover");
+                cursorInner.classList.add("cursor-magnetic", "cursor-hover");
+                return;
+            }
+        }
+
+        const magneticTarget = e.target.closest(".btn-magnetic");
+        if (magneticTarget) {
+            cursorOuter.classList.add("cursor-magnetic", "cursor-hover");
+            cursorInner.classList.add("cursor-magnetic", "cursor-hover");
+            return;
+        }
+
+        const interactiveTarget = e.target.closest("a, button, .btn, .nav-link, .physics-pill, .close-modal, .tech-item, .accordion-button, input, textarea, select");
+        if (interactiveTarget) {
             cursorOuter.classList.add("cursor-hover");
             cursorInner.classList.add("cursor-hover");
         }
     });
 
     document.body.addEventListener("mouseout", (e) => {
-        const target = e.target.closest("a, button, .btn, .physics-pill, .close-modal");
-        if (target) {
-            cursorOuter.classList.remove("cursor-hover");
-            cursorInner.classList.remove("cursor-hover");
+        const interactiveTarget = e.target.closest("a, button, .btn, .nav-link, .physics-pill, .close-modal, .tech-item, .accordion-button, input, textarea, select, [data-cursor], .btn-magnetic");
+        if (interactiveTarget) {
+            cursorOuter.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
+            cursorInner.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
         }
     });
+
+    // Export Global Controller API
+    window.cursorFollower = {
+        outer: cursorOuter,
+        inner: cursorInner,
+        xOuter: xOuter,
+        yOuter: yOuter,
+        xInner: xInner,
+        yInner: yInner,
+        setHover: function(className = "cursor-hover") {
+            cursorOuter.classList.add(className);
+            cursorInner.classList.add(className);
+        },
+        resetHover: function(className) {
+            if (className) {
+                cursorOuter.classList.remove(className);
+                cursorInner.classList.remove(className);
+            } else {
+                cursorOuter.classList.remove("cursor-hover", "cursor-magnetic", "cursor-view", "cursor-drag");
+                cursorInner.classList.remove("cursor-hover", "cursor-magnetic", "cursor-view", "cursor-drag");
+            }
+        },
+        show: function() {
+            isVisible = true;
+            cursorOuter.classList.remove("cursor-hidden");
+            cursorInner.classList.remove("cursor-hidden");
+            gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.2, overwrite: "auto" });
+        },
+        hide: function() {
+            isVisible = false;
+            cursorOuter.classList.add("cursor-hidden");
+            cursorInner.classList.add("cursor-hidden");
+            gsap.to([cursorOuter, cursorInner], { opacity: 0, duration: 0.2, overwrite: "auto" });
+        },
+        moveTo: function(x, y) {
+            xInner(x);
+            yInner(y);
+            xOuter(x);
+            yOuter(y);
+        }
+    };
 }
 
 /**
@@ -861,25 +981,13 @@ function initScrollAnimations() {
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Determine if it's a typing heading or standard element
-                if (entry.target.classList.contains("typewriter-anim")) {
-                    gsap.to(entry.target.querySelectorAll("span"), {
-                        opacity: 1,
-                        y: 0,
-                        scale: 1,
-                        duration: 0.4,
-                        stagger: 0.08,
-                        ease: "back.out(1.2)"
-                    });
-                } else {
-                    // Standard .wow element
-                    gsap.to(entry.target, { 
-                        opacity: 1, 
-                        y: 0, 
-                        duration: 0.8, 
-                        ease: "power2.out" 
-                    });
-                }
+                // Standard .wow element
+                gsap.to(entry.target, { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 0.8, 
+                    ease: "power2.out" 
+                });
                 obs.unobserve(entry.target);
             }
         });
@@ -888,33 +996,480 @@ function initScrollAnimations() {
     // 1. General Fade-Up Animations for Cards/Images (.wow)
     const wowElements = document.querySelectorAll(".wow");
     wowElements.forEach(el => {
-        if (el.classList.contains("typewriter-anim") || el.querySelector(".typewriter-anim")) {
-           // Skip container if it's specifically wrapping the typewriter to avoid double-hiding
-           // Actually, it's fine to fade the container and type the text, but let's just make sure they start hidden
-        }
-        // gsap.set(el, { opacity: 0, y: 40 });
         observer.observe(el);
     });
+}
 
-    // 2. Writing / Staggered Text Reveal Effect for Headings
-    const headings = document.querySelectorAll(".typewriter-anim");
-    headings.forEach(heading => {
-        const text = heading.innerText;
-        heading.innerHTML = "";
-        
-        // Split text into words and wrap in spans
-        const words = text.split(" ");
-        words.forEach(word => {
-            const span = document.createElement("span");
-            span.style.display = "inline-block";
-            span.style.opacity = "0";
-            span.style.transform = "translateY(15px) scale(0.95)";
-            span.innerText = word + " ";
-            heading.appendChild(span);
+/**
+ * ============================================================================
+ * MILESTONE 2: MOTION CONTROLLER FUNCTIONS (F4, F5, F6, F7)
+ * ============================================================================
+ */
+
+/**
+ * Smooth Scroll Engine (Lenis v1.1.x) & GSAP ScrollTrigger Synchronization
+ * Features: F4 (Lenis Smooth Scroll Engine) & F5 (GSAP ScrollTrigger Synchronization)
+ */
+function initSmoothScroll() {
+    if (typeof Lenis === "undefined" || typeof gsap === "undefined") {
+        console.warn("Lenis or GSAP not loaded.");
+        return;
+    }
+
+    // 1. Register GSAP ScrollTrigger Plugin
+    if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+    }
+
+    // 2. Accessibility: Check for prefers-reduced-motion
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const prefersReducedMotion = reducedMotionQuery.matches;
+
+    // 3. Initialize Lenis Singleton
+    const lenis = new Lenis({
+        lerp: prefersReducedMotion ? 1 : 0.09,
+        duration: prefersReducedMotion ? 0 : 1.2,
+        smoothWheel: !prefersReducedMotion,
+        wheelMultiplier: 1,
+        touchMultiplier: 1.5,
+        infinite: false,
+        autoResize: true
+    });
+
+    // Export global window.lenis object
+    window.lenis = lenis;
+
+    // 4. Synchronize Lenis scroll event to ScrollTrigger.update
+    if (typeof ScrollTrigger !== "undefined") {
+        lenis.on('scroll', ScrollTrigger.update);
+
+        // 5. Hook Lenis RAF execution to GSAP Central Ticker
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
         });
 
-        observer.observe(heading);
+        // 6. Disable GSAP Lag Smoothing for absolute precision
+        gsap.ticker.lagSmoothing(0);
+
+        // Configure ScrollTrigger defaults to prevent pin jitter
+        ScrollTrigger.config({
+            anticipatePin: 1,
+            autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize"
+        });
+    } else {
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+    }
+
+    // 7. Intercept Internal Hash Anchor Links for Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#' && targetId.length > 1) {
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    lenis.scrollTo(targetEl, {
+                        offset: -80,
+                        duration: 1.2
+                    });
+                }
+            }
+        });
+    });
+
+    // 8. Window Resize & Font Readiness Recalibration
+    window.addEventListener('resize', () => {
+        lenis.resize();
+        if (typeof ScrollTrigger !== "undefined") {
+            ScrollTrigger.refresh();
+        }
+    });
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => {
+            lenis.resize();
+            if (typeof ScrollTrigger !== "undefined") {
+                ScrollTrigger.refresh();
+            }
+        });
+    }
+
+    // 9. Prefers-Reduced-Motion Dynamic Change Listener
+    reducedMotionQuery.addEventListener('change', (e) => {
+        if (e.matches) {
+            lenis.options.lerp = 1;
+            lenis.options.duration = 0;
+            lenis.options.smoothWheel = false;
+        } else {
+            lenis.options.lerp = 0.09;
+            lenis.options.duration = 1.2;
+            lenis.options.smoothWheel = true;
+        }
+    });
+
+    // 10. Global Modal Scroll Lock Lifecycle Hooks
+    document.addEventListener('show.bs.modal', () => {
+        if (window.lenis) window.lenis.stop();
+    });
+    document.addEventListener('hidden.bs.modal', () => {
+        if (window.lenis) window.lenis.start();
+    });
+
+    // 11. Clean Teardown / Destroy Capability for Testing & Route Transitions
+    window.destroyScrollTrigger = function() {
+        if (typeof ScrollTrigger !== "undefined") {
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        }
+    };
+}
+
+/**
+ * Zero-Dependency Kinetic DOM Text Splitter Engine (F6)
+ * Preserves nested HTML tags, entities, inline styles, whitespace, and prevents re-split duplication.
+ */
+const KineticTextSplitter = {
+    split(element, mode) {
+        if (!element || element.getAttribute('data-split') === 'true') return;
+        const splitMode = mode || 'words';
+
+        // Backup original HTML for clean re-splits and resize handling
+        if (!element.getAttribute('data-original-html')) {
+            element.setAttribute('data-original-html', element.innerHTML);
+        }
+
+        if (splitMode === 'lines') {
+            this.splitLines(element);
+        } else {
+            const fragment = document.createDocumentFragment();
+            this.traverseAndSplit(element, fragment, splitMode);
+            element.innerHTML = '';
+            element.appendChild(fragment);
+        }
+
+        element.setAttribute('data-split', 'true');
+        element.setAttribute('data-split-mode', splitMode);
+    },
+
+    traverseAndSplit(node, targetParent, mode) {
+        node.childNodes.forEach(child => {
+            if (child.nodeType === Node.TEXT_NODE) {
+                const text = child.textContent;
+                if (!text || text.length === 0) return;
+
+                // Split words preserving whitespace delimiters
+                const parts = text.split(/(\s+)/);
+                parts.forEach(part => {
+                    if (/^\s+$/.test(part)) {
+                        targetParent.appendChild(document.createTextNode(part));
+                    } else if (part.length > 0) {
+                        if (mode === 'chars') {
+                            const wordMask = document.createElement('span');
+                            wordMask.className = 'word-mask split-mask';
+
+                            const chars = Array.from(part);
+                            chars.forEach(ch => {
+                                const charMask = document.createElement('span');
+                                charMask.className = 'char-mask split-mask';
+                                const charInner = document.createElement('span');
+                                charInner.className = 'char-inner split-inner';
+                                charInner.textContent = ch;
+                                charMask.appendChild(charInner);
+                                wordMask.appendChild(charMask);
+                            });
+                            targetParent.appendChild(wordMask);
+                        } else {
+                            // Default 'words' mode
+                            const wordMask = document.createElement('span');
+                            wordMask.className = 'word-mask split-mask';
+                            const wordInner = document.createElement('span');
+                            wordInner.className = 'word-inner split-inner';
+                            wordInner.textContent = part;
+                            wordMask.appendChild(wordInner);
+                            targetParent.appendChild(wordMask);
+                        }
+                    }
+                });
+            } else if (child.nodeType === Node.ELEMENT_NODE) {
+                if (child.tagName === 'BR') {
+                    targetParent.appendChild(child.cloneNode(true));
+                } else {
+                    const clonedEl = child.cloneNode(false);
+                    this.traverseAndSplit(child, clonedEl, mode);
+                    targetParent.appendChild(clonedEl);
+                }
+            }
+        });
+    },
+
+    splitLines(element) {
+        const fragment = document.createDocumentFragment();
+        this.traverseAndSplit(element, fragment, 'words');
+        element.innerHTML = '';
+        element.appendChild(fragment);
+
+        const wordMasks = Array.from(element.querySelectorAll('.word-mask'));
+        if (wordMasks.length === 0) return;
+
+        const linesMap = new Map();
+        wordMasks.forEach(wm => {
+            const top = Math.round(wm.getBoundingClientRect().top);
+            if (!linesMap.has(top)) linesMap.set(top, []);
+            linesMap.get(top).push(wm);
+        });
+
+        const lineFragment = document.createDocumentFragment();
+        linesMap.forEach(words => {
+            const lineMask = document.createElement('span');
+            lineMask.className = 'line-mask split-mask';
+            const lineInner = document.createElement('span');
+            lineInner.className = 'line-inner split-inner';
+
+            words.forEach((w, idx) => {
+                lineInner.appendChild(w);
+                if (idx < words.length - 1) {
+                    lineInner.appendChild(document.createTextNode(' '));
+                }
+            });
+            lineMask.appendChild(lineInner);
+            lineFragment.appendChild(lineMask);
+        });
+
+        element.innerHTML = '';
+        element.appendChild(lineFragment);
+    },
+
+    revert(element) {
+        const originalHtml = element.getAttribute('data-original-html');
+        if (originalHtml) {
+            element.innerHTML = originalHtml;
+            element.removeAttribute('data-split');
+            element.removeAttribute('data-split-mode');
+        }
+    }
+};
+
+/**
+ * Kinetic Text Reveal Animation System (F6)
+ */
+function initKineticTextReveals() {
+    if (typeof gsap === "undefined") return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+        document.querySelectorAll('.split-reveal, .reveal-words, .reveal-chars, .reveal-lines, .reveal-fade-up, .hero-title').forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+        });
+        return;
+    }
+
+    function animateInners(container, inners, config) {
+        if (!inners || inners.length === 0) return;
+
+        const rect = container.getBoundingClientRect();
+        const isAboveTheFold = rect.top < (window.innerHeight || document.documentElement.clientHeight) * 0.95 || container.closest('#hero, .hero-section');
+
+        gsap.set(inners, {
+            yPercent: config.yPercent || 105,
+            rotateX: config.rotateX || 35,
+            opacity: 0,
+            transformPerspective: 1000,
+            transformOrigin: "0% 50% -50px"
+        });
+
+        if (isAboveTheFold) {
+            // Immediate hero reveal without requiring scroll interaction
+            gsap.to(inners, {
+                yPercent: 0,
+                rotateX: 0,
+                opacity: 1,
+                duration: config.duration || 1.0,
+                stagger: config.stagger || 0.045,
+                ease: "power3.out",
+                delay: config.delay || 0.15
+            });
+        } else if (typeof ScrollTrigger !== "undefined") {
+            gsap.to(inners, {
+                yPercent: 0,
+                rotateX: 0,
+                opacity: 1,
+                duration: config.duration || 1.0,
+                stagger: config.stagger || 0.045,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: container,
+                    start: "top 85%",
+                    once: true,
+                    fastScrollEnd: true,
+                    toggleActions: "play none none none"
+                }
+            });
+        } else {
+            gsap.to(inners, {
+                yPercent: 0,
+                rotateX: 0,
+                opacity: 1,
+                duration: config.duration || 1.0,
+                stagger: config.stagger || 0.045,
+                ease: "power3.out"
+            });
+        }
+    }
+
+    function setupReveals() {
+        // 1. Character Reveals
+        document.querySelectorAll('.reveal-chars, [data-split-mode="chars"]').forEach(el => {
+            KineticTextSplitter.split(el, 'chars');
+            const inners = el.querySelectorAll('.char-inner');
+            animateInners(el, inners, {
+                yPercent: 110,
+                rotateX: 45,
+                duration: 0.9,
+                stagger: 0.02
+            });
+        });
+
+        // 2. Word Reveals (.reveal-words, .split-reveal, .hero-title, .typewriter-anim)
+        document.querySelectorAll('.reveal-words, .split-reveal:not([data-split-mode="chars"]):not([data-split-mode="lines"]), .hero-title, .typewriter-anim').forEach(el => {
+            KineticTextSplitter.split(el, 'words');
+            const inners = el.querySelectorAll('.word-inner');
+            animateInners(el, inners, {
+                yPercent: 105,
+                rotateX: 35,
+                duration: 1.0,
+                stagger: 0.045
+            });
+        });
+
+        // 3. Line Reveals
+        document.querySelectorAll('.reveal-lines, [data-split-mode="lines"]').forEach(el => {
+            KineticTextSplitter.split(el, 'lines');
+            const inners = el.querySelectorAll('.line-inner');
+            animateInners(el, inners, {
+                yPercent: 100,
+                rotateX: 25,
+                duration: 1.1,
+                stagger: 0.12
+            });
+        });
+
+        // 4. Fade-Up Reveals
+        document.querySelectorAll('.reveal-fade-up').forEach(el => {
+            if (typeof ScrollTrigger !== "undefined") {
+                gsap.fromTo(el,
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.9,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 85%",
+                            once: true,
+                            fastScrollEnd: true,
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+            }
+        });
+    }
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => {
+            setupReveals();
+        });
+    } else {
+        setupReveals();
+    }
+}
+
+/**
+ * Feature 7: Scrubbed Parallax Controller
+ */
+function initParallax() {
+    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const parallaxItems = document.querySelectorAll('[data-parallax], .parallax-element, .parallax-image, .parallax-container, .parallax-wrap');
+    parallaxItems.forEach(container => {
+        const speedAttr = container.getAttribute('data-parallax');
+        const speed = speedAttr !== null && !isNaN(parseFloat(speedAttr)) ? parseFloat(speedAttr) : 0.15;
+        const target = container.querySelector('img, .parallax-target, .parallax-image') || container;
+
+        gsap.fromTo(target,
+            { yPercent: -15 * Math.sign(speed || 1), scale: 1.15 },
+            {
+                yPercent: 15 * Math.sign(speed || 1),
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: container,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: true,
+                    invalidateOnRefresh: true
+                }
+            }
+        );
     });
 }
+
+/**
+ * Feature 7: Velocity-Reactive Infinite Marquee Controller
+ */
+function initMarqueeVelocity() {
+    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+    const tracks = document.querySelectorAll('.tech-marquee-track, .marquee-track');
+    if (!tracks.length) return;
+
+    let targetMultiplier = 1.0;
+    let currentMultiplier = 1.0;
+
+    // ScrollTrigger velocity sensor
+    ScrollTrigger.create({
+        onUpdate: (self) => {
+            const velocity = Math.abs(self.getVelocity() || (window.lenis ? window.lenis.velocity : 0));
+            targetMultiplier = 1.0 + Math.min(velocity / 350, 4.0);
+        }
+    });
+
+    // Central GSAP Ticker animation modulation loop
+    gsap.ticker.add(() => {
+        currentMultiplier += (targetMultiplier - currentMultiplier) * 0.08;
+        targetMultiplier += (1.0 - targetMultiplier) * 0.05; // Decay smoothly back to baseline
+
+        tracks.forEach(track => {
+            if (typeof track.getAnimations === 'function') {
+                const animations = track.getAnimations();
+                if (animations && animations.length) {
+                    animations.forEach(anim => {
+                        anim.playbackRate = Math.max(0.1, currentMultiplier);
+                    });
+                }
+            }
+        });
+    });
+
+    // Window resize recalibration & visibility change handling
+    window.addEventListener('resize', () => {
+        ScrollTrigger.refresh();
+    });
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            targetMultiplier = 1.0;
+            currentMultiplier = 1.0;
+        }
+    });
+}
+
 
 

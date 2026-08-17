@@ -24,17 +24,11 @@ $meta_config = [
         'keywords' => 'Bespoke Web Development, Next.js, Firebase, Single Page Apps, SEO Optimization',
         'url' => 'website-development'
     ],
-    'ai-agents' => [
-        'title' => 'Custom Autonomous AI Support Agents | Automatixes',
-        'desc' => 'Deploy natural language AI support agents trained on your custom knowledge base. Qualify leads and answer customer service queries 24/7 with zero hallucination.',
-        'keywords' => 'Autonomous AI Agents, AI chatbot, custom RAG, customer service automation, document indexing',
-        'url' => 'ai-agents'
-    ],
-    'ai-automations' => [
-        'title' => 'Workflow & CRM Automation (n8n, Make) | Automatixes',
-        'desc' => 'Eliminate manual admin tasks. We build end-to-end automations connecting HubSpot, Slack, WhatsApp, and email platforms to streamline lead management.',
-        'keywords' => 'AI Automations, n8n agency, Make.com integration, HubSpot workflow, Zapier triggers',
-        'url' => 'ai-automations'
+    'ai-automated-solutions' => [
+        'title' => 'AI Automated Solutions (Agents & Workflows) | Automatixes',
+        'desc' => 'Deploy custom AI agents for 24/7 support and eliminate manual tasks with end-to-end automations connecting your CRM, Slack, and email platforms.',
+        'keywords' => 'AI Automations, Autonomous AI Agents, n8n agency, Make.com integration, custom RAG, workflow automation',
+        'url' => 'ai-automated-solutions'
     ],
     'product-shoot' => [
         'title' => 'Commercial Product Photography & Studio Shoots | Automatixes',
@@ -159,7 +153,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     </script>
 
     <!-- Service Schema -->
-    <?php if (in_array($page_key, ['ai-agents', 'ai-automations', 'website-development', 'product-shoot'])): ?>
+    <?php if (in_array($page_key, ['ai-automated-solutions', 'website-development', 'product-shoot'])): ?>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -210,20 +204,20 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <!-- Google Fonts: Space Grotesk / Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- n8n Chat Widget CSS -->
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=1786926637.49003">
+    <link rel="stylesheet" href="assets/css/main.css?v=2.0.0">
 </head>
 <body>
 
     
     <!-- Custom Mouse Cursor Follower -->
-    <div class="mouse-cursor cursor-outer"></div>
-    <div class="mouse-cursor cursor-inner"></div>
+    <div class="mouse-cursor cursor-outer" aria-hidden="true"></div>
+    <div class="mouse-cursor cursor-inner" aria-hidden="true"></div>
     <!-- Preloader Start -->
     <div id="preloader">
         <div class="animation-preloader">
@@ -249,9 +243,9 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <!-- Header Navigation Start -->
     <header id="header-sticky" class="header-nav">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
                 <a class="navbar-brand d-flex align-items-center" href="index">
-                    <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 140px; height: auto; object-fit: contain; filter: brightness(0) invert(1);">
+                    <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 180px; height: auto; object-fit: contain; filter: brightness(0) invert(1);">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -265,9 +259,8 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                                 Services
                             </a>
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item py-2 fw-semibold" href="ai-agents">Autonomous AI Agents</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="ai-automated-solutions">AI Automated Solutions</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold" href="voice-agent">Voice Agent Demo <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem;">NEW</span></a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="ai-automations">AI Automations</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold" href="ai-image-generator">AI Image Generator</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold" href="website-development">Web & App Development</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">Product Shoot</a></li>
