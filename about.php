@@ -114,7 +114,7 @@
             </div>
         </div>
     </div>
-    <div id="physics-container" class="physics-container" style="width: 100%; height: 600px; position: relative; cursor: grab; z-index: 1;" data-pill-tint="brand" data-pills='["Faster Lead Response", "24/7 Automated Support", "Fewer Manual Errors", "Real-Time Reporting", "Seamless CRM Sync", "More Qualified Leads", "Hours Saved Weekly", "Consistent Follow-Ups", "Scalable Operations", "Predictable Revenue Growth"]'>
+    <div id="physics-container" class="physics-container" style="width: 100%; height: 600px; position: relative; cursor: grab; z-index: 1; overflow: hidden;" data-pill-tint="brand" data-pills='["Faster Lead Response", "24/7 Automated Support", "Fewer Manual Errors", "Real-Time Reporting", "Seamless CRM Sync", "More Qualified Leads", "Hours Saved Weekly", "Consistent Follow-Ups", "Scalable Operations", "Predictable Revenue Growth"]'>
         <!-- Matter.js Canvas Injected Here -->
     </div>
 </section>

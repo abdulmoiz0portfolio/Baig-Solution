@@ -115,7 +115,7 @@
             </div>
         </div>
     </div>
-    <div id="physics-container" style="width: 100%; height: 600px; position: relative; cursor: grab; z-index: 1;">
+    <div id="physics-container" style="width: 100%; height: 600px; position: relative; cursor: grab; z-index: 1; overflow: hidden;">
         <!-- Matter.js Canvas Injected Here -->
     </div>
 </section>
