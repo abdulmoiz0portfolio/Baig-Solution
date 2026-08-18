@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 $page_key = 'process'; 
 include 'header.php'; 
 ?>
@@ -17,7 +17,7 @@ include 'header.php';
     background-image: radial-gradient(rgba(193, 241, 29, 0.05) 1px, transparent 1px);
     background-size: 20px 20px;
     padding: 80px 20px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .n8n-workflow {
