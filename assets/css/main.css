@@ -2039,3 +2039,9 @@ html.lenis body {
     }
 }
 
+
+.hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.hover-lift:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.4) !important; }
+
+@media (min-width: 992px) { .scale-lg-up { transform: scale(1.05) !important; z-index: 2; position: relative; } }
+@media (max-width: 991px) { .pricing-card { margin-bottom: 2rem; } }
