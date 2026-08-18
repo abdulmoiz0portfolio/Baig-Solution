@@ -168,9 +168,9 @@
                     </div>
                     <!-- Dot indicators -->
                     <div class="carousel-dots">
-                        <button class="dot active" data-index="0">ÃƒÆ’Ã‚Â°Ãƒ"¦Ã‚Â¸Ãƒ"šÃ‚ÂÃƒÂ¢Ã¢"šÂ¬Ã¢â‚¬Â</button>
-                        <button class="dot" data-index="1">ÃƒÆ’Ã‚Â°Ãƒ"¦Ã‚Â¸Ãƒ"¦Ã¢â‚¬â„¢Ãƒ"šÃ‚Â¯</button>
-                        <button class="dot" data-index="2">ÃƒÆ’Ã‚Â°Ãƒ"¦Ã‚Â¸Ãƒ"šÃ‚ÂÃƒÂ¢Ã¢"šÂ¬Ã‚Â</button>
+                        <button class="dot active" data-index="0"></button>
+                        <button class="dot" data-index="1"></button>
+                        <button class="dot" data-index="2"></button>
                     </div>
                 </div>
             </div>

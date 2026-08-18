@@ -1,39 +1,122 @@
+<?php 
+include_once 'security.php'; 
+
+if (!isset($page_key)) {
+    $page_key = 'index';
+}
+
+$meta_config = [
+    'index' => [
+        'title' => 'AI Automation Agency (n8n, Make, GoHighLevel) | Automatixes',
+        'desc' => 'Automatixes is an AI-first agency building custom AI agents and workflow automations to connect your CRM, WhatsApp, and emails. Scale operations 24/7.',
+        'keywords' => 'AI Automation Agency, n8n, Make, GoHighLevel, Zapier, AI Agents, software development, CRM integration',
+        'url' => ''
+    ],
+    'about' => [
+        'title' => 'Our Mission & Automation Experts | Automatixes',
+        'desc' => 'Meet Automatixes. We design custom AI agent systems, API integrations, and e-commerce growth strategies to help small & mid-sized businesses automate operations.',
+        'keywords' => 'About Automatixes, AI Engineers, CRM automation experts, n8n consultants',
+        'url' => 'about'
+    ],
+    'website-development' => [
+        'title' => 'Bespoke Web & App Development Services | Automatixes',
+        'desc' => 'High-performance, secure, responsive web applications and custom single-page apps optimized for speed and automated lead conversion. Start today.',
+        'keywords' => 'Bespoke Web Development, Next.js, Firebase, Single Page Apps, SEO Optimization',
+        'url' => 'website-development'
+    ],
+    'ai-automated-solutions' => [
+        'title' => 'AI Automated Solutions (Agents & Workflows) | Automatixes',
+        'desc' => 'Deploy custom AI agents for 24/7 support and eliminate manual tasks with end-to-end automations connecting your CRM, Slack, and email platforms.',
+        'keywords' => 'AI Automations, Autonomous AI Agents, n8n agency, Make.com integration, custom RAG, workflow automation',
+        'url' => 'ai-automated-solutions'
+    ],
+    'product-shoot' => [
+        'title' => 'Commercial Product Photography & Studio Shoots | Automatixes',
+        'desc' => 'High-end e-commerce product shoots featuring studio lighting and expert prop styling that increases brand conversion rates. Browse our portfolio.',
+        'keywords' => 'Product Shoot Photography, e-commerce photography, luxury product studio, backlighting styling',
+        'url' => 'product-shoot'
+    ],
+    'contact' => [
+        'title' => 'Book a Free AI Operations Audit & Consultation | Automatixes',
+        'desc' => 'Ready to automate your operations? Contact Automatixes to schedule a free automation audit. We connect your calendar, CRM, and communication tools.',
+        'keywords' => 'Contact Automatixes, AI operations audit, book consultation, digital agency',
+        'url' => 'contact'
+    ],
+    'admin' => [
+        'title' => 'CRM Lead Logs Control Panel | Automatixes',
+        'desc' => 'Internal dashboard for Automatixes administrators to track real-time contact leads, newsletter subscribers, and automated cost quote submissions.',
+        'keywords' => 'Admin dashboard, lead tracking, CRM logs',
+        'url' => 'admin'
+    ],
+    'invoice-maker' => [
+        'title' => 'Free Online Invoice Maker | Automatixes',
+        'desc' => 'Generate professional, customizable invoices instantly with live math calculations, dynamic line items, and print/PDF export from Automatixes.',
+        'keywords' => 'Free Invoice Maker, online invoice generator, Automatixes invoice tool, automated invoice PDF, billing software',
+        'url' => 'invoice-maker'
+    ],
+    'voice-agent' => [
+        'title' => 'Talk to our AI Voice Agent | Automatixes',
+        'desc' => 'Experience the future of customer support. Click to start a live voice conversation with our autonomous AI agent.',
+        'keywords' => 'AI Voice Agent, Vapi AI, Retell AI, conversational AI, voicebot demo',
+        'url' => 'voice-agent'
+    ],
+    'blogs' => [
+        'title' => 'Insights & Updates | Automatixes',
+        'desc' => 'Read our latest insights on AI automation, web development, and digital marketing strategies for growing your business.',
+        'keywords' => 'Automatixes blog, AI automation insights, web development tips, business growth',
+        'url' => 'blogs'
+    ],
+    'blog-detail' => [
+        'title' => 'Blog Detail | Automatixes',
+        'desc' => 'Read the full article and gain insights into AI automation, digital operations, and bespoke software development.',
+        'keywords' => 'Automatixes blog, article',
+        'url' => 'blog-detail'
+    ]
+];
+
+$active_meta = isset($meta_config[$page_key]) ? $meta_config[$page_key] : $meta_config['index'];
+$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'automatixes.com';
+$forwarded_proto = isset($_SERVER['HTTP_X_FORWARDED_PROTO']) ? strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) : '';
+$protocol = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') || $forwarded_proto === 'https') ? "https" : "http";
+$canonical_url = "{$protocol}://{$host}/" . $active_meta['url'];
+$og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Automation Agency | Automatixes</title>
+    <title><?php echo $active_meta['title']; ?></title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="canonical" href="http://localhost:8000">
+    <link rel="canonical" href="<?php echo $canonical_url; ?>">
     
     <!-- Meta SEO Tags -->
-    <meta name="description" content="Automatixes is an AI-first agency building custom AI agents and workflow automations.">
-    <meta name="keywords" content="AI Automation Agency, n8n, Make, GoHighLevel, Zapier, AI Agents">
+    <meta name="description" content="<?php echo $active_meta['desc']; ?>">
+    <meta name="keywords" content="<?php echo $active_meta['keywords']; ?>">
     <meta name="author" content="Automatixes">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:8000">
-    <meta property="og:title" content="http://localhost:8000">
-    <meta property="og:description" content="http://localhost:8000">
-    <meta property="og:image" content="http://localhost:8000">
+    <meta property="og:url" content="<?php echo $canonical_url; ?>">
+    <meta property="og:title" content="<?php echo $active_meta['title']; ?>">
+    <meta property="og:description" content="<?php echo $active_meta['desc']; ?>">
+    <meta property="og:image" content="<?php echo $og_image; ?>">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="http://localhost:8000">
-    <meta name="twitter:title" content="http://localhost:8000">
-    <meta name="twitter:description" content="http://localhost:8000">
-    <meta name="twitter:image" content="http://localhost:8000">
+    <meta name="twitter:url" content="<?php echo $canonical_url; ?>">
+    <meta name="twitter:title" content="<?php echo $active_meta['title']; ?>">
+    <meta name="twitter:description" content="<?php echo $active_meta['desc']; ?>">
+    <meta name="twitter:image" content="<?php echo $og_image; ?>">
 
     <!-- Hreflang Tags for SEO/GEO -->
-    <link rel="alternate" hreflang="x-default" href="">
-    <link rel="alternate" hreflang="en" href="">
-    <link rel="alternate" hreflang="en-us" href="">
-    <link rel="alternate" hreflang="en-gb" href="">
-    <link rel="alternate" hreflang="en-ca" href="">
-    <link rel="alternate" hreflang="ar" href="">
+    <link rel="alternate" hreflang="x-default" href="<?php echo $canonical_url; ?>">
+    <link rel="alternate" hreflang="en" href="<?php echo $canonical_url; ?>">
+    <link rel="alternate" hreflang="en-us" href="<?php echo $canonical_url; ?>">
+    <link rel="alternate" hreflang="en-gb" href="<?php echo $canonical_url; ?>">
+    <link rel="alternate" hreflang="en-ca" href="<?php echo $canonical_url; ?>">
+    <link rel="alternate" hreflang="ar" href="<?php echo $canonical_url; ?>">
 
     <!-- JSON-LD Structured Data Schema -->
     <!-- WebSite Schema -->
@@ -42,7 +125,7 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Automatixes",
-      "url": "http://localhost:8000",
+      "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
       "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7."
     }
     </script>
@@ -53,9 +136,9 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Automatixes",
-      "url": "http://localhost:8000",
-      "logo": ":///assets/img/services/ai_automations.jpg",
-      "image": ":///assets/img/services/ai_automations.jpg",
+      "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
+      "logo": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
+      "image": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
       "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7.",
       "telephone": "+92-336-6920141",
       "email": "contact@automatixes.com",
@@ -70,14 +153,47 @@
     </script>
 
     <!-- Service Schema -->
-    
-    
-    
+    <?php if (in_array($page_key, ['ai-automated-solutions', 'website-development', 'product-shoot'])): ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "<?php echo $active_meta['title']; ?>",
+      "serviceType": "<?php echo str_replace(' | Automatixes', '', $active_meta['title']); ?>",
+      "provider": {
+        "@type": "Organization",
+        "name": "Automatixes",
+        "url": "<?php echo $protocol; ?>://<?php echo $host; ?>"
+      },
+      "description": "<?php echo $active_meta['desc']; ?>",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      }
+    }
+    </script>
+    <?php endif; ?>
 
     <!-- BreadcrumbList Schema -->
-    
-    
-    
+    <?php if ($page_key !== 'index'): ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "<?php echo $protocol; ?>://<?php echo $host; ?>"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "<?php echo str_replace(' | Automatixes', '', $active_meta['title']); ?>",
+        "item": "<?php echo $canonical_url; ?>"
+      }]
+    }
+    </script>
+    <?php endif; ?>
 
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -128,7 +244,7 @@
     <header id="header-sticky" class="header-nav">
         <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-0">
-                <a class="navbar-brand d-flex align-items-center" href="#">
+                <a class="navbar-brand d-flex align-items-center" href="index">
                     <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 180px; height: auto; object-fit: contain; filter: brightness(0) invert(1);">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -136,30 +252,29 @@
                 </button>
                                 <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="mainNavbar">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
-                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="index">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about">About</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item py-2 fw-semibold" href="#services-section">Autonomous AI Agents</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="#services-section">Voice Agent Demo <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem;">NEW</span></a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="#services-section">AI Automations</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="#services-section">AI Image Generator</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="#services-section">Web & App Development</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="#services-section">Product Shoot</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="#services-section">Free Invoice Maker</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="ai-automated-solutions">AI Automated Solutions</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="voice-agent">Voice Agent Demo <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem;">NEW</span></a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="ai-image-generator">AI Image Generator</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="website-development">Web & App Development</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">Product Shoot</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="invoice-maker">Free Invoice Maker</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link text-nowrap" href="#testimonials-section">Customer Ratings</a></li>
-                        <li class="nav-item"><a class="nav-link text-nowrap" href="#portfolio-section">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link text-nowrap" href="#process-section">Process</a></li>
-                        <li class="nav-item"><a class="nav-link text-nowrap" href="#faq-section">Blogs</a></li>
-                        <li class="nav-item"><a class="nav-link text-nowrap" href="#contact-section">Contact us</a></li>
+                        <li class="nav-item"><a class="nav-link text-nowrap" href="reviews">Customer Ratings</a></li>
+                                                <li class="nav-item"><a class="nav-link text-nowrap" href="portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link text-nowrap" href="process">Process</a></li>
+                        <li class="nav-item"><a class="nav-link text-nowrap" href="blogs">Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link text-nowrap" href="contact">Contact us</a></li>
                     </ul>
                     <div class="d-none d-lg-block">
-                        <a href="#contact-section" class="btn btn-brand rounded-pill px-4 py-2 fw-semibold text-nowrap">Get Started</a>
+                        <a href="contact" class="btn btn-brand rounded-pill px-4 py-2 fw-semibold text-nowrap">Get Started</a>
                     </div>
                 </div>
             </nav>
@@ -177,6 +292,7 @@
 
 
 
+<?php $page_key = 'index'; include 'header.php'; ?>
 
 <!-- Hero Section Start -->
 <section class="hero-section position-relative d-flex align-items-center justify-content-center text-center" style="min-height: 100vh; overflow: hidden; padding-top: 100px;">
@@ -293,7 +409,7 @@
             </div>
         </div>
     </div>
-    <div id="physics-container" style="width: 100%; height: 600px; position: relative; cursor: grab; z-index: 1;">
+    <div id="physics-container" style="width: 100%; height: 600px; position: relative; cursor: grab; z-index: 1; overflow: hidden;">
         <!-- Matter.js Canvas Injected Here -->
     </div>
 </section>
@@ -337,8 +453,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
         <!-- Additional Offerings Separator -->
         <div class="text-center my-5 pt-3 wow fadeInUp" data-wow-delay=".5s">
@@ -423,6 +537,19 @@
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>API & Webhook integrations</span></li>
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>100% predictable outcomes</span></li>
                     </ul>
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            </div>
+
+            <!-- Project 2: AI Agents -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                <div class="portfolio-card bg-white rounded-4 border p-3 h-100 position-relative shadow-sm text-start" style="transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;">
                     <a href="ai-automated-solutions" class="btn btn-outline-light btn-lg w-100 fw-bold border-2">Explore Automations <i class="fa-solid fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
@@ -953,14 +1080,21 @@
 }
 </script>
 
+<?php include 'footer.php'; ?>
+
+
+
+
+
+
     </div> <!-- End smooth-content -->
     </div> <!-- End smooth-wrapper -->
 
-    
+    <?php if ($page_key === 'index' || $page_key === 'voice-agent'): ?>
     <!-- ElevenLabs Voice Widget -->
     <elevenlabs-convai agent-id="agent_1601m004ny6efkns714nfr8vjvqm"></elevenlabs-convai>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-    
+    <?php endif; ?>
 
     <!-- Footer Section Start -->
     <footer class="footer-area bg-dark text-white pt-5 pb-3">
@@ -968,7 +1102,7 @@
             <div class="row g-4 mb-5">
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-widget">
-                        <a href="#" class="footer-logo mb-3 d-inline-block text-decoration-none">
+                        <a href="index" class="footer-logo mb-3 d-inline-block text-decoration-none">
                             <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes" style="height: 48px; border-radius: 8px; mix-blend-mode: lighten;">
                         </a>
                         <p class="text-muted">
@@ -989,13 +1123,12 @@
                     <div class="footer-widget">
                         <h5 class="widget-title">Quick Links</h5>
                         <ul class="list-unstyled footer-menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#about-section">About Us</a></li>
-                            <li><a href="#services-section">AI Agents</a></li>
-                            <li><a href="#services-section">AI Automations</a></li>
-                            <li><a href="#services-section">Web Development</a></li>
-                            <li><a href="#faq-section">Blogs</a></li>
-                            <li><a href="#contact-section">Contact Us</a></li>
+                            <li><a href="index">Home</a></li>
+                            <li><a href="about">About Us</a></li>
+                            <li><a href="ai-automated-solutions">AI Automated Solutions</a></li>
+                            <li><a href="website-development">Web Development</a></li>
+                            <li><a href="blogs">Blogs</a></li>
+                            <li><a href="contact">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1003,11 +1136,10 @@
                     <div class="footer-widget">
                         <h5 class="widget-title">Our Services</h5>
                         <ul class="list-unstyled footer-menu">
-                            <li><a href="#services-section">AI Agents Integration</a></li>
-                            <li><a href="#services-section">AI Automations (n8n/Make)</a></li>
-                            <li><a href="#services-section">Web & App Development</a></li>
-                            <li><a href="#services-section">Product Shoot</a></li>
-                            <li><a href="#services-section">Free Invoice Maker</a></li>
+                            <li><a href="ai-automated-solutions">AI Automated Solutions</a></li>
+                            <li><a href="website-development">Web & App Development</a></li>
+                            <li><a href="product-shoot">Product Shoot</a></li>
+                            <li><a href="invoice-maker">Free Invoice Maker</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1117,7 +1249,7 @@
         window.db = db;
         console.log("Firebase initialized successfully!");
 
-        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â ⭐ auto-populate TESTIMONIALS section ---
+        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ auto-populate TESTIMONIALS section ---
         function escapeHTMLInner(str) {
             if (!str) return '';
             return String(str).replace(/[&<>'\"]/g, tag => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[tag] || tag));
@@ -1501,7 +1633,7 @@
                 if (chatHeader && !document.getElementById('custom-chat-close')) {
                     const closeBtn = document.createElement('button');
                     closeBtn.id = 'custom-chat-close';
-                    closeBtn.innerHTML = 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢"šÂ¬Ã…"⭐"šÂ¬Ã…"';
+                    closeBtn.innerHTML = 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢"šÂ¬Ã…"ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢"šÂ¬Ã…"';
                     closeBtn.onclick = (e) => {
                         if (e) {
                             e.preventDefault();
@@ -1529,7 +1661,7 @@
                         
                         const replies = [
                             { icon: 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚ÂºÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¯ÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â¸ÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â', text: 'Services' },
-                            { icon: 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¸⭐"šÃ‚Â°', text: 'Pricing' },
+                            { icon: 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â°', text: 'Pricing' },
                             { icon: 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"¦Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¾', text: 'Connect Expert' }
                         ];
 
@@ -1607,7 +1739,6 @@
     <script src="assets/js/main.js?v=1.0.2"></script>
 </body>
 </html>
-
 
 
 
