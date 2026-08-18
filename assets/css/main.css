@@ -1204,9 +1204,7 @@ small,
     text-transform: uppercase;
 }
 
-.letters-loading:nth-child(4) {
-    margin-right: clamp(10px, 2.5vw, 25px);
-}
+
 
 .letters-loading::before {
     content: attr(data-text-preloader);
