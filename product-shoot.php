@@ -114,7 +114,7 @@
                 <h3 class="display-6 fw-extrabold text-dark">Product Shoot in Action</h3>
                 <p class="text-secondary">Watch how we bring products to life with professional styling and lighting.</p>
             </div>
-            <div class="col-lg-3 col-md-5 col-sm-8 mx-auto">
+            <div class="col-lg-5 col-md-8 col-sm-10 col-12 mx-auto">
                 <div class="showcase-dark-frame">
                     <div class="showcase-dark-header">
                         <div class="d-flex align-items-center gap-2">
@@ -181,9 +181,9 @@
 <style>
 /* ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ Dark showcase frame ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ */
 .showcase-dark-frame { background:#1a1a2e; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); box-shadow:0 25px 80px rgba(0,0,0,0.3); }
-.showcase-dark-header { background:linear-gradient(135deg,#0B4550,#1a1a2e); padding:14px 20px; display:flex; align-items:center; flex-wrap:wrap; gap:16px; border-bottom:1px solid rgba(255,255,255,0.06); }
+.showcase-dark-header { background:linear-gradient(135deg,#0B4550,#1a1a2e); padding:14px 20px; display:flex; align-items:center; flex-wrap:nowrap; gap:16px; border-bottom:1px solid rgba(255,255,255,0.06); overflow:hidden; }
 .sdot { width:12px; height:12px; border-radius:50%; display:inline-block; }
-.sframe-title { color:rgba(255,255,255,0.7); font-size:14px; font-weight:500; flex:1; }
+.sframe-title { color:rgba(255,255,255,0.7); font-size:14px; font-weight:500; flex:1; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
 .sframe-badge { background:rgba(200, 224, 25,0.15); color:#C8E019; padding:4px 14px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; border:1px solid rgba(200, 224, 25,0.2); }
 .sframe-body { background:#0B4550; position:relative; }
 
