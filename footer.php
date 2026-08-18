@@ -14,7 +14,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <a href="index" class="footer-logo mb-3 d-inline-block text-decoration-none">
-                            <img src="assets/img/logo/automatixes-logo-new.png" alt="Automatixes" style="height: 48px; object-fit: contain;">
+                            <img src="assets/img/logo/automatixes-logo-new.png" alt="Automatixes" style="height: 90px; object-fit: contain; margin-left: -15px;">
                         </a>
                         <p class="text-muted">
                             At Automatixes, we operate at the intersection of AI agents, sophisticated workflow automation, and custom web development. Let us help automate your growth.

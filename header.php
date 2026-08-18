@@ -245,7 +245,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
         <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-0">
                 <a class="navbar-brand d-flex align-items-center" href="index">
-                    <img src="assets/img/logo/automatixes-logo-new.png" alt="Automatixes Logo" style="width: 190px; height: auto; object-fit: contain;">
+                    <img src="assets/img/logo/automatixes-logo-new.png" alt="Automatixes Logo" style="width: 320px; height: auto; object-fit: contain; margin-top: -15px; margin-bottom: -15px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
