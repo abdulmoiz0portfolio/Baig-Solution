@@ -11,7 +11,7 @@
     <footer class="footer-area bg-dark text-white pt-5 pb-3">
         <div class="container">
             <div class="row g-4 mb-5">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <a href="index" class="footer-logo mb-3 d-inline-block text-decoration-none">
                             <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes" style="height: 48px; border-radius: 8px; mix-blend-mode: lighten;">
@@ -54,7 +54,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Legal</h5>
+                        <ul class="list-unstyled footer-menu">
+                            <li><a href="privacy">Privacy Policy</a></li>
+                            <li><a href="terms">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">Contact Info</h5>
                         <ul class="list-unstyled contact-info text-muted">
@@ -75,13 +84,10 @@
             <hr class="border-secondary">
             
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
+                <div class="col-12 text-center">
                     <p class="mb-0 text-muted">&copy; 2026 Automatixes. All rights reserved.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-                    <a href="privacy" class="text-muted text-decoration-none me-3">Privacy Policy</a>
-                    <a href="terms" class="text-muted text-decoration-none">Terms of Service</a>
-                </div>
+                
             </div>
         </div>
     </footer>

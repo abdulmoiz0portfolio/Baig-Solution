@@ -1,5 +1,5 @@
 /* ==========================================================================
-   QCLAY REDESIGN SYSTEM — MAIN STYLESHEET
+   QCLAY REDESIGN SYSTEM â€” MAIN STYLESHEET
    Obsidian Abyss Foundation & Fluid Design System
    ========================================================================== */
 
@@ -1195,17 +1195,17 @@ small,
 
 .letters-loading {
     font-weight: 800;
-    font-size: 55px;
+    font-size: clamp(24px, 7vw, 55px);
     color: rgba(255, 255, 255, 0.08);
     font-family: var(--font-heading);
     position: relative;
     display: inline-block;
-    letter-spacing: 12px;
+    letter-spacing: clamp(4px, 1.5vw, 12px);
     text-transform: uppercase;
 }
 
 .letters-loading:nth-child(4) {
-    margin-right: 25px;
+    margin-right: clamp(10px, 2.5vw, 25px);
 }
 
 .letters-loading::before {
