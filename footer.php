@@ -365,7 +365,7 @@
     
     <!-- Single Sticky Lead Capture Button -->
 
-    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; right: 0; transform: translate(calc(100% - 60px), -50%); background: #C8E019; color: white; border: none; padding: 12px 20px 12px 20px; border-radius: 30px 0 0 30px; font-size: 15px; cursor: pointer; outline: none !important; box-shadow: -4px 4px 15px rgba(0,0,0,0.2); font-weight: 600; z-index: 9000; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, box-shadow 0.3s ease; display: flex; align-items: center; gap: 8px;">
+    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; right: -5px; transform: translateY(-50%); background: #C8E019; color: #1a1a1a; border: none; padding: 12px 25px 12px 20px; border-radius: 30px 0 0 30px; font-size: 15px; cursor: pointer; outline: none !important; box-shadow: -4px 4px 15px rgba(0,0,0,0.2); font-weight: 700; z-index: 999999; transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; display: flex; align-items: center; gap: 10px;">
         <i class="fa-solid fa-headset fs-5"></i> <span style="white-space: nowrap;">Connect with an Expert</span>
     </button>
 
@@ -430,11 +430,11 @@
                 animation: softPulse 2s infinite;
             }
             #sticky-expert-btn:hover { 
-                transform: translate(0, -50%) !important; 
-                background: #B5CC15 !important; 
-                animation: none;
-                box-shadow: -4px 4px 20px rgba(0,0,0,0.3) !important;
-            }
+                  transform: translateY(-50%) translateX(-5px) !important; 
+                  background: #B5CC15 !important; 
+                  animation: none;
+                  box-shadow: -4px 4px 20px rgba(0,0,0,0.3) !important;
+              }
             #in-chat-quick-replies::-webkit-scrollbar { display: none; }
             
             /* Fix chat header layout to make it smaller and position X button */
