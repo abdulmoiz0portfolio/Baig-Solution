@@ -299,15 +299,66 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <div class="position-absolute rounded-circle" style="background: radial-gradient(circle, rgba(200, 224, 25,0.35) 0%, rgba(0,0,0,0) 70%); width: 700px; height: 700px; top: -100px; left: -150px; filter: blur(80px); z-index: 0; pointer-events: none;"></div>
     <div class="position-absolute rounded-circle" style="background: radial-gradient(circle, rgba(168,85,247,0.2) 0%, rgba(0,0,0,0) 70%); width: 600px; height: 600px; bottom: -50px; right: -100px; filter: blur(80px); z-index: 0; pointer-events: none;"></div>
     
-    <!-- Placeholder for 3D elements (can be replaced with actual images later) -->
-    <div class="position-absolute" style="top: 20%; left: 15%; z-index: 0; opacity: 0.8; pointer-events: none;">
-        <svg width="150" height="150" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 0L193.301 50V150L100 200L6.69873 150V50L100 0Z" fill="#C8E019" fill-opacity="0.8" style="transform: rotate(15deg);"/>
+    <!-- Floating Automation Workflow Nodes (Left) -->
+    <style>
+        @keyframes heroFloat {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+    <div class="position-absolute d-none d-lg-block" style="top: 25%; left: 8%; z-index: 0; opacity: 0.7; pointer-events: none; animation: heroFloat 6s ease-in-out infinite;">
+        <!-- n8n style workflow -->
+        <svg width="220" height="280" viewBox="0 0 220 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Connection Lines -->
+            <path d="M110 50 C 110 90, 110 90, 110 120" stroke="#C8E019" stroke-width="3" fill="none"/>
+            <path d="M110 160 C 110 190, 110 190, 110 220" stroke="#C8E019" stroke-width="3" fill="none"/>
+            <!-- Branch line -->
+            <path d="M110 160 C 160 180, 180 190, 180 220" stroke="#0D6171" stroke-width="3" stroke-dasharray="6 6" fill="none"/>
+            
+            <!-- Node 1: Trigger -->
+            <rect x="30" y="10" width="160" height="40" rx="8" fill="#111111" stroke="#C8E019" stroke-width="2"/>
+            <rect x="30" y="10" width="40" height="40" rx="8" fill="#C8E019"/>
+            <path d="M42 25 L50 17 L58 25 M50 17 L50 33" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="85" y="27" width="80" height="6" rx="3" fill="#333333"/>
+            
+            <!-- Node 2: Process/Filter -->
+            <rect x="30" y="120" width="160" height="40" rx="8" fill="#111111" stroke="#0D6171" stroke-width="2"/>
+            <rect x="30" y="120" width="40" height="40" rx="8" fill="#0D6171"/>
+            <circle cx="50" cy="140" r="8" stroke="#111" stroke-width="2" fill="none"/>
+            <rect x="85" y="137" width="60" height="6" rx="3" fill="#333333"/>
+            
+            <!-- Node 3: Output 1 -->
+            <rect x="30" y="220" width="160" height="40" rx="8" fill="#111111" stroke="#C8E019" stroke-width="2"/>
+            <rect x="30" y="220" width="40" height="40" rx="8" fill="#C8E019"/>
+            <path d="M42 235 L50 243 L58 235 M50 227 L50 243" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="85" y="237" width="90" height="6" rx="3" fill="#333333"/>
         </svg>
     </div>
-    <div class="position-absolute" style="bottom: 15%; right: 20%; z-index: 0; opacity: 0.6; pointer-events: none;">
-        <svg width="120" height="120" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 5L190 195H10L100 5Z" stroke="#A855F7" stroke-width="4" style="transform: rotate(-20deg);"/>
+    
+    <!-- Floating Automation Workflow Nodes (Right) -->
+    <div class="position-absolute d-none d-lg-block" style="bottom: 15%; right: 10%; z-index: 0; opacity: 0.6; pointer-events: none; animation: heroFloat 8s ease-in-out infinite reverse;">
+        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Central Node -->
+            <circle cx="100" cy="100" r="45" stroke="#0D6171" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
+            <circle cx="100" cy="100" r="25" fill="#111" stroke="#C8E019" stroke-width="3"/>
+            <circle cx="100" cy="100" r="8" fill="#C8E019"/>
+            
+            <!-- Orbiting Nodes -->
+            <!-- Top -->
+            <line x1="100" y1="75" x2="100" y2="40" stroke="#C8E019" stroke-width="2" stroke-dasharray="4 4"/>
+            <rect x="85" y="15" width="30" height="30" rx="6" fill="#111" stroke="#C8E019" stroke-width="2"/>
+            <circle cx="100" cy="30" r="4" fill="#C8E019"/>
+            
+            <!-- Bottom Right -->
+            <line x1="118" y1="118" x2="150" y2="150" stroke="#0D6171" stroke-width="2" stroke-dasharray="4 4"/>
+            <rect x="140" y="140" width="30" height="30" rx="6" fill="#111" stroke="#0D6171" stroke-width="2"/>
+            <circle cx="155" cy="155" r="4" fill="#0D6171"/>
+            
+            <!-- Bottom Left -->
+            <line x1="82" y1="118" x2="50" y2="150" stroke="#A855F7" stroke-width="2" stroke-dasharray="4 4"/>
+            <rect x="30" y="140" width="30" height="30" rx="6" fill="#111" stroke="#A855F7" stroke-width="2"/>
+            <circle cx="45" cy="155" r="4" fill="#A855F7"/>
         </svg>
     </div>
     
