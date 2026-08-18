@@ -14,7 +14,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <a href="index" class="footer-logo mb-3 d-inline-block text-decoration-none">
-                            <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes" style="height: 48px; border-radius: 8px; mix-blend-mode: lighten;">
+                            <img src="assets/img/logo/automatixes-logo-new.png" alt="Automatixes" style="height: 48px; object-fit: contain;">
                         </a>
                         <p class="text-muted">
                             At Automatixes, we operate at the intersection of AI agents, sophisticated workflow automation, and custom web development. Let us help automate your growth.
@@ -99,7 +99,7 @@
             <button class="close-modal" id="closeModal">&times;</button>
             <div class="modal-content-side" style="padding: 40px 30px; text-align: center;">
                 <div class="modal-logo">
-                    <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; mix-blend-mode: darken; border: 1px solid rgba(0,0,0,0.1); display: block; margin: 0 auto;">
+                    <img src="assets/img/logo/automatixes-icon.png" alt="Automatixes Logo" style="width: 64px; height: 64px; object-fit: contain; display: block; margin: 0 auto; margin-bottom: 10px;">
                 </div>
                 <h2 style="font-size: 28px; margin-bottom: 10px; ">Exclusive 10% Discount!</h2>
                 <p style="font-size: 15px; color: #666; margin-bottom: 25px;">Subscribe to our newsletter and save <b>10%</b> on your first project with us.</p>
