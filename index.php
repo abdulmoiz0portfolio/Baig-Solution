@@ -243,19 +243,6 @@
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>API & Webhook integrations</span></li>
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>100% predictable outcomes</span></li>
                     </ul>
-                
-                    
-                    
-                    
-                    
-                    
-                    
-                
-            </div>
-
-            <!-- Project 2: AI Agents -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                <div class="portfolio-card bg-white rounded-4 border p-3 h-100 position-relative shadow-sm text-start" style="transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;">
                     <a href="ai-automated-solutions" class="btn btn-outline-light btn-lg w-100 fw-bold border-2">Explore Automations <i class="fa-solid fa-arrow-right ms-2"></i></a>
                 </div>
             </div>

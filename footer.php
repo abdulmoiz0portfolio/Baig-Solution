@@ -16,29 +16,14 @@
                         <a href="index" class="footer-logo mb-3 d-inline-block text-decoration-none">
                             <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes" style="height: 48px; border-radius: 8px; mix-blend-mode: lighten;">
                         </a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style>
                         <p class="text-muted">
                             At Automatixes, we operate at the intersection of AI agents, sophisticated workflow automation, and custom web development. Let us help automate your growth.
                         </p>
                         <div class="social-links mt-4 d-none">
                             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style>
                             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style>
                             <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style>
                             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style>
                         </div>
                         <div class="mt-3">
                             
@@ -49,30 +34,12 @@
                     <div class="footer-widget">
                         <h5 class="widget-title">Quick Links</h5>
                         <ul class="list-unstyled footer-menu">
-                            <li><a href="index">Home</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style></li>
-                            <li><a href="about">About Us</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style></li>
-                            <li><a href="ai-automated-solutions">AI Automated Solutions</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style></li>
-                            <li><a href="website-development">Web Development</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style></li>
-                            <li><a href="blogs">Blogs</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style></li>
-                            <li><a href="contact">Contact Us</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style></li>
+                            <li><a href="index">Home</a></li>
+                            <li><a href="about">About Us</a></li>
+                            <li><a href="ai-automated-solutions">AI Automated Solutions</a></li>
+                            <li><a href="website-development">Web Development</a></li>
+                            <li><a href="blogs">Blogs</a></li>
+                            <li><a href="contact">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -80,22 +47,10 @@
                     <div class="footer-widget">
                         <h5 class="widget-title">Our Services</h5>
                         <ul class="list-unstyled footer-menu">
-                            <li><a href="ai-automated-solutions">AI Automated Solutions</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style></li>
-                            <li><a href="website-development">Web & App Development</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style></li>
-                            <li><a href="product-shoot">Product Shoot</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style></li>
-                            <li><a href="invoice-maker">Free Invoice Maker</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style></li>
+                            <li><a href="ai-automated-solutions">AI Automated Solutions</a></li>
+                            <li><a href="website-development">Web & App Development</a></li>
+                            <li><a href="product-shoot">Product Shoot</a></li>
+                            <li><a href="invoice-maker">Free Invoice Maker</a></li>
                         </ul>
                     </div>
                 </div>
@@ -107,16 +62,10 @@
                             <li class="d-flex mb-2">
                                 <i class="fa-solid fa-envelope text-accent-brand me-2 mt-1"></i>
                                 <a href="mailto:contact@automatixes.com">contact@automatixes.com</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style>
                             </li>
                             <li class="d-flex mb-2">
                                 <i class="fa-solid fa-phone text-accent-brand me-2 mt-1"></i>
                                 <a href="tel:+923366920141">+92 336 6920141</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style>
                             </li>
                         </ul>
                     </div>
@@ -131,13 +80,7 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
                     <a href="privacy" class="text-muted text-decoration-none me-3">Privacy Policy</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style>
                     <a href="terms" class="text-muted text-decoration-none">Terms of Service</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style>
                 </div>
             </div>
         </div>
@@ -217,7 +160,7 @@
         window.db = db;
         console.log("Firebase initialized successfully!");
 
-        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â 'ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ auto-populate TESTIMONIALS section ---
+        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ auto-populate TESTIMONIALS section ---
         function escapeHTMLInner(str) {
             if (!str) return '';
             return String(str).replace(/[&<>'\"]/g, tag => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[tag] || tag));
@@ -244,10 +187,7 @@
                             ? '<i class="fa-solid fa-star text-accent-brand me-1"></i>'
                             : '<i class="fa-regular fa-star text-accent-brand me-1"></i>';
                     }
-                    const profileLink = d.profileLink ? `<a href="${escapeHTMLInner(d.profileLink)}" target="_blank" rel="noopener" class="small text-accent-brand text-decoration-none mt-1 d-inline-block"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>View Profile</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style>` : '';
+                    const profileLink = d.profileLink ? `<a href="${escapeHTMLInner(d.profileLink)}" target="_blank" rel="noopener" class="small text-accent-brand text-decoration-none mt-1 d-inline-block"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>View Profile</a>` : '';
                     const col = document.createElement('div');
                     col.className = 'col-md-6 col-lg-4';
                     col.innerHTML = `
@@ -258,7 +198,7 @@
                                     <div class="review-stars-display mt-1">${starsHtml}</div>
                                     ${profileLink}
                                 </div>
-                                <small class="text-muted">${d.rating} ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â 'ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¹ÃƒÆ’Ã†â€™"Ã‚Â¦ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦</small>
+                                <small class="text-muted">${d.rating} ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¹Ãƒ"¦Ã¢â‚¬Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â¦</small>
                             </div>
                             <p class="text-secondary mb-0 mt-2" style="white-space:pre-line;">${escapeHTMLInner(d.comment)}</p>
                         </div>`;
@@ -361,10 +301,7 @@
                         }
                     }
 
-                    const profileLink = review.profileLink ? `<a href="${escapeHTML(review.profileLink)}" target="_blank" rel="noopener" class="small text-accent-brand text-decoration-none mt-1 d-inline-block"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>View Profile</a>
-    <style>
-        #sticky-whatsapp-btn:hover { transform: scale(1.1) !important; background: #20b858 !important; }
-    </style>` : '';
+                    const profileLink = review.profileLink ? `<a href="${escapeHTML(review.profileLink)}" target="_blank" rel="noopener" class="small text-accent-brand text-decoration-none mt-1 d-inline-block"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>View Profile</a>` : '';
 
                     const reviewCard = document.createElement("div");
                     reviewCard.className = "col-md-6 col-lg-4";
@@ -390,7 +327,7 @@
                     if(averageRatingText) averageRatingText.innerHTML = `${avg} <i class="fa-solid fa-star text-accent-brand"></i>`;
                     if(reviewCountText) reviewCountText.textContent = `based on ${reviewCount} review${reviewCount > 1 ? 's' : ''}`;
                 } else {
-                    if(averageRatingText) averageRatingText.textContent = "0 ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â 'ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¹ÃƒÆ’Ã†â€™"Ã‚Â¦ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦";
+                    if(averageRatingText) averageRatingText.textContent = "0 ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¹Ãƒ"¦Ã¢â‚¬Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â¦";
                     if(reviewCountText) reviewCountText.textContent = "(0 reviews)";
                     reviewsList.innerHTML = `<div class="col-12 text-center text-muted py-5 border rounded-4 bg-light">No reviews yet. Be the first to write a review!</div>`;
                 }
@@ -411,7 +348,8 @@
         }
     </script>
 
-        <!-- WhatsApp Floating Button -->
+    
+    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/923366920141" target="_blank" id="sticky-whatsapp-btn" style="position: fixed; bottom: 20px; left: 20px; width: 60px; height: 60px; background: #25D366; color: white; border-radius: 50%; font-size: 32px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 8999; transition: transform 0.3s ease; text-decoration: none;">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
@@ -420,7 +358,8 @@
     </style>
     
     <!-- Single Sticky Lead Capture Button -->
-    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; left: 0; transform: translate(calc(-100% + 60px), -50%); background: #C8E019; color: white; border: none; padding: 12px 20px 12px 20px; border-radius: 0 30px 30px 0; font-size: 15px; cursor: pointer; outline: none !important; box-shadow: 4px 4px 15px rgba(0,0,0,0.2); font-weight: 600; z-index: 9000; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, box-shadow 0.3s ease; display: flex; align-items: center; gap: 8px;">
+
+    <button id="sticky-expert-btn" onclick="connectWithExpert()" style="position: fixed; top: 50%; right: 0; transform: translate(calc(100% - 60px), -50%); background: #C8E019; color: white; border: none; padding: 12px 20px 12px 20px; border-radius: 30px 0 0 30px; font-size: 15px; cursor: pointer; outline: none !important; box-shadow: -4px 4px 15px rgba(0,0,0,0.2); font-weight: 600; z-index: 9000; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, box-shadow 0.3s ease; display: flex; align-items: center; gap: 8px;">
         <i class="fa-solid fa-headset fs-5"></i> <span style="white-space: nowrap;">Connect with an Expert</span>
     </button>
 
@@ -441,7 +380,7 @@
             .n8n-chat {
                 position: fixed !important;
                 bottom: 20px !important;
-                left: 20px !important;
+                right: 20px !important;
                 width: 380px !important;
                 height: 600px !important;
                 max-width: calc(100vw - 40px) !important;
@@ -488,7 +427,7 @@
                 transform: translate(0, -50%) !important; 
                 background: #B5CC15 !important; 
                 animation: none;
-                box-shadow: 4px 4px 20px rgba(0,0,0,0.3) !important;
+                box-shadow: -4px 4px 20px rgba(0,0,0,0.3) !important;
             }
             #in-chat-quick-replies::-webkit-scrollbar { display: none; }
             
@@ -615,7 +554,7 @@
                 if (chatHeader && !document.getElementById('custom-chat-close')) {
                     const closeBtn = document.createElement('button');
                     closeBtn.id = 'custom-chat-close';
-                    closeBtn.innerHTML = 'ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â 'ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢"Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦"ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢"Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦"';
+                    closeBtn.innerHTML = 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢"šÂ¬Ã…"ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢"šÂ¬Ã…"';
                     closeBtn.onclick = (e) => {
                         if (e) {
                             e.preventDefault();
@@ -642,9 +581,9 @@
                         qrContainer.style.cssText = 'display: flex; gap: 8px; overflow-x: auto; padding: 10px; background: #f8f9fa; white-space: nowrap; scrollbar-width: none; border-top: 1px solid #eee; width: 100%; box-sizing: border-box;';
                         
                         const replies = [
-                            { icon: 'ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â 'ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â 'ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â', text: 'Services' },
-                            { icon: 'ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â 'ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°', text: 'Pricing' },
-                            { icon: 'ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â 'ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™"Ã‚Â¦ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™"Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾', text: 'Connect Expert' }
+                            { icon: 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚ÂºÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¯ÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â¸ÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â', text: 'Services' },
+                            { icon: 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â°', text: 'Pricing' },
+                            { icon: 'ÃƒÆ’Ã†'Ãƒ"šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"¦Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Â¦Ãƒ"šÃ‚Â¾', text: 'Connect Expert' }
                         ];
 
                         replies.forEach(r => {
