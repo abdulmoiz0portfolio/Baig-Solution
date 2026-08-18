@@ -243,7 +243,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <!-- Header Navigation Start -->
     <header id="header-sticky" class="header-nav">
         <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-0">
                 <a class="navbar-brand d-flex align-items-center" href="index">
                     <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 180px; height: auto; object-fit: contain; filter: brightness(0) invert(1);">
                 </a>
