@@ -88,7 +88,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $active_meta['title']; ?></title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
     <link rel="canonical" href="<?php echo $canonical_url; ?>">
     
     <!-- Meta SEO Tags -->
