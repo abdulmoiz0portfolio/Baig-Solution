@@ -1202,6 +1202,8 @@ small,
     display: inline-block;
     letter-spacing: clamp(4px, 1.5vw, 12px);
     text-transform: uppercase;
+    -webkit-text-stroke: 1.5px rgba(255,255,255,0.2);
+    transform: translateZ(0);
 }
 
 
@@ -1214,6 +1216,7 @@ small,
     color: var(--accent-neon);
     opacity: 0;
     animation: loadLetter 1.2s infinite;
+    -webkit-text-stroke: 1.5px var(--accent-neon);
 }
 
 .letters-loading:nth-child(2)::before { animation-delay: 0.1s; }
