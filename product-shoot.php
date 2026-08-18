@@ -63,45 +63,45 @@
             </div>
             
             <!-- Photo 1: Perfume -->
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-light text-center">
+            <div class="col-6 col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm w-100 bg-light text-center d-flex flex-column">
                     <img src="assets/img/services/product_shoot.jpg" alt="Luxury Perfume Bottle Shoot" class="card-img-top w-100" style="aspect-ratio: 1/1; object-fit: cover;">
-                    <div class="card-body p-3">
-                        <h5 class="fw-bold text-dark mb-1">Luxury Perfume</h5>
-                        <p class="text-muted small mb-0">High-Contrast Backlighting</p>
+                    <div class="card-body p-2 p-md-3 d-flex flex-column justify-content-center flex-grow-1">
+                        <h5 class="fw-bold text-dark mb-1 fs-6 fs-md-5">Luxury Perfume</h5>
+                        <p class="text-muted small mb-0" style="font-size: 0.75rem;">High-Contrast Backlighting</p>
                     </div>
                 </div>
             </div>
             
             <!-- Photo 2: Watch -->
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-light text-center">
+            <div class="col-6 col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm w-100 bg-light text-center d-flex flex-column">
                     <img src="assets/img/services/watch_shoot.jpg" alt="Stainless Steel Watch Shoot" class="card-img-top w-100" style="aspect-ratio: 1/1; object-fit: cover;">
-                    <div class="card-body p-3">
-                        <h5 class="fw-bold text-dark mb-1">Luxury Watch</h5>
-                        <p class="text-muted small mb-0">Metallic Neon Reflections</p>
+                    <div class="card-body p-2 p-md-3 d-flex flex-column justify-content-center flex-grow-1">
+                        <h5 class="fw-bold text-dark mb-1 fs-6 fs-md-5">Luxury Watch</h5>
+                        <p class="text-muted small mb-0" style="font-size: 0.75rem;">Metallic Neon Reflections</p>
                     </div>
                 </div>
             </div>
             
             <!-- Photo 3: Skincare -->
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-light text-center">
+            <div class="col-6 col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm w-100 bg-light text-center d-flex flex-column">
                     <img src="assets/img/services/skincare_shoot.jpg" alt="Organic Skincare Jar Shoot" class="card-img-top w-100" style="aspect-ratio: 1/1; object-fit: cover;">
-                    <div class="card-body p-3">
-                        <h5 class="fw-bold text-dark mb-1">Skincare Cream</h5>
-                        <p class="text-muted small mb-0">Natural Sunlight Styling</p>
+                    <div class="card-body p-2 p-md-3 d-flex flex-column justify-content-center flex-grow-1">
+                        <h5 class="fw-bold text-dark mb-1 fs-6 fs-md-5">Skincare Cream</h5>
+                        <p class="text-muted small mb-0" style="font-size: 0.75rem;">Natural Sunlight Styling</p>
                     </div>
                 </div>
             </div>
             
             <!-- Photo 4: Headphones -->
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-light text-center">
+            <div class="col-6 col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm w-100 bg-light text-center d-flex flex-column">
                     <img src="assets/img/services/headphones_shoot.jpg" alt="Wireless Headphone Shoot" class="card-img-top w-100" style="aspect-ratio: 1/1; object-fit: cover;">
-                    <div class="card-body p-3">
-                        <h5 class="fw-bold text-dark mb-1">Wireless Headphones</h5>
-                        <p class="text-muted small mb-0">Futuristic Studio Setup</p>
+                    <div class="card-body p-2 p-md-3 d-flex flex-column justify-content-center flex-grow-1">
+                        <h5 class="fw-bold text-dark mb-1 fs-6 fs-md-5">Wireless Headphones</h5>
+                        <p class="text-muted small mb-0" style="font-size: 0.75rem;">Futuristic Studio Setup</p>
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@
 <style>
 /* ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ Dark showcase frame ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ */
 .showcase-dark-frame { background:#1a1a2e; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); box-shadow:0 25px 80px rgba(0,0,0,0.3); }
-.showcase-dark-header { background:linear-gradient(135deg,#0B4550,#1a1a2e); padding:14px 20px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(255,255,255,0.06); }
+.showcase-dark-header { background:linear-gradient(135deg,#0B4550,#1a1a2e); padding:14px 20px; display:flex; align-items:center; flex-wrap:wrap; gap:16px; border-bottom:1px solid rgba(255,255,255,0.06); }
 .sdot { width:12px; height:12px; border-radius:50%; display:inline-block; }
 .sframe-title { color:rgba(255,255,255,0.7); font-size:14px; font-weight:500; flex:1; }
 .sframe-badge { background:rgba(200, 224, 25,0.15); color:#C8E019; padding:4px 14px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; border:1px solid rgba(200, 224, 25,0.2); }
