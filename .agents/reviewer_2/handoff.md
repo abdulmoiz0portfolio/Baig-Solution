@@ -7,110 +7,107 @@
 
 ## 1. Observation
 
-### Code Files Reviewed
-1. `footer.php` (Lines 337–340, 422–502, 504–612):
-   - `toggleChatState()`: Helper function handling DOM element lookup (`.chat-window-toggle`, `.chat-toggle`, child of `.chat-window-wrapper`/`.chat-wrapper`), temporary inline style adjustments (`position: fixed !important; top: 0; left: 0; width: 60px; height: 60px; opacity: 0.01; visibility: visible; pointer-events: auto;`), pointer/mouse event dispatch sequence (`pointerdown`, `mousedown`, `pointerup`, `mouseup`, `click`, `.click()`), and 100ms style restoration.
-   - `#custom-chat-close` event handler: Calls `e.preventDefault()`, `e.stopPropagation()`, `toggleChatState()`, and restores `#sticky-expert-btn` to `display: flex`.
-   - `connectWithExpert()`: Sets `#sticky-expert-btn` display to `none`, triggers `toggleChatState()`, and populates lead prompt into chat textarea via native setter `Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, "value").set`.
-   - `MutationObserver`: Injects `#custom-chat-close` button into `.chat-layout header` and quick reply pills above textarea.
+### Code Files Inspected
+1. **`index.php` (Lines 1–265)**:
+   - **Left SVG Container (Lines 17–105)**:
+     - Element: `<div class="position-absolute d-none d-lg-block" style="top: 25%; left: 8%; z-index: 0; opacity: 0.15; pointer-events: none; animation: heroFloat 6s ease-in-out infinite;">`
+     - Inline SVG: `width="240" height="280" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet"`
+     - Background Pattern: `n8nCanvasGrid` (16x16 userSpaceOnUse with 0.75r circle at 0.15 fill-opacity).
+     - Nodes: 4 modular workflow nodes (`#node-trigger` Webhook Trigger, `#node-router` AI Processor / Router, `#node-database` DB Action, `#node-notification` Dispatch).
+     - Connections: 3 curved cubic Bézier / line conduits (`n8nGrad1`, `n8nGrad2`, `n8nGrad3`) with data pulse indicator circles.
+     - Color Palette: Strictly `#C8E019` (lime green), `#ffffff`, `#94a3b8` (slate gray), and `#111827` (dark slate). Zero leftover purple or teal.
+   - **Right SVG Container (Lines 107–239)**:
+     - Element: `<div class="position-absolute d-none d-lg-block" style="bottom: 15%; right: 10%; z-index: 0; opacity: 0.15; pointer-events: none; animation: heroFloat 8s ease-in-out infinite reverse;">`
+     - Inline SVG: `width="260" height="260" viewBox="0 0 260 260" preserveAspectRatio="xMidYMid meet"`
+     - Background Texture: 3 concentric orbital guide rings (`r="55"`, `r="95"`, `r="120"`) with dashed subtle strokes.
+     - Modules: 6 circular stack modules (`#module-trigger` Ingest Trigger, `#module-router-hub` Central Make Router Hub, `#module-crm-lead` CRM Lead Profile, `#module-database-sync` Cloud DB Sync, `#module-messaging` Slack/SMS, `#module-ai-scoring` AI Lead Scoring).
+     - Connections: 5 conduits (`makeFlow1` through `makeFlow5`) with a dedicated `#filter-badge` and data pulse indicator circles.
+     - Color Palette: Strictly `#C8E019`, `#ffffff`, `#94a3b8`, `#111827`, `#64748b`. Zero purple or teal.
+   - **Hero Foreground Elements (Lines 241–264)**:
+     - Hero container has `class="container position-relative z-1 hero-content py-5"`.
+     - Badge (`🚀 DIGITAL AGENCY FOR AMBITIOUS BRANDS`), H1 headline (`We Build Systems That Work While You Sleep.`), lead paragraph, and CTA buttons (`Start Your Project`, `View Our Work`) remain 100% intact and unshifted.
 
-2. `assets/js/main.js` (Line 56):
-   - `setupNavigation()` scroll handler: Added `if (!header) return;` guard to avoid `TypeError: Cannot read properties of null (reading 'style')` on pages lacking `#header-sticky`.
-
-3. `tests/test-chat-toggle.js` (Lines 1–116):
-   - Playwright end-to-end automated test script testing full toggle lifecycle (`http://localhost:3000/`).
-
-### Test Execution Command & Output
-- **Command**: `node tests/test-chat-toggle.js`
-- **Result**: Exit code `0`
-- **Verbatim Output**:
-```text
-Launching headless browser for chat toggle verification...
-Navigating to http://localhost:3000...
-Waiting for .chat-window-wrapper to attach...
-Initial State -> Sticky Btn display: "flex", Chat Window Open: false
-Clicking #sticky-expert-btn ("Connect with an Expert")...
-Waiting for chat window to open...
-Open State -> Sticky Btn display: "none", Chat Window Open: true
-Waiting for #custom-chat-close ("✖") button...
-Clicking #custom-chat-close ("✖") red button...
-Waiting for chat window to close...
-Closed State -> Sticky Btn display: "flex", Chat Window Open: false
---------------------------------------------------
-✅ VERIFICATION PASSED SUCCESSFULLY:
- - R1: #sticky-expert-btn reliably opens chat window
- - R2: #custom-chat-close reliably closes chat window and restores #sticky-expert-btn
- - R3: Automated verification script executed cleanly
---------------------------------------------------
-```
+2. **`index.html` (Lines 296–558)**:
+   - **Left SVG Container (Lines 310–398)**: 100% identical in structure, SVG markup, coordinates, gradients, and styling to `index.php`.
+   - **Right SVG Container (Lines 400–532)**: 100% identical in structure, SVG markup, coordinates, gradients, and styling to `index.php`.
+   - **Hero Foreground Elements (Lines 534–557)**: 100% identical to `index.php`.
 
 ---
 
 ## 2. Logic Chain
 
 1. **Integrity Violations Audit**:
-   - Checked for hardcoded outputs, dummy facade implementations, and shortcuts.
-   - `tests/test-chat-toggle.js` executes Playwright in a real Chromium browser, querying actual computed styles and bounding bounding rects of DOM nodes.
-   - `toggleChatState()` implements real DOM event dispatch and style overrides to bypass Vue event suppression.
-   - **Conclusion**: Zero integrity violations found.
+   - Checked for hardcoded shortcuts, facade implementations, mock results, or self-certifying bypasses.
+   - Observed that real, fully formed, scalable vector graphics have been handcrafted with intricate SVG primitives (`<path>`, `<rect>`, `<circle>`, `<ellipse>`, `<defs>`, `<pattern>`, `<linearGradient>`).
+   - Conclusion: Zero integrity violations found.
 
-2. **Requirements Verification**:
-   - **R1 (Chat Open Action)**: Clicking `#sticky-expert-btn` hides the sticky button (`display: none`) and invokes `toggleChatState()` to reliably open `.chat-layout`. Verified by test assertion: `rect.width > 0 && rect.height > 0`.
-   - **R2 (Chat Close Action)**: Clicking `#custom-chat-close` in chat header invokes `toggleChatState()` to close `.chat-layout` and restores `#sticky-expert-btn` (`display: flex`). Verified by test assertion: `rect.width === 0`.
-   - **R3 (Automated Verification)**: Playwright test script `tests/test-chat-toggle.js` completes full open-close cycle with exit code 0.
+2. **Requirement R1 Verification (Left Side n8n Workflow)**:
+   - *Observation*: 4 square rounded nodes (`rx="12"`) arranged as Webhook -> AI Router -> DB Action + Notification Dispatch on a dot grid canvas.
+   - *Requirement check*: Matches n8n workflow metaphor. Opacity is `0.15` (within 12%–18% target). Palette is `#C8E019` lime-green and white/gray tones. Pure background vector (no UI cards or text).
+   - Conclusion: PASS.
 
-3. **Code Quality, Memory & Listener Review**:
-   - Dynamic elements (`#custom-chat-close`, quick replies) created inside `MutationObserver` bind standard `.onclick` handlers. When `.chat-layout` is destroyed on close, all child elements and associated handlers are cleaned up by garbage collection.
-   - `assets/js/main.js` null check `if (!header) return;` prevents unhandled scroll listener errors on subpages.
+3. **Requirement R2 Verification (Right Side CRM / Make Stack)**:
+   - *Observation*: 6 circular modules arranged in a radial hub-and-spoke configuration around a central orchestrator router with concentric orbital rings and filter badge.
+   - *Requirement check*: Distinct from left SVG (radial circular vs. Cartesian grid). Opacity is `0.15` (within 12%–18% target). Palette is `#C8E019` lime-green and white/gray tones.
+   - Conclusion: PASS.
+
+4. **Requirement R3 Verification (Placement, Responsiveness, Layout Integrity)**:
+   - *Observation*: Positioning classes `position-absolute d-none d-lg-block`, styles `top: 25%; left: 8%` (left) and `bottom: 15%; right: 10%` (right), and `heroFloat` keyframes are preserved.
+   - *Requirement check*: Hidden on small viewports (<992px) via `d-none d-lg-block`, zero pointer interception via `pointer-events: none;`, layering at `z-index: 0` underneath foreground `z-index: 1`.
+   - Conclusion: PASS.
+
+5. **Parity Verification (`index.php` vs `index.html`)**:
+   - *Observation*: Byte-for-byte comparison of SVG markup and container wrappers between `index.php` (lines 17–239) and `index.html` (lines 310–532) confirms identical markup.
+   - Conclusion: PASS.
 
 ---
 
 ## 3. Findings & Challenge Assessment
 
-### Findings
+### Quality Review Summary
+- **Correctness**: Excellent. Both SVGs render valid, well-structured vector graphics that clearly communicate modern automation infrastructure.
+- **Completeness**: All 4 acceptance criteria and all sub-requirements in `ORIGINAL_REQUEST.md` and `PROJECT.md` are fulfilled.
+- **Visual Distinction**: Left (Cartesian n8n workflow) and Right (Radial Make.com CRM scenario) provide clear asymmetric visual balance without competing for visual attention.
+- **Color Discipline**: Strict adherence to the lime-green (`#C8E019`) and slate/white palette. No remnant colors.
 
-#### [Minor / Optimization] Finding 1: Rapid Consecutive Click Style Overwrite Edge Case
-- **What**: In `footer.php:451-453`, `toggleChatState()` reads `getAttribute('style')` to store `origContainerStyle`.
-- **Where**: `footer.php:451`
-- **Why**: If `toggleChatState()` is called twice within 100ms, the second call reads the temporary `position: fixed !important` style as original style, which could theoretically cause the inline style to persist after the second timeout.
-- **Impact**: LOW. In normal usage, `#sticky-expert-btn` is hidden immediately (`display: none`) on the first click, preventing user multi-clicking.
-- **Suggestion**: Optional enhancement for future releases: set `toggleContainer.dataset.toggling = "true"` during toggle operation and ignore style saves if already toggling.
-
-#### [Minor / Accessibility] Finding 2: Screen Reader Label for Custom Close Button
-- **What**: `#custom-chat-close` button renders character `✖` without an explicit `aria-label`.
-- **Where**: `footer.php:514`
-- **Why**: Screen readers may announce the character as "multiplication X" instead of "Close chat".
-- **Suggestion**: Add `closeBtn.setAttribute('aria-label', 'Close chat');`.
+### Adversarial Stress-Testing
+- *Stress Scenario 1: Small screens / Mobile viewports*: Handled via `d-none d-lg-block` so neither SVG causes horizontal scrolling or clutter on smartphones/tablets.
+- *Stress Scenario 2: Click interception*: Containers have `pointer-events: none;`, guaranteeing that any clicks or text selection in the hero section pass through unhindered.
+- *Stress Scenario 3: Z-Index collisions*: SVGs are constrained to `z-index: 0`, while hero content container is explicitly `z-index: 1`.
 
 ---
 
-## 4. Verified Claims
+## 4. Verified Claims Matrix
 
-| Claim | Method | Result |
+| Claim / Requirement | Verification Method | Status |
 |---|---|---|
-| R1: `#sticky-expert-btn` opens chat window | `node tests/test-chat-toggle.js` + Playwright assertion (`rect.width > 0`) | PASS |
-| R2: `#custom-chat-close` closes chat and restores sticky button | `node tests/test-chat-toggle.js` + Playwright assertion (`rect.width === 0`, `display: flex`) | PASS |
-| R3: E2E Test script runs cleanly | Execution exit code `0` | PASS |
-| Page error fix in `main.js` | Source code inspection + execution without JS console exceptions | PASS |
+| R1: Left SVG represents n8n workflow (3-4 nodes) | Verified 4 connected nodes, cubic bezier paths, dot grid in `index.php:17-105` and `index.html:310-398` | PASS |
+| R2: Right SVG represents CRM/Make modular stack | Verified 6 circular modules, radial hub, filter badge, orbital guides in `index.php:107-239` and `index.html:400-532` | PASS |
+| Visual distinction between Left & Right | Verified structural geometry contrast (Cartesian grid vs. Radial orbital) | PASS |
+| Opacity within 12%–18% | Verified `opacity: 0.15;` (15%) on both container wrappers | PASS |
+| Color restriction to lime-green and white/gray | Verified hex values (`#C8E019`, `#ffffff`, `#94a3b8`, `#111827`, `#64748b`); zero teal/purple in SVGs | PASS |
+| Pure background illustration (no cards/text) | Verified absence of `<text>` elements and opaque card borders | PASS |
+| Container positioning & responsiveness preserved | Verified `d-none d-lg-block`, `pointer-events: none;`, `heroFloat` animations intact | PASS |
+| 100% Parity between `index.php` and `index.html` | Verified identical SVG markup across both files | PASS |
 
 ---
 
 ## 5. Caveats
-- Browser compatibility tested primarily on Chromium via Playwright. Standard DOM `PointerEvent` and `MouseEvent` dispatching is widely supported across Firefox and Safari WebKit engines.
+- No caveats. The change is strictly visual and vector markup modernization with zero breaking architectural dependencies or server-side PHP logic alterations.
 
 ---
 
 ## 6. Conclusion
-The implementation delivered by worker_m1_1 is functionally complete, robust, and clean. All original requirements (R1, R2, R3) are fully met and programmatically verified.
-Verdict: **APPROVE**.
+The implementation delivered in `index.php` and `index.html` fully satisfies all architectural, visual, and responsiveness requirements set forth in `ORIGINAL_REQUEST.md` and `PROJECT.md`. The design is clean, authentic to the agency's automation branding, and maintains total parity between PHP and HTML templates.
+
+Final Verdict: **APPROVE**
 
 ---
 
 ## 7. Verification Method
-To re-verify independently, run the following command from the project root:
+To independently inspect and verify:
+1. View `index.php` lines 17–239 and `index.html` lines 310–532 using `view_file`.
+2. Inspect opacity property (`opacity: 0.15;`) in container inline styles.
+3. Validate SVG color attributes and ensure only `#C8E019`, `#ffffff`, `#94a3b8`, and neutral grays are present.
+4. Verify presence of responsive class `d-none d-lg-block` and `pointer-events: none;`.
 
-```bash
-node tests/test-chat-toggle.js
-```
-
-**Expected Exit Code**: `0`

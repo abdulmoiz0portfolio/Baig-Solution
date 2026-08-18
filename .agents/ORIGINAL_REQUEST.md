@@ -1,17 +1,33 @@
 # Original User Request
 
-## Initial Request — 2026-08-17T09:31:25+05:00
+## Initial Request — 2026-08-18T15:06:15Z
 
-You are the Project Orchestrator for the following mission:
-Add a custom mouse cursor effect to the existing website at C:/Users/Moiz Baig/.gemini/antigravity/scratch/qclay-redesign-copy.
+Replace the two decorative background SVGs in the hero section of `index.php` and `index.html` with distinct, low-opacity background illustrations representing an automation stack.
 
-Working directory for your metadata: C:/Users/Moiz Baig/.gemini/antigravity/scratch/qclay-redesign-copy/.agents/orchestrator_2
-Original request file: C:/Users/Moiz Baig/.gemini/antigravity/scratch/qclay-redesign-copy/.agents/ORIGINAL_REQUEST.md
+Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes.com
 
-Requirements:
-1. Visual Elements: Ensure `<div class="mouse-cursor cursor-outer" aria-hidden="true"></div>` and `<div class="mouse-cursor cursor-inner" aria-hidden="true"></div>` are styled and positioned correctly.
-2. Styling: Add CSS for `.cursor-inner` and `.cursor-outer` to define size, border, background, opacity, and transition effects. The outer cursor should have a larger, semi-transparent ring with subtle blur; inner cursor a solid dot. Hide both on touch devices (`@media (hover: none) and (pointer: coarse)`).
-3. Interaction Logic: Implement JS tracking `mousemove` updating positions via `requestAnimationFrame` for a smooth trailing lag. Enlarge outer cursor and change color to site accent `#e77f23` on hover over `.nav-link`, `.btn`, or `[data-cursor]`. Ensure `pointer-events: none`.
-4. Performance & Compatibility: No noticeable jank (<5% frame-time impact), no console errors/warnings, works across modern browsers.
+## Requirements
 
-Please decompose, dispatch to specialized workers/reviewers, oversee implementation and verification, and report back upon completion.
+### R1. Left Side SVG (n8n workflow)
+Create an inline SVG representing an n8n workflow (3-4 small circular/square nodes connected by thin lines). 
+- Must use low opacity (12-18%).
+- Colors: lime-green (`#a3e635` or `#C8E019`) and white/gray tones only.
+- It must act as a background texture, not a visible UI widget (no borders/cards).
+
+### R2. Right Side SVG (CRM/Make stack)
+Create a second, distinct inline SVG representing a broader automation/CRM stack (connected placeholder icons/nodes).
+- Same opacity (12-18%) and color restrictions (lime-green + white/gray).
+- Must be visually distinct from the left SVG.
+
+### R3. Placement & Responsiveness
+Keep the new SVGs in the exact same positioning containers as the existing ones. Do not overlap text, CTAs, or the chat widgets. Ensure it is responsive (e.g., hidden on mobile or properly scaled using existing classes like `d-none d-lg-block`).
+
+## Acceptance Criteria
+
+### Implementation
+- [ ] Left SVG is replaced with an n8n-style node diagram in `index.php` and `index.html`.
+- [ ] Right SVG is replaced with a CRM/Make-style node diagram in `index.php` and `index.html`.
+- [ ] Both SVGs have 12-18% opacity.
+- [ ] Colors used are restricted to lime-green and white/gray.
+- [ ] SVGs are pure background illustrations without text or UI card borders.
+- [ ] The hero section layout, headlines, and buttons remain intact and unshifted.

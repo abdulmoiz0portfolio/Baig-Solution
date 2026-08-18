@@ -14,58 +14,227 @@
             100% { transform: translateY(0px); }
         }
     </style>
-    <div class="position-absolute d-none d-lg-block" style="top: 25%; left: 8%; z-index: 0; opacity: 0.7; pointer-events: none; animation: heroFloat 6s ease-in-out infinite;">
-        <!-- n8n style workflow -->
-        <svg width="220" height="280" viewBox="0 0 220 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Connection Lines -->
-            <path d="M110 50 C 110 90, 110 90, 110 120" stroke="#C8E019" stroke-width="3" fill="none"/>
-            <path d="M110 160 C 110 190, 110 190, 110 220" stroke="#C8E019" stroke-width="3" fill="none"/>
-            <!-- Branch line -->
-            <path d="M110 160 C 160 180, 180 190, 180 220" stroke="#0D6171" stroke-width="3" stroke-dasharray="6 6" fill="none"/>
-            
-            <!-- Node 1: Trigger -->
-            <rect x="30" y="10" width="160" height="40" rx="8" fill="#111111" stroke="#C8E019" stroke-width="2"/>
-            <rect x="30" y="10" width="40" height="40" rx="8" fill="#C8E019"/>
-            <path d="M42 25 L50 17 L58 25 M50 17 L50 33" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="85" y="27" width="80" height="6" rx="3" fill="#333333"/>
-            
-            <!-- Node 2: Process/Filter -->
-            <rect x="30" y="120" width="160" height="40" rx="8" fill="#111111" stroke="#0D6171" stroke-width="2"/>
-            <rect x="30" y="120" width="40" height="40" rx="8" fill="#0D6171"/>
-            <circle cx="50" cy="140" r="8" stroke="#111" stroke-width="2" fill="none"/>
-            <rect x="85" y="137" width="60" height="6" rx="3" fill="#333333"/>
-            
-            <!-- Node 3: Output 1 -->
-            <rect x="30" y="220" width="160" height="40" rx="8" fill="#111111" stroke="#C8E019" stroke-width="2"/>
-            <rect x="30" y="220" width="40" height="40" rx="8" fill="#C8E019"/>
-            <path d="M42 235 L50 243 L58 235 M50 227 L50 243" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="85" y="237" width="90" height="6" rx="3" fill="#333333"/>
+    <!-- Floating Automation Workflow Nodes (Left - n8n Workflow) -->
+    <div class="position-absolute d-none d-lg-block" style="top: 25%; left: 8%; z-index: 0; opacity: 0.15; pointer-events: none; animation: heroFloat 6s ease-in-out infinite;">
+        <svg width="240" height="280" viewBox="0 0 240 280" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <defs>
+                <!-- Canvas Grid Pattern -->
+                <pattern id="n8nCanvasGrid" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+                    <circle cx="8" cy="8" r="0.75" fill="#ffffff" fill-opacity="0.15"/>
+                </pattern>
+                
+                <!-- Connection Gradients -->
+                <linearGradient id="n8nGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#C8E019" stop-opacity="0.9"/>
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
+                </linearGradient>
+                <linearGradient id="n8nGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+                    <stop offset="100%" stop-color="#C8E019" stop-opacity="0.9"/>
+                </linearGradient>
+                <linearGradient id="n8nGrad3" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+                    <stop offset="100%" stop-color="#94a3b8" stop-opacity="0.5"/>
+                </linearGradient>
+            </defs>
+
+            <!-- Background Canvas Texture -->
+            <rect width="240" height="280" fill="url(#n8nCanvasGrid)" rx="16"/>
+
+            <!-- Connection Paths -->
+            <!-- Path 1: Trigger to AI Engine -->
+            <path d="M68 44 C118 44, 102 110, 152 110" stroke="url(#n8nGrad1)" stroke-width="1.75" stroke-linecap="round" fill="none"/>
+            <!-- Path 2: AI Engine to Action Sync (Vertical Primary) -->
+            <path d="M176 134 L176 208" stroke="url(#n8nGrad2)" stroke-width="1.75" stroke-linecap="round" fill="none"/>
+            <!-- Path 3: AI Engine to Dispatch/Notification (Branch Secondary) -->
+            <path d="M152 122 C100 122, 120 198, 68 198" stroke="url(#n8nGrad3)" stroke-width="1.75" stroke-dasharray="4 4" stroke-linecap="round" fill="none"/>
+
+            <!-- Data Packet Pulse Indicators -->
+            <circle cx="110" cy="77" r="2.5" fill="#C8E019"/>
+            <circle cx="176" cy="171" r="2.5" fill="#C8E019"/>
+            <circle cx="108" cy="160" r="2" fill="#ffffff" fill-opacity="0.8"/>
+
+            <!-- Node 1: Webhook Trigger (Top Left) -->
+            <g id="node-trigger">
+                <rect x="20" y="20" width="48" height="48" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#C8E019" stroke-width="1.5"/>
+                <!-- Lightning Trigger Glyph -->
+                <path d="M45 32 L37 44 L43 44 L41 56 L51 42 L45 42 Z" fill="#C8E019"/>
+                <!-- Status Indicator -->
+                <circle cx="62" cy="24" r="4.5" fill="#111827" stroke="#C8E019" stroke-width="1.2"/>
+                <path d="M60 24 L61.5 25.5 L64.5 22.5" fill="none" stroke="#C8E019" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Output Port -->
+                <circle cx="68" cy="44" r="3" fill="#C8E019" stroke="#111827" stroke-width="1"/>
+            </g>
+
+            <!-- Node 2: AI Processor / Router (Center Right) -->
+            <g id="node-router">
+                <rect x="152" y="86" width="48" height="48" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.5"/>
+                <!-- AI Sparkle Icon -->
+                <path d="M176 99 C176 105 181 110 187 110 C181 110 176 115 176 121 C176 115 171 110 165 110 C171 110 176 105 176 99 Z" fill="#C8E019"/>
+                <path d="M185 94 C185 96.5 187.5 99 190 99 C187.5 99 185 101.5 185 104 C185 101.5 182.5 99 180 99 C182.5 99 185 96.5 185 94 Z" fill="#ffffff" fill-opacity="0.8"/>
+                <!-- Input Port -->
+                <circle cx="152" cy="110" r="3" fill="#ffffff" stroke="#111827" stroke-width="1"/>
+                <!-- Output Ports -->
+                <circle cx="176" cy="134" r="3" fill="#C8E019" stroke="#111827" stroke-width="1"/>
+                <circle cx="152" cy="122" r="3" fill="#94a3b8" stroke="#111827" stroke-width="1"/>
+            </g>
+
+            <!-- Node 3: Database / CRM Action (Bottom Right) -->
+            <g id="node-database">
+                <rect x="152" y="208" width="48" height="48" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#C8E019" stroke-width="1.5"/>
+                <!-- Database / Storage Icon -->
+                <ellipse cx="176" cy="223" rx="10" ry="3.5" fill="none" stroke="#C8E019" stroke-width="1.5"/>
+                <path d="M166 228 C166 231 170.5 232.5 176 232.5 C181.5 232.5 186 231 186 228" fill="none" stroke="#C8E019" stroke-width="1.5"/>
+                <path d="M166 234 C166 237 170.5 238.5 176 238.5 C181.5 238.5 186 237 186 234" fill="none" stroke="#C8E019" stroke-width="1.5"/>
+                <line x1="166" y1="223" x2="166" y2="234" stroke="#C8E019" stroke-width="1.5"/>
+                <line x1="186" y1="223" x2="186" y2="234" stroke="#C8E019" stroke-width="1.5"/>
+                <!-- Input Port -->
+                <circle cx="176" cy="208" r="3" fill="#C8E019" stroke="#111827" stroke-width="1"/>
+            </g>
+
+            <!-- Node 4: Dispatch / Notification (Bottom Left) -->
+            <g id="node-notification">
+                <rect x="20" y="174" width="48" height="48" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.5"/>
+                <!-- Paper Plane / Send Icon -->
+                <path d="M35 199 L53 189 L45 207 L42 200 Z" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+                <line x1="53" y1="189" x2="42" y2="200" stroke="#C8E019" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- Input Port -->
+                <circle cx="68" cy="198" r="3" fill="#ffffff" stroke="#111827" stroke-width="1"/>
+            </g>
         </svg>
     </div>
     
-    <!-- Floating Automation Workflow Nodes (Right) -->
-    <div class="position-absolute d-none d-lg-block" style="bottom: 15%; right: 10%; z-index: 0; opacity: 0.6; pointer-events: none; animation: heroFloat 8s ease-in-out infinite reverse;">
-        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Central Node -->
-            <circle cx="100" cy="100" r="45" stroke="#0D6171" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
-            <circle cx="100" cy="100" r="25" fill="#111" stroke="#C8E019" stroke-width="3"/>
-            <circle cx="100" cy="100" r="8" fill="#C8E019"/>
-            
-            <!-- Orbiting Nodes -->
-            <!-- Top -->
-            <line x1="100" y1="75" x2="100" y2="40" stroke="#C8E019" stroke-width="2" stroke-dasharray="4 4"/>
-            <rect x="85" y="15" width="30" height="30" rx="6" fill="#111" stroke="#C8E019" stroke-width="2"/>
-            <circle cx="100" cy="30" r="4" fill="#C8E019"/>
-            
-            <!-- Bottom Right -->
-            <line x1="118" y1="118" x2="150" y2="150" stroke="#0D6171" stroke-width="2" stroke-dasharray="4 4"/>
-            <rect x="140" y="140" width="30" height="30" rx="6" fill="#111" stroke="#0D6171" stroke-width="2"/>
-            <circle cx="155" cy="155" r="4" fill="#0D6171"/>
-            
-            <!-- Bottom Left -->
-            <line x1="82" y1="118" x2="50" y2="150" stroke="#A855F7" stroke-width="2" stroke-dasharray="4 4"/>
-            <rect x="30" y="140" width="30" height="30" rx="6" fill="#111" stroke="#A855F7" stroke-width="2"/>
-            <circle cx="45" cy="155" r="4" fill="#A855F7"/>
+    <!-- Floating Automation Workflow Nodes (Right - CRM / Make Stack) -->
+    <div class="position-absolute d-none d-lg-block" style="bottom: 15%; right: 10%; z-index: 0; opacity: 0.15; pointer-events: none; animation: heroFloat 8s ease-in-out infinite reverse;">
+        <svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <defs>
+                <!-- Flow Gradients -->
+                <linearGradient id="makeFlow1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#C8E019" stop-opacity="0.9"/>
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
+                </linearGradient>
+                <linearGradient id="makeFlow2" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+                    <stop offset="100%" stop-color="#C8E019" stop-opacity="0.9"/>
+                </linearGradient>
+                <linearGradient id="makeFlow3" x1="0%" y1="0%" x2="100%" y2="50%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#C8E019" stop-opacity="0.8"/>
+                </linearGradient>
+                <linearGradient id="makeFlow4" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#94a3b8" stop-opacity="0.6"/>
+                </linearGradient>
+                <linearGradient id="makeFlow5" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#C8E019" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#94a3b8" stop-opacity="0.5"/>
+                </linearGradient>
+            </defs>
+
+            <!-- Background Orbital Guide Rings (Make.com Canvas Texture) -->
+            <circle cx="130" cy="130" r="55" stroke="#ffffff" stroke-opacity="0.08" stroke-dasharray="3 5" fill="none"/>
+            <circle cx="130" cy="130" r="95" stroke="#C8E019" stroke-opacity="0.08" stroke-dasharray="4 6" fill="none"/>
+            <circle cx="130" cy="130" r="120" stroke="#ffffff" stroke-opacity="0.04" stroke-dasharray="6 8" fill="none"/>
+
+            <!-- Connection Conduits -->
+            <!-- Conduit 1: Trigger -> Hub -->
+            <path d="M63 90 C90 90, 95 130, 105 130" stroke="url(#makeFlow1)" stroke-width="1.75" stroke-linecap="round" fill="none"/>
+            <!-- Conduit 2: Hub -> CRM Target -->
+            <path d="M151 118 C170 100, 185 60, 197 60" stroke="url(#makeFlow2)" stroke-width="1.75" stroke-linecap="round" fill="none"/>
+            <!-- Conduit 3: Hub -> Database Sync -->
+            <path d="M155 135 C175 135, 185 155, 209 155" stroke="url(#makeFlow3)" stroke-width="1.75" stroke-linecap="round" fill="none"/>
+            <!-- Conduit 4: Hub -> Instant Messaging -->
+            <path d="M145 151 C155 175, 162 195, 173 214" stroke="url(#makeFlow4)" stroke-width="1.75" stroke-linecap="round" fill="none"/>
+            <!-- Conduit 5: Hub -> AI Lead Scoring (Secondary Branch) -->
+            <path d="M112 148 C95 170, 88 185, 77 204" stroke="url(#makeFlow5)" stroke-width="1.5" stroke-dasharray="3 3" stroke-linecap="round" fill="none"/>
+
+            <!-- Filter Badge (Between Trigger and Hub) -->
+            <g id="filter-badge">
+                <circle cx="84" cy="110" r="6.5" fill="#111827" stroke="#C8E019" stroke-width="1.2"/>
+                <path d="M81.5 107.5 L86.5 107.5 L84.5 110 L84.5 113 L83.5 113 L83.5 110 Z" fill="#C8E019"/>
+            </g>
+
+            <!-- Data Pulse Packets -->
+            <circle cx="73" cy="98" r="2" fill="#ffffff"/>
+            <circle cx="178" cy="84" r="2.5" fill="#C8E019"/>
+            <circle cx="184" cy="147" r="2" fill="#ffffff"/>
+            <circle cx="156" cy="178" r="2.5" fill="#C8E019"/>
+            <circle cx="98" cy="172" r="2" fill="#C8E019"/>
+
+            <!-- Module 1: Webhook / Lead Ingest Trigger (Top-Left) -->
+            <g id="module-trigger">
+                <circle cx="45" cy="90" r="23" stroke="#C8E019" stroke-opacity="0.3" stroke-width="1.25" stroke-dasharray="3 3" fill="none"/>
+                <circle cx="45" cy="90" r="18" fill="#ffffff" fill-opacity="0.05" stroke="#C8E019" stroke-width="1.5"/>
+                <!-- Lightning Bolt Ingest Glyph -->
+                <path d="M47 81 L41 89 L46 89 L43 99 L51 88 L46 88 Z" fill="#C8E019"/>
+                <!-- Connection Output Port -->
+                <circle cx="63" cy="90" r="2.5" fill="#C8E019" stroke="#111827" stroke-width="0.75"/>
+            </g>
+
+            <!-- Module 2: Central Make Router / Orchestrator Hub (Center) -->
+            <g id="module-router-hub">
+                <circle cx="130" cy="130" r="32" stroke="#C8E019" stroke-opacity="0.2" stroke-width="1.5" stroke-dasharray="2 3" fill="none"/>
+                <circle cx="130" cy="130" r="25" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-width="1.75"/>
+                <circle cx="130" cy="130" r="15" fill="#C8E019" fill-opacity="0.12" stroke="#C8E019" stroke-width="1.25"/>
+                <!-- Make Router Split Glyph -->
+                <circle cx="130" cy="130" r="3.5" fill="#C8E019"/>
+                <path d="M130 126.5 L130 120 M132.5 131.5 L138 135 M127.5 131.5 L122 135" stroke="#C8E019" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="130" cy="119" r="1.5" fill="#ffffff"/>
+                <circle cx="139" cy="136" r="1.5" fill="#ffffff"/>
+                <circle cx="121" cy="136" r="1.5" fill="#ffffff"/>
+                <!-- Hub Connection Ports -->
+                <circle cx="105" cy="130" r="2.5" fill="#C8E019"/>
+                <circle cx="151" cy="118" r="2.5" fill="#C8E019"/>
+                <circle cx="155" cy="135" r="2.5" fill="#ffffff"/>
+                <circle cx="145" cy="151" r="2.5" fill="#ffffff"/>
+                <circle cx="112" cy="148" r="2.5" fill="#94a3b8"/>
+            </g>
+
+            <!-- Module 3: CRM Lead Profile Target (Top-Right) -->
+            <g id="module-crm-lead">
+                <circle cx="215" cy="60" r="22" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.25" stroke-dasharray="3 3" fill="none"/>
+                <circle cx="215" cy="60" r="18" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-width="1.5"/>
+                <!-- CRM User Avatar Glyph -->
+                <circle cx="215" cy="55" r="3.5" stroke="#C8E019" stroke-width="1.3" fill="none"/>
+                <path d="M208 67 C208 63 211 61 215 61 C219 61 222 63 222 67" stroke="#C8E019" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+                <circle cx="221" cy="53" r="2" fill="#C8E019"/>
+                <!-- Input Port -->
+                <circle cx="197" cy="60" r="2.5" fill="#ffffff" stroke="#111827" stroke-width="0.75"/>
+            </g>
+
+            <!-- Module 4: Cloud Database / Store Sync (Middle-Right) -->
+            <g id="module-database-sync">
+                <circle cx="225" cy="155" r="20" stroke="#C8E019" stroke-opacity="0.3" stroke-width="1.25" fill="none"/>
+                <circle cx="225" cy="155" r="16" fill="#ffffff" fill-opacity="0.05" stroke="#C8E019" stroke-width="1.5"/>
+                <!-- Database Cylinder Stack Glyph -->
+                <ellipse cx="225" cy="148" rx="6.5" ry="2.5" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+                <path d="M218.5 148 L218.5 158 C218.5 160 221.5 161.5 225 161.5 C228.5 161.5 231.5 160 231.5 158 L231.5 148" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+                <path d="M218.5 153 C218.5 155 221.5 156.5 225 156.5 C228.5 156.5 231.5 155 231.5 153" fill="none" stroke="#C8E019" stroke-width="1.2"/>
+                <!-- Input Port -->
+                <circle cx="209" cy="155" r="2.5" fill="#C8E019" stroke="#111827" stroke-width="0.75"/>
+            </g>
+
+            <!-- Module 5: Instant Communications / Slack / SMS (Bottom-Right) -->
+            <g id="module-messaging">
+                <circle cx="185" cy="225" r="22" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.25" stroke-dasharray="4 3" fill="none"/>
+                <circle cx="185" cy="225" r="17" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-width="1.5"/>
+                <!-- Message Bubble Notification Glyph -->
+                <path d="M178 221 C178 217.5 181 215 185 215 C189 215 192 217.5 192 221 C192 224 189 226.5 185 226.5 C184 226.5 183 226.3 182 226 L179 228 L179.5 225 C178.5 224 178 222.5 178 221 Z" fill="none" stroke="#C8E019" stroke-width="1.2" stroke-linejoin="round"/>
+                <line x1="182" y1="220" x2="188" y2="220" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
+                <!-- Input Port -->
+                <circle cx="173" cy="214" r="2.5" fill="#ffffff" stroke="#111827" stroke-width="0.75"/>
+            </g>
+
+            <!-- Module 6: AI Lead Scoring / Analytics (Bottom-Left) -->
+            <g id="module-ai-scoring">
+                <circle cx="65" cy="215" r="20" stroke="#C8E019" stroke-opacity="0.3" stroke-width="1.25" stroke-dasharray="2 3" fill="none"/>
+                <circle cx="65" cy="215" r="16" fill="#ffffff" fill-opacity="0.05" stroke="#C8E019" stroke-width="1.5"/>
+                <!-- Bar Chart & AI Spark Glyph -->
+                <path d="M59 222 L59 217 M63 222 L63 213 M67 222 L67 215 M71 222 L71 210" stroke="#C8E019" stroke-width="1.3" stroke-linecap="round"/>
+                <path d="M58 209 C60 209 61 207 61 205 C61 207 62 209 64 209 C62 209 61 211 61 213 C61 211 60 209 58 209 Z" fill="#ffffff"/>
+                <!-- Input Port -->
+                <circle cx="77" cy="204" r="2.5" fill="#C8E019" stroke="#111827" stroke-width="0.75"/>
+            </g>
         </svg>
     </div>
     

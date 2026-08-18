@@ -1,13 +1,13 @@
-# BRIEFING — 2026-08-17T09:30:00+05:00
+# BRIEFING — 2026-08-18T20:06:15+05:00
 
 ## Mission
-Add custom mouse cursor effect to qclay-redesign-copy website with trailing animation, hover scaling/coloring, and mobile/touch disablement.
+Replace two decorative background SVGs in hero section of index.php and index.html with distinct, low-opacity (12-18%) automation stack illustrations (lime-green + white/gray) in automatixes.com.
 
 ## 🔒 My Identity
 - Archetype: sentinel
-- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\qclay-redesign-copy\.agents\sentinel
-- Orchestrator: 7d380adf-a3a6-4db1-8361-29dac468033b
-- Victory Auditor: bb5144b0-27ac-4384-ad77-6bb457840c9d
+- Working directory: C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes.com\.agents\sentinel
+- Orchestrator: 218103fb-1696-4de8-a21e-b790db456a29
+- Victory Auditor: f28cb19c-6f80-415e-a349-abfee7de20f4
 
 ## 🔒 Key Constraints
 - No technical decisions — relay only
@@ -15,15 +15,15 @@ Add custom mouse cursor effect to qclay-redesign-copy website with trailing anim
 - Must not write code, analyze problems, or make technical decisions
 
 ## User Context
-- **Last user request**: Add custom mouse cursor effect (inner and outer circles) following pointer with trailing animation, hover enlargement/accent color on interactive elements, touch device disablement, <5% frame-time impact.
-- **Pending clarifications**: none
+- **Last user request**: Replace decorative background SVGs in hero section of index.php and index.html with automation stack SVGs (n8n left, CRM/Make right, 12-18% opacity, lime-green/gray/white palette).
+- **Pending clarifications**: none (user asleep, proceed autonomously)
 - **Delivered results**: none
 
 ## Project Status
 - **Phase**: complete
 - **Route**: General (teamwork_preview_orchestrator)
-- **Orchestrator ID**: 7d380adf-a3a6-4db1-8361-29dac468033b
-- **Crons**: none (cleaned up)
+- **Orchestrator ID**: 218103fb-1696-4de8-a21e-b790db456a29
+- **Crons**: cleaned up
 
 ## Victory Audit Status
 - **Triggered**: yes
@@ -31,4 +31,4 @@ Add custom mouse cursor effect to qclay-redesign-copy website with trailing anim
 - **Retry count**: 0
 
 ## Artifact Index
-- C:\Users\Moiz Baig\.gemini\antigravity\scratch\qclay-redesign-copy\.agents\ORIGINAL_REQUEST.md — Verbatim original user request
+- C:\Users\Moiz Baig\.gemini\antigravity\scratch\automatixes.com\.agents\ORIGINAL_REQUEST.md — Verbatim original user request
