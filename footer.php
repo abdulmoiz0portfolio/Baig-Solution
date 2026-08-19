@@ -2,7 +2,16 @@
     </div> <!-- End smooth-wrapper -->
 
     <?php if ($page_key === 'index' || $page_key === 'voice-agent'): ?>
-    <!-- ElevenLabs Voice Widget -->
+    
+    <style>
+        /* Protect ElevenLabs widget z-index without breaking its internal layout */
+        elevenlabs-convai {
+            z-index: 2147483646 !important; 
+            pointer-events: auto !important;
+        }
+    </style>
+
+      <!-- ElevenLabs Voice Widget -->
     <elevenlabs-convai agent-id="agent_1601m004ny6efkns714nfr8vjvqm"></elevenlabs-convai>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
     <?php endif; ?>
